@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You | Omdan Development Inc</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#D4AF37', charcoal: '#36454F' },
+          fontFamily: { serif: ['Playfair Display','serif'], sans: ['Montserrat','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(54,69,79,.85) 0%, rgba(212,175,55,.35) 100%);
+    }
+    .glow-button {
+      box-shadow: 0 0 10px rgba(212,175,55,.5);
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    .glow-button:hover {
+      box-shadow: 0 0 20px rgba(212,175,55,.9);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-charcoal">
+  <!-- Header -->
+  <header class="relative">
+    <div class="hero-gradient absolute inset-0 -z-10"></div>
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between text-white">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto">
+        <span class="font-serif text-xl font-bold group-hover:opacity-90">Omdan Development</span>
+      </a>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pb-14 pt-2 text-white text-center">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold">Thank You!</h1>
+      <p class="text-white/90 mt-3 text-lg md:text-xl max-w-2xl mx-auto">
+        We’ve received your request — our team will contact you within 24 hours to schedule your free on-site quote.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="max-w-3xl mx-auto px-6 -mt-10 pb-16">
+    <article class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+      <div class="mx-auto mb-6 flex items-center justify-center h-16 w-16 rounded-full bg-gold/15">
+        <i data-feather="check" class="text-gold w-8 h-8"></i>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-serif font-bold mb-4">Your Consultation is Almost Set</h2>
+      <p class="text-gray-700 text-lg mb-8">
+        Thank you for reaching out to Omdan Development Inc.
+        A project specialist will review your submission and follow up soon to confirm your appointment.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-gold text-white px-6 py-3 rounded-full font-medium glow-button">
+          <i data-feather="home"></i> Back to Home
+        </a>
+      </div>
+
+      <hr class="my-10 border-gray-200">
+
+      <p class="text-sm text-gray-500">
+        Tip: Check your spam folder if you don’t see our email within a few minutes.
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-10 text-center text-sm text-gray-500">
+    © 2025 Omdan Development Inc. All rights reserved.
+  </footer>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
+
+  <!-- Optional Auto Redirect (after 8 seconds) -->
+  <script>
+    // Uncomment to enable auto-redirect
+    // setTimeout(() => window.location.href = 'index.html', 8000);
+  </script>
+</body>
+</html>
