@@ -44,21 +44,52 @@
 </head>
 <body class="text-charcoal font-sans">
 
-  <!-- Top Nav (simple) -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.webp" alt="Omdan Development logo" class="h-10 w-auto">
-        <span class="font-serif font-bold">Omdan Development</span>
-      </a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="index.html#services" class="hover:text-gold">Services</a>
-        <a href="#gallery" class="hover:text-gold font-medium transition">Gallery</a>
-        <a href="index.html#contact" class="hover:text-gold">Contact</a>
-        <a href="index.html#contact" class="bg-gold text-white px-4 py-2 rounded-full">Free Consultation</a>
-      </div>
+<!-- Top Nav (responsive) -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur shadow" aria-label="Main">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Brand -->
+    <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+      <img src="assets/logo.webp" alt="Omdan Development logo" class="h-10 w-auto flex-shrink-0">
+      <span class="font-serif font-bold text-base sm:text-xl leading-tight truncate">Omdan Development</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html#about" class="hover:text-gold transition">About</a>
+      <a href="index.html#services" class="hover:text-gold transition">Services</a>
+      <!-- Pavers-page section links -->
+      <a href="#paver-styles" class="hover:text-gold transition">Styles</a>
+      <a href="#color-blends" class="hover:text-gold transition">Colors</a>
+      <a href="#use-cases" class="hover:text-gold transition">Where Pavers Shine</a>
+      <a href="#gallery" class="hover:text-gold transition">Gallery</a>
+      <a href="#pavers-contact" class="hover:text-gold transition">Contact</a>
+      <a href="#pavers-contact" class="bg-gold text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition">Free Consultation</a>
     </div>
-  </nav>
+
+    <!-- Mobile toggle -->
+    <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-gray-100" aria-label="Open menu" aria-expanded="false">
+      <i data-feather="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+      <a href="index.html#about" class="hover:text-gold">About</a>
+      <a href="index.html#services" class="hover:text-gold">Services</a>
+      <!-- Pavers-page section links -->
+      <a href="#paver-styles" class="hover:text-gold">Styles</a>
+      <a href="#color-blends" class="hover:text-gold">Colors</a>
+      <a href="#use-cases" class="hover:text-gold">Where Pavers Shine</a>
+      <a href="#gallery" class="hover:text-gold">Gallery</a>
+      <a href="index.html#contact" class="hover:text-gold">Contact</a>
+      <a href="index.html#contact" class="bg-gold text-white px-5 py-2 rounded-full text-center font-medium hover:bg-opacity-90">Free Consultation</a>
+    </div>
+  </div>
+</nav>
+<!-- add top padding to avoid content hiding behind fixed nav -->
+<div class="pt-20"></div>
+
 
   <!-- HERO -->
   <header class="hero text-white">
@@ -221,7 +252,7 @@
 
 
 
-<section class="py-16 bg-white" id="paver-colors">
+<section class="py-16 bg-white" id="color-blends">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-10">
       <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Paver Color Collections</h2>
@@ -348,7 +379,7 @@
 
 
 
- <section class="py-16 bg-gray-50" id="paver-uses">
+ <section class="py-16 bg-gray-50" id="use-cases">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-10">
       <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Where Pavers Shine</h2>
@@ -625,6 +656,25 @@
     }
   });
 });
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  toggleBtn?.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Smooth scroll for same-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const target = document.querySelector(a.getAttribute('href'));
+      if(target){ e.preventDefault(); mobileMenu?.classList.add('hidden'); target.scrollIntoView({behavior:'smooth'}); }
+    })
+  });
+
+  // Feather icons
+  feather?.replace();
 </script>
 
 </body>
