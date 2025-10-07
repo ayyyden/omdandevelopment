@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Leaflet CSS for the service-area map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
   <title>Omdan Development Inc | Luxury Landscaping Los Angeles</title>
   <meta name="description" content="Premium residential landscaping in Los Angeles: pavers, artificial turf, concrete, gravel xeriscape, and exterior painting. Book a free consultation.">
   <meta name="theme-color" content="#36454F">
@@ -13,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (single config) -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -38,33 +41,15 @@
     .scroll-reveal.visible{opacity:1;transform:translateY(0)}
     .glow-button{box-shadow:0 0 10px rgba(212,175,55,.5);transition:box-shadow .3s ease,transform .3s ease}
     .glow-button:hover{box-shadow:0 0 20px rgba(212,175,55,.9);transform:scale(1.05)}
-    /* Hide scrollbar on mobile carousel */
-    .no-scrollbar::-webkit-scrollbar{display:none}
-    .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-    /* subtle attention pop (not required for shake, but fixed) */
-@keyframes cta-pop {
-  0%   { transform: scale(1); }
-  40%  { transform: scale(1.08); }
-  60%  { transform: scale(0.98); }
-  100% { transform: scale(1); }
-}  /* ← this closing brace was missing */
 
-/* Premium pulse + glow (no shake) */
-@keyframes cta-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(212,175,55,0); }
-  50%      { transform: scale(1.03); box-shadow: 0 0 18px rgba(212,175,55,0.55); }
-}
+    /* CTA pulse */
+    @keyframes cta-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(212,175,55,0); }
+      50%      { transform: scale(1.03); box-shadow: 0 0 18px rgba(212,175,55,0.55); }
+    }
+    #cta-button.attn { animation: cta-pulse 1.1s ease-in-out; will-change: transform, box-shadow; }
 
-#cta-button.attn {
-  animation: cta-pulse 1.1s ease-in-out;
-  will-change: transform, box-shadow;
-}
-
-/* respectful: stop motion if user prefers less animation */
-@media (prefers-reduced-motion: reduce) {
-  #cta-button { animation: none !important; }
-}
-
+    @media (prefers-reduced-motion: reduce) { #cta-button { animation: none !important; } }
   </style>
 </head>
 
@@ -72,7 +57,6 @@
   <!-- Header / Nav -->
   <nav class="fixed w-full bg-white/95 backdrop-blur shadow z-50" aria-label="Main navigation" role="banner">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Brand: logo + name -->
       <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
         <img src="assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" loading="eager" />
         <span class="font-serif font-bold text-base sm:text-xl leading-tight text-charcoal truncate">Omdan Development</span>
@@ -82,7 +66,6 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="#about" class="hover:text-gold font-medium transition">About</a>
         <a href="#services" class="hover:text-gold font-medium transition">Services</a>
-        
         <a href="#testimonials" class="hover:text-gold font-medium transition">Testimonials</a>
         <a href="#gallery" class="hover:text-gold font-medium transition">Gallery</a>
         <a href="#contact" class="hover:text-gold font-medium transition">Contact</a>
@@ -110,28 +93,21 @@
 
   <!-- Hero -->
   <header class="relative h-[90vh] min-h-[560px] flex items-center justify-center bg-center bg-no-repeat bg-cover" style="background-image:url('assets/15.webp'); background-size:cover; background-position:center;">
-  <div class="hero-gradient absolute inset-0" aria-hidden="true"></div>
-  <link rel="preload" as="image" href="assets/15.webp" />
-  
-  <div class="max-w-4xl mx-auto px-6 z-10 text-center scroll-reveal">
-    <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Transforming Outdoor Spaces Into Timeless Luxury</h1>
-    <p class="text-lg md:text-xl text-white/95 mb-8">Premium residential landscaping and exterior transformations in Los Angeles and surrounding areas.</p>
-   <a id="cta-button"
-   href="#contact"
-   class="bg-black text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg
-          hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-black/30
-          transition inline-block">
-  Book a Free Consultation
-</a>
+    <div class="hero-gradient absolute inset-0" aria-hidden="true"></div>
+    <link rel="preload" as="image" href="assets/15.webp" />
 
-  </div>
+    <div class="max-w-4xl mx-auto px-6 z-10 text-center scroll-reveal">
+      <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Transforming Outdoor Spaces Into Timeless Luxury</h1>
+      <p class="text-lg md:text-xl text-white/95 mb-8">Premium residential landscaping and exterior transformations in Los Angeles and surrounding areas.</p>
+      <a id="cta-button" href="#contact" class="bg-black text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-black/30 transition inline-block">
+        Book a Free Consultation
+      </a>
+    </div>
 
-  <!-- Accessible noscript fallback -->
-  <noscript>
-    <img src="assets/15.webp" alt="Luxury modern backyard with pool and landscaping by Omdan Development" class="hidden" />
-  </noscript>
-</header>
-
+    <noscript>
+      <img src="assets/15.webp" alt="Luxury modern backyard with pool and landscaping by Omdan Development" class="hidden" />
+    </noscript>
+  </header>
 
   <!-- Intro -->
   <section class="py-20 bg-white">
@@ -176,13 +152,12 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service Card Template -->
         <article class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition scroll-reveal hover-scale">
           <div class="bg-gold/15 w-16 h-16 rounded-full flex items-center justify-center mb-4"><i data-feather="grid" class="text-gold"></i></div>
           <h3 class="text-xl font-serif font-bold mb-2">Paver Installation</h3>
           <p class="mb-4">Custom driveways, patios, and walkways designed to complement your home's architecture.</p>
           <img src="assets/pavers.webp" alt="Large-format paver patio with clean modern lines" class="rounded-lg" loading="lazy" decoding="async" width="1200" height="800" />
-          <a href="#contact" class="mt-4 inline-flex items-center text-gold font-medium">Learn more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+         <a href="pavers.html" class="mt-4 inline-flex items-center text-gold font-medium">Learn more →</a>
         </article>
 
         <article class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition scroll-reveal hover-scale">
@@ -190,7 +165,7 @@
           <h3 class="text-xl font-serif font-bold mb-2">Artificial Turf</h3>
           <p class="mb-4">Premium low-maintenance lawns that look lush year-round without water waste.</p>
           <img src="assets/turf.webp" alt="Realistic artificial turf with crisp edging" class="rounded-lg" loading="lazy" decoding="async" width="1200" height="800" />
-          <a href="#contact" class="mt-4 inline-flex items-center text-gold font-medium">Learn more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+       <a href="artificial-turf.html" class="mt-4 inline-flex items-center text-gold font-medium">Learn more →</a>
         </article>
 
         <article class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition scroll-reveal hover-scale">
@@ -206,7 +181,7 @@
           <h3 class="text-xl font-serif font-bold mb-2">Cement & Concrete Work</h3>
           <p class="mb-4">Durable, smooth finishes for driveways and decorative areas with custom patterns.</p>
           <img src="assets/concrete.webp" alt="Decorative concrete driveway with border detail" class="rounded-lg" loading="lazy" decoding="async" width="1200" height="800" />
-          <a href="#contact" class="mt-4 inline-flex items-center text-gold font-medium">Learn more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+         <a href="concrete.html" class="mt-4 inline-flex items-center text-gold font-medium">Learn more →</a>
         </article>
 
         <article class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition scroll-reveal hover-scale">
@@ -245,7 +220,7 @@
           <div class="bg-gold/15 w-16 h-16 rounded-full flex items-center justify-center mb-4"><i data-feather="shield" class="text-gold"></i></div>
           <h3 class="text-xl font-serif font-bold mb-2">Architectural Fencing & Privacy Walls</h3>
           <p class="mb-4">Elegant, durable fences designed to elevate privacy and curb appeal.</p>
-          <img src="assets/21.webp" alt="Custom outdoor living layout with firepit and seating" class="rounded-lg" loading="lazy" decoding="async" width="1200" height="800" />
+          <img src="assets/21.webp" alt="Architectural privacy fencing" class="rounded-lg" loading="lazy" decoding="async" width="1200" height="800" />
           <a href="#contact" class="mt-4 inline-flex items-center text-gold font-medium">Learn more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
         </article>
       </div>
@@ -264,27 +239,19 @@
       <div id="testimonial-carousel" class="flex transition-transform duration-700 ease-in-out">
         <div class="min-w-full px-4">
           <div class="bg-white shadow-lg rounded-2xl p-8">
-            <p class="text-gray-600 italic mb-6">
-              “Omdan Development turned our front yard into a modern oasis. The paver design is flawless!”
-            </p>
+            <p class="text-gray-600 italic mb-6">“Omdan Development turned our front yard into a modern oasis. The paver design is flawless!”</p>
             <h3 class="font-bold text-gold">— Sarah L., Los Angeles</h3>
           </div>
         </div>
-
         <div class="min-w-full px-4">
           <div class="bg-white shadow-lg rounded-2xl p-8">
-            <p class="text-gray-600 italic mb-6">
-              “Their attention to detail is unmatched. From design to finish, everything was perfect.”
-            </p>
+            <p class="text-gray-600 italic mb-6">“Their attention to detail is unmatched. From design to finish, everything was perfect.”</p>
             <h3 class="font-bold text-gold">— David R., Encino</h3>
           </div>
         </div>
-
         <div class="min-w-full px-4">
           <div class="bg-white shadow-lg rounded-2xl p-8">
-            <p class="text-gray-600 italic mb-6">
-              “Professional, reliable, and absolutely stunning results. Highly recommended!”
-            </p>
+            <p class="text-gray-600 italic mb-6">“Professional, reliable, and absolutely stunning results. Highly recommended!”</p>
             <h3 class="font-bold text-gold">— Michelle K., Calabasas</h3>
           </div>
         </div>
@@ -302,24 +269,9 @@
     const carousel = document.getElementById('testimonial-carousel');
     const dots = document.querySelectorAll('.dot');
     let index = 0;
-
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((dot, i) => dot.classList.toggle('bg-gold', i === index));
-    }
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        index = parseInt(dot.dataset.index);
-        updateCarousel();
-      });
-    });
-
-    setInterval(() => {
-      index = (index + 1) % dots.length;
-      updateCarousel();
-    }, 5000);
-
+    function updateCarousel(){ carousel.style.transform = `translateX(-${index * 100}%)`; dots.forEach((d,i)=>d.classList.toggle('bg-gold', i===index)); }
+    dots.forEach(dot => dot.addEventListener('click', () => { index = parseInt(dot.dataset.index); updateCarousel(); }));
+    setInterval(() => { index = (index + 1) % dots.length; updateCarousel(); }, 5000);
     updateCarousel();
   </script>
 
@@ -334,33 +286,17 @@
       <!-- MOBILE: horizontal swipe carousel -->
       <div class="md:hidden relative">
         <div id="galleryTrack" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar -mx-6 px-6 gap-4">
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/11.webp" alt="Paver walkway with herringbone pattern" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/16.webp" alt="Artificial turf backyard with modern seating" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/17.webp" alt="Stamped concrete patio with border" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/18.webp" alt="Xeriscape front yard with gravel and stone accents" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/19.webp" alt="Fresh exterior paint on modern stucco home" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md">
-            <img src="assets/20.webp" alt="Front yard turf with clean steel edging" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" />
-          </figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/11.webp" alt="Paver walkway with herringbone pattern" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/16.webp" alt="Artificial turf backyard with modern seating" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/17.webp" alt="Stamped concrete patio with border" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/18.webp" alt="Xeriscape front yard with gravel and stone accents" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/19.webp" alt="Fresh exterior paint on modern stucco home" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
+          <figure class="min-w-full snap-center rounded-lg overflow-hidden shadow-md"><img src="assets/20.webp" alt="Front yard turf with clean steel edging" class="w-full h-[60vh] object-cover" loading="lazy" decoding="async" /></figure>
         </div>
 
         <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 pointer-events-none">
-          <button id="galleryPrev" class="pointer-events-auto bg-white/80 backdrop-blur rounded-full p-2 shadow hover:scale-105 transition">
-            <i data-feather="chevron-left"></i>
-          </button>
-          <button id="galleryNext" class="pointer-events-auto bg-white/80 backdrop-blur rounded-full p-2 shadow hover:scale-105 transition">
-            <i data-feather="chevron-right"></i>
-          </button>
+          <button id="galleryPrev" class="pointer-events-auto bg-white/80 backdrop-blur rounded-full p-2 shadow hover:scale-105 transition"><i data-feather="chevron-left"></i></button>
+          <button id="galleryNext" class="pointer-events-auto bg-white/80 backdrop-blur rounded-full p-2 shadow hover:scale-105 transition"><i data-feather="chevron-right"></i></button>
         </div>
 
         <div class="flex justify-center gap-2 mt-4">
@@ -375,24 +311,12 @@
 
       <!-- DESKTOP: grid -->
       <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/11.webp" alt="Paver walkway with herringbone pattern" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/16.webp" alt="Artificial turf backyard with modern seating" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/17.webp" alt="Stamped concrete patio with border" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/18.webp" alt="Xeriscape front yard with gravel and stone accents" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/19.webp" alt="Fresh exterior paint on modern stucco home" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale">
-          <img src="assets/20.webp" alt="Front yard turf with clean steel edging" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
-        </figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/11.webp" alt="Paver walkway with herringbone pattern" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/16.webp" alt="Artificial turf backyard with modern seating" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/17.webp" alt="Stamped concrete patio with border" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/18.webp" alt="Xeriscape front yard with gravel and stone accents" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/19.webp" alt="Fresh exterior paint on modern stucco home" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
+        <figure class="relative group overflow-hidden rounded-lg scroll-reveal hover-scale"><img src="assets/20.webp" alt="Front yard turf with clean steel edging" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" /></figure>
       </div>
     </div>
   </section>
@@ -404,21 +328,13 @@
       const dots = document.querySelectorAll('#gallery .dot');
       const prev = document.getElementById('galleryPrev');
       const next = document.getElementById('galleryNext');
-
       if (!track) return;
-
       const getIndex = () => Math.round(track.scrollLeft / track.clientWidth);
       const goTo = (i) => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
-
-      const updateDots = () => {
-        const i = getIndex();
-        dots.forEach((d, idx) => d.classList.toggle('bg-gold', idx === i));
-      };
-
+      const updateDots = () => { const i = getIndex(); dots.forEach((d, idx) => d.classList.toggle('bg-gold', idx === i)); };
       prev?.addEventListener('click', () => goTo(Math.max(0, getIndex() - 1)));
       next?.addEventListener('click', () => goTo(Math.min(dots.length - 1, getIndex() + 1)));
       track.addEventListener('scroll', () => window.requestAnimationFrame(updateDots));
-
       updateDots();
     })();
   </script>
@@ -435,26 +351,11 @@
         <div class="scroll-reveal">
           <h3 class="text-2xl font-serif font-bold mb-6">Book a Free Consultation</h3>
           <form class="space-y-6" onsubmit="event.preventDefault(); window.location='thankyou.html';">
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">Full Name</span>
-              <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-            </label>
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">Phone Number</span>
-              <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-            </label>
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">Email Address</span>
-              <input type="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-            </label>
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">Project Address</span>
-              <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-            </label>
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">How Can We Help?</span>
-              <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
-            </label>
+            <label class="block"><span class="block text-sm font-medium mb-1">Full Name</span><input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">Phone Number</span><input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">Email Address</span><input type="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">Project Address</span><input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" /></label>
+            <label class="block"><span class="block text-sm font-medium mb-1">How Can We Help?</span><textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"></textarea></label>
             <button type="submit" class="bg-gold text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 w-full">Submit Request</button>
           </form>
         </div>
@@ -464,14 +365,49 @@
             <h3 class="text-2xl font-serif font-bold mb-6">Contact Information</h3>
             <ul class="space-y-5">
               <li class="flex items-start gap-3"><i data-feather="phone" class="text-gold"></i><div><h4 class="font-medium">Phone</h4><p class="text-gray-600">123-456-7890</p></div></li>
-              <li class="flex items-start gap-3"><i data-feather="mail" class="text-gold"></i><div><h4 class="font-medium">Email</h4><p class="text-gray-600">omdan@gmail.com</p></div></li>
-              <li class="flex items-start gap-3"><i data-feather="map-pin" class="text-gold"></i><div><h4 class="font-medium">Location</h4><p class="text-gray-600">1234 Marry St, Los Angeles, CA</p></div></li>
+              <li class="flex items-start gap-3"><i data-feather="mail" class="text-gold"></i><div><h4 class="font-medium">Email</h4><p class="text-gray-600">omdandevelopment@gmail.com</p></div></li>
+              <li class="flex items-start gap-3"><i data-feather="map-pin" class="text-gold"></i><div><h4 class="font-medium">Location</h4><p class="text-gray-600">9243 Louise Ave, Northridge, CA 91325</p></div></li>
             </ul>
+
             <div class="mt-8">
               <h4 class="font-serif font-bold mb-4">Service Area</h4>
+              <!-- Map container with explicit height -->
               <div class="aspect-[16/9]">
-                <iframe title="Service area map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="w-full h-64 rounded-lg border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-              </div>
+<!-- Service Area Map (covers LA, Pasadena, Lancaster, Victorville, Temecula, Palm Springs) -->
+<div class="relative w-full rounded-lg overflow-hidden" style="height:380px;">
+  <iframe
+    title="Service area map"
+    src="https://www.google.com/maps?ll=34.055036,-117.650985&z=8&output=embed"
+    class="absolute inset-0 w-full h-full border-0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+
+  <!-- Gold oval overlay representing coverage area -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 flex items-center justify-center">
+    <div
+      style="
+        width: 95%;
+        max-width: 1200px;
+        aspect-ratio: 1.4 / 1; /* wider than tall for rectangular coverage */
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 4px rgba(212,175,55,1) inset,
+          0 0 0 9999px rgba(0,0,0,0);
+        background: rgba(212,175,55,0.18);
+      ">
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
             </div>
           </div>
         </aside>
@@ -511,17 +447,16 @@
         </div>
         <div>
           <h4 class="font-serif font-bold text-lg mb-4">Contact</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li class="flex items-start gap-2"><i data-feather="phone" class="text-gold"></i><span>123-456-7890</span></li>
-            <li class="flex items-start gap-2"><i data-feather="mail" class="text-gold"></i><span>omdan@gmail.com</span></li>
-            <li class="flex items-start gap-2"><i data-feather="map-pin" class="text-gold"></i><span>1234 Marry St, Los Angeles, CA</span></li>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center gap-2"><i data-feather="phone" class="text-gold w-5 h-5"></i><span>123-456-7890</span></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="text-gold w-5 h-5 flex-shrink-0"></i><span>omdandevelopment@gmail.com</span></li>
+            <li class="flex items-center gap-2"><i data-feather="map-pin" class="text-gold w-5 h-5"></i><span>9243 Louise Ave, Northridge, CA 91325</span></li>
           </ul>
         </div>
       </div>
 
       <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
         <p>© 2025 Omdan Development Inc. All rights reserved.</p>
-
         <div class="flex items-center gap-6 mt-4 md:mt-0" aria-label="Footer links">
           <a href="privacy.html" class="hover:text-gold transition">Privacy Policy</a>
           <div class="flex gap-4" aria-label="Social links">
@@ -534,6 +469,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     // Mobile menu toggle
     const toggleBtn = document.getElementById('menu-toggle');
@@ -566,23 +502,66 @@
 
     // Feather icons
     feather.replace();
+
+    // CTA gentle pulse every 3s
+    (function(){
+      const cta = document.getElementById('cta-button');
+      if(!cta) return;
+      const run = () => { cta.classList.remove('attn'); void cta.offsetWidth; cta.classList.add('attn'); };
+      run(); setInterval(run, 3000);
+    })();
   </script>
+
+ <!-- Leaflet JS (one include only) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cta = document.getElementById('cta-button');
-    if (!cta) return;
+document.addEventListener('DOMContentLoaded', function () {
+  const el = document.getElementById('serviceMap');
+  if (!el) return;
 
-    const run = () => {
-      cta.classList.remove('attn');   // reset
-      void cta.offsetWidth;           // restart animation
-      cta.classList.add('attn');
-    };
+  // Northridge office as center
+  const SERVICE_CENTER = [34.2379003, -118.5236471];
+  const SERVICE_RADIUS_KM = 70; // adjust to taste
 
-    run();                    // play once on load
-    setInterval(run, 3000);   // every 3 seconds
-  });
+  // Make sure parent is visible and element has height
+  el.style.minHeight = el.style.minHeight || '380px';
+
+  const map = L.map(el, { scrollWheelZoom: false });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const circle = L.circle(SERVICE_CENTER, {
+    radius: SERVICE_RADIUS_KM * 1000,
+    color: '#D4AF37',
+    weight: 4,
+    fillColor: '#D4AF37',
+    fillOpacity: 0.18
+  }).addTo(map).bindPopup(`Service Area (~${SERVICE_RADIUS_KM} km radius)`);
+
+  // Extra visible dashed outline (optional)
+  L.circle(SERVICE_CENTER, {
+    radius: SERVICE_RADIUS_KM * 1000,
+    color: '#000',
+    weight: 1.5,
+    fill: false,
+    opacity: 0.35,
+    dashArray: '6 6'
+  }).addTo(map);
+
+  // Business pin
+  L.marker(SERVICE_CENTER)
+    .addTo(map)
+    .bindPopup('Omdan Development Inc<br>9243 Louise Ave, Northridge, CA 91325');
+
+  // Fit the circle on screen
+  map.fitBounds(circle.getBounds(), { padding: [20, 20] });
+
+  // If the map sits in a container that finishes layout later, resize again
+  setTimeout(() => map.invalidateSize(), 300);
+});
 </script>
-
 
 
 </body>
