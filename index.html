@@ -28,9 +28,6 @@
       }
     }
   </script>
-  <!-- hCaptcha (FREE on Web3Forms) -->
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-
 
   <!-- Feather icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -53,6 +50,10 @@
     #cta-button.attn { animation: cta-pulse 1.1s ease-in-out; will-change: transform, box-shadow; }
 
     @media (prefers-reduced-motion: reduce) { #cta-button { animation: none !important; } }
+    /* Hide scrollbars for horizontal tracks on mobile */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
   </style>
 </head>
 
@@ -268,15 +269,31 @@
     </div>
   </section>
 
-  <script>
-    const carousel = document.getElementById('testimonial-carousel');
-    const dots = document.querySelectorAll('.dot');
-    let index = 0;
-    function updateCarousel(){ carousel.style.transform = `translateX(-${index * 100}%)`; dots.forEach((d,i)=>d.classList.toggle('bg-gold', i===index)); }
-    dots.forEach(dot => dot.addEventListener('click', () => { index = parseInt(dot.dataset.index); updateCarousel(); }));
-    setInterval(() => { index = (index + 1) % dots.length; updateCarousel(); }, 5000);
+ <script>
+  const carousel = document.getElementById('testimonial-carousel');
+  const dots = document.querySelectorAll('#testimonials .dot');  // scoped to the section
+  let index = 0;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('bg-gold', i === index));
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      index = parseInt(dot.dataset.index, 10);
+      updateCarousel();
+    });
+  });
+
+  setInterval(() => {
+    index = (index + 1) % dots.length;
     updateCarousel();
-  </script>
+  }, 5000);
+
+  updateCarousel();
+</script>
+
 
   <!-- Gallery -->
   <section id="gallery" class="py-20 bg-gray-50">
@@ -468,7 +485,7 @@
           <ul class="space-y-2 text-gray-300">
             <li><a class="hover:text-gold" href="index.html#services">All Services</a></li>
             <li><a class="hover:text-gold" href="pavers.html">Pavers</a></li>
-            <li><a class="hover:text-gold" href="turf.html">artificial-Turf</a></li>
+            <li><a class="hover:text-gold" href="turf.html">Artificial-Turf</a></li>
             <li><a class="hover:text-gold" href="concrete.html">Cement & Concrete</a></li>
           </ul>
         </div>
