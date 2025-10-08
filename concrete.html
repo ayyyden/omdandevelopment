@@ -1,94 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cement & Concrete Work Los Angeles | Driveways, Pads & Stamped Finishes</title>
-  <meta name="description" content="Expert concrete driveways, patios, walkways, and pads in Los Angeles. Stamped, smooth, and broom finishes with proper reinforcement and drainage." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{gold:'#D4AF37',charcoal:'#36454F'},fontFamily:{serif:['Playfair Display','serif'],sans:['Montserrat','sans-serif']}}}}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-  <style>.hero{background:linear-gradient(135deg,rgba(54,69,79,.78),rgba(212,175,55,.35)),url('assets/concrete-hero.webp') center/cover no-repeat}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concrete & Cement Work | Omdan Development Inc</title>
+  <meta name="description" content="Premium concrete driveways, patios, walkways, steps and pool decks in Los Angeles. Broom, smooth, stamped, salt and exposed aggregate finishes. Free on-site quote." />
+  <meta name="theme-color" content="#36454F" />
 
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-   {"@type":"Question","name":"Do you reinforce your slabs?","acceptedAnswer":{"@type":"Answer","text":"Yes—proper base prep with rebar or mesh, control joints, and correct PSI mixes based on use (driveway vs. patio)."}},
-   {"@type":"Question","name":"What finishes are available?","acceptedAnswer":{"@type":"Answer","text":"Smooth steel trowel, broom, sand finish, and stamped patterns with color additives and sealers."}},
-   {"@type":"Question","name":"Can you integrate drains and lighting?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We plan slopes, trench drains, and sleeves for lighting/irrigation before the pour."}}
-  ]}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#D4AF37', charcoal: '#36454F' },
+          fontFamily: { serif: ['Playfair Display','serif'], sans: ['Montserrat','sans-serif'] }
+        }
+      }
+    }
   </script>
+
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    .hero-gradient{background:linear-gradient(135deg,rgba(54,69,79,.78) 0%,rgba(212,175,55,.35) 100%)}
+    .hover-scale{transition:transform .3s ease}
+    .hover-scale:hover{transform:scale(1.03)}
+    .scroll-reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .scroll-reveal.visible{opacity:1;transform:translateY(0)}
+    @media (max-width: 480px){ .prose-narrow { max-width: 36ch; margin-inline: auto; } }
+
+    /* title accent underline that fits text width */
+    .title-accent{display:inline-block; position:relative; padding-bottom:.4rem}
+    .title-accent:after{
+      content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+      height:3px; width:60%; max-width:260px;
+      background: linear-gradient(90deg, rgba(212,175,55,.15), rgba(212,175,55,1), rgba(212,175,55,.15));
+      border-radius:999px;
+    }
+
+    /* mobile swipe helpers */
+    .no-scrollbar::-webkit-scrollbar{display:none}
+    .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+
+    /* lightbox */
+    @keyframes fadeIn { from {opacity:0; transform:scale(.98)} to {opacity:1; transform:scale(1)} }
+    .animate-fade-in{ animation: fadeIn .25s ease-out }
+  </style>
 </head>
-<body class="text-charcoal font-sans">
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.webp" alt="Omdan Development logo" class="h-10 w-auto">
-        <span class="font-serif font-bold">Omdan Development</span>
+
+<body class="bg-white font-sans text-charcoal">
+  <!-- Nav -->
+  <nav class="fixed w-full bg-white/95 backdrop-blur shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3 min-w-0">
+        <img src="assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" />
+        <span class="font-serif font-bold text-base sm:text-xl leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-6">
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#about" class="hover:text-gold font-medium transition">About</a>
+        <a href="index.html#services" class="hover:text-gold font-medium transition">Services</a>
+        <a href="#gallery" class="hover:text-gold font-medium transition">Gallery</a>
+        <a href="#contact" class="hover:text-gold font-medium transition">Contact</a>
+        <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition">Book a Free Consultation</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-gray-100" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+        <a href="index.html#about" class="hover:text-gold">About</a>
         <a href="index.html#services" class="hover:text-gold">Services</a>
-        <a href="gallery.html" class="hover:text-gold">Gallery</a>
-        <a href="index.html#contact" class="hover:text-gold">Contact</a>
-        <a href="index.html#contact" class="bg-gold text-white px-4 py-2 rounded-full">Free Consultation</a>
+        <a href="#gallery" class="hover:text-gold">Gallery</a>
+        <a href="#contact" class="hover:text-gold">Contact</a>
+        <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full text-center font-medium hover:bg-opacity-90">Book a Free Consultation</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero text-white">
-    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-      <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Cement & Concrete Work</h1>
-      <p class="text-lg md:text-xl opacity-95">Driveways, patios, walkways, and pads with premium finishes and exacting prep.</p>
-      <a href="index.html#contact" class="inline-block mt-8 bg-black text-white px-7 py-3 rounded-full font-semibold">Request a Quote</a>
+  <!-- Hero -->
+  <header class="relative h-[78vh] min-h-[520px] flex items-center justify-center bg-center bg-no-repeat bg-cover"
+          style="background-image:url('assets/cb.webp')"><!-- replace with your hero -->
+    <div class="hero-gradient absolute inset-0"></div>
+    <link rel="preload" as="image" href="assets/cb.webp" />
+    <div class="max-w-4xl mx-auto px-6 z-10 text-center scroll-reveal">
+      <h1 class="text-3xl md:text-6xl font-serif font-bold text-white mb-4">Precision Concrete for Lasting Beauty</h1>
+      <p class="text-lg md:text-xl text-white/95 mb-8">Driveways, patios, walkways, steps and pool decks with premium finishes and clean details—built for LA homes.</p>
+      <a href="#contact" class="bg-black text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-black/30 transition inline-block">Book a Free Consultation</a>
     </div>
   </header>
 
-  <main>
-    <section class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="font-serif text-3xl font-bold mb-4">Precision Pours • Beautiful Finishes</h2>
-        <p class="mb-4">From clean modern slabs to detailed stamped work, we engineer each pour for strength and drainage. We coordinate permits when needed and keep your site tidy.</p>
-        <ul class="list-disc ml-5 space-y-2">
-          <li>Driveways, patios, walkways, equipment pads</li>
-          <li>Stamped, broom, sand, and smooth finishes</li>
-          <li>Rebar/mesh reinforcement & control joints</li>
-          <li>Integrated drains, lighting sleeves & borders</li>
+  <!-- Intro -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+      <img
+        src="assets/concrete-1.webp" 
+        alt="Modern concrete work in Los Angeles"
+        class="w-full h-auto rounded-xl shadow-xl hover-scale object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="scroll-reveal">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Clean Lines. Strong Builds.</h2>
+        <p class="mt-5 text-lg">We pour and finish architectural-grade concrete with attention to grading, base prep, rebar, control joints and drainage. From smooth modern patios to durable driveways and pool decks, our work blends design and performance.</p>
+        <ul class="mt-6 space-y-3 text-gray-700">
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-gold flex-shrink-0"></i> 4–6" slabs, 3,000–4,500 PSI mixes as specified</li>
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-gold flex-shrink-0"></i> Rebar/mesh reinforcement & saw-cut control joints</li>
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-gold flex-shrink-0"></i> Finish options: broom, smooth, stamped, salt, exposed aggregate</li>
         </ul>
-        <div class="mt-6 flex gap-3 flex-wrap">
-          <a href="pavers.html" class="underline hover:text-gold">Paver Installation</a>
-          <a href="artificial-turf.html" class="underline hover:text-gold">Artificial Turf</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Finish Types -->
+  <section class="py-16 bg-gray-50" id="finish-types">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Popular Concrete Finishes</h2>
+        <p class="text-gray-600 mt-2">Choose the look and traction that fits your space and style.</p>
+      </div>
+
+      <!-- MOBILE swipe -->
+      <div class="md:hidden">
+        <div
+          class="flex overflow-x-auto no-scrollbar gap-4 -mx-4 px-4 snap-x snap-mandatory"
+          style="scroll-padding-left:1rem; scroll-padding-right:1rem"
+          data-track="finishes">
+          <!-- Six finish cards -->
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/broom-finish.webp" alt="Broom finish concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Broom Finish</h4>
+              <p class="text-gray-600 text-sm">Classic, slip-resistant texture for driveways & walkways.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/smooth-finish.webp" alt="Smooth trowel concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Smooth Trowel</h4>
+              <p class="text-gray-600 text-sm">Clean modern slab—great for patios & courtyards.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/stamped-finish.webp" alt="Stamped concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Stamped Patterns</h4>
+              <p class="text-gray-600 text-sm">Ashlar slate, stone or plank looks with integral color.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/exposed-finish.webp" alt="Exposed aggregate concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Exposed Aggregate</h4>
+              <p class="text-gray-600 text-sm">Pebble-rich texture with premium sealant sheen.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/salt-finish.webp" alt="Salt finish concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Salt Finish</h4>
+              <p class="text-gray-600 text-sm">Speckled, non-slick surface—popular near pools.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="flex-none w-[82vw] max-w-sm bg-white rounded-xl shadow p-4 snap-center">
+            <img src="assets/borders-finish.webp" alt="Decorative borders and bands" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+            <figcaption class="mt-3">
+              <h4 class="font-semibold">Borders & Bands</h4>
+              <p class="text-gray-600 text-sm">Contrasting saw cuts, color bands, or paver inlays.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- dots -->
+        <div class="flex justify-center gap-2 mt-4" data-dots="finishes">
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
         </div>
       </div>
-      <img src="assets/concrete.webp" alt="Decorative concrete patio and walkway" class="rounded-xl shadow">
-    </section>
 
-    <section class="bg-gray-50 py-12">
-      <div class="max-w-7xl mx-auto px-6">
-        <h3 class="font-serif text-2xl font-bold mb-6">Concrete Gallery</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <img src="assets/18.webp" alt="Modern slab with clean joints" class="rounded-lg object-cover h-56 w-full">
-          <img src="assets/19.webp" alt="Stamped concrete close-up" class="rounded-lg object-cover h-56 w-full">
-          <img src="assets/17.webp" alt="Broom finish path" class="rounded-lg object-cover h-56 w-full">
+      <!-- DESKTOP grid -->
+      <div class="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/broom-finish.webp" alt="Broom finish concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Broom Finish</h4><p class="text-gray-600 text-sm">Reliable traction & classic look.</p></figcaption>
+        </figure>
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/smooth-finish.webp" alt="Smooth trowel concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Smooth Trowel</h4><p class="text-gray-600 text-sm">Minimal & modern.</p></figcaption>
+        </figure>
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/stamped-finish.webp" alt="Stamped concrete" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Stamped Patterns</h4><p class="text-gray-600 text-sm">Stone, slate, or plank styles.</p></figcaption>
+        </figure>
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/exposed-finish.webp" alt="Exposed aggregate" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Exposed Aggregate</h4><p class="text-gray-600 text-sm">Durable, textural finish.</p></figcaption>
+        </figure>
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/salt-finish.webp" alt="Salt finish" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Salt Finish</h4><p class="text-gray-600 text-sm">Great for pool decks.</p></figcaption>
+        </figure>
+        <figure class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+          <img src="assets/borders-finish.webp" alt="Borders and bands" class="rounded-lg w-full h-44 object-cover" loading="lazy">
+          <figcaption class="mt-4"><h4 class="font-semibold">Borders & Bands</h4><p class="text-gray-600 text-sm">Accents & layout control.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Build Standards (simple stat strip) -->
+  <section id="standards" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Built the Right Way</h2>
+        <p class="text-gray-600 mt-2">Quality materials and methods for slabs that stay strong and look clean.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-xl shadow p-5 text-center">
+          <div class="text-2xl font-bold">4–6"</div>
+          <p class="text-gray-600 text-sm">Typical slab thickness</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 text-center">
+          <div class="text-2xl font-bold">3,000–4,500 PSI</div>
+          <p class="text-gray-600 text-sm">Concrete strength options</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 text-center">
+          <div class="text-2xl font-bold">#3–#4 Rebar</div>
+          <p class="text-gray-600 text-sm">Reinforcement as specified</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 text-center">
+          <div class="text-2xl font-bold">Control Joints</div>
+          <p class="text-gray-600 text-sm">Saw-cut spacing to reduce cracks</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-14 text-center">
-      <h3 class="font-serif text-3xl font-bold mb-3">Need a driveway, patio, or pad?</h3>
-      <a href="index.html#contact" class="bg-gold text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90">Schedule Your Site Visit</a>
-    </section>
-  </main>
+  <!-- Where Concrete Shines -->
+  <section id="use-cases" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Where Concrete Shines</h2>
+        <p class="text-gray-600 mt-2">Versatile, durable, and beautiful across your property.</p>
+      </div>
 
-  <footer class="bg-charcoal text-white py-10">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6 items-center">
-      <p>© 2025 Omdan Development Inc.</p>
-      <nav class="flex gap-4 text-gray-300">
-        <a href="index.html#about" class="hover:text-gold">About</a>
-        <a href="index.html#services" class="hover:text-gold">Services</a>
-        <a href="index.html#contact" class="hover:text-gold">Contact</a>
-      </nav>
+      <!-- MOBILE swipe -->
+      <div class="md:hidden">
+        <div
+          class="flex overflow-x-auto no-scrollbar gap-4 -mx-4 px-4 snap-x snap-mandatory"
+          style="scroll-padding-left:1rem; scroll-padding-right:1rem"
+          data-track="uses">
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Driveways</h3>
+            <p class="text-gray-600 text-sm">Strong slabs with clean joints and borders.</p>
+          </article>
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Backyard Patios</h3>
+            <p class="text-gray-600 text-sm">Smooth, stamped, or salt finishes for outdoor living.</p>
+          </article>
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Walkways & Entries</h3>
+            <p class="text-gray-600 text-sm">Broom finish for traction and crisp edges.</p>
+          </article>
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Pool Decks</h3>
+            <p class="text-gray-600 text-sm">Salt or exposed aggregate with sealer.</p>
+          </article>
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Steps & Landings</h3>
+            <p class="text-gray-600 text-sm">Formed treads, nosings and safety grip.</p>
+          </article>
+          <article class="flex-none w-[82vw] max-w-sm bg-white rounded-2xl shadow p-5 snap-center">
+            <h3 class="text-lg font-semibold mb-1">Side Yards / Utility</h3>
+            <p class="text-gray-600 text-sm">Low-maintenance, hose-friendly surfaces.</p>
+          </article>
+        </div>
+        <div class="flex justify-center gap-2 mt-4" data-dots="uses">
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+          <span class="dot w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+        </div>
+      </div>
+
+      <!-- DESKTOP grid -->
+      <div class="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Driveways</h3><p class="text-gray-600">Reinforced slabs with clean joints & borders.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Backyard Patios</h3><p class="text-gray-600">Modern finishes for outdoor living.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Walkways & Entries</h3><p class="text-gray-600">Safe traction and tidy edges.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Pool Decks</h3><p class="text-gray-600">Cool textures & protective sealer.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Steps & Landings</h3><p class="text-gray-600">Formed details & grip.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold mb-1">Side Yards / Utility</h3><p class="text-gray-600">Low-maintenance hardscape.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini Gallery -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <h3 class="font-serif text-2xl md:text-3xl font-bold mb-6 title-accent">Recent Concrete Work</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img src="assets/rc-1.webp" alt="Concrete project" class="rounded-lg object-cover h-56 w-full cursor-zoom-in">
+      <img src="assets/rc-2.webp" alt="Concrete project" class="rounded-lg object-cover h-56 w-full cursor-zoom-in">
+      <img src="assets/rc-3.webp" alt="Concrete project" class="rounded-lg object-cover h-56 w-full cursor-zoom-in">
+    </div>
+  </section>
+
+  <!-- Testimonials (concrete-specific) -->
+  <section id="testimonials" class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Concrete Client Reviews</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <p class="text-gray-600 italic mb-6">“They replaced our driveway and added a modern walkway with bands. Lines are perfect and drainage is spot on.”</p>
+          <h3 class="font-bold text-gold">— R. Bennett, Northridge</h3>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <p class="text-gray-600 italic mb-6">“We chose salt finish for the pool deck—great grip and a clean look. Crew was professional start to finish.”</p>
+          <h3 class="font-bold text-gold">— T. Harper, Encino</h3>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <p class="text-gray-600 italic mb-6">“Our patio is now a smooth trowel courtyard with accent cuts—exactly the modern style we wanted.”</p>
+          <h3 class="font-bold text-gold">— S. Coleman, Pasadena</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold title-accent">Book a Free Consultation</h2>
+        <p class="text-gray-600 mt-2">Tell us about your concrete project—we’ll bring finish samples and options.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <form class="space-y-4 bg-gray-50 p-6 rounded-xl shadow"
+              onsubmit="event.preventDefault(); window.location='thankyou.html';">
+          <div>
+            <label class="block text-sm mb-1">Full Name</label>
+            <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Phone</label>
+              <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Email</label>
+              <input type="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Project Address</label>
+            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Street, City">
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Project Type</label>
+            <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+              <option>Driveway</option>
+              <option>Backyard Patio</option>
+              <option>Walkway / Entry</option>
+              <option>Pool Deck</option>
+              <option>Steps / Landings</option>
+              <option>Side Yard / Utility</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Notes</label>
+            <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Finish type, size, borders, timeline"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-black text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg">Send</button>
+        </form>
+
+        <aside class="bg-gray-50 p-8 rounded-xl shadow">
+          <h3 class="text-2xl font-serif font-bold mb-6">Contact Information</h3>
+          <ul class="space-y-5">
+            <li class="flex items-start gap-3"><i data-feather="phone" class="text-gold w-5 h-5"></i><div><h4 class="font-medium">Phone</h4><p class="text-gray-600">123-456-7890</p></div></li>
+            <li class="flex items-start gap-3"><i data-feather="mail" class="text-gold w-5 h-5"></i><div><h4 class="font-medium">Email</h4><p class="text-gray-600">omdandevelopment@gmail.com</p></div></li>
+            <li class="flex items-start gap-3"><i data-feather="map-pin" class="text-gold w-5 h-5"></i><div><h4 class="font-medium">Service Area</h4><p class="text-gray-600">Los Angeles & surrounding cities</p></div></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto" />
+            <span class="font-serif text-xl font-bold">Omdan Development</span>
+          </div>
+          <p class="mt-4 text-gray-300">Transforming outdoor spaces into timeless luxury throughout Los Angeles.</p>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-lg mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a class="hover:text-gold" href="index.html#services">All Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="index.html#about" class="hover:text-gold transition">About</a></li>
+            <li><a href="#gallery" class="hover:text-gold transition">Gallery</a></li>
+            <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center gap-2"><i data-feather="phone" class="text-gold w-5 h-5"></i><span>123-456-7890</span></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="text-gold w-5 h-5 flex-shrink-0"></i><span>omdandevelopment@gmail.com</span></li>
+            <li class="flex items-center gap-2"><i data-feather="map-pin" class="text-gold w-5 h-5"></i><span>9243 Louise Ave, Northridge, CA 91325</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <p>© 2025 Omdan Development Inc. All rights reserved.</p>
+        <div class="flex items-center gap-6 mt-4 md:mt-0">
+          <a href="privacy.html" class="hover:text-gold transition">Privacy Policy</a>
+          <div class="flex gap-4">
+            <a class="hover:text-gold" href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a class="hover:text-gold" href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a class="hover:text-gold" href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Scroll reveal
+    function scrollReveal(){
+      const els = document.querySelectorAll('.scroll-reveal');
+      const screen = window.innerHeight / 1.2;
+      els.forEach(el=>{
+        const top = el.getBoundingClientRect().top;
+        if(top < screen){ el.classList.add('visible'); }
+      });
+    }
+    window.addEventListener('scroll', scrollReveal);
+    window.addEventListener('load', scrollReveal);
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+      })
+    });
+
+    // Feather icons
+    feather.replace();
+
+    // Simple mobile carousel dots sync
+    document.querySelectorAll('[data-track]').forEach(track=>{
+      const dotsWrap = document.querySelector(`[data-dots="${track.dataset.track}"]`);
+      if(!dotsWrap) return;
+      const dots = dotsWrap.querySelectorAll('.dot');
+      const update = () => {
+        const i = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach((d, idx) => d.classList.toggle('bg-gold', idx === i));
+      };
+      track.addEventListener('scroll', ()=> requestAnimationFrame(update));
+      update();
+    });
+
+    // Lightbox for images on this page
+    document.querySelectorAll('#gallery img, [data-track="finishes"] img').forEach(img=>{
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', ()=>{
+        const overlay = document.createElement('div');
+        overlay.className = 'fixed inset-0 bg-black/80 flex items-center justify-center z-50 cursor-zoom-out';
+        overlay.innerHTML = `<img src="${img.src}" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl animate-fade-in" alt="">`;
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', ()=> overlay.remove());
+      });
+    });
+  </script>
 </body>
 </html>
