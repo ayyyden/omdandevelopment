@@ -353,12 +353,16 @@
       <div class="grid md:grid-cols-2 gap-12">
         <div class="scroll-reveal">
           <h3 class="text-2xl font-serif font-bold mb-6">Book a Free Consultation</h3>
-          <form id="quoteForm" class="space-y-6">
-  <!-- ✅ Web3Forms required -->
+          <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="space-y-6" novalidate>
+  <!-- Web3Forms (required) -->
   <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
   <input type="hidden" name="subject" value="New Quote Request from Website">
   <input type="hidden" name="from_name" value="Omdan Development Website">
-  <!-- Honeypot (spam trap) -->
+
+  <!-- Redirect after success: use your FULL URL -->
+<input type="hidden" name="redirect" value="https://omdandevelopment.com/thankyou.html">
+
+  <!-- Spam trap -->
   <input type="checkbox" name="botcheck" class="hidden" style="display:none">
 
   <label class="block">
@@ -386,16 +390,14 @@
     <textarea name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
   </label>
 
-  <!-- ✅ Google reCAPTCHA v2 checkbox -->
-   <div class="h-captcha" data-sitekey="75968046-f32a-4382-84d6-9eb4af920888"></div>
+  <!-- hCaptcha (your key) -->
+  <div class="h-captcha" data-sitekey="75968046-f32a-4382-84d6-9eb4af920888"></div>
 
-  <!-- Status message -->
-  <p id="formStatus" class="text-sm mt-2"></p>
-
-  <button id="submitBtn" type="submit" class="bg-gold text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 w-full">
+  <button type="submit" class="bg-gold text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 w-full">
     Submit Request
   </button>
 </form>
+
 
         </div>
 
@@ -629,6 +631,7 @@ form.addEventListener('submit', async (e) => {
 });
 </script>
 
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
 </body>
 </html>
