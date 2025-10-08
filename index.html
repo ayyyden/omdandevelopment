@@ -28,6 +28,9 @@
       }
     }
   </script>
+  <!-- hCaptcha (FREE on Web3Forms) -->
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
 
   <!-- Feather icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -384,7 +387,7 @@
   </label>
 
   <!-- ✅ Google reCAPTCHA v2 checkbox -->
-  <div class="g-recaptcha" data-sitekey="6LfiWeIrAAAAAL-ZAbG2kapp2Ozvai0gg6Tj-g_d"></div>
+   <div class="h-captcha" data-sitekey="75968046-f32a-4382-84d6-9eb4af920888"></div>
 
   <!-- Status message -->
   <p id="formStatus" class="text-sm mt-2"></p>
@@ -597,64 +600,33 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => map.invalidateSize(), 300);
 });
 </script>
-<!-- Google reCAPTCHA v2 -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <script>
-  const form = document.getElementById('quoteForm');
-  const statusEl = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitBtn');
+const form = document.getElementById('quoteForm');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = '';
-    statusEl.className = 'text-sm mt-2';
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    // Ensure reCAPTCHA is solved
-    const recaptchaToken = grecaptcha.getResponse();
-    if (!recaptchaToken) {
-      statusEl.textContent = 'Please complete the reCAPTCHA.';
-      statusEl.classList.add('text-red-600');
-      return;
-    }
+  // Ensure captcha completed
+  const token = hcaptcha.getResponse();
+  if (!token) { alert('Please complete the captcha.'); return; }
 
-    // Build form data
-    const data = new FormData(form);
-    data.append('g-recaptcha-response', recaptchaToken);
+  const data = new FormData(form);
+  // (hCaptcha auto injects a hidden input named "h-captcha-response"
+  // but adding manually is fine too)
+  data.append('h-captcha-response', token);
 
-    // UI: disable button
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+  const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+  const json = await res.json();
 
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
-      });
-      const json = await res.json();
+  if (json.success) {
+    window.location = 'thankyou.html';
+  } else {
+    alert(json.message || 'Submission failed');
+  }
 
-      if (json.success) {
-        statusEl.textContent = 'Thanks! Your request was sent successfully.';
-        statusEl.classList.add('text-green-600');
-        form.reset();
-        grecaptcha.reset();
-
-        // If you want to redirect to thankyou.html, uncomment:
-        // window.location = 'thankyou.html';
-      } else {
-        statusEl.textContent = json.message || 'Something went wrong. Please try again.';
-        statusEl.classList.add('text-red-600');
-        grecaptcha.reset();
-      }
-    } catch (err) {
-      statusEl.textContent = 'Network error. Please try again.';
-      statusEl.classList.add('text-red-600');
-      grecaptcha.reset();
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('opacity-60', 'cursor-not-allowed');
-    }
-  });
+  // reset widget after submit
+  hcaptcha.reset();
+});
 </script>
 
 
