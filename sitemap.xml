@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://omdandevelopment.com/</loc>
   </url>
 
   <url>
-    <loc>https://omdandevelopment.com/pavers/</loc>
+    <loc>https://omdandevelopment.com/privacy/</loc>
   </url>
 
   <url>
-    <loc>https://omdandevelopment.com/turf/</loc>
+    <loc>https://omdandevelopment.com/thankyou.html</loc>
+  </url>
+
+  <!-- Main Service Pages -->
+  <url>
+    <loc>https://omdandevelopment.com/pavers/</loc>
   </url>
 
   <url>
@@ -18,30 +24,58 @@
   </url>
 
   <url>
-    <loc>https://omdandevelopment.com/privacy/</loc>
+    <loc>https://omdandevelopment.com/turf/</loc>
   </url>
 
-
+  <!-- Pavers Cities -->
   <url>
     <loc>https://omdandevelopment.com/pavers/palm-springs/</loc>
   </url>
-
   <url>
     <loc>https://omdandevelopment.com/pavers/palm-desert/</loc>
   </url>
-
   <url>
     <loc>https://omdandevelopment.com/pavers/desert-hot-springs/</loc>
   </url>
-
   <url>
     <loc>https://omdandevelopment.com/pavers/yucca-valley/</loc>
   </url>
-
   <url>
     <loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc>
   </url>
 
+  <!-- Concrete Cities -->
+  <url>
+    <loc>https://omdandevelopment.com/concrete/palm-springs/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/concrete/palm-desert/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/concrete/desert-hot-springs/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/concrete/yucca-valley/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc>
+  </url>
 
+  <!-- Turf Cities -->
+  <url>
+    <loc>https://omdandevelopment.com/turf/palm-springs/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/turf/palm-desert/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/turf/desert-hot-springs/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/turf/yucca-valley/</loc>
+  </url>
+  <url>
+    <loc>https://omdandevelopment.com/turf/twentynine-palms/</loc>
+  </url>
 
 </urlset>
