@@ -20,7 +20,7 @@
   </url>
 
   <url>
-   <!-- <loc>https://omdandevelopment.com/concrete/</loc> -->
+   <loc>https://omdandevelopment.com/concrete/</loc> 
   </url>
 
   <url>
@@ -44,7 +44,7 @@
     <loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc>
   </url>
 
-  <!-- Concrete Cities 
+     <!-- Concrete Cities -->
   <url>
     <loc>https://omdandevelopment.com/concrete/palm-springs/</loc>
   </url>
@@ -59,7 +59,7 @@
   </url>
   <url>
     <loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc>
-  </url> -->
+  </url>
 
   <!-- Turf Cities -->
   <url>
@@ -78,4 +78,40 @@
     <loc>https://omdandevelopment.com/turf/twentynine-palms/</loc>
   </url>
 
+  <!-- Handyman Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/handyman/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/moreno-valley/</loc></url>
+
+  <!-- Bathroom Remodeling Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/moreno-valley/</loc></url>
+
+  <!-- Kitchen Remodel Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/moreno-valley/</loc></url>
+
+  <!-- Gutters Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/moreno-valley/</loc></url>
+
+  <!-- Pavers Additional Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc></url>
+
+  <!-- Turf Additional Cities (Phase 1) -->
+  <url><loc>https://omdandevelopment.com/turf/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/turf/moreno-valley/</loc></url>
+  
 </urlset>
