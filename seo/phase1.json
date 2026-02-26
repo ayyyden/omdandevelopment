@@ -1,0 +1,21 @@
+{
+  "cities": [
+    { "slug": "palm-springs", "name": "Palm Springs", "state": "CA" },
+    { "slug": "twentynine-palms", "name": "Twentynine Palms", "state": "CA" },
+    { "slug": "yucca-valley", "name": "Yucca Valley", "state": "CA" },
+    { "slug": "yucaipa", "name": "Yucaipa", "state": "CA" },
+    { "slug": "moreno-valley", "name": "Moreno Valley", "state": "CA" }
+  ],
+  "services": [
+    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
+    { "slug": "pavers", "name": "Pavers", "serviceType": "Paver Installation" },
+    { "slug": "turf", "name": "Artificial Turf", "serviceType": "Artificial Turf Installation" },
+    { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },
+    { "slug": "kitchen-remodel", "name": "Kitchen Remodel", "serviceType": "Kitchen Remodeling" },
+    { "slug": "gutters", "name": "Gutters", "serviceType": "Gutter Installation" }
+  ],
+  "phone": "9512920703",
+  "phoneDisplay": "(951) 292-0703",
+  "brand": "Omdan Development Inc",
+  "baseUrl": "https://omdandevelopment.com"
+}
