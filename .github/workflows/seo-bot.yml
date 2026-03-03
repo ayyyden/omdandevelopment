@@ -1,0 +1,37 @@
+name: SEO Bot (baseline fixes)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  seo_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run SEO fix script
+        run: node scripts/seo-fixes.js
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.OPENCLAW_GITHUB_TOKEN }}
+          commit-message: "SEO bot: baseline technical fixes"
+          title: "SEO Bot: baseline technical fixes"
+          body: |
+            Automated SEO baseline fixes.
+            - Normalized homepage geo signals
+            - Added LocalBusiness schema
+            - Ensured robots.txt + sitemap.xml exist
+          branch: seo-bot/baseline-fixes
+          delete-branch: true
