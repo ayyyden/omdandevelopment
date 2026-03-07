@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://omdandevelopment.com",
+  "services": [
+    { "slug": "pavers", "name": "Pavers", "serviceType": "Paver Installation" },
+    { "slug": "turf", "name": "Artificial Turf", "serviceType": "Artificial Turf Installation" },
+    { "slug": "concrete", "name": "Concrete", "serviceType": "Concrete Contractor" },
+    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
+    { "slug": "kitchen-remodel", "name": "Kitchen Remodel", "serviceType": "Kitchen Remodeling" },
+    { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },
+    { "slug": "gutters", "name": "Gutters", "serviceType": "Gutter Installation" }
+  ],
+  "cities": [
+    { "slug": "palm-springs", "name": "Palm Springs", "state": "CA" },
+    { "slug": "palm-desert", "name": "Palm Desert", "state": "CA" },
+    { "slug": "desert-hot-springs", "name": "Desert Hot Springs", "state": "CA" },
+    { "slug": "yucca-valley", "name": "Yucca Valley", "state": "CA" },
+    { "slug": "twentynine-palms", "name": "Twentynine Palms", "state": "CA" },
+    { "slug": "moreno-valley", "name": "Moreno Valley", "state": "CA" },
+    { "slug": "yucaipa", "name": "Yucaipa", "state": "CA" },
+    { "slug": "san-jacinto", "name": "San Jacinto", "state": "CA" },
+    { "slug": "beaumont", "name": "Beaumont", "state": "CA" },
+    { "slug": "perris", "name": "Perris", "state": "CA" },
+    { "slug": "lake-elsinore", "name": "Lake Elsinore", "state": "CA" },
+    { "slug": "corona", "name": "Corona", "state": "CA" }
+  ]
+}
