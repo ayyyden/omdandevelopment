@@ -1,0 +1,17 @@
+{
+  "baseUrl": "https://omdandevelopment.com",
+  "batchName": "phase2-safe-expansion",
+  "services": [
+    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
+    { "slug": "kitchen-remodel", "name": "Kitchen Remodel", "serviceType": "Kitchen Remodeling" },
+    { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },
+    { "slug": "gutters", "name": "Gutters", "serviceType": "Gutter Installation" },
+    { "slug": "concrete", "name": "Concrete", "serviceType": "Concrete Contractor" }
+  ],
+  "cities": [
+    { "slug": "palm-desert", "name": "Palm Desert", "state": "CA" },
+    { "slug": "desert-hot-springs", "name": "Desert Hot Springs", "state": "CA" },
+    { "slug": "moreno-valley", "name": "Moreno Valley", "state": "CA" },
+    { "slug": "yucaipa", "name": "Yucaipa", "state": "CA" }
+  ]
+}
