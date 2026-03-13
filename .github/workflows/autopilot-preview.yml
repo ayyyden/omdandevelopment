@@ -1,0 +1,43 @@
+name: Deploy Autopilot Preview
+
+on:
+  push:
+    branches:
+      - autopilot
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout autopilot
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare preview bundle
+        run: |
+          rm -rf preview-dist
+          rsync -av --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'scripts/' \
+            --exclude 'seo/' \
+            --exclude '*.md' \
+            ./ preview-dist/
+          rm -f preview-dist/CNAME
+
+      - name: Push to preview repository
+        env:
+          PREVIEW_PAT: ${{ secrets.PREVIEW_REPO_TOKEN }}
+        run: |
+          cd preview-dist
+          git init
+          git config user.name "autopilot-preview-bot"
+          git config user.email "autopilot-preview@omdandevelopment.com"
+          git add .
+          git commit -m "Autopilot preview deploy: ${GITHUB_SHA}"
+          git branch -M main
+          git remote add origin https://ayyyden:${PREVIEW_PAT}@github.com/ayyyden/omdandevelopment-preview.git
+          git push --force origin main

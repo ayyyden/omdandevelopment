@@ -24,7 +24,7 @@
   </url>
 
   <url>
-    <loc>https://omdandevelopment.com/turf/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/</loc>
   </url>
 
   <url>
@@ -70,19 +70,19 @@
 
   <!-- Turf Cities -->
   <url>
-    <loc>https://omdandevelopment.com/turf/palm-springs/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc>
   </url>
   <url>
-    <loc>https://omdandevelopment.com/turf/palm-desert/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/palm-desert/</loc>
   </url>
   <url>
-    <loc>https://omdandevelopment.com/turf/desert-hot-springs/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/desert-hot-springs/</loc>
   </url>
   <url>
-    <loc>https://omdandevelopment.com/turf/yucca-valley/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/yucca-valley/</loc>
   </url>
   <url>
-    <loc>https://omdandevelopment.com/turf/twentynine-palms/</loc>
+    <loc>https://omdandevelopment.com/artificial-turf/twentynine-palms/</loc>
   </url>
 
   <!-- Handyman Cities (Phase 1) -->
@@ -91,6 +91,10 @@
   <url><loc>https://omdandevelopment.com/handyman/yucca-valley/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/yucaipa/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/menifee/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/murrieta/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/temecula/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/san-bernardino/</loc></url>
 
   <!-- Bathroom Remodeling Cities (Phase 1) -->
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-springs/</loc></url>
@@ -98,6 +102,10 @@
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucca-valley/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucaipa/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/menifee/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/murrieta/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/temecula/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/san-bernardino/</loc></url>
 
   <!-- Kitchen Remodel Cities (Phase 1) -->
   <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-springs/</loc></url>
@@ -118,8 +126,8 @@
   <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc></url>
 
   <!-- Turf Additional Cities (Phase 1) -->
-  <url><loc>https://omdandevelopment.com/turf/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/turf/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/moreno-valley/</loc></url>
   
   <url><loc>https://omdandevelopment.com/handyman/palm-desert/</loc></url>
 
