@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's|/kitchen-remodel/__TRACKED_VAR__/|/kitchen-remodeling/__TRACKED_VAR__/|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodeling/__TRACKED_VAR__/index.html)",
+      "Bash(sed -i 's|Kitchen Remodel in \\\\\\([^,]*\\\\\\),|Kitchen Remodeling in \\\\1,|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodeling/__TRACKED_VAR__/index.html)",
+      "Bash(sed -i 's|<h1 class=\"mt-2 text-3xl sm:text-4xl font-extrabold\">Kitchen Remodel in|<h1 class=\"mt-2 text-3xl sm:text-4xl font-extrabold\">Kitchen Remodeling in|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodeling/__TRACKED_VAR__/index.html)",
+      "Bash(sed -i 's|<p class=\"text-sm text-muted\">kitchen remodel services</p>|<p class=\"text-sm text-muted\">kitchen remodeling services</p>|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodeling/__TRACKED_VAR__/index.html)",
+      "Bash(sed -i 's|canonical\" href=\"https://omdandevelopment.com/kitchen-remodel/__TRACKED_VAR__/\"|canonical\" href=\"https://omdandevelopment.com/kitchen-remodeling/__TRACKED_VAR__/\"|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodel/__TRACKED_VAR__/index.html)",
+      "Bash(sed -i 's|og:url\" content=\"https://omdandevelopment.com/kitchen-remodel/__TRACKED_VAR__/\"|og:url\" content=\"https://omdandevelopment.com/kitchen-remodeling/__TRACKED_VAR__/\"|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodel/__TRACKED_VAR__/index.html)"
+    ]
+  }
+}

@@ -20,7 +20,7 @@
   </url>
 
   <url>
-   <loc>https://omdandevelopment.com/concrete/</loc> 
+    <loc>https://omdandevelopment.com/concrete/</loc>
   </url>
 
   <url>
@@ -30,8 +30,9 @@
   <url>
     <loc>https://omdandevelopment.com/bathroom-remodeling/</loc>
   </url>
+
   <url>
-    <loc>https://omdandevelopment.com/kitchen-remodel/</loc>
+    <loc>https://omdandevelopment.com/kitchen-remodeling/</loc>
   </url>
 
   <url>
@@ -39,99 +40,53 @@
   </url>
 
   <!-- Plumbing Cities -->
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/palm-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/palm-desert/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/desert-hot-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/twentynine-palms/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/yucca-valley/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/yucaipa/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/moreno-valley/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/menifee/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/murrieta/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/temecula/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/plumbing/san-bernardino/</loc>
-  </url>
+  <url><loc>https://omdandevelopment.com/plumbing/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/desert-hot-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/menifee/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/murrieta/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/temecula/</loc></url>
+  <url><loc>https://omdandevelopment.com/plumbing/san-bernardino/</loc></url>
 
   <!-- Pavers Cities -->
-  <url>
-    <loc>https://omdandevelopment.com/pavers/palm-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/pavers/palm-desert/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/pavers/desert-hot-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/pavers/yucca-valley/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc>
-  </url>
+  <url><loc>https://omdandevelopment.com/pavers/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/desert-hot-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc></url>
 
-     <!-- Concrete Cities -->
-  <url>
-    <loc>https://omdandevelopment.com/concrete/palm-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/concrete/palm-desert/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/concrete/desert-hot-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/concrete/yucca-valley/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc>
-  </url>
+  <!-- Concrete Cities -->
+  <url><loc>https://omdandevelopment.com/concrete/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/desert-hot-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/concrete/yucaipa/</loc></url>
 
-  <!-- Turf Cities -->
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/palm-desert/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/desert-hot-springs/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/yucca-valley/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/twentynine-palms/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/menifee/</loc>
-  </url>
-  <url>
-    <loc>https://omdandevelopment.com/artificial-turf/murrieta/</loc>
-  </url>
+  <!-- Artificial Turf Cities -->
+  <url><loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/desert-hot-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/menifee/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/murrieta/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/temecula/</loc></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/san-bernardino/</loc></url>
 
-  <!-- Handyman Cities (Phase 1) -->
+  <!-- Handyman Cities -->
   <url><loc>https://omdandevelopment.com/handyman/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/handyman/desert-hot-springs/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/twentynine-palms/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/yucca-valley/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/yucaipa/</loc></url>
@@ -141,8 +96,10 @@
   <url><loc>https://omdandevelopment.com/handyman/temecula/</loc></url>
   <url><loc>https://omdandevelopment.com/handyman/san-bernardino/</loc></url>
 
-  <!-- Bathroom Remodeling Cities (Phase 1) -->
+  <!-- Bathroom Remodeling Cities -->
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucca-valley/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucaipa/</loc></url>
@@ -152,46 +109,26 @@
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/temecula/</loc></url>
   <url><loc>https://omdandevelopment.com/bathroom-remodeling/san-bernardino/</loc></url>
 
-  <!-- Kitchen Remodel Cities (Phase 1) -->
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/moreno-valley/</loc></url>
+  <!-- Kitchen Remodeling Cities -->
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/desert-hot-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/twentynine-palms/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucca-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucaipa/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/moreno-valley/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/menifee/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/murrieta/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/temecula/</loc></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/san-bernardino/</loc></url>
 
-  <!-- Gutters Cities (Phase 1) -->
+  <!-- Gutters Cities -->
   <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/palm-desert/</loc></url>
+  <url><loc>https://omdandevelopment.com/gutters/desert-hot-springs/</loc></url>
   <url><loc>https://omdandevelopment.com/gutters/twentynine-palms/</loc></url>
   <url><loc>https://omdandevelopment.com/gutters/yucca-valley/</loc></url>
   <url><loc>https://omdandevelopment.com/gutters/yucaipa/</loc></url>
   <url><loc>https://omdandevelopment.com/gutters/moreno-valley/</loc></url>
-
-  <!-- Pavers Additional Cities (Phase 1) -->
-  <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc></url>
-
-  <!-- Turf Additional Cities (Phase 1) -->
-  <url><loc>https://omdandevelopment.com/artificial-turf/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/moreno-valley/</loc></url>
-  
-  <url><loc>https://omdandevelopment.com/handyman/palm-desert/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/handyman/desert-hot-springs/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-desert/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/desert-hot-springs/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-desert/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/gutters/palm-desert/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/gutters/desert-hot-springs/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/concrete/moreno-valley/</loc></url>
-
-  <url><loc>https://omdandevelopment.com/concrete/yucaipa/</loc></url>
 
 </urlset>
