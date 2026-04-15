@@ -63,8 +63,11 @@
     }
 
     /* Reviews carousel */
-    .review-card { flex: 0 0 100%; }
-    @media (min-width: 768px) { .review-card { flex: 0 0 calc(33.333% - 16px); } }
+    .rv-slide { flex: 0 0 100%; }
+    @media (min-width: 768px) { .rv-slide { flex: 0 0 calc(33.333% - 16px); } }
+    .rv-dot { width: 10px; height: 10px; border-radius: 9999px; background: #cbd5e1; transition: background 0.2s; cursor: pointer; border: none; padding: 0; }
+    .rv-dot:hover { background: #94a3b8; }
+    .rv-dot-active { background: #2563eb; }
   </style>
   <!-- OPENCLAW_JSONLD:localbusiness:START -->
 <script type="application/ld+json">
@@ -733,7 +736,7 @@
         <div id=”reviewsTrack” class=”flex gap-6” style=”transition: transform 0.4s cubic-bezier(.4,0,.2,1); will-change: transform;”>
 
           <!-- Card 1: Ben E. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for a full backyard remodel in Yucca Valley, and honestly, it exceeded all of our expectations. What was once an empty, unusable space is now a place where we can relax, host family, and truly enjoy our home. David was not only professional and detail-oriented, but he also genuinely cared about bringing our vision to life. He kept us informed every step of the way and made the entire process stress-free. The transformation is incredible, and we're beyond grateful. Highly recommend David and his team!”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -749,7 +752,7 @@
           </div>
 
           <!-- Card 2: John M. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”We had artificial turf installed in Desert Hot Springs by Omdan Development Inc, and we're very happy with the results. David was friendly, professional, and made the whole process easy. The work came out clean and looks great. Highly recommend!”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -765,7 +768,7 @@
           </div>
 
           <!-- Card 3: Simcha T. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”David and his team are absolutely incredible! They redid my kitchen and bathroom and I loved the results. They really made my vision a reality. Couldn't have picked a better team for the job!”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -780,7 +783,7 @@
           </div>
 
           <!-- Card 4: Giela T. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”I had my bathroom remodeled by Omdan Development Inc. in Riverside and I'm really happy with how it turned out. I was pretty stressed going into it and met with a few other companies, but Omdan made me feel comfortable right away. My project manager David was great — easy to communicate with, responsive, and made the whole process feel smooth. The team did beautiful work and paid attention to the details. I'd definitely recommend them to anyone looking for a stress-free remodel.”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -796,7 +799,7 @@
           </div>
 
           <!-- Card 5: Revital W. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for our outdoor bathroom remodel in Riverside and had a great experience from start to finish. David was clear about pricing and timelines and kept us informed throughout the project. The work was clean, professional, and the attention to detail really showed. We're very happy with the results and would definitely recommend David and his team.”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -812,7 +815,7 @@
           </div>
 
           <!-- Card 6: Sivan K. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”Excellent customer service by David. Loved the attention to details and the dedication.”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -827,7 +830,7 @@
           </div>
 
           <!-- Card 7: Rotem L. -->
-          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+          <div class=”rv-slide bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
             <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
             <p class=”text-muted text-sm leading-relaxed flex-1”>”David from Omdan Development Inc. did an excellent job on our paver and turf project in San Jacinto. The workmanship was clean, professional, and completed on time. The pavers were installed perfectly and the turf looks great, giving the yard a clean and modern look. David was honest, communicative, and easy to work with. He also offered financing with good rates, which made the process very smooth. Highly recommend Omdan Development Inc.”</p>
             <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
@@ -1218,8 +1221,7 @@
           btn.setAttribute('aria-label', 'Go to review ' + (i + 1));
           btn.setAttribute('role', 'tab');
           btn.setAttribute('aria-selected', String(i === cur));
-          btn.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-200 ' +
-                          (i === cur ? 'bg-brand' : 'bg-slate-300 hover:bg-slate-400');
+          btn.className = 'rv-dot' + (i === cur ? ' rv-dot-active' : '');
           btn.addEventListener('click', () => goTo(i));
           dotsEl.appendChild(btn);
         }
