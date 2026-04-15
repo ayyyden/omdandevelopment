@@ -8,7 +8,9 @@
       "Bash(sed -i 's|canonical\" href=\"https://omdandevelopment.com/kitchen-remodel/__TRACKED_VAR__/\"|canonical\" href=\"https://omdandevelopment.com/kitchen-remodeling/__TRACKED_VAR__/\"|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodel/__TRACKED_VAR__/index.html)",
       "Bash(sed -i 's|og:url\" content=\"https://omdandevelopment.com/kitchen-remodel/__TRACKED_VAR__/\"|og:url\" content=\"https://omdandevelopment.com/kitchen-remodeling/__TRACKED_VAR__/\"|g' /c/Users/Edan/Documents/GitHub/omdandevelopment/kitchen-remodel/__TRACKED_VAR__/index.html)",
       "Bash([ -f /c/Users/Edan/Documents/GitHub/omdandevelopment/turf/twentynine-palms/index.html ])",
-      "Bash([ -f /c/Users/Edan/Documents/GitHub/omdandevelopment/turf.html ])"
+      "Bash([ -f /c/Users/Edan/Documents/GitHub/omdandevelopment/turf.html ])",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }
