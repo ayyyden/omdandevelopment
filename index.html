@@ -61,6 +61,10 @@
     .hero-overlay {
       background: linear-gradient(180deg, rgba(15,23,42,.78) 0%, rgba(15,23,42,.55) 40%, rgba(15,23,42,.25) 100%);
     }
+
+    /* Reviews carousel */
+    .review-card { flex: 0 0 100%; }
+    @media (min-width: 768px) { .review-card { flex: 0 0 calc(33.333% - 16px); } }
   </style>
   <!-- OPENCLAW_JSONLD:localbusiness:START -->
 <script type="application/ld+json">
@@ -705,36 +709,168 @@
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="bg-slate-50 py-16">
-    <div class="max-w-6xl mx-auto px-5 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold reveal">Reviews</h2>
-      <p class="mt-2 text-muted reveal">Real feedback from homeowners.</p>
+  <section id=”testimonials” class=”bg-slate-50 py-16”>
+    <div class=”max-w-6xl mx-auto px-5”>
 
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
-          <div class="flex items-center gap-2 text-brand mb-3">
-            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
-          </div>
-          <p class="text-muted">“Our front yard came out clean and modern. Communication was easy and the crew was respectful.”</p>
-          <p class="mt-3 font-semibold">— Sarah L.</p>
-        </div>
+      <!-- Section header -->
+      <div class=”text-center reveal”>
+        <h2 class=”text-3xl sm:text-4xl font-extrabold”>What Our Customers Say</h2>
+        <p class=”mt-2 text-muted”>Real reviews from verified Google customers.</p>
+      </div>
 
-        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
-          <div class="flex items-center gap-2 text-brand mb-3">
-            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
-          </div>
-          <p class="text-muted">“They explained the scope clearly, stayed on schedule, and the finish looks great.”</p>
-          <p class="mt-3 font-semibold">— David R.</p>
-        </div>
+      <!-- Aggregate rating row -->
+      <div class=”flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mt-4 mb-10 reveal”>
+        <span class=”text-yellow-400 text-xl leading-none”>★★★★★</span>
+        <span class=”font-bold text-ink”>5.0</span>
+        <span class=”text-muted text-sm”>— 7 Google Reviews</span>
+        <a href=”https://www.google.com/search?q=Omdan+Development+Inc+Palm+Springs+reviews”
+           target=”_blank” rel=”noopener”
+           class=”text-brand text-sm hover:underline ml-1”>See all reviews →</a>
+      </div>
 
-        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
-          <div class="flex items-center gap-2 text-brand mb-3">
-            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
+      <!-- Carousel track -->
+      <div class=”overflow-hidden”>
+        <div id=”reviewsTrack” class=”flex gap-6” style=”transition: transform 0.4s cubic-bezier(.4,0,.2,1); will-change: transform;”>
+
+          <!-- Card 1: Ben E. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for a full backyard remodel in Yucca Valley, and honestly, it exceeded all of our expectations. What was once an empty, unusable space is now a place where we can relax, host family, and truly enjoy our home. David was not only professional and detail-oriented, but he also genuinely cared about bringing our vision to life. He kept us informed every step of the way and made the entire process stress-free. The transformation is incredible, and we're beyond grateful. Highly recommend David and his team!”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Ben E.</p>
+                <p class=”text-xs text-muted”>Yucca Valley</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
           </div>
-          <p class="text-muted">“No surprises. Clean work, fair price, and the project turned out exactly how we wanted.”</p>
-          <p class="mt-3 font-semibold">— Michelle K.</p>
+
+          <!-- Card 2: John M. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”We had artificial turf installed in Desert Hot Springs by Omdan Development Inc, and we're very happy with the results. David was friendly, professional, and made the whole process easy. The work came out clean and looks great. Highly recommend!”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>John M.</p>
+                <p class=”text-xs text-muted”>Desert Hot Springs</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Simcha T. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”David and his team are absolutely incredible! They redid my kitchen and bathroom and I loved the results. They really made my vision a reality. Couldn't have picked a better team for the job!”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Simcha T.</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Giela T. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”I had my bathroom remodeled by Omdan Development Inc. in Riverside and I'm really happy with how it turned out. I was pretty stressed going into it and met with a few other companies, but Omdan made me feel comfortable right away. My project manager David was great — easy to communicate with, responsive, and made the whole process feel smooth. The team did beautiful work and paid attention to the details. I'd definitely recommend them to anyone looking for a stress-free remodel.”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Giela T.</p>
+                <p class=”text-xs text-muted”>Riverside</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Revital W. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for our outdoor bathroom remodel in Riverside and had a great experience from start to finish. David was clear about pricing and timelines and kept us informed throughout the project. The work was clean, professional, and the attention to detail really showed. We're very happy with the results and would definitely recommend David and his team.”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Revital W.</p>
+                <p class=”text-xs text-muted”>Riverside</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Sivan K. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”Excellent customer service by David. Loved the attention to details and the dedication.”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Sivan K.</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Rotem L. -->
+          <div class=”review-card bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col”>
+            <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
+            <p class=”text-muted text-sm leading-relaxed flex-1”>”David from Omdan Development Inc. did an excellent job on our paver and turf project in San Jacinto. The workmanship was clean, professional, and completed on time. The pavers were installed perfectly and the turf looks great, giving the yard a clean and modern look. David was honest, communicative, and easy to work with. He also offered financing with good rates, which made the process very smooth. Highly recommend Omdan Development Inc.”</p>
+            <div class=”mt-5 pt-4 border-t border-line flex items-center justify-between”>
+              <div>
+                <p class=”font-semibold text-ink text-sm”>Rotem L.</p>
+                <p class=”text-xs text-muted”>San Jacinto</p>
+              </div>
+              <div class=”flex items-center gap-1.5”>
+                <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+                <span class=”text-xs text-muted”>Google</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <!-- Nav row: prev arrow · dots · next arrow -->
+      <div class=”flex items-center justify-center gap-4 mt-8”>
+        <button id=”reviewsPrev”
+                class=”flex-none w-10 h-10 flex items-center justify-center bg-white border border-line rounded-full shadow-sm hover:shadow-md transition disabled:opacity-30 disabled:cursor-not-allowed”
+                aria-label=”Previous reviews”>
+          <i data-feather=”chevron-left” class=”w-5 h-5 text-ink”></i>
+        </button>
+        <div id=”reviewsDots” class=”flex items-center gap-2” role=”tablist” aria-label=”Review position”></div>
+        <button id=”reviewsNext”
+                class=”flex-none w-10 h-10 flex items-center justify-center bg-white border border-line rounded-full shadow-sm hover:shadow-md transition disabled:opacity-30 disabled:cursor-not-allowed”
+                aria-label=”Next reviews”>
+          <i data-feather=”chevron-right” class=”w-5 h-5 text-ink”></i>
+        </button>
+      </div>
+
+      <!-- Google CTA -->
+      <div class=”text-center mt-6”>
+        <a href=”https://www.google.com/search?q=Omdan+Development+Inc+Palm+Springs+reviews”
+           target=”_blank” rel=”noopener”
+           class=”inline-flex items-center gap-2 text-sm text-muted hover:text-brand transition”>
+          <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 0 24 24” class=”w-4 h-4 flex-none” aria-hidden=”true”><path d=”M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z” fill=”#4285F4”/><path d=”M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z” fill=”#34A853”/><path d=”M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z” fill=”#FBBC05”/><path d=”M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z” fill=”#EA4335”/></svg>
+          Read all our Google reviews
+          <i data-feather=”external-link” class=”w-3.5 h-3.5”></i>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1050,6 +1186,72 @@
       next?.addEventListener('click', () => goTo(Math.min(dots.length - 1, getIndex() + 1)));
       track.addEventListener('scroll', () => window.requestAnimationFrame(updateDots));
       updateDots();
+    })();
+
+    // Reviews carousel
+    (function () {
+      const track   = document.getElementById('reviewsTrack');
+      const prevBtn = document.getElementById('reviewsPrev');
+      const nextBtn = document.getElementById('reviewsNext');
+      const dotsEl  = document.getElementById('reviewsDots');
+      if (!track || !prevBtn || !nextBtn || !dotsEl) return;
+
+      const TOTAL = 7;
+      let cur = 0;
+
+      function vis()    { return window.innerWidth >= 768 ? 3 : 1; }
+      function maxPos() { return TOTAL - vis(); }
+
+      // Step = one card width + one gap (gap-6 = 24px)
+      function stepPx() {
+        const w   = track.parentElement.clientWidth;
+        const v   = vis();
+        const gap = 24;
+        return (w - gap * (v - 1)) / v + gap;
+      }
+
+      function buildDots() {
+        dotsEl.innerHTML = '';
+        const max = maxPos();
+        for (let i = 0; i <= max; i++) {
+          const btn = document.createElement('button');
+          btn.setAttribute('aria-label', 'Go to review ' + (i + 1));
+          btn.setAttribute('role', 'tab');
+          btn.setAttribute('aria-selected', String(i === cur));
+          btn.className = 'w-2.5 h-2.5 rounded-full transition-colors duration-200 ' +
+                          (i === cur ? 'bg-brand' : 'bg-slate-300 hover:bg-slate-400');
+          btn.addEventListener('click', () => goTo(i));
+          dotsEl.appendChild(btn);
+        }
+      }
+
+      function goTo(i) {
+        cur = Math.max(0, Math.min(i, maxPos()));
+        track.style.transform = 'translateX(-' + (cur * stepPx()) + 'px)';
+        prevBtn.disabled = cur === 0;
+        nextBtn.disabled = cur === maxPos();
+        buildDots();
+      }
+
+      prevBtn.addEventListener('click', () => goTo(cur - 1));
+      nextBtn.addEventListener('click', () => goTo(cur + 1));
+
+      // Touch / swipe support
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? cur + 1 : cur - 1);
+      }, { passive: true });
+
+      // Recalculate on resize (e.g. orientation change)
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => goTo(Math.min(cur, maxPos())), 100);
+      });
+
+      goTo(0); // initialise
     })();
 
     // Feather icons
