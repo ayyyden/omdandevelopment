@@ -9,6 +9,21 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://omdandevelopment.com/blog/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://omdandevelopment.com/blog/how-artificial-turf-saves-money/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Main Service Pages -->
   <url>
     <loc>https://omdandevelopment.com/pavers/</loc>

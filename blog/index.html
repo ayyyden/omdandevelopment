@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Outdoor Living Blog | Tips for Palm Springs Homeowners — Omdan Development</title>
+  <meta name="description" content="Practical tips, project ideas, and expert advice for Palm Springs and Southern California homeowners from Omdan Development — licensed contractor, License #1148568.">
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Outdoor Living Blog | Omdan Development">
+  <meta property="og:description" content="Practical tips and ideas for Palm Springs and Southern California homeowners. Pavers, artificial turf, concrete, and outdoor living advice from a licensed local contractor.">
+  <meta property="og:url" content="https://omdandevelopment.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://omdandevelopment.com/assets/15.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://omdandevelopment.com/blog/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: '#0f172a',
+            muted: '#334155',
+            line: '#e2e8f0',
+            brand: '#2563eb',
+            brand2: '#16a34a'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Outdoor Living Blog — Omdan Development",
+    "url": "https://omdandevelopment.com/blog/",
+    "description": "Practical tips and ideas for Palm Springs and Southern California homeowners from Omdan Development Inc, a licensed local contractor.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Omdan Development Inc",
+      "url": "https://omdandevelopment.com/",
+      "telephone": "+1-951-292-0703",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://omdandevelopment.com/assets/logo.webp"
+      }
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "How Artificial Turf Can Save Palm Springs Homeowners Money",
+        "url": "https://omdandevelopment.com/blog/how-artificial-turf-saves-money/",
+        "datePublished": "2026-04-15",
+        "author": {
+          "@type": "Organization",
+          "name": "Omdan Development Inc"
+        },
+        "description": "Palm Springs lawns cost a fortune to keep alive in the desert heat. Here's what homeowners stop paying for the moment they switch to artificial turf."
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink overflow-x-hidden">
+
+  <!-- Top bar -->
+  <div class="w-full bg-ink text-white text-sm">
+    <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold">Omdan Development Inc</span>
+        <span class="text-white/70 hidden sm:inline">•</span>
+        <span class="text-white/85">Landscaping & Outdoor Improvements</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
+        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
+        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation" role="banner">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink font-medium transition">How it works</a>
+        <a href="/#gallery" class="text-muted hover:text-ink font-medium transition">Work</a>
+        <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
+        <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
+          Get a Free Consultation
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
+        <a href="/#about" class="text-muted hover:text-ink">About</a>
+        <a href="/#services" class="text-muted hover:text-ink">Services</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink">How it works</a>
+        <a href="/#gallery" class="text-muted hover:text-ink">Work</a>
+        <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
+        <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
+          Get a Free Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-ink text-white py-16 px-5">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm mb-6">
+        <i data-feather="book-open" class="w-4 h-4"></i>
+        <span>Omdan Development — Outdoor Living Blog</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Outdoor Living Blog</h1>
+      <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Practical tips and ideas for Palm Springs and Southern California homeowners</p>
+    </div>
+  </section>
+
+  <!-- Blog post grid -->
+  <main class="max-w-7xl mx-auto px-5 py-16">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Post card: How Artificial Turf Saves Money -->
+      <article class="reveal bg-white border border-line rounded-2xl overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+        <div class="bg-brand2/10 px-6 pt-6 pb-4">
+          <span class="inline-block bg-brand2 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Artificial Turf</span>
+          <h2 class="text-xl font-bold text-ink leading-snug">
+            <a href="/blog/how-artificial-turf-saves-money/" class="hover:text-brand transition">
+              How Artificial Turf Can Save Palm Springs Homeowners Money
+            </a>
+          </h2>
+        </div>
+        <div class="px-6 py-4 flex-1 flex flex-col justify-between">
+          <p class="text-muted text-sm leading-relaxed">
+            Palm Springs lawns cost a fortune to keep alive in the desert heat. Here's what homeowners stop paying for the moment they switch to artificial turf — and why the savings add up faster than you'd expect.
+          </p>
+          <div class="mt-5 flex items-center justify-between">
+            <time class="text-xs text-muted/70" datetime="2026-04-15">April 15, 2026</time>
+            <a href="/blog/how-artificial-turf-saves-money/"
+               class="inline-flex items-center gap-1.5 text-brand font-semibold text-sm hover:underline">
+              Read article <i data-feather="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- More posts coming soon -->
+    <div class="mt-16 text-center reveal">
+      <p class="text-muted text-sm">More articles coming soon. In the meantime, have a project in mind?</p>
+      <a href="/#contact" class="mt-4 inline-flex items-center gap-2 bg-brand text-white px-7 py-3 rounded-lg font-semibold hover:opacity-95 transition">
+        <i data-feather="message-square" class="w-4 h-4"></i>
+        Get a Free Consultation
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-10">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-5 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <span class="text-lg font-bold">Omdan Development</span>
+          </div>
+          <p class="mt-3 text-white/75 text-sm">
+            Landscaping & outdoor improvements + handyman repairs across Los Angeles and nearby areas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-3">Services</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/plumbing/">Plumbing</a></li>
+            <li><a class="hover:text-white" href="/#services">All Services</a></li>
+            <li><a class="hover:text-white" href="/pavers/">Pavers</a></li>
+            <li><a class="hover:text-white" href="/artificial-turf/">Artificial Turf</a></li>
+            <li><a class="hover:text-white" href="/concrete/">Concrete</a></li>
+            <li><a class="hover:text-white" href="/handyman/">Handyman</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-3">Service Areas</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/handyman/palm-springs/">Palm Springs</a></li>
+            <li><a class="hover:text-white" href="/handyman/palm-desert/">Palm Desert</a></li>
+            <li><a class="hover:text-white" href="/handyman/twentynine-palms/">Twentynine Palms</a></li>
+            <li><a class="hover:text-white" href="/handyman/yucca-valley/">Yucca Valley</a></li>
+            <li><a class="hover:text-white" href="/handyman/yucaipa/">Yucaipa</a></li>
+            <li><a class="hover:text-white" href="/handyman/moreno-valley/">Moreno Valley</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-3">Quick links</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/#about">About</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Service Areas</a></li>
+            <li><a class="hover:text-white" href="/#how">How it works</a></li>
+            <li><a class="hover:text-white" href="/#gallery">Work</a></li>
+            <li><a class="hover:text-white" href="/blog/">Blog</a></li>
+            <li><a class="hover:text-white" href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-3">Contact</h4>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i><span>Los Angeles & nearby</span></li>
+          </ul>
+
+          <div class="mt-4 flex items-center gap-3">
+            <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/people/Omdan-Development/61575892508757/" target="_blank" rel="noopener" aria-label="Facebook">
+              <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
+        <p>© 2026 Omdan Development Inc. All rights reserved.</p>
+        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    function revealOnScroll() {
+      const els = document.querySelectorAll('.reveal');
+      const screen = window.innerHeight * 0.88;
+      els.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < screen) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    feather.replace();
+  </script>
+</body>
+</html>

@@ -17,7 +17,9 @@
       "Bash(mv \"tile work.webp\" \"tile-work.webp\")",
       "Bash(mv \"counter top.webp\" \"counter-top.webp\")",
       "Bash(mv \"rw 1.webp\" \"rw-1.webp\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(grep -Ein '\\\\$[0-9]|per month|per year|[0-9]+\\\\s*\\(dollars|bucks\\)|cost\\\\s+[0-9]|[0-9]+\\\\s*\\\\/\\\\s*\\(sq|sqft|sf\\)|price[^range]' c:/Users/Edan/Documents/GitHub/omdandevelopment/blog/index.html c:/Users/Edan/Documents/GitHub/omdandevelopment/blog/how-artificial-turf-saves-money/index.html)",
+      "Bash(grep -Ein '\\\\$[0-9]|USD|[0-9]+[,.]?[0-9]*\\\\s*\\(dollars|bucks\\)|[0-9]+\\\\s*k\\\\b|per sq\\(uare\\)?\\\\s*foot|per sq\\(uare\\)?\\\\s*ft' c:/Users/Edan/Documents/GitHub/omdandevelopment/blog/index.html c:/Users/Edan/Documents/GitHub/omdandevelopment/blog/how-artificial-turf-saves-money/index.html)"
     ]
   }
 }
