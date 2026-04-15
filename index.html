@@ -61,14 +61,6 @@
     .hero-overlay {
       background: linear-gradient(180deg, rgba(15,23,42,.78) 0%, rgba(15,23,42,.55) 40%, rgba(15,23,42,.25) 100%);
     }
-
-    /* Reviews carousel */
-    #rv-viewport { overflow: hidden; width: 100%; }
-    #rv-track { display: flex; transition: transform 0.4s ease; }
-    .rv-card { flex: none; padding: 0 10px; box-sizing: border-box; }
-    .rv-dot { width: 10px; height: 10px; border-radius: 9999px; background: #cbd5e1; transition: background 0.2s; cursor: pointer; border: none; padding: 0; }
-    .rv-dot:hover { background: #94a3b8; }
-    .rv-dot-active { background: #2563eb; }
   </style>
   <!-- OPENCLAW_JSONLD:localbusiness:START -->
 <script type="application/ld+json">
@@ -713,191 +705,38 @@
   </section>
 
   <!-- Testimonials -->
-  <section id=”testimonials” class=”bg-slate-50 py-16”>
-    <div class=”max-w-6xl mx-auto px-5”>
+  <section id="testimonials" class="bg-slate-50 py-16">
+    <div class="max-w-6xl mx-auto px-5 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold reveal">Reviews</h2>
+      <p class="mt-2 text-muted reveal">Real feedback from homeowners.</p>
 
-      <!-- Section header -->
-      <div class=”text-center reveal”>
-        <h2 class=”text-3xl sm:text-4xl font-extrabold”>What Our Customers Say</h2>
-        <p class=”mt-2 text-muted”>Real reviews from verified Google customers.</p>
-      </div>
-
-      <!-- Aggregate rating row -->
-      <div class=”flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mt-4 mb-10 reveal”>
-        <span class=”text-yellow-400 text-xl leading-none”>★★★★★</span>
-        <span class=”font-bold text-ink”>5.0</span>
-        <span class=”text-muted text-sm”>— 7 Google Reviews</span>
-        <a href=”https://www.google.com/search?q=Omdan+Development+Inc+Palm+Springs+reviews”
-           target=”_blank” rel=”noopener”
-           class=”text-brand text-sm hover:underline ml-1”>See all →</a>
-      </div>
-
-      <!-- Carousel -->
-      <div style=”position:relative;”>
-        <div id=”rv-viewport”>
-          <div id=”rv-track”>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for a full backyard remodel in Yucca Valley, and honestly, it exceeded all of our expectations. What was once an empty, unusable space is now a place where we can relax, host family, and truly enjoy our home. David was not only professional and detail-oriented, but he also genuinely cared about bringing our vision to life. He kept us informed every step of the way and made the entire process stress-free. Highly recommend David and his team!”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Ben E.</p>
-                  <p class=”text-xs text-muted”>Yucca Valley</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”We had artificial turf installed in Desert Hot Springs by Omdan Development Inc, and we're very happy with the results. David was friendly, professional, and made the whole process easy. The work came out clean and looks great. Highly recommend!”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>John M.</p>
-                  <p class=”text-xs text-muted”>Desert Hot Springs</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”David and his team are absolutely incredible! They redid my kitchen and bathroom and I loved the results. They really made my vision a reality. Couldn't have picked a better team for the job!”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Simcha T.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”I had my bathroom remodeled by Omdan Development Inc. in Riverside and I'm really happy with how it turned out. I was pretty stressed going into it and met with a few other companies, but Omdan made me feel comfortable right away. My project manager David was great — easy to communicate with, responsive, and made the whole process feel smooth. I'd definitely recommend them to anyone looking for a stress-free remodel.”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Giela T.</p>
-                  <p class=”text-xs text-muted”>Riverside</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”We hired Omdan Development Inc for our outdoor bathroom remodel in Riverside and had a great experience from start to finish. David was clear about timelines and kept us informed throughout the project. The work was clean, professional, and the attention to detail really showed. We would definitely recommend David and his team.”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Revital W.</p>
-                  <p class=”text-xs text-muted”>Riverside</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”Excellent customer service by David. Loved the attention to details and the dedication.”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Sivan K.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class=”rv-card”>
-              <div class=”bg-white border border-line rounded-2xl p-6 shadow-sm flex flex-col h-full”>
-                <div class=”text-yellow-400 text-xl leading-none mb-3”>★★★★★</div>
-                <p class=”text-muted text-sm leading-relaxed flex-1”>”David from Omdan Development Inc. did an excellent job on our paver and turf project in San Jacinto. The workmanship was clean, professional, and completed on time. The pavers were installed perfectly and the turf looks great, giving the yard a clean and modern look. David was honest, communicative, and easy to work with. Highly recommend Omdan Development Inc.”</p>
-                <div class=”mt-5 pt-4 border-t border-line”>
-                  <p class=”font-semibold text-ink text-sm”>Rotem L.</p>
-                  <p class=”text-xs text-muted”>San Jacinto</p>
-                </div>
-              </div>
-            </div>
-
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
+          <div class="flex items-center gap-2 text-brand mb-3">
+            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
           </div>
+          <p class="text-muted">“Our front yard came out clean and modern. Communication was easy and the crew was respectful.”</p>
+          <p class="mt-3 font-semibold">— Sarah L.</p>
         </div>
-        <button id=”rv-prev” style=”position:absolute;top:50%;left:0;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.1);font-size:22px;line-height:1;cursor:pointer;” aria-label=”Previous reviews”>&#8249;</button>
-        <button id=”rv-next” style=”position:absolute;top:50%;right:0;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.1);font-size:22px;line-height:1;cursor:pointer;” aria-label=”Next reviews”>&#8250;</button>
+
+        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
+          <div class="flex items-center gap-2 text-brand mb-3">
+            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
+          </div>
+          <p class="text-muted">“They explained the scope clearly, stayed on schedule, and the finish looks great.”</p>
+          <p class="mt-3 font-semibold">— David R.</p>
+        </div>
+
+        <div class="bg-white border border-line rounded-xl p-6 text-left reveal">
+          <div class="flex items-center gap-2 text-brand mb-3">
+            <i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i><i data-feather="star" class="w-4 h-4"></i>
+          </div>
+          <p class="text-muted">“No surprises. Clean work, fair price, and the project turned out exactly how we wanted.”</p>
+          <p class="mt-3 font-semibold">— Michelle K.</p>
+        </div>
       </div>
-
-      <!-- Dots -->
-      <div id=”rv-dots” class=”flex items-center justify-center gap-2 mt-8”></div>
-
-      <!-- CTA -->
-      <div class=”text-center mt-6”>
-        <a href=”https://www.google.com/search?q=Omdan+Development+Inc+Palm+Springs+reviews”
-           target=”_blank” rel=”noopener”
-           class=”text-sm text-muted hover:text-brand transition”>
-          Read all our Google reviews →
-        </a>
-      </div>
-
     </div>
   </section>
-
-  <script>
-  (function () {
-    var viewport = document.getElementById('rv-viewport');
-    var track    = document.getElementById('rv-track');
-    var prev     = document.getElementById('rv-prev');
-    var next     = document.getElementById('rv-next');
-    var dotsEl   = document.getElementById('rv-dots');
-    if (!viewport || !track) return;
-
-    var cards = track.querySelectorAll('.rv-card');
-    var TOTAL = cards.length;
-    var cur = 0;
-
-    function vis()    { return window.innerWidth >= 768 ? 3 : 1; }
-    function maxPos() { return TOTAL - vis(); }
-    function cardPx() { return viewport.clientWidth / vis(); }
-
-    function setWidths() {
-      var w = cardPx() + 'px';
-      for (var i = 0; i < cards.length; i++) { cards[i].style.width = w; }
-    }
-
-    function buildDots() {
-      if (!dotsEl) return;
-      dotsEl.innerHTML = '';
-      var max = maxPos();
-      for (var i = 0; i <= max; i++) {
-        var btn = document.createElement('button');
-        btn.setAttribute('aria-label', 'Go to review ' + (i + 1));
-        btn.className = 'rv-dot' + (i === cur ? ' rv-dot-active' : '');
-        (function (idx) {
-          btn.addEventListener('click', function () { goTo(idx); });
-        })(i);
-        dotsEl.appendChild(btn);
-      }
-    }
-
-    function goTo(i) {
-      cur = Math.max(0, Math.min(i, maxPos()));
-      setWidths();
-      track.style.transform = 'translateX(-' + (cur * cardPx()) + 'px)';
-      if (prev) prev.disabled = cur === 0;
-      if (next) next.disabled = cur === maxPos();
-      buildDots();
-    }
-
-    if (prev) prev.addEventListener('click', function () { goTo(cur - 1); });
-    if (next) next.addEventListener('click', function () { goTo(cur + 1); });
-
-    var touchStartX = 0;
-    track.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', function (e) {
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) goTo(dx < 0 ? cur + 1 : cur - 1);
-    }, { passive: true });
-
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () { goTo(Math.min(cur, maxPos())); }, 100);
-    });
-
-    goTo(0);
-  })();
-  </script>
 
   <!-- Gallery -->
   <section id="gallery" class="py-16 bg-white">
