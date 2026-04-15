@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /thankyou/
+Disallow: /seo/
+Disallow: /scripts/
 
 Sitemap: https://omdandevelopment.com/sitemap.xml

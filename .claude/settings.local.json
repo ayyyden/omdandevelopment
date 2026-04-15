@@ -10,7 +10,14 @@
       "Bash([ -f /c/Users/Edan/Documents/GitHub/omdandevelopment/turf/twentynine-palms/index.html ])",
       "Bash([ -f /c/Users/Edan/Documents/GitHub/omdandevelopment/turf.html ])",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git checkout *)",
+      "Bash(mv \"drywall repair.webp\" \"drywall-repair.webp\")",
+      "Bash(mv \"floor repair.webp\" \"floor-repair.webp\")",
+      "Bash(mv \"tile work.webp\" \"tile-work.webp\")",
+      "Bash(mv \"counter top.webp\" \"counter-top.webp\")",
+      "Bash(mv \"rw 1.webp\" \"rw-1.webp\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

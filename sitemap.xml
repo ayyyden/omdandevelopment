@@ -1,134 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages -->
+  <!-- Homepage -->
   <url>
     <loc>https://omdandevelopment.com/</loc>
-  </url>
-
-  <url>
-    <loc>https://omdandevelopment.com/privacy/</loc>
-  </url>
-
-  <url>
-    <loc>https://omdandevelopment.com/thankyou/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <!-- Main Service Pages -->
   <url>
     <loc>https://omdandevelopment.com/pavers/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://omdandevelopment.com/concrete/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://omdandevelopment.com/artificial-turf/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://omdandevelopment.com/bathroom-remodeling/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://omdandevelopment.com/kitchen-remodeling/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://omdandevelopment.com/plumbing/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Plumbing Cities -->
-  <url><loc>https://omdandevelopment.com/plumbing/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/menifee/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/murrieta/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/temecula/</loc></url>
-  <url><loc>https://omdandevelopment.com/plumbing/san-bernardino/</loc></url>
+  <url>
+    <loc>https://omdandevelopment.com/handyman/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Pavers Cities -->
-  <url><loc>https://omdandevelopment.com/pavers/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc></url>
+  <url>
+    <loc>https://omdandevelopment.com/kitchen-remodel/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Concrete Cities -->
-  <url><loc>https://omdandevelopment.com/concrete/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/concrete/yucaipa/</loc></url>
+  <!-- Pavers City Pages -->
+  <url><loc>https://omdandevelopment.com/pavers/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Artificial Turf Cities -->
-  <url><loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/menifee/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/murrieta/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/temecula/</loc></url>
-  <url><loc>https://omdandevelopment.com/artificial-turf/san-bernardino/</loc></url>
+  <!-- Concrete City Pages -->
+  <url><loc>https://omdandevelopment.com/concrete/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Handyman Cities -->
-  <url><loc>https://omdandevelopment.com/handyman/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/menifee/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/murrieta/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/temecula/</loc></url>
-  <url><loc>https://omdandevelopment.com/handyman/san-bernardino/</loc></url>
+  <!-- Artificial Turf City Pages -->
+  <url><loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/artificial-turf/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Bathroom Remodeling Cities -->
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/menifee/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/murrieta/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/temecula/</loc></url>
-  <url><loc>https://omdandevelopment.com/bathroom-remodeling/san-bernardino/</loc></url>
+  <!-- Plumbing City Pages -->
+  <url><loc>https://omdandevelopment.com/plumbing/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/plumbing/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Kitchen Remodeling Cities -->
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/moreno-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/menifee/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/murrieta/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/temecula/</loc></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodeling/san-bernardino/</loc></url>
+  <!-- Handyman City Pages -->
+  <url><loc>https://omdandevelopment.com/handyman/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/handyman/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Gutters Cities -->
-  <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/palm-desert/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/desert-hot-springs/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/twentynine-palms/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/yucca-valley/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/yucaipa/</loc></url>
-  <url><loc>https://omdandevelopment.com/gutters/moreno-valley/</loc></url>
+  <!-- Bathroom Remodeling City Pages -->
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/bathroom-remodeling/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Kitchen Remodeling City Pages -->
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodeling/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Kitchen Remodel (legacy) City Pages -->
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/kitchen-remodel/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Gutters City Pages -->
+  <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Turf (legacy) City Pages -->
+  <url><loc>https://omdandevelopment.com/turf/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/turf/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Utility Pages -->
+  <url>
+    <loc>https://omdandevelopment.com/thankyou/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://omdandevelopment.com/privacy/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 
 </urlset>
