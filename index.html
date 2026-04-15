@@ -63,8 +63,7 @@
     }
 
     /* Reviews carousel */
-    .rv-slide { flex: 0 0 100%; }
-    @media (min-width: 768px) { .rv-slide { flex: 0 0 calc(33.333% - 16px); } }
+    .rv-slide { flex-shrink: 0; width: 100%; }
     .rv-dot { width: 10px; height: 10px; border-radius: 9999px; background: #cbd5e1; transition: background 0.2s; cursor: pointer; border: none; padding: 0; }
     .rv-dot:hover { background: #94a3b8; }
     .rv-dot-active { background: #2563eb; }
@@ -1199,18 +1198,26 @@
       const dotsEl  = document.getElementById('reviewsDots');
       if (!track || !prevBtn || !nextBtn || !dotsEl) return;
 
-      const TOTAL = 7;
+      const TOTAL  = 7;
+      const GAP    = 24; // matches gap-6 (1.5rem = 24px)
       let cur = 0;
+
+      const slides = track.querySelectorAll('.rv-slide');
 
       function vis()    { return window.innerWidth >= 768 ? 3 : 1; }
       function maxPos() { return TOTAL - vis(); }
 
-      // Step = one card width + one gap (gap-6 = 24px)
-      function stepPx() {
-        const w   = track.parentElement.clientWidth;
-        const v   = vis();
-        const gap = 24;
-        return (w - gap * (v - 1)) / v + gap;
+      // Card width derived from the VISIBLE container, not the overflowing track
+      function cardW() {
+        const v = vis();
+        return (track.parentElement.clientWidth - GAP * (v - 1)) / v;
+      }
+      function stepPx() { return cardW() + GAP; }
+
+      // Set each slide's width explicitly so CSS percentages aren't needed
+      function setWidths() {
+        const w = cardW() + 'px';
+        slides.forEach(function (s) { s.style.width = w; });
       }
 
       function buildDots() {
@@ -1222,35 +1229,36 @@
           btn.setAttribute('role', 'tab');
           btn.setAttribute('aria-selected', String(i === cur));
           btn.className = 'rv-dot' + (i === cur ? ' rv-dot-active' : '');
-          btn.addEventListener('click', () => goTo(i));
+          btn.addEventListener('click', function () { goTo(i); });
           dotsEl.appendChild(btn);
         }
       }
 
       function goTo(i) {
         cur = Math.max(0, Math.min(i, maxPos()));
+        setWidths();
         track.style.transform = 'translateX(-' + (cur * stepPx()) + 'px)';
         prevBtn.disabled = cur === 0;
         nextBtn.disabled = cur === maxPos();
         buildDots();
       }
 
-      prevBtn.addEventListener('click', () => goTo(cur - 1));
-      nextBtn.addEventListener('click', () => goTo(cur + 1));
+      prevBtn.addEventListener('click', function () { goTo(cur - 1); });
+      nextBtn.addEventListener('click', function () { goTo(cur + 1); });
 
       // Touch / swipe support
-      let touchStartX = 0;
-      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend',   e => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
+      var touchStartX = 0;
+      track.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - touchStartX;
         if (Math.abs(dx) > 40) goTo(dx < 0 ? cur + 1 : cur - 1);
       }, { passive: true });
 
       // Recalculate on resize (e.g. orientation change)
-      let resizeTimer;
-      window.addEventListener('resize', () => {
+      var resizeTimer;
+      window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => goTo(Math.min(cur, maxPos())), 100);
+        resizeTimer = setTimeout(function () { goTo(Math.min(cur, maxPos())); }, 100);
       });
 
       goTo(0); // initialise
