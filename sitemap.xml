@@ -74,13 +74,6 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://omdandevelopment.com/kitchen-remodel/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- Pavers City Pages -->
   <url><loc>https://omdandevelopment.com/pavers/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/pavers/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -89,6 +82,10 @@
   <url><loc>https://omdandevelopment.com/pavers/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/pavers/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/pavers/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/pavers/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Concrete City Pages -->
   <url><loc>https://omdandevelopment.com/concrete/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -98,6 +95,10 @@
   <url><loc>https://omdandevelopment.com/concrete/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/concrete/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/concrete/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/concrete/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Artificial Turf City Pages -->
   <url><loc>https://omdandevelopment.com/artificial-turf/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -164,15 +165,6 @@
   <url><loc>https://omdandevelopment.com/kitchen-remodeling/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/kitchen-remodeling/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Kitchen Remodel (legacy) City Pages -->
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/desert-hot-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://omdandevelopment.com/kitchen-remodel/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
   <!-- Gutters City Pages -->
   <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/gutters/palm-desert/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -181,6 +173,10 @@
   <url><loc>https://omdandevelopment.com/gutters/yucca-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/gutters/yucaipa/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/gutters/moreno-valley/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/menifee/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omdandevelopment.com/gutters/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Turf (legacy) City Pages -->
   <url><loc>https://omdandevelopment.com/turf/twentynine-palms/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
