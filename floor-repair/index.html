@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://omdandevelopment.com/floor-repair/">
+
+  <title>Floor Repair Services | Omdan Development Inc — Palm Springs &amp; Inland Empire</title>
+  <meta name="description" content="Floor repair for hardwood, tile, and laminate across Palm Springs, Coachella Valley, and Inland Empire homes." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#0f172a", muted: "#475569", line: "#e2e8f0", soft: "#f8fafc", brand: "#2563eb" },
+          fontFamily: { sans: ["Montserrat", "sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .hover-scale { transition: transform .2s ease; }
+    .hover-scale:hover { transform: scale(1.02); }
+    .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Floor Repair",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Omdan Development Inc",
+      "telephone": "+1-951-292-0703",
+      "url": "https://omdandevelopment.com/",
+      "hasCredential": "CSLB License #1148568"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Yucca Valley"},
+      {"@type": "City", "name": "Yucaipa"},
+      {"@type": "City", "name": "Moreno Valley"}
+    ],
+    "description": "Floor repair for hardwood, tile, and laminate across Palm Springs, Coachella Valley, and Inland Empire homes.",
+    "url": "https://omdandevelopment.com/floor-repair/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you match old tile that has been discontinued?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Matching discontinued tile is one of the most challenging parts of floor repair. We first try to find the original tile through surplus suppliers and tile specialty stores. If that fails, we look for close visual matches — same size, color range, and texture. In some cases, a creative solution like adding an intentional border or accent pattern is the best outcome. We'll always show you options before starting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes squeaky floors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Squeaks happen when flooring boards rub against each other, against nails, or against the subfloor. Common causes include: boards that have shrunk and lost their snug fit, subfloor screws that have backed out, nail shanks that have loosened in the subfloor, and boards that weren't properly fastened during installation. The fix depends on the floor type and whether the squeak is accessible from above or below."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is floor repair not enough and you need full replacement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repair stops making sense when: the damaged area covers more than 30–40% of the floor, the subfloor has widespread moisture damage, the flooring product has been discontinued and no visual match is possible, or the floor has been repaired multiple times and is structurally compromised. Full replacement is almost always more cost-effective than patching a floor that's mostly gone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do tiles crack in desert homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tile cracks in desert homes most often come from thermal expansion — extreme temperature swings cause the slab and tile to expand and contract at different rates, especially without proper expansion joints. AC cycling that drops indoor temperatures dramatically also stresses tile. Subfloor movement from settling and lack of proper mortar coverage are other common causes."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink">
+
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" />
+        <span class="font-semibold text-base sm:text-lg truncate">Omdan Development</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a href="/#about" class="text-muted hover:text-ink transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink transition">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink transition">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg hover:opacity-95 transition">Free Quote</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-soft" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-white">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4 font-semibold text-sm">
+        <a href="/#about" class="text-muted hover:text-ink">About</a>
+        <a href="/#services" class="text-muted hover:text-ink">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg text-center">Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-[72px]"></div>
+
+  <header class="relative">
+    <div class="absolute inset-0">
+      <img src="/assets/floor-repair.webp" alt="Floor repair service" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-ink/65"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-5 py-20 md:py-28">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-2 text-white/90 text-xs font-semibold bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+          <span>Floor Repair</span>
+          <span class="opacity-70">•</span>
+          <span class="opacity-90">Palm Springs &amp; Inland Empire</span>
+        </p>
+        <h1 class="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
+          Floor Repair for Hardwood, Tile, Laminate &amp; More
+        </h1>
+        <p class="mt-4 text-white/90 text-base md:text-lg">
+          Cracked tiles, warped boards, squeaky floors, and damaged sections repaired and blended back to match. We work with all residential flooring types across Palm Springs and the Inland Empire.
+        </p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="bg-brand text-white px-5 py-3 rounded-lg font-semibold text-center hover:opacity-95 transition">Get a Free Quote</a>
+          <a href="tel:(951)292-0703" class="bg-white text-ink px-5 py-3 rounded-lg font-semibold text-center hover:bg-soft transition">Call (951) 292-0703</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Tile</div><div class="opacity-80">crack &amp; chip repair</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Hardwood</div><div class="opacity-80">board replacement</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Laminate</div><div class="opacity-80">section swap</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Subfloor</div><div class="opacity-80">squeaks &amp; soft spots</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floor Types -->
+  <section class="py-14" id="floor-types">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Flooring Types We Repair</h2>
+        <p class="mt-2 text-muted">Each material has different repair requirements — here's what to know.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Hardwood</h3>
+          <p class="text-sm text-muted">Solid hardwood boards can often be sanded, refinished, or individually replaced. Matching requires finding the same species, width, and stain. Desert AC cycling causes hardwood to shrink and expand, which can create gaps and squeaks that are addressable without full replacement.</p>
+        </div>
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Engineered Hardwood</h3>
+          <p class="text-sm text-muted">A plywood core with a real wood veneer top layer. More stable than solid wood in desert conditions because the cross-ply construction resists expansion. Individual planks can be replaced if the product is still available. Minor surface scratches can sometimes be addressed with refinishing depending on veneer thickness.</p>
+        </div>
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Laminate</h3>
+          <p class="text-sm text-muted">Photo-printed surface over a fiberboard core — cannot be sanded or refinished. Damaged sections must be replaced. Floating laminate floors can often be disassembled from an edge to reach the damaged section. Glued-down laminate requires cutting out damaged planks and carefully matching the replacement.</p>
+        </div>
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Ceramic &amp; Porcelain Tile</h3>
+          <p class="text-sm text-muted">Individual tiles can be removed and replaced when cracked. The challenge is always matching the existing tile — color, size, texture, and finish must all be close. Grout matching is also part of the repair. Desert thermal expansion makes cracked tile floors common.</p>
+        </div>
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Vinyl Plank (LVP)</h3>
+          <p class="text-sm text-muted">One of the most repair-friendly floor types. Floating LVP can be disassembled from the wall edge to reach and replace damaged planks without disturbing the whole floor. Click-lock profiles make individual plank swaps fast and clean when a matching product is available.</p>
+        </div>
+
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Natural Stone</h3>
+          <p class="text-sm text-muted">Travertine, slate, and marble tiles are repairable when cracked or chipped. Travertine is common in desert-region homes and develops hairline cracks from thermal movement. Chips can be filled with color-matched epoxy. Full tile replacement requires finding matching material, which can be challenging for older installations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Damage Types -->
+  <section class="py-14 bg-soft" id="damage">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Common Floor Damage We Fix</h2>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Cracked Tile</h3>
+          <p class="text-sm text-muted">Single tiles cracked from impact, thermal expansion, or void beneath (no mortar backing). One to several tiles removed and replaced.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Warped / Cupped Boards</h3>
+          <p class="text-sm text-muted">Wood boards that have lifted or cupped at the edges from moisture or humidity changes. Usually indicates a subfloor or moisture issue that must be resolved first.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Squeaky Floors</h3>
+          <p class="text-sm text-muted">Boards rubbing against fasteners or each other. Can often be fixed from above with screws driven at the right angle, or from below if a crawl space is accessible.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Gaps Between Boards</h3>
+          <p class="text-sm text-muted">Common in desert climates where low winter humidity causes wood to shrink. Seasonal gaps are normal; persistent large gaps may need filler or board replacement.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Scratches &amp; Surface Damage</h3>
+          <p class="text-sm text-muted">Deep scratches on hardwood can be sanded and refinished spot-by-spot or across the full floor depending on severity. LVP and laminate scratches require section replacement.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5">
+          <h3 class="font-semibold mb-1">Soft Spots &amp; Subfloor Damage</h3>
+          <p class="text-sm text-muted">Soft, spongy areas underfoot indicate subfloor damage — usually from water. The flooring above and damaged subfloor panels must be removed and replaced before new flooring goes back down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Desert-Specific Issues -->
+  <section class="py-14" id="desert-issues">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Desert-Specific Floor Problems</h2>
+        <p class="mt-3 text-muted">The Coachella Valley and Inland Empire have floor conditions you won't see in most other climates.</p>
+
+        <div class="mt-6 space-y-5">
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Tile Cracking from Thermal Expansion</h3>
+            <p class="mt-2 text-muted">Slab-on-grade construction (standard in the desert) means the concrete slab expands significantly in summer heat. Without proper expansion joints and flexible grout, tiles crack as the slab moves. This is the most common floor repair we see in desert homes — cracked tile in high-sun rooms, south-facing spaces, and near exterior walls.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Wood Warping from AC Cycling</h3>
+            <p class="mt-2 text-muted">Hardwood floors in desert homes face an unusual stress: extreme outdoor heat combined with aggressive air conditioning creates dramatic humidity swings inside the home. AC units in the desert strip moisture aggressively, then the system cycles off and indoor humidity recovers. This constant cycling causes wood to expand and contract repeatedly, leading to warping, cupping, and squeaks.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Grout Cracking and Disintegration</h3>
+            <p class="mt-2 text-muted">Sanded cement grout in high-traffic desert homes tends to crack and crumble faster than in temperate climates due to thermal stress and the gritty desert dust that acts as an abrasive. Re-grouting individual areas or entire floors is often the right fix before the broken grout allows water and debris under tiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spot vs Section -->
+  <section class="py-14 bg-soft" id="scope">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Spot Repair vs. Section Replacement</h2>
+        <div class="mt-6 grid sm:grid-cols-2 gap-5">
+          <div class="bg-white border border-line rounded-2xl p-5">
+            <h3 class="font-semibold text-green-700 mb-2">Spot Repair</h3>
+            <p class="text-sm text-muted">One to a handful of damaged tiles, boards, or planks. Clean, targeted work with minimal disruption. Works well when matching material is available and the surrounding floor is in good condition.</p>
+          </div>
+          <div class="bg-white border border-line rounded-2xl p-5">
+            <h3 class="font-semibold text-blue-700 mb-2">Section Replacement</h3>
+            <p class="text-sm text-muted">A defined section — a hallway, one room, one area — is fully removed and replaced with matching or complementary material. Better than spot repair when damage is spread across an area or when a perfect match isn't possible.</p>
+          </div>
+        </div>
+        <div class="mt-5 bg-white border border-line rounded-2xl p-5">
+          <h3 class="font-semibold mb-2">When Repair Isn't the Answer</h3>
+          <p class="text-sm text-muted">If the damaged area covers more than roughly 30–40% of the total floor, if the subfloor is widespread, or if the product has been discontinued with no viable match, full replacement is usually the more practical and cost-effective path. We'll tell you honestly which makes sense for your situation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14" id="faq">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">Common Questions</h2>
+        <div class="space-y-5">
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Can you match old or discontinued tile?</h3>
+            <p class="mt-2 text-muted">Sometimes yes, sometimes no. We check surplus tile suppliers and specialty stores first. If we can't find an exact match, we'll show you close visual alternatives. If nothing works, a creative solution like a new accent border is sometimes the best outcome.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">What causes squeaky floors and can they be fixed?</h3>
+            <p class="mt-2 text-muted">Squeaks come from boards rubbing against nails, each other, or the subfloor. The fix depends on access — from below in a crawl space is cleanest, but we can also address squeaks from above on hardwood and some other floor types. Not every squeak can be eliminated 100%, but most can be significantly reduced.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">When should I replace instead of repair?</h3>
+            <p class="mt-2 text-muted">Repair is the right call for isolated damage with available matching material. When damage covers a large percentage of the floor, the product is discontinued, or the subfloor is compromised, replacement makes more sense economically and practically.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Do I need to move furniture for a floor repair?</h3>
+            <p class="mt-2 text-muted">For spot repairs, usually only furniture in the immediate repair area needs to move. For section replacements, we'll let you know the area that needs to be cleared. We can help move standard furniture items as part of the job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-14 bg-soft">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Get a Free Floor Repair Quote</h2>
+        <p class="mt-2 text-muted">Describe the damage, flooring type, and we'll get back to you promptly.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
+          <input type="hidden" name="subject" value="New Quote Request - Floor Repair Page">
+          <input type="hidden" name="from_name" value="Omdan Development Website">
+          <input type="hidden" name="redirect" value="/thankyou/">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <label class="block"><span class="block text-sm font-semibold mb-1">Full Name</span><input name="name" type="text" required autocomplete="name" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Phone Number</span><input name="phone" type="tel" required autocomplete="tel" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Email Address</span><input name="email" type="email" required autocomplete="email" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Project Address</span><input name="address" type="text" required autocomplete="street-address" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Describe the Damage</span><textarea name="message" rows="4" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Floor type (tile, hardwood, laminate, LVP)? Type of damage? Approx area?"></textarea></label>
+          <div class="h-captcha" data-captcha="true"></div>
+          <button type="submit" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:opacity-95 w-full">Submit Request</button>
+        </form>
+        <aside class="bg-white border border-line rounded-2xl p-7">
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <ul class="space-y-4 text-sm text-muted">
+            <li class="flex items-start gap-3"><i data-feather="phone" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Phone</div><div>(951) 292-0703</div></div></li>
+            <li class="flex items-start gap-3"><i data-feather="mail" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Email</div><div>omdandevelopment@gmail.com</div></div></li>
+            <li class="flex items-start gap-3"><i data-feather="map-pin" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Service area</div><div>Palm Springs, Coachella Valley &amp; Inland Empire</div></div></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-white py-10">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><div class="flex items-center gap-3"><img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" /><span class="text-lg font-bold">Omdan Development</span></div><p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements + handyman repairs across Southern California.</p></div>
+        <div><h4 class="font-bold mb-3">Services</h4><ul class="space-y-2 text-white/75 text-sm"><li><a class="hover:text-white" href="/floor-repair/">Floor Repair</a></li><li><a class="hover:text-white" href="/tile-work/">Tile Work</a></li><li><a class="hover:text-white" href="/drywall-repair/">Drywall Repair</a></li><li><a class="hover:text-white" href="/#services">All Services</a></li></ul></div>
+        <div><h4 class="font-bold mb-3">Quick Links</h4><ul class="space-y-2 text-white/75 text-sm"><li><a class="hover:text-white" href="/#about">About</a></li><li><a class="hover:text-white" href="/#services">Services</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li></ul></div>
+        <div><h4 class="font-bold mb-3">Contact</h4><ul class="space-y-3 text-white/75 text-sm"><li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li><li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li><li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i><span>Southern California service-area business</span></li></ul></div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
+        <p>© 2026 Omdan Development Inc. All rights reserved.</p>
+        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => { const isOpen = !mobileMenu.classList.contains('hidden'); mobileMenu.classList.toggle('hidden'); toggleBtn.setAttribute('aria-expanded', String(!isOpen)); });
+    function scrollReveal(){ document.querySelectorAll('.scroll-reveal').forEach(el=>{ if(el.getBoundingClientRect().top < window.innerHeight/1.2) el.classList.add('visible'); }); }
+    window.addEventListener('scroll', scrollReveal);
+    window.addEventListener('load', scrollReveal);
+    feather.replace();
+  </script>
+</body>
+</html>

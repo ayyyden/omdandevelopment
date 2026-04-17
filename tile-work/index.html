@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://omdandevelopment.com/tile-work/">
+
+  <title>Tile Installation &amp; Repair | Omdan Development Inc — Palm Springs &amp; Inland Empire</title>
+  <meta name="description" content="Tile installation for floors, showers, backsplashes, and patios across Palm Springs and Inland Empire." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#0f172a", muted: "#475569", line: "#e2e8f0", soft: "#f8fafc", brand: "#2563eb" },
+          fontFamily: { sans: ["Montserrat", "sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .hover-scale { transition: transform .2s ease; }
+    .hover-scale:hover { transform: scale(1.02); }
+    .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Tile Installation & Repair",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Omdan Development Inc",
+      "telephone": "+1-951-292-0703",
+      "url": "https://omdandevelopment.com/",
+      "hasCredential": "CSLB License #1148568"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Yucca Valley"},
+      {"@type": "City", "name": "Yucaipa"},
+      {"@type": "City", "name": "Moreno Valley"}
+    ],
+    "description": "Tile installation for floors, showers, backsplashes, and patios across Palm Springs and Inland Empire.",
+    "url": "https://omdandevelopment.com/tile-work/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does grout last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cement-based grout in high-traffic areas typically lasts 8–15 years before cracking, crumbling, or discoloring significantly. Epoxy grout lasts longer — often 20+ years — but costs more and is harder to install. In desert climates, thermal expansion can shorten grout life in slab-on-grade applications. Sealing grout annually helps extend its life."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you tile over existing tile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Technically yes, but it's generally not recommended. The added height changes transitions to other flooring, creates threshold issues at doors, and the old tile surface must be perfectly bonded — any loose tiles underneath will eventually cause the new layer to fail too. In most cases, removing the old tile and starting fresh produces a better, longer-lasting result."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between ceramic and porcelain tile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both are made from clay fired at high temperatures, but porcelain uses denser clay fired at higher temperatures. The result: porcelain is harder, less porous (water absorption under 0.5%), and more durable than ceramic. Porcelain is better for wet areas and outdoor applications. Ceramic is easier to cut and install and is fine for dry interior walls and low-traffic areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tile is best for an outdoor patio in Palm Springs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For outdoor patios in the Coachella Valley, look for a slip-resistant porcelain tile rated for exterior use (frost-rating matters less here, but UV and heat stability do). Travertine is a popular desert-region choice and looks great outdoors, but is porous and needs sealing. Large-format porcelain pavers (24x24 or larger) in a concrete or light grey tone are a modern alternative that hold up well and stay cooler underfoot than darker tiles."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink">
+
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" />
+        <span class="font-semibold text-base sm:text-lg truncate">Omdan Development</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a href="/#about" class="text-muted hover:text-ink transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink transition">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink transition">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg hover:opacity-95 transition">Free Quote</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-soft" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-white">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4 font-semibold text-sm">
+        <a href="/#about" class="text-muted hover:text-ink">About</a>
+        <a href="/#services" class="text-muted hover:text-ink">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg text-center">Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-[72px]"></div>
+
+  <header class="relative">
+    <div class="absolute inset-0">
+      <img src="/assets/tile-work.webp" alt="Tile installation service" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-ink/65"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-5 py-20 md:py-28">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-2 text-white/90 text-xs font-semibold bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+          <span>Tile Work</span>
+          <span class="opacity-70">•</span>
+          <span class="opacity-90">Palm Springs &amp; Inland Empire</span>
+        </p>
+        <h1 class="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
+          Tile Installation for Floors, Showers, Backsplashes &amp; Patios
+        </h1>
+        <p class="mt-4 text-white/90 text-base md:text-lg">
+          Clean layouts, tight grout lines, and the right tile system for indoor and outdoor applications across the Coachella Valley and Inland Empire.
+        </p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="bg-brand text-white px-5 py-3 rounded-lg font-semibold text-center hover:opacity-95 transition">Get a Free Quote</a>
+          <a href="tel:(951)292-0703" class="bg-white text-ink px-5 py-3 rounded-lg font-semibold text-center hover:bg-soft transition">Call (951) 292-0703</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Floors</div><div class="opacity-80">indoor &amp; outdoor</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Showers</div><div class="opacity-80">walls &amp; floors</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Backsplash</div><div class="opacity-80">kitchen &amp; bath</div></div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs"><div class="font-bold text-white">Patios</div><div class="opacity-80">exterior rated</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tile Types -->
+  <section class="py-14" id="tile-types">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Types of Tile</h2>
+        <p class="mt-2 text-muted">Material choice affects appearance, durability, maintenance, and how the tile performs in each application.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Ceramic</h3>
+          <p class="text-sm text-muted">Made from clay, glazed and fired. More porous than porcelain and best suited for dry or low-moisture interior walls and backsplashes. Easy to cut, wide range of sizes and colors. Not recommended for heavy-duty floors or outdoor use.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: interior walls, backsplashes, low-traffic floors</div>
+        </div>
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Porcelain</h3>
+          <p class="text-sm text-muted">Denser, harder, and less porous than ceramic. Water absorption under 0.5% makes it ideal for wet areas and outdoor applications. Available in large formats that mimic stone or wood. The most versatile tile type — works everywhere.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: floors, showers, patios, high-traffic areas</div>
+        </div>
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Travertine</h3>
+          <p class="text-sm text-muted">A natural limestone with a distinctive pitted, organic surface. Very popular in desert-region homes and Mediterranean-style architecture. Porous — must be sealed before and after grouting and annually thereafter. Warm beige, ivory, and walnut tones complement desert interiors beautifully.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: floors, patios, showers (sealed), pool surrounds</div>
+        </div>
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Slate</h3>
+          <p class="text-sm text-muted">A dense, natural stone with a layered surface and earthy tones — greens, greys, blacks, and reds. Naturally textured surface provides excellent slip resistance. Variation in thickness can make installation more complex. Sealing recommended.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: floors, accent walls, outdoor areas</div>
+        </div>
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Marble</h3>
+          <p class="text-sm text-muted">Classic and elegant, but requires care. Marble is porous, scratches relatively easily, and etches when exposed to acidic cleaners. Best in low-traffic areas and decorative applications. Stunning in bathrooms and entryways when properly maintained.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: bathrooms, entryways, accent work</div>
+        </div>
+        <div class="bg-soft rounded-2xl border border-line p-6">
+          <h3 class="font-bold text-lg mb-2">Glass Mosaic</h3>
+          <p class="text-sm text-muted">Small glass tiles typically mounted on mesh backing. Brilliant color, reflective surface, and non-porous. Perfect for accent strips, backsplashes, and shower niches. Requires white or non-staining thinset to avoid color showing through. Needs unsanded grout to avoid scratching the glass.</p>
+          <div class="mt-3 text-xs text-brand font-semibold">Best for: backsplashes, shower accents, pool waterline</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sizes -->
+  <section class="py-14 bg-soft" id="sizes">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Tile Size Guide</h2>
+        <p class="mt-3 text-muted">Size has a big impact on visual scale, grout line frequency, and installation complexity.</p>
+
+        <div class="mt-6 space-y-4">
+          <div class="bg-white border border-line rounded-xl p-4">
+            <div class="font-semibold">Small Mosaic (1"–4")</div>
+            <p class="text-sm text-muted mt-1">Intricate patterns, many grout lines. Used for shower floors (more grout lines = more traction), backsplash accents, and pool surrounds. Mesh-mounted for efficient installation.</p>
+          </div>
+          <div class="bg-white border border-line rounded-xl p-4">
+            <div class="font-semibold">Subway (3"×6", 4"×8")</div>
+            <p class="text-sm text-muted mt-1">A timeless classic. Most common on kitchen backsplashes and shower walls. Versatile in both traditional and modern settings depending on grout color and pattern orientation.</p>
+          </div>
+          <div class="bg-white border border-line rounded-xl p-4">
+            <div class="font-semibold">Standard (12"×12", 18"×18")</div>
+            <p class="text-sm text-muted mt-1">The most common floor tile size. Efficient to install, works in most rooms. 18×18 feels larger and has fewer grout lines — good for rooms where you want a cleaner look.</p>
+          </div>
+          <div class="bg-white border border-line rounded-xl p-4">
+            <div class="font-semibold">Large Format (24"×24", 24"×48"+)</div>
+            <p class="text-sm text-muted mt-1">Creates a dramatic, high-end look with minimal grout lines. Requires a very flat substrate — even minor deflection or unevenness causes lippage (tiles not level with each other). Installation takes more skill and specialized tools.</p>
+          </div>
+          <div class="bg-white border border-line rounded-xl p-4">
+            <div class="font-semibold">Plank (4"×24", 6"×36")</div>
+            <p class="text-sm text-muted mt-1">Mimics wood plank flooring in a tile format. Popular in bathrooms and kitchens where wood would be vulnerable to moisture. Installed in offset patterns like real wood.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grout Types -->
+  <section class="py-14" id="grout">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Grout Types — and When to Use Each</h2>
+        <p class="mt-3 text-muted">Grout choice is one of the most overlooked decisions in tile work. It affects durability, maintenance, and appearance.</p>
+        <div class="mt-6 space-y-5">
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Sanded Grout</h3>
+            <p class="mt-2 text-muted">Contains fine sand for added strength. Used for joints 1/8" or wider. Standard for most floor tile and wall tile with wider grout lines. The sand makes it strong enough to resist cracking in wider joints. Do not use on glass tile or polished stone — the sand scratches the surface.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Unsanded Grout</h3>
+            <p class="mt-2 text-muted">Smooth formula for joints under 1/8". Required for glass mosaic tile and polished marble to prevent scratching. Also used for vertical tile where sanded grout tends to slide before setting. Shrinks more than sanded, so only appropriate for narrow joints.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-bold text-lg">Epoxy Grout</h3>
+            <p class="mt-2 text-muted">A two-part system that cures chemically rather than drying. Virtually non-porous, stain-resistant, and can last 20+ years without sealing. The premium choice for kitchen backsplashes, commercial kitchens, and any area exposed to grease, chemicals, or heavy staining. More expensive and harder to work with — installation must be fast and precise as it sets quickly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications and Patterns -->
+  <section class="py-14 bg-soft" id="applications">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Applications</h2>
+          <div class="mt-6 space-y-4">
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Floors</h3><p class="text-sm text-muted mt-1">Porcelain and ceramic for indoor; rated porcelain, travertine, or natural stone for outdoor. Slip resistance rating (COF) is critical for wet areas and pool surrounds.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Shower Walls &amp; Floors</h3><p class="text-sm text-muted mt-1">Shower installations require a proper waterproofing membrane behind the tile. We use cement backer board or waterproof membrane systems — never standard drywall in wet areas.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Kitchen &amp; Bath Backsplash</h3><p class="text-sm text-muted mt-1">Subway tile, mosaic, and natural stone are all popular. Backsplashes behind cooktops need heat-resistant materials; glass tile near high heat may crack.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Outdoor Patios &amp; Pool Surrounds</h3><p class="text-sm text-muted mt-1">Exterior-rated tile with appropriate slip resistance (wet COF 0.60+). Lighter colors help with heat in the desert. Large-format porcelain pavers are increasingly popular for modern outdoor spaces.</p></div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Layout Patterns</h2>
+          <p class="mt-3 text-muted">Pattern changes the feel of a room significantly, even with the same tile.</p>
+          <div class="mt-6 space-y-4">
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Straight / Grid</h3><p class="text-sm text-muted mt-1">Tiles aligned in a square grid. Clean and efficient. Highlights very square, even tiles but shows any slight size variation.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Offset / Brick (Running Bond)</h3><p class="text-sm text-muted mt-1">Each row offset by half a tile length. The classic subway tile pattern. Very forgiving of slight size variation and works in most applications.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Herringbone</h3><p class="text-sm text-muted mt-1">Tiles set at 45° angles in a V-pattern. Dynamic visual interest. Popular for backsplashes, entryways, and accent walls. Requires more cuts and time to install.</p></div>
+            <div class="bg-white border border-line rounded-xl p-4"><h3 class="font-semibold">Diagonal / Diamond</h3><p class="text-sm text-muted mt-1">Tiles set at 45° to the walls. Makes a room feel larger and adds visual movement. Requires more cuts at every wall edge.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14" id="faq">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">Common Questions</h2>
+        <div class="space-y-5">
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">How long does grout last?</h3>
+            <p class="mt-2 text-muted">8–15 years for cement-based grout in high-traffic areas; longer with annual sealing. Epoxy grout can last 20+ years. In desert climates, thermal expansion can shorten grout life in slab-on-grade floors — proper expansion joints and flexible grout near transitions help.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Can you tile over existing tile?</h3>
+            <p class="mt-2 text-muted">Technically possible, but usually not recommended. The extra height changes door clearances and creates transition issues. More importantly, any loose tile underneath will cause the new layer to fail. In most cases, removing the old tile produces a better long-term result.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">What's the difference between ceramic and porcelain?</h3>
+            <p class="mt-2 text-muted">Porcelain uses denser clay fired at higher temperatures, producing a harder, less porous tile with water absorption under 0.5%. Ceramic is softer, more porous, easier to cut, and better suited to dry interior walls and low-traffic floors. Use porcelain anywhere moisture, heavy traffic, or outdoor conditions are a factor.</p>
+          </div>
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">What tile works best for an outdoor patio in the desert?</h3>
+            <p class="mt-2 text-muted">Exterior-rated porcelain with a slip-resistant surface is the practical top choice. Travertine works well and looks great but needs regular sealing. For large patios, consider porcelain pavers in lighter colors — they stay cooler underfoot and require minimal maintenance in the desert climate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-14 bg-soft">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Get a Free Tile Quote</h2>
+        <p class="mt-2 text-muted">Tell us the application, size, and material you're considering and we'll get back to you quickly.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
+          <input type="hidden" name="subject" value="New Quote Request - Tile Work Page">
+          <input type="hidden" name="from_name" value="Omdan Development Website">
+          <input type="hidden" name="redirect" value="/thankyou/">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <label class="block"><span class="block text-sm font-semibold mb-1">Full Name</span><input name="name" type="text" required autocomplete="name" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Phone Number</span><input name="phone" type="tel" required autocomplete="tel" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Email Address</span><input name="email" type="email" required autocomplete="email" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Project Address</span><input name="address" type="text" required autocomplete="street-address" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
+          <label class="block"><span class="block text-sm font-semibold mb-1">Project Details</span><textarea name="message" rows="4" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Application (floor, shower, backsplash, patio)? Approx area? Tile preference?"></textarea></label>
+          <div class="h-captcha" data-captcha="true"></div>
+          <button type="submit" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:opacity-95 w-full">Submit Request</button>
+        </form>
+        <aside class="bg-white border border-line rounded-2xl p-7">
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <ul class="space-y-4 text-sm text-muted">
+            <li class="flex items-start gap-3"><i data-feather="phone" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Phone</div><div>(951) 292-0703</div></div></li>
+            <li class="flex items-start gap-3"><i data-feather="mail" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Email</div><div>omdandevelopment@gmail.com</div></div></li>
+            <li class="flex items-start gap-3"><i data-feather="map-pin" class="w-5 h-5 text-brand"></i><div><div class="font-semibold text-ink">Service area</div><div>Palm Springs, Coachella Valley &amp; Inland Empire</div></div></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-white py-10">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><div class="flex items-center gap-3"><img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" /><span class="text-lg font-bold">Omdan Development</span></div><p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements + handyman repairs across Southern California.</p></div>
+        <div><h4 class="font-bold mb-3">Services</h4><ul class="space-y-2 text-white/75 text-sm"><li><a class="hover:text-white" href="/tile-work/">Tile Work</a></li><li><a class="hover:text-white" href="/floor-repair/">Floor Repair</a></li><li><a class="hover:text-white" href="/countertop-replacement/">Countertop Replacement</a></li><li><a class="hover:text-white" href="/#services">All Services</a></li></ul></div>
+        <div><h4 class="font-bold mb-3">Quick Links</h4><ul class="space-y-2 text-white/75 text-sm"><li><a class="hover:text-white" href="/#about">About</a></li><li><a class="hover:text-white" href="/#services">Services</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li></ul></div>
+        <div><h4 class="font-bold mb-3">Contact</h4><ul class="space-y-3 text-white/75 text-sm"><li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li><li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li><li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i><span>Southern California service-area business</span></li></ul></div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
+        <p>© 2026 Omdan Development Inc. All rights reserved.</p>
+        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => { const isOpen = !mobileMenu.classList.contains('hidden'); mobileMenu.classList.toggle('hidden'); toggleBtn.setAttribute('aria-expanded', String(!isOpen)); });
+    function scrollReveal(){ document.querySelectorAll('.scroll-reveal').forEach(el=>{ if(el.getBoundingClientRect().top < window.innerHeight/1.2) el.classList.add('visible'); }); }
+    window.addEventListener('scroll', scrollReveal);
+    window.addEventListener('load', scrollReveal);
+    feather.replace();
+  </script>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://omdandevelopment.com/gravel/">
+
+  <title>Gravel &amp; Xeriscape Installation | Omdan Development Inc — Palm Springs &amp; Inland Empire</title>
+  <meta name="description" content="Low-water desert landscaping with gravel and xeriscape design for Coachella Valley and Inland Empire homeowners." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0f172a",
+            muted: "#475569",
+            line: "#e2e8f0",
+            soft: "#f8fafc",
+            brand: "#2563eb"
+          },
+          fontFamily: { sans: ["Montserrat", "sans-serif"] }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .hover-scale { transition: transform .2s ease; }
+    .hover-scale:hover { transform: scale(1.02); }
+    .scroll-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+    .no-scrollbar::-webkit-scrollbar { display:none; }
+    .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+  </style>
+
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Gravel & Xeriscape Installation",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Omdan Development Inc",
+      "telephone": "+1-951-292-0703",
+      "url": "https://omdandevelopment.com/",
+      "hasCredential": "CSLB License #1148568"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Yucca Valley"},
+      {"@type": "City", "name": "Twentynine Palms"},
+      {"@type": "City", "name": "Yucaipa"},
+      {"@type": "City", "name": "Moreno Valley"}
+    ],
+    "description": "Low-water desert landscaping with gravel and xeriscape design for Coachella Valley and Inland Empire homeowners.",
+    "url": "https://omdandevelopment.com/gravel/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does gravel get hot in the desert sun?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dark-colored gravels like black lava rock do absorb heat and can get warm underfoot in direct sun. Lighter colors — tan, white, or grey crushed granite — reflect more heat and stay cooler. For areas you walk on barefoot, lighter materials and some shade go a long way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should gravel be installed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most landscaping applications, 2–3 inches of gravel is standard. Thinner applications (1 inch) let weeds push through more easily. Driveways and heavy-traffic areas typically need 4 inches or more over a compacted base."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix different types of gravel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A common approach is to use decomposed granite as a base layer for compaction and stability, then top-dress with decorative river rock or larger cobble for visual interest. Mixing materials in different zones — path vs. planting bed — adds texture and definition to the yard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a weed barrier under gravel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A quality landscape fabric significantly reduces weed growth and is strongly recommended. Cheaper plastic sheeting breaks down and can cause drainage issues. We use permeable woven fabric that lets water pass through while blocking most weed germination."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" />
+        <span class="font-semibold text-base sm:text-lg truncate">Omdan Development</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a href="/#about" class="text-muted hover:text-ink transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink transition">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink transition">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg hover:opacity-95 transition">Free Quote</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-soft" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-white" role="dialog" aria-label="Mobile menu">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4 font-semibold text-sm">
+        <a href="/#about" class="text-muted hover:text-ink">About</a>
+        <a href="/#services" class="text-muted hover:text-ink">Services</a>
+        <a href="#contact" class="text-muted hover:text-ink">Contact</a>
+        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg text-center">Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-[72px]"></div>
+
+  <!-- Hero -->
+  <header class="relative">
+    <div class="absolute inset-0">
+      <img src="/assets/gravel.webp" alt="Gravel and xeriscape landscaping" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-ink/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-5 py-20 md:py-28">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-2 text-white/90 text-xs font-semibold bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+          <span>Gravel &amp; Xeriscape</span>
+          <span class="opacity-70">•</span>
+          <span class="opacity-90">Palm Springs &amp; Inland Empire</span>
+        </p>
+        <h1 class="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
+          Desert-Smart Yards That Look Great and Use Zero Water
+        </h1>
+        <p class="mt-4 text-white/90 text-base md:text-lg">
+          Gravel and xeriscape landscaping built for Coachella Valley heat — weed barrier, edging, the right material for your space, and a clean finished look.
+        </p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="bg-brand text-white px-5 py-3 rounded-lg font-semibold text-center hover:opacity-95 transition">Get a Free Quote</a>
+          <a href="tel:(951)292-0703" class="bg-white text-ink px-5 py-3 rounded-lg font-semibold text-center hover:bg-soft transition">Call (951) 292-0703</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs">
+            <div class="font-bold text-white">Zero Water</div>
+            <div class="opacity-80">after install</div>
+          </div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs">
+            <div class="font-bold text-white">5 Types</div>
+            <div class="opacity-80">of gravel available</div>
+          </div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs">
+            <div class="font-bold text-white">Weed Barrier</div>
+            <div class="opacity-80">permeable fabric</div>
+          </div>
+          <div class="bg-white/10 border border-white/15 rounded-lg p-3 text-white/90 text-xs">
+            <div class="font-bold text-white">Clean Edging</div>
+            <div class="opacity-80">steel or plastic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- What is Xeriscape -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+      <div class="scroll-reveal">
+        <h2 class="text-2xl md:text-3xl font-bold">What Is Xeriscape — and Why Does It Matter Here?</h2>
+        <p class="mt-4 text-muted">
+          Xeriscape (from the Greek "xeros" meaning dry) is a landscaping approach designed to dramatically reduce or eliminate irrigation. In the Coachella Valley, where summer temperatures regularly exceed 110°F and water rates continue to climb, it's not just a trend — it's the practical choice.
+        </p>
+        <p class="mt-3 text-muted">
+          A well-done xeriscape yard uses a combination of gravel, boulders, desert-adapted plants, and hardscape to create a yard that looks intentional and finished — not just a pile of rocks. The goal is a low-maintenance, drought-tolerant landscape that holds up year-round without a sprinkler system.
+        </p>
+        <ul class="mt-6 space-y-3 text-sm text-muted">
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-brand flex-shrink-0"></i>Eliminates lawn watering costs entirely</li>
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-brand flex-shrink-0"></i>Reduces HOA water violations in drought restrictions</li>
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-brand flex-shrink-0"></i>No mowing, no fertilizing, no seasonal replanting</li>
+          <li class="flex items-start gap-2"><i data-feather="check" class="w-5 h-5 text-brand flex-shrink-0"></i>Can qualify for local water district rebates</li>
+        </ul>
+      </div>
+      <img src="/assets/gravel.webp" alt="Xeriscape yard with gravel and desert plants" class="w-full rounded-2xl border border-line shadow-sm hover-scale object-cover" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <!-- Types of Gravel -->
+  <section class="py-14 bg-soft" id="gravel-types">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Types of Gravel We Install</h2>
+        <p class="mt-2 text-muted">Each material has different properties — here's what to know before you choose.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">Decomposed Granite (DG)</h3>
+          <p class="text-muted text-sm">The most popular choice in the desert Southwest. DG is finely crushed granite that compacts into a firm, walkable surface. Available in tan, gold, brown, and grey tones. Works well for paths, driveways, and large open areas. Stabilized DG mixes with a binder to reduce tracking and erosion.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: paths, driveways, large yards</div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">Pea Gravel</h3>
+          <p class="text-muted text-sm">Small, smooth, rounded stones — typically 3/8" to 1/2" — in mixed natural colors of tan, brown, grey, and white. Comfortable underfoot and great for play areas and plant beds. Because it doesn't compact, it stays loose and can shift under foot traffic over time.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: plant beds, casual walkways, dog runs</div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">River Rock</h3>
+          <p class="text-muted text-sm">Water-worn smooth stones ranging from 1" to 4"+ in size. Natural mixed colors — tans, greys, and browns. Creates a natural, polished look. Excellent around plants and for dry stream beds that direct seasonal water flow. Heavier than DG, so it stays put well.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: planting beds, dry creek beds, borders</div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">Crushed Stone / Road Base</h3>
+          <p class="text-muted text-sm">Angular crushed rock that locks together under compaction. Harder and more stable than DG. Used for driveways, heavy-traffic areas, and as a sub-base under pavers. Grey is the most common color. Not typically used as a finished decorative surface.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: driveways, base layers, utility areas</div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">Lava Rock</h3>
+          <p class="text-muted text-sm">Lightweight volcanic rock with a highly textured surface. Available in red, black, and brown. Its porous surface holds some moisture, which can benefit nearby plants. Distinctive desert aesthetic, though the dark colors absorb more heat than lighter gravels.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: accent areas, plant beds, visual contrast</div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-line shadow-sm p-6">
+          <h3 class="font-bold text-lg mb-2">White / Marble Chips</h3>
+          <p class="text-muted text-sm">Bright white or cream crushed marble or limestone. Highly reflective — great for heat mitigation in the desert. Creates a clean, modern look that photographs well. Can be used to brighten shaded corners or create a contemporary minimalist aesthetic.</p>
+          <div class="mt-3 text-xs text-muted border-t border-line pt-3">Best for: modern yards, poolside, accent areas</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sizes and Colors -->
+  <section class="py-14" id="sizes-colors">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Sizes Available</h2>
+          <p class="mt-3 text-muted">Size affects both function and aesthetics. Smaller materials compact and stay in place; larger materials are purely decorative.</p>
+          <div class="mt-6 space-y-4">
+            <div class="border border-line rounded-xl p-4">
+              <div class="font-semibold">3/8" (Pea Gravel / Fine DG)</div>
+              <p class="text-sm text-muted mt-1">Small, walkable, covers fine detail areas. Good for paths and tight spots between plants.</p>
+            </div>
+            <div class="border border-line rounded-xl p-4">
+              <div class="font-semibold">3/4" (Standard Gravel)</div>
+              <p class="text-sm text-muted mt-1">The most common landscape size. Covers well, looks balanced, and works in most applications.</p>
+            </div>
+            <div class="border border-line rounded-xl p-4">
+              <div class="font-semibold">1.5" (Medium Rock)</div>
+              <p class="text-sm text-muted mt-1">More visual weight. Less likely to scatter. Good for open beds and areas not frequently walked on.</p>
+            </div>
+            <div class="border border-line rounded-xl p-4">
+              <div class="font-semibold">2"–4" Cobble</div>
+              <p class="text-sm text-muted mt-1">Large decorative stone. Used as accent, border material, or around feature plants and boulders.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Color Options</h2>
+          <p class="mt-3 text-muted">Color has a real effect on both aesthetics and heat. Lighter tones reflect heat; darker tones absorb it.</p>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-yellow-200 border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">Tan / Gold</div><p class="text-xs text-muted mt-1">Classic desert look. Works with adobe, stucco, and warm-tone homes.</p></div>
+            </div>
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gray-300 border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">Grey</div><p class="text-xs text-muted mt-1">Modern and neutral. Popular for contemporary homes and clean-lined yards.</p></div>
+            </div>
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-white border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">White</div><p class="text-xs text-muted mt-1">High contrast and reflective. Great near pools and modern architecture.</p></div>
+            </div>
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gray-900 border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">Black</div><p class="text-xs text-muted mt-1">Bold and dramatic. Gets hot in direct sun — best for shaded or decorative zones.</p></div>
+            </div>
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-600 border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">Red Lava</div><p class="text-xs text-muted mt-1">Striking southwestern color. Lightweight and porous — good for plant beds.</p></div>
+            </div>
+            <div class="border border-line rounded-xl p-4 flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-amber-100 border border-line flex-shrink-0 mt-0.5"></div>
+              <div><div class="font-semibold text-sm">Mixed / Natural</div><p class="text-xs text-muted mt-1">Multi-tone blends that mimic natural streambeds. Very forgiving and natural-looking.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process -->
+  <section class="py-14 bg-soft" id="installation">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">How We Install Gravel Landscaping</h2>
+        <p class="mt-2 text-muted">Good gravel installs last for years. Shortcuts show up fast — weeds, shifting material, poor drainage.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <div class="text-brand font-bold text-2xl mb-2">01</div>
+          <h3 class="font-semibold mb-1">Clear &amp; Grade</h3>
+          <p class="text-sm text-muted">Remove existing grass, weeds, and debris. Grade the surface for positive drainage away from the home's foundation.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <div class="text-brand font-bold text-2xl mb-2">02</div>
+          <h3 class="font-semibold mb-1">Install Edging</h3>
+          <p class="text-sm text-muted">Steel or heavy-duty poly edging defines the border and keeps gravel from migrating into lawn areas, driveways, or walkways.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <div class="text-brand font-bold text-2xl mb-2">03</div>
+          <h3 class="font-semibold mb-1">Lay Weed Barrier</h3>
+          <p class="text-sm text-muted">Permeable woven landscape fabric goes down before the gravel. It allows water to drain while blocking the light seeds need to germinate.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <div class="text-brand font-bold text-2xl mb-2">04</div>
+          <h3 class="font-semibold mb-1">Place &amp; Compact</h3>
+          <p class="text-sm text-muted">Gravel is spread evenly to the target depth — typically 2–3 inches. DG and compactable materials are compacted for a firm finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage Guide -->
+  <section class="py-14" id="coverage">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">How Much Gravel Do You Need?</h2>
+        <p class="mt-3 text-muted">Gravel coverage depends on the material and depth. Here's a simple guide for planning:</p>
+        <div class="mt-6 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-soft">
+                <th class="text-left p-3 border border-line font-semibold">Depth</th>
+                <th class="text-left p-3 border border-line font-semibold">Coverage per ton</th>
+                <th class="text-left p-3 border border-line font-semibold">Good for</th>
+              </tr>
+            </thead>
+            <tbody class="text-muted">
+              <tr>
+                <td class="p-3 border border-line">1 inch</td>
+                <td class="p-3 border border-line">~160–200 sq ft</td>
+                <td class="p-3 border border-line">Light top-dress refresh</td>
+              </tr>
+              <tr class="bg-soft">
+                <td class="p-3 border border-line">2 inches</td>
+                <td class="p-3 border border-line">~80–100 sq ft</td>
+                <td class="p-3 border border-line">Standard landscape beds</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-line">3 inches</td>
+                <td class="p-3 border border-line">~55–65 sq ft</td>
+                <td class="p-3 border border-line">Recommended for weed suppression</td>
+              </tr>
+              <tr class="bg-soft">
+                <td class="p-3 border border-line">4 inches</td>
+                <td class="p-3 border border-line">~40–50 sq ft</td>
+                <td class="p-3 border border-line">Driveways and heavy traffic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-sm text-muted">These are approximations — actual coverage varies by stone density and size. We'll calculate exact quantities as part of the quoting process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-14 bg-soft" id="benefits">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Why Homeowners Choose Gravel in the Desert</h2>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="droplet" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Zero Irrigation</h3>
+          <p class="text-sm text-muted">Once installed, gravel never needs watering. Significant savings on water bills and no irrigation system to maintain or repair.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="clock" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Minimal Maintenance</h3>
+          <p class="text-sm text-muted">No mowing, edging, fertilizing, or seasonal planting. An occasional rake to redistribute material and remove debris is all that's needed.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="thermometer" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Cooler Than Concrete</h3>
+          <p class="text-sm text-muted">Lighter-colored gravel reflects more heat than dark concrete or asphalt, and the air gaps between stones can keep surface temperatures lower.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="cloud-rain" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Good Drainage</h3>
+          <p class="text-sm text-muted">Permeable gravel lets rainwater soak through rather than run off, reducing puddles, erosion, and foundation water issues.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="dollar-sign" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Long Lifespan</h3>
+          <p class="text-sm text-muted">Quality gravel doesn't rot, fade significantly, or need replacing. A well-installed xeriscape can look great for 10–15+ years with minimal upkeep.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-line p-5 shadow-sm">
+          <i data-feather="eye" class="w-6 h-6 text-brand mb-3"></i>
+          <h3 class="font-semibold mb-1">Clean, Finished Look</h3>
+          <p class="text-sm text-muted">With proper edging and a consistent material, gravel yards look intentional and polished — not like an afterthought.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14" id="faq">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">Common Questions</h2>
+        <div class="space-y-5">
+
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Does gravel get hot in the desert sun?</h3>
+            <p class="mt-2 text-muted">Dark materials like black lava rock absorb heat and can be very hot underfoot in summer. Lighter-colored materials — tan DG, white marble chips, grey granite — reflect more heat and are significantly cooler. For areas people walk on barefoot, we recommend lighter tones or materials with more shade.</p>
+          </div>
+
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">How deep should gravel be installed?</h3>
+            <p class="mt-2 text-muted">Two to three inches is the sweet spot for most landscaping. At 2 inches, some light weeds may still push through over time. At 3 inches, weed suppression is much better. For DG paths and driveways, 4 inches provides a more stable, compacted surface.</p>
+          </div>
+
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Can I mix types of gravel in one yard?</h3>
+            <p class="mt-2 text-muted">Yes, and it often looks better. A common approach: DG or compacted base for open areas and paths, then larger river rock or cobble in the planting beds around cacti and succulents. Different materials in different zones add texture and keep the yard from looking monotonous.</p>
+          </div>
+
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">What about weeds — does gravel stop them?</h3>
+            <p class="mt-2 text-muted">A quality weed barrier fabric plus 2–3 inches of gravel significantly reduces weeds. It won't stop everything — wind-blown seeds can germinate on top of the gravel over time — but maintenance is dramatically less than a lawn. Occasional spot treatments handle what gets through.</p>
+          </div>
+
+          <div class="border border-line rounded-2xl p-6">
+            <h3 class="font-semibold text-lg">Is there a water district rebate for removing lawn?</h3>
+            <p class="mt-2 text-muted">Many Coachella Valley and Inland Empire water districts offer lawn-to-desert conversion rebates. We recommend checking with CVWD, EMWD, or your local water agency before the project — rebate amounts and program availability change seasonally.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-14 bg-soft">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold">Get a Free Gravel / Xeriscape Quote</h2>
+        <p class="mt-2 text-muted">Tell us your yard size, material preferences, and location and we'll get back to you quickly.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
+          <input type="hidden" name="subject" value="New Quote Request - Gravel / Xeriscape Page">
+          <input type="hidden" name="from_name" value="Omdan Development Website">
+          <input type="hidden" name="redirect" value="/thankyou/">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <label class="block">
+            <span class="block text-sm font-semibold mb-1">Full Name</span>
+            <input name="name" type="text" required autocomplete="name" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold mb-1">Phone Number</span>
+            <input name="phone" type="tel" required autocomplete="tel" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold mb-1">Email Address</span>
+            <input name="email" type="email" required autocomplete="email" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold mb-1">Project Address</span>
+            <input name="address" type="text" required autocomplete="street-address" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold mb-1">Project Details</span>
+            <textarea name="message" rows="4" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Approx sq footage? Gravel type preference? Removing lawn?"></textarea>
+          </label>
+          <div class="h-captcha" data-captcha="true"></div>
+          <button type="submit" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:opacity-95 w-full">Submit Request</button>
+        </form>
+        <aside class="bg-white border border-line rounded-2xl p-7">
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <ul class="space-y-4 text-sm text-muted">
+            <li class="flex items-start gap-3">
+              <i data-feather="phone" class="w-5 h-5 text-brand"></i>
+              <div><div class="font-semibold text-ink">Phone</div><div>(951) 292-0703</div></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-feather="mail" class="w-5 h-5 text-brand"></i>
+              <div><div class="font-semibold text-ink">Email</div><div>omdandevelopment@gmail.com</div></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-feather="map-pin" class="w-5 h-5 text-brand"></i>
+              <div><div class="font-semibold text-ink">Service area</div><div>Palm Springs, Coachella Valley &amp; Inland Empire</div></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-10">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" />
+            <span class="text-lg font-bold">Omdan Development</span>
+          </div>
+          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements + handyman repairs across Southern California.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Services</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/gravel/">Gravel &amp; Xeriscape</a></li>
+            <li><a class="hover:text-white" href="/pavers/">Pavers</a></li>
+            <li><a class="hover:text-white" href="/artificial-turf/">Artificial Turf</a></li>
+            <li><a class="hover:text-white" href="/concrete/">Concrete</a></li>
+            <li><a class="hover:text-white" href="/#services">All Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/#about">About</a></li>
+            <li><a class="hover:text-white" href="/#services">Services</a></li>
+            <li><a class="hover:text-white" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Contact</h4>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="map-pin" class="w-4 h-4"></i><span>Southern California service-area business</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
+        <p>© 2026 Omdan Development Inc. All rights reserved.</p>
+        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    function scrollReveal(){
+      document.querySelectorAll('.scroll-reveal').forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight / 1.2) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', scrollReveal);
+    window.addEventListener('load', scrollReveal);
+    feather.replace();
+  </script>
+</body>
+</html>
