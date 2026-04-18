@@ -1,1 +1,431 @@
-[]
+[
+  {
+    "title": "How to Choose Between Concrete Pavers and Natural Stone for a Desert Patio",
+    "slug": "how-to-choose-between-concrete-pavers-and-natural-stone-for-a-desert-patio",
+    "category": "Pavers",
+    "priority": 1,
+    "service": "pavers"
+  },
+  {
+    "title": "Paver Driveway vs Concrete Driveway: What Makes More Sense in Southern California",
+    "slug": "paver-driveway-vs-concrete-driveway-southern-california",
+    "category": "Pavers",
+    "priority": 1,
+    "service": "pavers"
+  },
+  {
+    "title": "Why Pavers Are a Popular Choice for Palm Springs Outdoor Living Spaces",
+    "slug": "why-pavers-are-popular-for-palm-springs-outdoor-living-spaces",
+    "category": "Pavers",
+    "priority": 1,
+    "city": "Palm Springs",
+    "service": "pavers"
+  },
+  {
+    "title": "How Long Do Pavers Last in the Coachella Valley Heat",
+    "slug": "how-long-do-pavers-last-in-the-coachella-valley-heat",
+    "category": "Pavers",
+    "priority": 2,
+    "city": "Palm Desert",
+    "service": "pavers"
+  },
+  {
+    "title": "What to Expect During a Paver Installation Project",
+    "slug": "what-to-expect-during-a-paver-installation-project",
+    "category": "Pavers",
+    "priority": 2,
+    "service": "pavers"
+  },
+  {
+    "title": "The Difference Between Concrete Pavers, Brick Pavers, and Travertine",
+    "slug": "difference-between-concrete-pavers-brick-pavers-and-travertine",
+    "category": "Pavers",
+    "priority": 2,
+    "service": "pavers"
+  },
+  {
+    "title": "Paver Patio Ideas for Backyards in Moreno Valley and Riverside",
+    "slug": "paver-patio-ideas-for-backyards-in-moreno-valley-and-riverside",
+    "category": "Pavers",
+    "priority": 2,
+    "city": "Moreno Valley",
+    "service": "pavers"
+  },
+  {
+    "title": "How to Keep Pavers Looking Clean in a Dusty Desert Climate",
+    "slug": "how-to-keep-pavers-looking-clean-in-a-dusty-desert-climate",
+    "category": "Pavers",
+    "priority": 3,
+    "service": "pavers"
+  },
+  {
+    "title": "Why Southern California Homeowners Are Replacing Grass with Artificial Turf",
+    "slug": "why-southern-california-homeowners-are-replacing-grass-with-artificial-turf",
+    "category": "Artificial Turf",
+    "priority": 1,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Pet-Friendly Artificial Turf: What to Look for Before You Buy",
+    "slug": "pet-friendly-artificial-turf-what-to-look-for-before-you-buy",
+    "category": "Artificial Turf",
+    "priority": 1,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "How Artificial Turf Performs in Extreme Desert Heat",
+    "slug": "how-artificial-turf-performs-in-extreme-desert-heat",
+    "category": "Artificial Turf",
+    "priority": 2,
+    "city": "Palm Springs",
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Artificial Turf vs Drought-Tolerant Landscaping: Which Is Right for Your Yard",
+    "slug": "artificial-turf-vs-drought-tolerant-landscaping-which-is-right-for-your-yard",
+    "category": "Artificial Turf",
+    "priority": 2,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "How Long Does Artificial Turf Last: A Realistic Look at Desert Conditions",
+    "slug": "how-long-does-artificial-turf-last-a-realistic-look-at-desert-conditions",
+    "category": "Artificial Turf",
+    "priority": 2,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Is Artificial Turf Safe for Kids and Pets in Hot Climates",
+    "slug": "is-artificial-turf-safe-for-kids-and-pets-in-hot-climates",
+    "category": "Artificial Turf",
+    "priority": 2,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "HOA Rules and Artificial Turf in the Coachella Valley",
+    "slug": "hoa-rules-and-artificial-turf-in-the-coachella-valley",
+    "category": "Artificial Turf",
+    "priority": 3,
+    "city": "Palm Desert",
+    "service": "artificial-turf"
+  },
+  {
+    "title": "What to Know About Artificial Turf Installation Before You Start",
+    "slug": "what-to-know-about-artificial-turf-installation-before-you-start",
+    "category": "Artificial Turf",
+    "priority": 3,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Concrete Driveway vs Asphalt: What Holds Up Better in Southern California",
+    "slug": "concrete-driveway-vs-asphalt-what-holds-up-better-in-southern-california",
+    "category": "Concrete",
+    "priority": 1,
+    "service": "concrete"
+  },
+  {
+    "title": "When to Repair vs Replace a Cracked Concrete Driveway",
+    "slug": "when-to-repair-vs-replace-a-cracked-concrete-driveway",
+    "category": "Concrete",
+    "priority": 1,
+    "service": "concrete"
+  },
+  {
+    "title": "How Desert Heat Affects Concrete and What You Can Do About It",
+    "slug": "how-desert-heat-affects-concrete-and-what-you-can-do-about-it",
+    "category": "Concrete",
+    "priority": 2,
+    "city": "Palm Springs",
+    "service": "concrete"
+  },
+  {
+    "title": "Stamped Concrete vs Plain Concrete for Patios and Pool Decks",
+    "slug": "stamped-concrete-vs-plain-concrete-for-patios-and-pool-decks",
+    "category": "Concrete",
+    "priority": 2,
+    "service": "concrete"
+  },
+  {
+    "title": "Concrete Pool Decks: What to Consider Before Starting the Project",
+    "slug": "concrete-pool-decks-what-to-consider-before-starting-the-project",
+    "category": "Concrete",
+    "priority": 2,
+    "service": "concrete"
+  },
+  {
+    "title": "Concrete Finishes and Colors: Why the Choice Matters More Than Most Homeowners Think",
+    "slug": "concrete-finishes-and-colors-why-the-choice-matters",
+    "category": "Concrete",
+    "priority": 3,
+    "service": "concrete"
+  },
+  {
+    "title": "What a Concrete Contractor Does Before Pouring a Slab",
+    "slug": "what-a-concrete-contractor-does-before-pouring-a-slab",
+    "category": "Concrete",
+    "priority": 3,
+    "service": "concrete"
+  },
+  {
+    "title": "Do Homes in the Desert Really Need Gutters",
+    "slug": "do-homes-in-the-desert-really-need-gutters",
+    "category": "Gutters",
+    "priority": 1,
+    "service": "gutters"
+  },
+  {
+    "title": "Signs Your Gutters Are Failing Before You See Water Damage Inside",
+    "slug": "signs-your-gutters-are-failing-before-you-see-water-damage",
+    "category": "Gutters",
+    "priority": 1,
+    "service": "gutters"
+  },
+  {
+    "title": "How Gutters Protect Your Foundation During Southern California Rain Events",
+    "slug": "how-gutters-protect-your-foundation-during-southern-california-rain-events",
+    "category": "Gutters",
+    "priority": 2,
+    "service": "gutters"
+  },
+  {
+    "title": "Seamless Gutters vs Sectional Gutters: What's the Difference and Which Is Better",
+    "slug": "seamless-gutters-vs-sectional-gutters-whats-the-difference",
+    "category": "Gutters",
+    "priority": 2,
+    "service": "gutters"
+  },
+  {
+    "title": "Gutter Repair vs Gutter Replacement: How to Know What Your Home Needs",
+    "slug": "gutter-repair-vs-gutter-replacement-how-to-know-what-your-home-needs",
+    "category": "Gutters",
+    "priority": 2,
+    "service": "gutters"
+  },
+  {
+    "title": "How Often Should Gutters Be Cleaned in Southern California",
+    "slug": "how-often-should-gutters-be-cleaned-in-southern-california",
+    "category": "Gutters",
+    "priority": 2,
+    "service": "gutters"
+  },
+  {
+    "title": "Are Gutter Guards Worth the Investment for Desert Homes",
+    "slug": "are-gutter-guards-worth-the-investment-for-desert-homes",
+    "category": "Gutters",
+    "priority": 3,
+    "service": "gutters"
+  },
+  {
+    "title": "Home Maintenance Tasks Palm Springs Homeowners Overlook Every Year",
+    "slug": "home-maintenance-tasks-palm-springs-homeowners-overlook-every-year",
+    "category": "Handyman",
+    "priority": 1,
+    "city": "Palm Springs",
+    "service": "handyman"
+  },
+  {
+    "title": "What a Handyman Can Handle vs When You Need a Licensed Contractor",
+    "slug": "what-a-handyman-can-handle-vs-when-you-need-a-licensed-contractor",
+    "category": "Handyman",
+    "priority": 1,
+    "service": "handyman"
+  },
+  {
+    "title": "A Seasonal Home Maintenance Checklist for Coachella Valley Homeowners",
+    "slug": "seasonal-home-maintenance-checklist-for-coachella-valley-homeowners",
+    "category": "Handyman",
+    "priority": 1,
+    "city": "Palm Desert",
+    "service": "handyman"
+  },
+  {
+    "title": "How to Prioritize a Long Home Repair List Without Getting Overwhelmed",
+    "slug": "how-to-prioritize-a-long-home-repair-list-without-getting-overwhelmed",
+    "category": "Handyman",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "Common Door and Window Problems in Desert Homes and How They Get Fixed",
+    "slug": "common-door-and-window-problems-in-desert-homes",
+    "category": "Handyman",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "How Desert Climate Damages Caulking, Weatherstripping, and Exterior Seals",
+    "slug": "how-desert-climate-damages-caulking-weatherstripping-and-exterior-seals",
+    "category": "Handyman",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "How to Know When a Small Repair Is Actually a Bigger Problem",
+    "slug": "how-to-know-when-a-small-repair-is-actually-a-bigger-problem",
+    "category": "Handyman",
+    "priority": 3,
+    "service": "handyman"
+  },
+  {
+    "title": "What to Expect When You Hire a Handyman for the First Time",
+    "slug": "what-to-expect-when-you-hire-a-handyman-for-the-first-time",
+    "category": "Handyman",
+    "priority": 3,
+    "service": "handyman"
+  },
+  {
+    "title": "Why Hard Water Is a Serious Plumbing Problem in the Coachella Valley",
+    "slug": "why-hard-water-is-a-serious-plumbing-problem-in-the-coachella-valley",
+    "category": "Plumbing",
+    "priority": 1,
+    "city": "Palm Springs",
+    "service": "handyman"
+  },
+  {
+    "title": "Signs Your Home Has a Hidden Water Leak",
+    "slug": "signs-your-home-has-a-hidden-water-leak",
+    "category": "Plumbing",
+    "priority": 1,
+    "service": "handyman"
+  },
+  {
+    "title": "How Desert Heat Affects Outdoor Plumbing and Irrigation Lines",
+    "slug": "how-desert-heat-affects-outdoor-plumbing-and-irrigation-lines",
+    "category": "Plumbing",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "What to Do When Your Water Heater Shows Signs of Trouble",
+    "slug": "what-to-do-when-your-water-heater-shows-signs-of-trouble",
+    "category": "Plumbing",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "Plumbing Upgrades That Help Reduce Water Usage in Southern California",
+    "slug": "plumbing-upgrades-that-help-reduce-water-usage-in-southern-california",
+    "category": "Plumbing",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "Common Causes of Low Water Pressure in Older Desert Homes",
+    "slug": "common-causes-of-low-water-pressure-in-older-desert-homes",
+    "category": "Plumbing",
+    "priority": 2,
+    "service": "handyman"
+  },
+  {
+    "title": "What a Plumbing Inspection Covers and When You Should Schedule One",
+    "slug": "what-a-plumbing-inspection-covers-and-when-you-should-schedule-one",
+    "category": "Plumbing",
+    "priority": 3,
+    "service": "handyman"
+  },
+  {
+    "title": "How to Plan a Bathroom Remodel Without Getting Surprised Halfway Through",
+    "slug": "how-to-plan-a-bathroom-remodel-without-getting-surprised-halfway-through",
+    "category": "Bathroom Remodeling",
+    "priority": 1,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Walk-In Shower vs Bathtub: How to Decide What's Right for Your Home",
+    "slug": "walk-in-shower-vs-bathtub-how-to-decide-whats-right-for-your-home",
+    "category": "Bathroom Remodeling",
+    "priority": 1,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Tile Choices for Bathroom Floors and Walls in Southern California Homes",
+    "slug": "tile-choices-for-bathroom-floors-and-walls-in-southern-california-homes",
+    "category": "Bathroom Remodeling",
+    "priority": 2,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Small Bathroom Renovation Ideas That Actually Make a Real Difference",
+    "slug": "small-bathroom-renovation-ideas-that-actually-make-a-real-difference",
+    "category": "Bathroom Remodeling",
+    "priority": 2,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "What to Think About Before Updating an Outdated Master Bathroom",
+    "slug": "what-to-think-about-before-updating-an-outdated-master-bathroom",
+    "category": "Bathroom Remodeling",
+    "priority": 2,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Budgeting for a Bathroom Remodel: What Affects the Scope of Work",
+    "slug": "budgeting-for-a-bathroom-remodel-what-affects-the-scope-of-work",
+    "category": "Bathroom Remodeling",
+    "priority": 2,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Why Bathroom Ventilation Matters More in the Desert Than Homeowners Expect",
+    "slug": "why-bathroom-ventilation-matters-more-in-the-desert",
+    "category": "Bathroom Remodeling",
+    "priority": 3,
+    "service": "bathroom-remodeling"
+  },
+  {
+    "title": "Kitchen Remodel Planning: What to Decide Before You Demolish Anything",
+    "slug": "kitchen-remodel-planning-what-to-decide-before-you-demolish-anything",
+    "category": "Kitchen Remodeling",
+    "priority": 1,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "Countertop Options for Desert Kitchens: Durability, Style, and What Holds Up",
+    "slug": "countertop-options-for-desert-kitchens-durability-style-and-what-holds-up",
+    "category": "Kitchen Remodeling",
+    "priority": 1,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "Cabinet Refacing vs Full Cabinet Replacement: What Makes Sense for Your Kitchen",
+    "slug": "cabinet-refacing-vs-full-cabinet-replacement-what-makes-sense",
+    "category": "Kitchen Remodeling",
+    "priority": 2,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "How to Design a Kitchen Layout That Works Better for Everyday Life",
+    "slug": "how-to-design-a-kitchen-layout-that-works-better-for-everyday-life",
+    "category": "Kitchen Remodeling",
+    "priority": 2,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "What Kitchen Changes Make the Biggest Difference for Resale Value",
+    "slug": "what-kitchen-changes-make-the-biggest-difference-for-resale-value",
+    "category": "Kitchen Remodeling",
+    "priority": 2,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "What to Know About Kitchen Plumbing Before Starting a Remodel",
+    "slug": "what-to-know-about-kitchen-plumbing-before-starting-a-remodel",
+    "category": "Kitchen Remodeling",
+    "priority": 2,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "Backsplash Tile for Desert Kitchens: What Works and What Doesn't",
+    "slug": "backsplash-tile-for-desert-kitchens-what-works-and-what-doesnt",
+    "category": "Kitchen Remodeling",
+    "priority": 3,
+    "service": "kitchen-remodeling"
+  },
+  {
+    "title": "Why Kitchen Lighting Is One of the Most Overlooked Renovation Decisions",
+    "slug": "why-kitchen-lighting-is-one-of-the-most-overlooked-renovation-decisions",
+    "category": "Kitchen Remodeling",
+    "priority": 3,
+    "service": "kitchen-remodeling"
+  }
+]
