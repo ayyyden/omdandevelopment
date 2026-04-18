@@ -1,0 +1,45 @@
+name: Weekly Blog Publisher
+
+# Runs every Monday at 10:00 UTC (2:00 AM PST / 3:00 AM PDT)
+# Can also be triggered manually via the GitHub Actions UI for testing.
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish blog post
+        id: publish
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/publish-blog.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "blog-bot@omdandevelopment.com"
+          git add blog/ content/blog-posted-log.json sitemap.xml
+          if git diff --staged --quiet; then
+            echo "Nothing to commit — no new topic was selected or library is empty."
+            exit 0
+          fi
+          TITLE="${{ steps.publish.outputs.blog_title }}"
+          git commit -m "feat(blog): auto-publish — ${TITLE}"
+          git push origin main
