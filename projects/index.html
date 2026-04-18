@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Project Gallery | Omdan Development Inc</title>
+  <meta name="description" content="Browse completed projects by Omdan Development Inc — licensed contractor serving Palm Springs, Coachella Valley, Inland Empire, and surrounding areas.">
+  <link rel="canonical" href="https://omdandevelopment.com/projects/">
+
+  <meta property="og:title" content="Project Gallery | Omdan Development Inc">
+  <meta property="og:description" content="Real work from real jobs. Browse completed projects by Omdan Development Inc.">
+  <meta property="og:url" content="https://omdandevelopment.com/projects/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: { ink: '#0f172a', muted: '#334155', line: '#e2e8f0', brand: '#2563eb', brand2: '#16a34a' }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+  <!-- Top bar -->
+  <div class="bg-ink text-white/80 text-xs py-2">
+    <div class="max-w-7xl mx-auto px-5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold">Omdan Development Inc</span>
+        <span class="text-white/70 hidden sm:inline">•</span>
+        <span class="text-white/85">Landscaping & Outdoor Improvements</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end">
+        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
+        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
+        <a href="/projects/" class="text-brand font-semibold hover:text-ink transition">Projects</a>
+        <a href="/blog/" class="text-muted hover:text-ink font-medium transition">Blog</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">Get a Free Consultation</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
+        <a href="/#about" class="text-muted hover:text-ink">About</a>
+        <a href="/#services" class="text-muted hover:text-ink">Services</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink">Service Areas</a>
+        <a href="/projects/" class="text-brand font-semibold">Projects</a>
+        <a href="/blog/" class="text-muted hover:text-ink">Blog</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">Get a Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="bg-ink text-white py-16">
+    <div class="max-w-6xl mx-auto px-5">
+      <p class="text-sm font-semibold text-brand uppercase tracking-wide">Portfolio</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold mt-2">Project Gallery</h1>
+      <p class="mt-3 text-white/75 max-w-2xl">Real work from real jobs. Browse completed projects across our service areas.</p>
+    </div>
+  </header>
+
+  <!-- Projects grid -->
+  <main class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- =============================================
+             ADD EACH NEW PROJECT CARD HERE.
+             Copy this <article> block, paste it above
+             this comment, and update:
+               href        → /projects/YOUR-SLUG/
+               img src     → /assets/projects/YOUR-SLUG/cover.webp
+               img alt     → short description
+               service     → service type label
+               h2 text     → project title
+               city & date → city, Month DD, YYYY
+             ============================================= -->
+
+        <!-- PROJECT: Roof Reset – Agoura Hills – April 17, 2026 -->
+        <article class="bg-white border border-line rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition group reveal">
+          <a href="/projects/roof-reset-agoura-hills-april-17-2026/" class="block overflow-hidden h-52">
+            <img src="/assets/projects/roof-reset-agoura-hills-april-17-2026/cover.webp"
+                 alt="Roof Reset project completed in Agoura Hills"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                 loading="lazy" decoding="async" />
+          </a>
+          <div class="p-5">
+            <span class="text-xs font-semibold text-brand uppercase tracking-wide">Roof Reset</span>
+            <h2 class="mt-1 text-lg font-bold leading-snug">
+              <a href="/projects/roof-reset-agoura-hills-april-17-2026/" class="hover:text-brand transition">
+                Roof Reset in Agoura Hills
+              </a>
+            </h2>
+            <p class="mt-2 text-sm text-muted flex items-center gap-3">
+              <span class="flex items-center gap-1"><i data-feather="map-pin" class="w-3.5 h-3.5"></i> Agoura Hills, CA</span>
+              <span class="flex items-center gap-1"><i data-feather="calendar" class="w-3.5 h-3.5"></i> Apr 17, 2026</span>
+            </p>
+          </div>
+        </article>
+        <!-- /END PROJECT -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-10">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-5 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <span class="text-lg font-bold">Omdan Development</span>
+          </div>
+          <p class="mt-3 text-white/75 text-sm">Landscaping & outdoor improvements + handyman repairs across Los Angeles and nearby areas.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Services</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/pavers/">Pavers</a></li>
+            <li><a class="hover:text-white" href="/artificial-turf/">Artificial Turf</a></li>
+            <li><a class="hover:text-white" href="/concrete/">Concrete</a></li>
+            <li><a class="hover:text-white" href="/gutters/">Gutters</a></li>
+            <li><a class="hover:text-white" href="/handyman/">Handyman</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Service Areas</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/handyman/palm-springs/">Palm Springs</a></li>
+            <li><a class="hover:text-white" href="/handyman/palm-desert/">Palm Desert</a></li>
+            <li><a class="hover:text-white" href="/handyman/twentynine-palms/">Twentynine Palms</a></li>
+            <li><a class="hover:text-white" href="/handyman/yucca-valley/">Yucca Valley</a></li>
+            <li><a class="hover:text-white" href="/handyman/moreno-valley/">Moreno Valley</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-white/75 text-sm">
+            <li><a class="hover:text-white" href="/#about">About</a></li>
+            <li><a class="hover:text-white" href="/projects/">Projects</a></li>
+            <li><a class="hover:text-white" href="/blog/">Blog</a></li>
+            <li><a class="hover:text-white" href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3">Contact</h4>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+          </ul>
+          <div class="mt-4 flex items-center gap-3">
+            <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
+              <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.instagram.com/omdan_development/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i data-feather="instagram" class="w-4 h-4"></i><span class="text-sm">Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
+        <p>© 2026 Omdan Development Inc. All rights reserved.</p>
+        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      var m = document.getElementById('mobile-menu');
+      var open = !m.classList.contains('hidden');
+      m.classList.toggle('hidden', open);
+      this.setAttribute('aria-expanded', String(!open));
+    });
+    // Scroll reveal
+    function revealOnScroll() {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.88) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll, { passive: true });
+    revealOnScroll();
+    feather.replace();
+  </script>
+</body>
+</html>
