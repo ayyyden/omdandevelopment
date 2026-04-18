@@ -1,10 +1,12 @@
 name: Weekly Blog Publisher
 
-# Runs every Monday at 10:00 UTC (2:00 AM PST / 3:00 AM PDT)
+# Runs every Monday at 17:00 UTC = 10:00 AM PDT (Los Angeles, March–November)
+# During winter (PST, November–March) this fires at 9:00 AM LA time.
+# GitHub Actions cron is UTC-only; DST shifts cannot be avoided.
 # Can also be triggered manually via the GitHub Actions UI for testing.
 on:
   schedule:
-    - cron: '0 10 * * 1'
+    - cron: '0 17 * * 1'
   workflow_dispatch: {}
 
 permissions:
