@@ -229,6 +229,32 @@
     }
     window.addEventListener('scroll', revealOnScroll, { passive: true });
     revealOnScroll();
+    function copyEmail(btn) {
+      var email = 'omdandevelopment@gmail.com';
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(function() {
+          showCopied(btn);
+        }).catch(function() { legacyCopy(email, btn); });
+      } else {
+        legacyCopy(email, btn);
+      }
+    }
+    function legacyCopy(text, btn) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand('copy'); showCopied(btn); } catch(e) {}
+      document.body.removeChild(ta);
+    }
+    function showCopied(btn) {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    }
+    
     feather.replace();
   </script>
 </body>

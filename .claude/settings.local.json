@@ -26,7 +26,8 @@
       "Bash(cp \"C:\\\\Users\\\\Edan\\\\Pictures\\\\website-project-photos\\\\roof-reset-agoura-hills-april-17-2026\\\\cover\\\\03.webp\" \"c:\\\\Users\\\\Edan\\\\Documents\\\\GitHub\\\\omdandevelopment\\\\assets\\\\projects\\\\roof-reset-agoura-hills-april-17-2026\\\\cover.webp\")",
       "Bash(cp \"C:\\\\Users\\\\Edan\\\\Pictures\\\\website-project-photos\\\\roof-reset-agoura-hills-april-17-2026\\\\web\"/*.webp \"c:\\\\Users\\\\Edan\\\\Documents\\\\GitHub\\\\omdandevelopment\\\\assets\\\\projects\\\\roof-reset-agoura-hills-april-17-2026/\")",
       "Bash(node -e ' *)",
-      "Bash(node scripts/_update-footer.js)"
+      "Bash(node scripts/_update-footer.js)",
+      "Bash(node scripts/_fix-copy-email.js)"
     ]
   }
 }
