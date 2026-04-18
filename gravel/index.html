@@ -119,28 +119,58 @@
 <body class="bg-white font-sans text-ink">
 
   <!-- Nav -->
-  <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <!-- Top bar -->
+  <div class="w-full bg-ink text-white text-sm">
+    <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold">Omdan Development Inc</span>
+        <span class="text-white/70 hidden sm:inline">•</span>
+        <span class="text-white/85">Landscaping &amp; Outdoor Improvements</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
+        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
+        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-10 w-auto flex-shrink-0" />
-        <span class="font-semibold text-base sm:text-lg truncate">Omdan Development</span>
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
-        <a href="/#about" class="text-muted hover:text-ink transition">About</a>
-        <a href="/#services" class="text-muted hover:text-ink transition">Services</a>
-        <a href="#contact" class="text-muted hover:text-ink transition">Contact</a>
-        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg hover:opacity-95 transition">Free Quote</a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
+        <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink font-medium transition">How it works</a>
+        <a href="/#gallery" class="text-muted hover:text-ink font-medium transition">Work</a>
+        <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
+        <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
+        <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
+          Get a Free Consultation
+        </a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-soft" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-white" role="dialog" aria-label="Mobile menu">
-      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4 font-semibold text-sm">
+    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+      <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
-        <a href="#contact" class="text-muted hover:text-ink">Contact</a>
-        <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg text-center">Free Quote</a>
+        <a href="/#service-areas" class="text-muted hover:text-ink">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink">How it works</a>
+        <a href="/#gallery" class="text-muted hover:text-ink">Work</a>
+        <a href="/projects/" class="text-muted hover:text-ink">Projects</a>
+        <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
+        <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
+          Get a Free Consultation
+        </a>
       </div>
     </div>
   </nav>
