@@ -196,6 +196,16 @@ function buildPage(art, topic, slug, today) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWYZ2LSMHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWYZ2LSMHR');
+  gtag('config', 'AW-17862403534');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -334,22 +344,40 @@ ${faqSchemaItems}
 <body class="bg-white font-sans text-ink overflow-x-hidden">
 
   <!-- Top bar -->
-  <div class="w-full bg-ink text-white text-sm">
-    <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="font-semibold">Omdan Development Inc</span>
-        <span class="text-white/70 hidden sm:inline">•</span>
-        <span class="text-white/85">Landscaping &amp; Outdoor Improvements</span>
+  <div class="w-full bg-ink text-white">
+    <!-- Mobile: phone number centered -->
+    <div class="md:hidden flex items-center justify-center h-8">
+      <a href="tel:9512920703" class="flex items-center gap-2 text-white/80 text-xs font-medium tracking-wide">
+        <i data-feather="phone" class="w-3 h-3 flex-shrink-0"></i>
+        <span>(951) 292-0703</span>
+      </a>
+    </div>
+    <!-- Desktop: trust signal left, contacts right -->
+    <div class="hidden md:flex max-w-7xl mx-auto px-5 h-9 items-center justify-between">
+      <div class="flex items-center gap-3 text-white/45 text-xs tracking-wide uppercase font-medium">
+        <i data-feather="shield" class="w-3 h-3 flex-shrink-0"></i>
+        <span>Licensed &amp; Insured</span>
+        <span class="w-px h-3 bg-white/20"></span>
+        <span>Lic #1148568</span>
       </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
+      <div class="flex items-center text-xs font-medium">
+        <a href="tel:9512920703"
+           class="flex items-center gap-1.5 px-3 h-9 text-white/70 hover:text-white transition">
+          <i data-feather="phone" class="w-3.5 h-3.5 flex-shrink-0"></i>
+          <span>(951) 292-0703</span>
+        </a>
+        <span class="w-px h-4 bg-white/20"></span>
+        <a href="mailto:omdandevelopment@gmail.com"
+           class="flex items-center gap-1.5 px-3 h-9 text-white/70 hover:text-white transition">
+          <i data-feather="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
+          <span>omdandevelopment@gmail.com</span>
+        </a>
       </div>
     </div>
   </div>
 
   <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation" role="banner">
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
         <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
@@ -359,6 +387,7 @@ ${faqSchemaItems}
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink font-medium transition">How it works</a>
         <a href="/#gallery" class="text-muted hover:text-ink font-medium transition">Work</a>
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
@@ -376,6 +405,7 @@ ${faqSchemaItems}
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink">Service Areas</a>
+        <a href="/#how" class="text-muted hover:text-ink">How it works</a>
         <a href="/#gallery" class="text-muted hover:text-ink">Work</a>
         <a href="/projects/" class="text-muted hover:text-ink">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
