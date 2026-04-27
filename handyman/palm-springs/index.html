@@ -14,15 +14,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Handyman in Palm Springs, CA | Omdan Development Inc</title>
-  <meta name="description" content="Professional handyman services in Palm Springs, CA. Licensed, bonded & insured. Call (951) 292-0703 or request a quote." />
+  <title>Handyman Services in Palm Springs, CA | Repairs, Installs &amp; Punch Lists</title>
+  <meta name="description" content="Handyman services in Palm Springs for repairs, installs, drywall, doors, fixtures, punch lists, rentals, condos, and vacation homes. Licensed Contractor #1148568. Call (951) 292-0703." />
   <link rel="canonical" href="https://omdandevelopment.com/handyman/palm-springs/" />
 
   <meta name="theme-color" content="#0f172a" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Handyman in Palm Springs, CA | Omdan Development Inc">
-  <meta property="og:description" content="Licensed, bonded & insured handyman services in Palm Springs. Call (951) 292-0703 or request a quote.">
+  <meta property="og:title" content="Handyman Services in Palm Springs, CA | Repairs, Installs &amp; Punch Lists">
+  <meta property="og:description" content="Handyman services in Palm Springs for repairs, installs, drywall, doors, fixtures, punch lists, rentals, condos, and vacation homes. Licensed Contractor #1148568.">
   <meta property="og:url" content="https://omdandevelopment.com/handyman/palm-springs/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://omdandevelopment.com/assets/15.webp">
@@ -63,17 +63,97 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 
-  <!-- Schema -->
+  <!-- JSON-LD: Service Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Omdan Development Inc",
-    "url": "https://omdandevelopment.com/",
-    "telephone": "+1-951-292-0703",
-    "areaServed": "Palm Springs, CA",
-    "serviceType": "Handyman",
-    "image": "https://omdandevelopment.com/assets/15.webp"
+    "@type": "Service",
+    "name": "Handyman Services in Palm Springs",
+    "description": "Handyman services in Palm Springs for repairs, installs, drywall, doors, fixtures, punch lists, vacation rentals, condos, and HOA properties.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Omdan Development Inc",
+      "telephone": "+1-951-292-0703",
+      "hasCredential": "CSLB License #1148568",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Springs",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Palm Springs",
+      "sameAs": "https://en.wikipedia.org/wiki/Palm_Springs,_California"
+    },
+    "url": "https://omdandevelopment.com/handyman/palm-springs/"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What handyman services do you provide in Palm Springs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We handle a wide range of home repairs and installs in Palm Springs including drywall repair, door and hardware repairs, fixture replacement, tile and floor touch-ups, small carpentry, exterior repairs, fence and gate work, and general property maintenance. We also handle rental punch lists and pre-listing repairs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you help with rental property punch lists?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Rental punch lists are a significant part of our Palm Springs work. We coordinate scheduling around guest check-in and check-out windows, work efficiently to minimize vacancy time, and handle multiple repair items in a single visit rather than requiring separate trips for each task."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with drywall, doors, fixtures, and small repairs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Common repairs we handle include drywall patching and texture matching, door adjustments and lock repairs, faucet and fixture replacement, cabinet hardware swaps, caulking and sealing, and small carpentry repairs. Send photos and we'll confirm scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with condos, HOAs, and vacation homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We regularly work in condos, HOA communities, and vacation homes throughout Palm Springs. We can supply scope documentation and photos for HOA submissions, work within building access hours, and coordinate around rental bookings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you work between guest stays?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — send the booking window and we'll stage materials so the punch list wraps before the next check-in. We understand the Palm Springs vacation rental market and work efficiently to minimize vacancy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured for handyman work in California?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Omdan Development Inc holds CSLB License #1148568 and is fully licensed, bonded, and insured. Hiring a licensed contractor for handyman work protects you from liability and ensures the work meets California standards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I request a handyman estimate in Palm Springs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Text or call (951) 292-0703 with photos of the repairs needed and your property address. We'll respond the same day with next steps and confirm scope and scheduling before any work begins."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -163,10 +243,19 @@
   <!-- Page hero -->
   <header class="border-b border-line bg-slate-50">
     <div class="max-w-7xl mx-auto px-5 py-12">
-      <p class="text-sm text-muted">handyman services</p>
-      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold">Handyman in Palm Springs, CA</h1>
+      <nav class="text-sm text-muted mb-3" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          <li><a href="/" class="hover:text-brand transition">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/handyman/" class="hover:text-brand transition">Handyman</a></li>
+          <li aria-hidden="true">›</li>
+          <li class="text-ink font-medium" aria-current="page">Palm Springs</li>
+        </ol>
+      </nav>
+      <p class="text-sm text-muted">Handyman Services · Palm Springs, CA</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold">Handyman Services in Palm Springs, CA</h1>
       <p class="mt-3 text-muted max-w-2xl">
-        Professional construction and repair services delivered with clear communication, precise execution, and clean results. Licensed, bonded &amp; insured.
+        Repairs, installs, drywall, doors, fixtures, and punch lists for homeowners, vacation rentals, condos, and HOA properties across Palm Springs. Licensed Contractor #1148568.
       </p>
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -180,103 +269,328 @@
     </div>
   </header>
 
-   <!-- Content -->
+  <!-- Content -->
   <main class="max-w-7xl mx-auto px-5 py-12">
   <div class="grid lg:grid-cols-3 gap-10">
-    <div class="lg:col-span-2 space-y-0">
-    <section class="max-w-3xl">
-      <h2 class="text-2xl font-bold">Trusted handyman help in Palm Springs</h2>
-      <p class="mt-3 text-muted">Breezeblock bungalows, mid-century condos, and rental pools need fast, respectful service. We work around guest calendars, HOA rules, and vintage materials so everything feels intentional.</p>
-      <div class="mt-6 grid sm:grid-cols-3 gap-3">
-            <div class="rounded-2xl border border-line bg-white p-4">
-              <p class="text-sm text-muted">Vacant-ready in 24–48 hours</p>
+    <div class="lg:col-span-2 space-y-10">
+
+      <!-- Intro -->
+      <section>
+        <h2 class="text-2xl font-bold">Trusted handyman help in Palm Springs</h2>
+        <p class="mt-3 text-muted">
+          Palm Springs homes in <strong>Old Las Palmas</strong>, <strong>Movie Colony</strong>, <strong>Vista Las Palmas</strong>, <strong>Sunrise Park</strong>, <strong>Tahquitz River Estates</strong>, <strong>Racquet Club Estates</strong>, <strong>South Palm Springs</strong>, and <strong>Deepwell</strong> need handyman services that understand the market — breezeblock bungalows, mid-century condos, and vacation rentals all require a contractor who works efficiently, respects the property, and gets it right the first time.
+        </p>
+        <p class="mt-3 text-muted">
+          Omdan Development provides licensed handyman services in Palm Springs for homeowners, property managers, short-term rental hosts, and HOA communities. We handle repairs, installs, and punch lists with clear scope and reliable scheduling.
+        </p>
+        <div class="mt-5 grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl border border-line bg-white p-4">
+            <p class="text-sm text-muted">Scheduling</p>
+            <p class="mt-1 font-bold">Work around guests &amp; bookings</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-4">
+            <p class="text-sm text-muted">Approach</p>
+            <p class="mt-1 font-bold">Respect vintage &amp; mid-century homes</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-4">
+            <p class="text-sm text-muted">Scope</p>
+            <p class="mt-1 font-bold">Multiple repairs in one visit</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common repairs -->
+      <section>
+        <h2 class="text-xl font-bold">Handyman services in Palm Springs</h2>
+        <p class="mt-2 text-muted">Common repairs and installs we handle throughout Palm Springs:</p>
+        <div class="mt-4 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="square" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold"><a href="/drywall-repair/" class="hover:text-brand transition">Drywall Repair</a></div>
             </div>
-            <div class="rounded-2xl border border-line bg-white p-4">
-              <p class="text-sm text-muted">Respect vintage finishes</p>
+            <p class="text-sm text-muted">Patch holes, fix damage from water or hardware, match texture, and finish to paint-ready condition. Common between rentals and after any wall work.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="unlock" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Door &amp; Hardware Repairs</div>
             </div>
-            <div class="rounded-2xl border border-line bg-white p-4">
-              <p class="text-sm text-muted">Pool + patio friendly</p>
+            <p class="text-sm text-muted">Door adjustments, latch and lock repairs, deadbolt replacement, slider lock fixes, and cabinet hardware swaps. Common items on rental punch lists.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="droplet" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Fixture Replacement</div>
             </div>
-      </div>
-    </section>
+            <p class="text-sm text-muted">Faucet swaps, showerhead replacement, toilet hardware, light fixture installs, and ceiling fan replacement. Clean installs with no visible damage to surrounding surfaces.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="grid" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold"><a href="/tile-work/" class="hover:text-brand transition">Tile &amp; Floor Touch-Ups</a></div>
+            </div>
+            <p class="text-sm text-muted">Replace cracked or loose tiles, regrout worn grout joints, repair <a href="/floor-repair/" class="text-brand hover:underline">flooring</a> transitions, and fix trip hazards on patios, walkways, and pool areas.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="sun" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Exterior Repairs</div>
+            </div>
+            <p class="text-sm text-muted">Stucco crack repair, fascia work, breezeblock repair and repaint, gate and fence hardware, and caulking around windows and doors — all common from desert heat and UV exposure.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="tool" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Small Carpentry</div>
+            </div>
+            <p class="text-sm text-muted">Shelf installation, cabinet door realignment, trim repair, baseboards, and small woodworking repairs that make a property feel well-maintained.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="list" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Rental Punch Lists</div>
+            </div>
+            <p class="text-sm text-muted">Multiple repair items handled in one efficient visit. We work between guest stays to keep your rental in top condition without disrupting your booking calendar.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <i data-feather="home" class="w-5 h-5 text-brand"></i>
+              <div class="font-semibold">Pre-Listing Repairs</div>
+            </div>
+            <p class="text-sm text-muted">Address the repair list before you list your property — drywall, doors, fixtures, caulking, and cosmetic fixes that help your home show well and avoid buyer negotiations.</p>
+          </div>
+        </div>
+      </section>
 
-    <section class="mt-10">
-      <h2 class="text-xl font-bold">Recent projects in Palm Springs</h2>
-      <ul class="mt-4 space-y-3">
-        <li class="border border-line rounded-2xl bg-white/70 p-4 text-sm text-muted">Refinished breezeblock privacy walls and swapped rusted gate hardware off Sunrise Way.</li>
-        <li class="border border-line rounded-2xl bg-white/70 p-4 text-sm text-muted">Rapid rental punch list: slider lock repair, faucet swap, drywall touch-up between weekend guests.</li>
-        <li class="border border-line rounded-2xl bg-white/70 p-4 text-sm text-muted">Pool-equipment pad rebuild with conduit cleanup and fresh stucco near Deepwell Estates.</li>
-      </ul>
-    </section>
+      <!-- Vacation rentals / HOA / condos -->
+      <section>
+        <h2 class="text-xl font-bold">Handyman support for vacation rentals, condos, and HOA properties</h2>
+        <p class="mt-3 text-muted">
+          Palm Springs has one of the most active short-term rental markets in California. Property managers and owners in neighborhoods like Movie Colony, South Palm Springs, and Racquet Club Estates need a reliable handyman who understands how the rental economy works — fast turnarounds, clean work, and no missed check-ins.
+        </p>
+        <ul class="mt-4 space-y-3 text-muted">
+          <li class="flex items-start gap-3">
+            <i data-feather="check" class="w-5 h-5 text-brand2 mt-0.5 flex-shrink-0"></i>
+            <span><strong>Vacation rentals and Airbnbs</strong> — We schedule around your booking calendar and stage materials ahead of time so punch list repairs are completed before the next guest arrives.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-feather="check" class="w-5 h-5 text-brand2 mt-0.5 flex-shrink-0"></i>
+            <span><strong>Condos and HOA communities</strong> — We supply scope notes and photos for HOA or property manager approval before work begins, work within building access hours, and handle elevator and common area access coordination.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-feather="check" class="w-5 h-5 text-brand2 mt-0.5 flex-shrink-0"></i>
+            <span><strong>Mid-century and vintage homes</strong> — We source specialty hardware and finishes that respect the original character of mid-century modern homes in neighborhoods like Old Las Palmas and Vista Las Palmas.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-feather="check" class="w-5 h-5 text-brand2 mt-0.5 flex-shrink-0"></i>
+            <span><strong>Property managers</strong> — We work with property management companies to handle multi-unit repair coordination, routine maintenance visits, and seasonal property checks.</span>
+          </li>
+        </ul>
+      </section>
 
-    <section class="mt-10">
-      <h2 class="text-xl font-bold">Typical home fixes in Palm Springs</h2>
-      <ul class="mt-4 space-y-3">
-        <li class="flex items-start gap-3">
-          <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
-          <span class="text-muted">Sun-faded fascia and stucco cracks from the desert heat</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
-          <span class="text-muted">Pool deck trip hazards and loose coping stones</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
-          <span class="text-muted">A/C condensate reroutes for flat mid-century roofs</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
-          <span class="text-muted">Breezeblock repair and repaint</span>
-        </li>
-      </ul>
-    </section>
+      <!-- Typical fixes -->
+      <section>
+        <h2 class="text-xl font-bold">Common repairs in Palm Springs properties</h2>
+        <p class="mt-2 text-muted">Desert conditions create specific, recurring repair needs:</p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Sun-faded fascia, stucco cracks, and caulking failures from extreme UV and temperature cycles</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Pool deck trip hazards, loose coping stones, and cracked deck tile</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Sliding door and slider lock repairs — a top rental complaint item</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Breezeblock wall repair and repaint in mid-century properties</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Drywall holes and texture damage between tenants or after contractor work</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Faucet and fixture failures from hard mineral-rich Coachella Valley water</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">A/C condensate drainage issues common with flat mid-century roofs</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-brand flex-shrink-0"></span>
+            <span class="text-muted">Gate and fence hardware replacement from rust and UV exposure</span>
+          </li>
+        </ul>
+      </section>
 
-    <section class="mt-10">
-      <h2 class="text-xl font-bold">Palm Springs handyman FAQ</h2>
-      <div class="mt-4 space-y-4">
-        <details class="border border-line rounded-2xl bg-white p-5">
-          <summary class="font-semibold cursor-pointer">Can you work between guest stays?</summary>
-          <p class="text-muted mt-3">Yes—send the booking window and we’ll stage materials so the punch list wraps before the next check-in.</p>
-        </details>
-        <details class="border border-line rounded-2xl bg-white p-5">
-          <summary class="font-semibold cursor-pointer">Do you handle vintage fixtures?</summary>
-          <p class="text-muted mt-3">We source specialty hardware/finishes that respect mid-century homes and provide photos for your records.</p>
-        </details>
-        <details class="border border-line rounded-2xl bg-white p-5">
-          <summary class="font-semibold cursor-pointer">Can you coordinate HOA approvals?</summary>
-          <p class="text-muted mt-3">We’ll supply scope notes and photos before work begins so your HOA or property manager can greenlight the repairs.</p>
-        </details>
-      </div>
-    </section>
+      <!-- Process -->
+      <section>
+        <h2 class="text-xl font-bold">How we handle handyman work</h2>
+        <div class="mt-4 grid sm:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="text-sm font-semibold text-brand mb-2">1. Share photos or video</p>
+            <p class="text-muted text-sm">
+              Text or call with photos of the repairs and your address. The more detail you provide, the faster we can confirm scope and scheduling.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="text-sm font-semibold text-brand mb-2">2. Scope + timeline confirmed</p>
+            <p class="text-muted text-sm">
+              We confirm what's included, materials, timing, and price before we show up. For rental properties, we coordinate around your booking calendar.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="text-sm font-semibold text-brand mb-2">3. Work done, site cleaned</p>
+            <p class="text-muted text-sm">
+              Licensed crew completes the repairs, cleans up, and reviews the work with you. We photograph completed repairs for property managers if needed.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section class="mt-10">
-      <h2 class="text-xl font-bold">Nearby service areas</h2>
-      <p class="mt-2 text-muted">Working across the valley so you always have backup coverage.</p>
-      <div class="mt-4 flex flex-wrap gap-3">
-        <a href="/handyman/palm-desert/" class="text-brand font-semibold hover:underline">Palm Desert Handyman</a>
-        <a href="/handyman/desert-hot-springs/" class="text-brand font-semibold hover:underline">Desert Hot Springs Handyman</a>
-        <a href="/handyman/yucca-valley/" class="text-brand font-semibold hover:underline">Yucca Valley Handyman</a>
-      </div>
-    </section>
+      <!-- FAQ -->
+      <section>
+        <h2 class="text-xl font-bold">Palm Springs handyman FAQ</h2>
+        <div class="mt-4 space-y-4">
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">What handyman services do you provide in Palm Springs?</summary>
+            <p class="text-muted mt-3 text-sm">We handle a wide range of home repairs and installs including drywall repair, door and hardware repairs, fixture replacement, tile and floor touch-ups, small carpentry, exterior repairs, fence and gate work, and general property maintenance. We also handle rental punch lists and pre-listing repairs.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Do you help with rental property punch lists?</summary>
+            <p class="text-muted mt-3 text-sm">Yes. Rental punch lists are a significant part of our Palm Springs work. We coordinate scheduling around guest check-in and check-out windows, work efficiently to minimize vacancy time, and handle multiple repair items in a single visit rather than requiring separate trips for each task.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Can you help with drywall, doors, fixtures, and small repairs?</summary>
+            <p class="text-muted mt-3 text-sm">Yes. Common repairs include <a href="/drywall-repair/" class="text-brand hover:underline">drywall patching</a> and texture matching, door adjustments and lock repairs, faucet and fixture replacement, cabinet hardware swaps, caulking and sealing, and small carpentry repairs. Send photos and we'll confirm scope.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Do you work with condos, HOAs, and vacation homes?</summary>
+            <p class="text-muted mt-3 text-sm">Yes. We regularly work in condos, HOA communities, and vacation homes throughout Palm Springs. We supply scope documentation and photos for HOA submissions, work within building access hours, and coordinate around rental bookings.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Can you work between guest stays?</summary>
+            <p class="text-muted mt-3 text-sm">Yes — send the booking window and we'll stage materials so the punch list wraps before the next check-in. We understand the Palm Springs vacation rental market and work efficiently to minimize vacancy.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Do you handle vintage fixtures?</summary>
+            <p class="text-muted mt-3 text-sm">We source specialty hardware and finishes that respect mid-century homes and provide photos for your records. If an exact match isn't available, we'll present options and get your approval before installation.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">Are you licensed and insured for handyman work in California?</summary>
+            <p class="text-muted mt-3 text-sm">Yes. Omdan Development Inc holds CSLB License #1148568 and is fully licensed, bonded, and insured. Hiring a licensed contractor for handyman work protects you from liability and ensures the work meets California standards.</p>
+          </details>
+          <details class="border border-line rounded-2xl bg-white p-5">
+            <summary class="font-semibold cursor-pointer">How do I request a handyman estimate?</summary>
+            <p class="text-muted mt-3 text-sm">Text or call <a href="tel:9512920703" class="text-brand hover:underline">(951) 292-0703</a> with photos of the repairs needed and your property address. We'll respond the same day with next steps and confirm scope and scheduling before any work begins.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Related services -->
+      <section>
+        <div class="rounded-2xl border border-line bg-slate-50 p-6">
+          <h2 class="text-xl font-bold">Related services</h2>
+          <p class="mt-2 text-muted text-sm">Other services we provide in Palm Springs:</p>
+          <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/handyman/">
+              <i data-feather="tool" class="w-4 h-4 flex-shrink-0"></i>All Handyman Services
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/drywall-repair/">
+              <i data-feather="square" class="w-4 h-4 flex-shrink-0"></i>Drywall Repair
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/tile-work/">
+              <i data-feather="grid" class="w-4 h-4 flex-shrink-0"></i>Tile Work
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/floor-repair/">
+              <i data-feather="move" class="w-4 h-4 flex-shrink-0"></i>Floor Repair
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/exterior-painting/">
+              <i data-feather="edit-3" class="w-4 h-4 flex-shrink-0"></i>Exterior Painting
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/plumbing/">
+              <i data-feather="droplet" class="w-4 h-4 flex-shrink-0"></i>Plumbing
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/bathroom-remodeling/">
+              <i data-feather="home" class="w-4 h-4 flex-shrink-0"></i>Bathroom Remodeling
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/kitchen-remodeling/">
+              <i data-feather="layout" class="w-4 h-4 flex-shrink-0"></i>Kitchen Remodeling
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition" href="/projects/">
+              <i data-feather="image" class="w-4 h-4 flex-shrink-0"></i>See Our Work
+            </a>
+          </div>
+
+          <h3 class="font-bold mt-6 mb-3 text-sm">Handyman services in nearby cities</h3>
+          <div class="flex flex-wrap gap-3 text-sm">
+            <a href="/handyman/palm-desert/" class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition">
+              <i data-feather="map-pin" class="w-4 h-4 flex-shrink-0"></i>Handyman in Palm Desert
+            </a>
+            <a href="/handyman/desert-hot-springs/" class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition">
+              <i data-feather="map-pin" class="w-4 h-4 flex-shrink-0"></i>Handyman in Desert Hot Springs
+            </a>
+            <a href="/handyman/yucca-valley/" class="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-3 hover:border-brand hover:text-brand transition">
+              <i data-feather="map-pin" class="w-4 h-4 flex-shrink-0"></i>Handyman in Yucca Valley
+            </a>
+          </div>
+        </div>
+      </section>
+
     </div>
+
+    <!-- Sidebar -->
     <aside class="space-y-5">
       <div class="rounded-2xl border border-line bg-white p-5">
-        <p class="text-sm text-muted">Process</p>
-        <ol class="mt-3 space-y-3 text-sm text-muted">
-          <li><span class="font-semibold text-ink">1.</span> Share photos or video of the project.</li>
-          <li><span class="font-semibold text-ink">2.</span> We confirm scope, materials, and timeline.</li>
-          <li><span class="font-semibold text-ink">3.</span> Licensed crew completes the work and cleans up.</li>
-        </ol>
+        <h3 class="text-lg font-bold">Get a quote</h3>
+        <p class="mt-2 text-sm text-muted">Text photos of the repair + your address for the fastest response.</p>
+        <div class="mt-4 flex flex-col gap-3">
+          <a href="tel:9512920703" class="inline-flex items-center justify-center bg-ink text-white px-5 py-3 rounded-lg font-semibold hover:opacity-95 transition">
+            Call (951) 292-0703
+          </a>
+          <a href="/#contact" class="inline-flex items-center justify-center bg-brand text-white px-5 py-3 rounded-lg font-semibold hover:opacity-95 transition">
+            Request a Quote
+          </a>
+        </div>
+        <p class="mt-3 text-xs text-muted">Licensed, bonded &amp; insured. CSLB #1148568.</p>
       </div>
+
+      <div class="rounded-2xl border border-line bg-white p-5">
+        <h3 class="text-base font-bold">Handyman services</h3>
+        <ul class="mt-3 space-y-2 text-sm text-muted">
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Drywall repair &amp; patching</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Door &amp; hardware repairs</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Fixture replacement</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Tile &amp; floor touch-ups</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Exterior repairs</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Rental punch lists</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>Pre-listing repairs</li>
+          <li class="flex items-center gap-2"><i data-feather="arrow-right" class="w-3.5 h-3.5 text-brand flex-shrink-0"></i>HOA &amp; condo properties</li>
+        </ul>
+      </div>
+
       <div class="rounded-2xl border border-line bg-slate-50 p-5">
         <p class="text-sm text-muted">Need help fast?</p>
         <p class="mt-2 text-lg font-bold">Text photos to (951) 292-0703</p>
-        <p class="mt-1 text-sm text-muted">We’ll reply with next steps the same day.</p>
+        <p class="mt-1 text-sm text-muted">We'll reply with next steps the same day.</p>
+      </div>
+
+      <div class="rounded-2xl border border-line bg-white p-5">
+        <h3 class="text-base font-bold">Service area</h3>
+        <p class="mt-2 text-sm text-muted">
+          Palm Springs — Old Las Palmas, Movie Colony, Vista Las Palmas, Sunrise Park, Tahquitz River Estates, Racquet Club Estates, South Palm Springs, Deepwell, and surrounding neighborhoods.
+        </p>
+        <p class="mt-2 text-sm text-muted">Also serving Palm Desert, Desert Hot Springs, Yucca Valley, and the greater Coachella Valley.</p>
       </div>
     </aside>
   </div>
 </main>
- 
 
   <!-- Footer -->
     <!-- Footer -->
@@ -383,7 +697,7 @@
       btn.textContent = 'Copied!';
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
-    
+
     feather.replace();
   </script>
 </body>
