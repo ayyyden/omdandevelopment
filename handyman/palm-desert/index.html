@@ -26,6 +26,8 @@
   <meta property="og:url" content="https://omdandevelopment.com/handyman/palm-desert/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://omdandevelopment.com/assets/15.webp">
+  <meta property="og:image:width" content="5120">
+  <meta property="og:image:height" content="5120">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
@@ -76,7 +78,16 @@
         "name": "Omdan Development Inc",
         "url": "https://omdandevelopment.com/",
         "telephone": "+1-951-292-0703",
-        "areaServed": "Palm Desert, CA",
+        "areaServed": {
+      "@type": "City",
+      "name": "Palm Desert"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
         "hasCredential": "CSLB License #1148568"
       },
       "serviceType": "Handyman Services",
@@ -119,6 +130,18 @@
       ]
     }
   ]
+  </script>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://omdandevelopment.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Handyman Services", "item": "https://omdandevelopment.com/handyman/"},
+      {"@type": "ListItem", "position": 3, "name": "Palm Desert", "item": "https://omdandevelopment.com/handyman/palm-desert/"}
+    ]
+  }
   </script>
 </head>
 

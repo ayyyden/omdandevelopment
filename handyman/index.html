@@ -25,6 +25,8 @@
   <meta property="og:url" content="https://omdandevelopment.com/handyman/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://omdandevelopment.com/assets/15.webp">
+  <meta property="og:image:width" content="5120">
+  <meta property="og:image:height" content="5120">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
@@ -94,6 +96,17 @@
 
   <!-- Web3Forms client -->
   <script src="https://web3forms.com/client/script.js" async defer></script>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://omdandevelopment.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Handyman Services", "item": "https://omdandevelopment.com/handyman/"}
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-white font-sans text-ink overflow-x-hidden">
