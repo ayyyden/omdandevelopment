@@ -40,21 +40,128 @@ Omdan Development Inc is a licensed and insured contractor based in Palm Springs
 Omdan Development serves cities across the Coachella Valley and Inland Empire in Southern California:
 
 ### Coachella Valley
-- Palm Springs: https://omdandevelopment.com/pavers/palm-springs/
-- Palm Desert: https://omdandevelopment.com/pavers/palm-desert/
-- Desert Hot Springs: https://omdandevelopment.com/pavers/desert-hot-springs/
-- Indio: https://omdandevelopment.com/pavers/indio/
-- Cathedral City: https://omdandevelopment.com/pavers/cathedral-city/
-- Yucca Valley: https://omdandevelopment.com/pavers/yucca-valley/
-- Twentynine Palms: https://omdandevelopment.com/pavers/twentynine-palms/
+
+- Palm Springs:
+  - Pavers: https://omdandevelopment.com/pavers/palm-springs/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/palm-springs/
+  - Concrete: https://omdandevelopment.com/concrete/palm-springs/
+  - Handyman: https://omdandevelopment.com/handyman/palm-springs/
+  - Plumbing: https://omdandevelopment.com/plumbing/palm-springs/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/palm-springs/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/palm-springs/
+  - Gutters: https://omdandevelopment.com/gutters/palm-springs/
+
+- Palm Desert:
+  - Pavers: https://omdandevelopment.com/pavers/palm-desert/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/palm-desert/
+  - Concrete: https://omdandevelopment.com/concrete/palm-desert/
+  - Handyman: https://omdandevelopment.com/handyman/palm-desert/
+  - Plumbing: https://omdandevelopment.com/plumbing/palm-desert/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/palm-desert/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/palm-desert/
+  - Gutters: https://omdandevelopment.com/gutters/palm-desert/
+
+- Desert Hot Springs:
+  - Pavers: https://omdandevelopment.com/pavers/desert-hot-springs/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/desert-hot-springs/
+  - Concrete: https://omdandevelopment.com/concrete/desert-hot-springs/
+  - Handyman: https://omdandevelopment.com/handyman/desert-hot-springs/
+  - Plumbing: https://omdandevelopment.com/plumbing/desert-hot-springs/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/desert-hot-springs/
+  - Gutters: https://omdandevelopment.com/gutters/desert-hot-springs/
+
+- Indio (Pavers, Artificial Turf, Concrete):
+  - Pavers: https://omdandevelopment.com/pavers/indio/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/indio/
+  - Concrete: https://omdandevelopment.com/concrete/indio/
+
+- Cathedral City (Pavers, Artificial Turf, Concrete):
+  - Pavers: https://omdandevelopment.com/pavers/cathedral-city/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/cathedral-city/
+  - Concrete: https://omdandevelopment.com/concrete/cathedral-city/
+
+- Yucca Valley:
+  - Pavers: https://omdandevelopment.com/pavers/yucca-valley/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/yucca-valley/
+  - Concrete: https://omdandevelopment.com/concrete/yucca-valley/
+  - Handyman: https://omdandevelopment.com/handyman/yucca-valley/
+  - Plumbing: https://omdandevelopment.com/plumbing/yucca-valley/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/yucca-valley/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/yucca-valley/
+  - Gutters: https://omdandevelopment.com/gutters/yucca-valley/
+
+- Twentynine Palms:
+  - Pavers: https://omdandevelopment.com/pavers/twentynine-palms/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/twentynine-palms/
+  - Concrete: https://omdandevelopment.com/concrete/twentynine-palms/
+  - Handyman: https://omdandevelopment.com/handyman/twentynine-palms/
+  - Plumbing: https://omdandevelopment.com/plumbing/twentynine-palms/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/twentynine-palms/
+  - Gutters: https://omdandevelopment.com/gutters/twentynine-palms/
 
 ### Inland Empire
-- Yucaipa: https://omdandevelopment.com/pavers/yucaipa/
-- Moreno Valley: https://omdandevelopment.com/pavers/moreno-valley/
-- Menifee: https://omdandevelopment.com/pavers/menifee/
-- Murrieta: https://omdandevelopment.com/pavers/murrieta/
-- Temecula: https://omdandevelopment.com/pavers/temecula/
-- San Bernardino: https://omdandevelopment.com/pavers/san-bernardino/
+
+- Yucaipa:
+  - Pavers: https://omdandevelopment.com/pavers/yucaipa/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/yucaipa/
+  - Concrete: https://omdandevelopment.com/concrete/yucaipa/
+  - Handyman: https://omdandevelopment.com/handyman/yucaipa/
+  - Plumbing: https://omdandevelopment.com/plumbing/yucaipa/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/yucaipa/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/yucaipa/
+  - Gutters: https://omdandevelopment.com/gutters/yucaipa/
+
+- Moreno Valley:
+  - Pavers: https://omdandevelopment.com/pavers/moreno-valley/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/moreno-valley/
+  - Concrete: https://omdandevelopment.com/concrete/moreno-valley/
+  - Handyman: https://omdandevelopment.com/handyman/moreno-valley/
+  - Plumbing: https://omdandevelopment.com/plumbing/moreno-valley/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/moreno-valley/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/moreno-valley/
+  - Gutters: https://omdandevelopment.com/gutters/moreno-valley/
+
+- Menifee:
+  - Pavers: https://omdandevelopment.com/pavers/menifee/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/menifee/
+  - Concrete: https://omdandevelopment.com/concrete/menifee/
+  - Handyman: https://omdandevelopment.com/handyman/menifee/
+  - Plumbing: https://omdandevelopment.com/plumbing/menifee/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/menifee/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/menifee/
+  - Gutters: https://omdandevelopment.com/gutters/menifee/
+
+- Murrieta:
+  - Pavers: https://omdandevelopment.com/pavers/murrieta/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/murrieta/
+  - Concrete: https://omdandevelopment.com/concrete/murrieta/
+  - Handyman: https://omdandevelopment.com/handyman/murrieta/
+  - Plumbing: https://omdandevelopment.com/plumbing/murrieta/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/murrieta/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/murrieta/
+  - Gutters: https://omdandevelopment.com/gutters/murrieta/
+
+- Temecula:
+  - Pavers: https://omdandevelopment.com/pavers/temecula/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/temecula/
+  - Concrete: https://omdandevelopment.com/concrete/temecula/
+  - Handyman: https://omdandevelopment.com/handyman/temecula/
+  - Plumbing: https://omdandevelopment.com/plumbing/temecula/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/temecula/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/temecula/
+  - Gutters: https://omdandevelopment.com/gutters/temecula/
+
+- San Bernardino:
+  - Pavers: https://omdandevelopment.com/pavers/san-bernardino/
+  - Artificial Turf: https://omdandevelopment.com/artificial-turf/san-bernardino/
+  - Concrete: https://omdandevelopment.com/concrete/san-bernardino/
+  - Handyman: https://omdandevelopment.com/handyman/san-bernardino/
+  - Plumbing: https://omdandevelopment.com/plumbing/san-bernardino/
+  - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/san-bernardino/
+  - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/san-bernardino/
+  - Gutters: https://omdandevelopment.com/gutters/san-bernardino/
 
 ## Key Pages
 - Homepage: https://omdandevelopment.com/
