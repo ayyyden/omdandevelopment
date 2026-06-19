@@ -131,6 +131,21 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Cool Life Paint City Pages -->
+  <url><loc>https://omdandevelopment.com/cool-life-paint/palm-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/palm-desert/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/desert-hot-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/yucca-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/twentynine-palms/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/yucaipa/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/moreno-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/menifee/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/murrieta/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/temecula/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/san-bernardino/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/indio/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/cool-life-paint/cathedral-city/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <url>
     <loc>https://omdandevelopment.com/insulation/</loc>
     <lastmod>2026-06-18</lastmod>
@@ -138,12 +153,42 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Insulation City Pages -->
+  <url><loc>https://omdandevelopment.com/insulation/palm-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/palm-desert/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/desert-hot-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/yucca-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/twentynine-palms/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/yucaipa/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/moreno-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/menifee/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/murrieta/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/temecula/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/san-bernardino/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/indio/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/insulation/cathedral-city/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <url>
     <loc>https://omdandevelopment.com/hvac/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- HVAC City Pages -->
+  <url><loc>https://omdandevelopment.com/hvac/palm-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/palm-desert/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/desert-hot-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/yucca-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/twentynine-palms/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/yucaipa/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/moreno-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/menifee/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/murrieta/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/temecula/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/san-bernardino/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/indio/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/hvac/cathedral-city/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Pavers City Pages -->
   <url><loc>https://omdandevelopment.com/pavers/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -241,6 +286,36 @@
   <url><loc>https://omdandevelopment.com/kitchen-remodeling/murrieta/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/kitchen-remodeling/temecula/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://omdandevelopment.com/kitchen-remodeling/san-bernardino/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Roofing City Pages -->
+  <url><loc>https://omdandevelopment.com/roofing/palm-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/palm-desert/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/cathedral-city/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/indio/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/desert-hot-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/yucca-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/twentynine-palms/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/yucaipa/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/moreno-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/menifee/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/murrieta/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/temecula/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/roofing/san-bernardino/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Windows City Pages -->
+  <url><loc>https://omdandevelopment.com/windows/palm-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/palm-desert/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/cathedral-city/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/indio/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/desert-hot-springs/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/yucca-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/twentynine-palms/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/yucaipa/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/moreno-valley/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/menifee/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/murrieta/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/temecula/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omdandevelopment.com/windows/san-bernardino/</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Gutters City Pages -->
   <url><loc>https://omdandevelopment.com/gutters/palm-springs/</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>

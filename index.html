@@ -448,7 +448,7 @@
         </a>
         <img src="/assets/badge-home-run-financing.webp" alt="Home Run Financing" class="h-10 w-auto" loading="lazy" decoding="async" width="600" height="192" />
         <img src="/assets/badge-momnt-financing.webp" alt="Momnt Financing" class="h-10 w-auto" loading="lazy" decoding="async" width="600" height="300" />
-        <img src="/assets/badge-figure-financing.webp" alt="Figure Financing" class="h-10 w-auto" loading="lazy" decoding="async" width="600" height="125" />
+        <img src="/assets/badge-figure-financing.webp" alt="Figure Financing" class="h-6 w-auto" loading="lazy" decoding="async" width="600" height="125" />
       </div>
     </div>
   </section>
@@ -796,6 +796,8 @@
         <button aria-pressed="false" class="sa-city px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-muted hover:border-brand hover:text-brand transition" data-city="murrieta">Murrieta</button>
         <button aria-pressed="false" class="sa-city px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-muted hover:border-brand hover:text-brand transition" data-city="temecula">Temecula</button>
         <button aria-pressed="false" class="sa-city px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-muted hover:border-brand hover:text-brand transition" data-city="san-bernardino">San Bernardino</button>
+        <button aria-pressed="false" class="sa-city px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-muted hover:border-brand hover:text-brand transition" data-city="indio">Indio</button>
+        <button aria-pressed="false" class="sa-city px-4 py-2 rounded-full border border-line bg-white text-sm font-medium text-muted hover:border-brand hover:text-brand transition" data-city="cathedral-city">Cathedral City</button>
       </div>
 
       <!-- Service panel — revealed on city select -->
@@ -1485,14 +1487,16 @@
         'menifee':           { name: 'Menifee',           svcs: FULL },
         'murrieta':          { name: 'Murrieta',          svcs: FULL },
         'temecula':          { name: 'Temecula',          svcs: FULL },
-        'san-bernardino':    { name: 'San Bernardino',    svcs: FULL }
+        'san-bernardino':    { name: 'San Bernardino',    svcs: FULL },
+        'indio':             { name: 'Indio',             svcs: FULL },
+        'cathedral-city':    { name: 'Cathedral City',    svcs: FULL }
       };
       var panel     = document.getElementById('sa-panel');
       var grid      = document.getElementById('sa-services');
       var cityLabel = document.getElementById('sa-city-label');
       var cityCta   = document.getElementById('sa-city-cta');
       var btns      = document.querySelectorAll('.sa-city');
-      var HUB_ONLY = ['windows','roofing','cool-life-paint','insulation','hvac'];
+      var HUB_ONLY = [];
       btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
           var slug = btn.getAttribute('data-city');
@@ -1546,7 +1550,7 @@
       });
     })();
 
-    feather.replace();
+    document.addEventListener('DOMContentLoaded', function() { feather.replace(); });
   </script>
 
   <!-- Web3Forms client (required when using hCaptcha) -->
