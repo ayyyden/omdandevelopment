@@ -509,4 +509,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://omdandevelopment.com/blog/artificial-turf-vs-drought-tolerant-landscaping-which-is-right-for-your-yard/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
