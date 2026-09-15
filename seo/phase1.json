@@ -7,7 +7,6 @@
     { "slug": "moreno-valley", "name": "Moreno Valley", "state": "CA" }
   ],
   "services": [
-    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
     { "slug": "pavers", "name": "Pavers", "serviceType": "Paver Installation" },
     { "slug": "turf", "name": "Artificial Turf", "serviceType": "Artificial Turf Installation" },
     { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },

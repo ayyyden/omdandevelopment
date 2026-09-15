@@ -4,7 +4,6 @@
     { "slug": "pavers", "name": "Pavers", "serviceType": "Paver Installation" },
     { "slug": "turf", "name": "Artificial Turf", "serviceType": "Artificial Turf Installation" },
     { "slug": "concrete", "name": "Concrete", "serviceType": "Concrete Contractor" },
-    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
     { "slug": "kitchen-remodel", "name": "Kitchen Remodel", "serviceType": "Kitchen Remodeling" },
     { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },
     { "slug": "gutters", "name": "Gutters", "serviceType": "Gutter Installation" }

@@ -61,7 +61,6 @@ Priority scale: `10` = highest (publish first), `1` = lowest. Use whole numbers.
 - `/artificial-turf/` — artificial turf
 - `/concrete/` — concrete work
 - `/gutters/` — gutters
-- `/handyman/` — handyman services
 - `/kitchen-remodeling/` — kitchen remodeling
 - `/bathroom-remodeling/` — bathroom remodeling
 - `/gravel/` — gravel and xeriscape
