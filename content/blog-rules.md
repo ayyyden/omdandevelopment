@@ -65,10 +65,6 @@ Priority scale: `10` = highest (publish first), `1` = lowest. Use whole numbers.
 - `/bathroom-remodeling/` — bathroom remodeling
 - `/gravel/` — gravel and xeriscape
 - `/exterior-painting/` — exterior painting
-- `/drywall-repair/` — drywall repair
-- `/floor-repair/` — floor repair
-- `/tile-work/` — tile work
-- `/countertop-replacement/` — countertop replacement
 - `/pool-remodeling/` — pool remodeling
 
 **Service areas to reference** (only these — do not invent others):

@@ -119,7 +119,7 @@ function callClaude(prompt) {
 // ─── prompt builder ───────────────────────────────────────────────────────────
 
 function buildPrompt(topic) {
-  return `You are a content writer for Omdan Development Inc, a licensed contractor in Southern California (License #1148568). They serve Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, drywall repair, floor repair, tile work, countertop replacement, pool remodeling.
+  return `You are a content writer for Omdan Development Inc, a licensed contractor in Southern California (License #1148568). They serve Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, pool remodeling.
 
 Write a full blog article for this topic:
 Title: "${topic.title}"
@@ -136,7 +136,7 @@ STRICT RULES — follow every one:
 - Include internal links where contextually natural. Available service pages:
   /pavers/, /artificial-turf/, /concrete/, /gutters/,
   /kitchen-remodeling/, /bathroom-remodeling/, /gravel/, /exterior-painting/,
-  /drywall-repair/, /floor-repair/, /tile-work/, /countertop-replacement/, /pool-remodeling/
+  /pool-remodeling/
 - Reference specific cities: Palm Springs, Coachella Valley, Palm Desert, Desert Hot Springs,
   Yucca Valley, Twentynine Palms, Moreno Valley, Menifee, Murrieta, Temecula, San Bernardino.
 - 5 to 7 sections minimum.
