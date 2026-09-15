@@ -3,7 +3,7 @@
 > CSLB License #1148568
 
 ## About
-Omdan Development Inc is a licensed and insured contractor based in Palm Springs, California. The company provides residential and light commercial construction, landscaping, plumbing, and handyman services across Southern California's Coachella Valley and Inland Empire regions. David leads the crew and is personally involved in every project.
+Omdan Development Inc is a licensed and insured contractor based in Palm Springs, California. The company provides residential and light commercial construction, landscaping, and plumbing services across Southern California's Coachella Valley and Inland Empire regions. David leads the crew and is personally involved in every project.
 
 ## Contact
 - Phone: (951) 292-0703
@@ -25,16 +25,11 @@ Omdan Development Inc is a licensed and insured contractor based in Palm Springs
 ### Remodeling & Interior
 - Bathroom Remodeling (showers, tile, vanities, flooring): https://omdandevelopment.com/bathroom-remodeling/
 - Kitchen Remodeling (cabinets, countertops, backsplash, tile, flooring): https://omdandevelopment.com/kitchen-remodeling/
-- Countertop Replacement: https://omdandevelopment.com/countertop-replacement/
-- Tile Work: https://omdandevelopment.com/tile-work/
-- Drywall Repair: https://omdandevelopment.com/drywall-repair/
-- Floor Repair: https://omdandevelopment.com/floor-repair/
 - Pool Remodeling: https://omdandevelopment.com/pool-remodeling/
 
 ### Other Services
 - Plumbing (fixtures, leak repair, repipes, water heaters): https://omdandevelopment.com/plumbing/
 - Gutter Installation & Repair: https://omdandevelopment.com/gutters/
-- Handyman Services (repairs, installs, HOA properties, vacation rentals): https://omdandevelopment.com/handyman/
 
 ## Service Areas
 Omdan Development serves cities across the Coachella Valley and Inland Empire in Southern California:
@@ -45,7 +40,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/palm-springs/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/palm-springs/
   - Concrete: https://omdandevelopment.com/concrete/palm-springs/
-  - Handyman: https://omdandevelopment.com/handyman/palm-springs/
   - Plumbing: https://omdandevelopment.com/plumbing/palm-springs/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/palm-springs/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/palm-springs/
@@ -55,7 +49,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/palm-desert/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/palm-desert/
   - Concrete: https://omdandevelopment.com/concrete/palm-desert/
-  - Handyman: https://omdandevelopment.com/handyman/palm-desert/
   - Plumbing: https://omdandevelopment.com/plumbing/palm-desert/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/palm-desert/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/palm-desert/
@@ -65,7 +58,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/desert-hot-springs/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/desert-hot-springs/
   - Concrete: https://omdandevelopment.com/concrete/desert-hot-springs/
-  - Handyman: https://omdandevelopment.com/handyman/desert-hot-springs/
   - Plumbing: https://omdandevelopment.com/plumbing/desert-hot-springs/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/desert-hot-springs/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/desert-hot-springs/
@@ -85,7 +77,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/yucca-valley/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/yucca-valley/
   - Concrete: https://omdandevelopment.com/concrete/yucca-valley/
-  - Handyman: https://omdandevelopment.com/handyman/yucca-valley/
   - Plumbing: https://omdandevelopment.com/plumbing/yucca-valley/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/yucca-valley/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/yucca-valley/
@@ -95,7 +86,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/twentynine-palms/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/twentynine-palms/
   - Concrete: https://omdandevelopment.com/concrete/twentynine-palms/
-  - Handyman: https://omdandevelopment.com/handyman/twentynine-palms/
   - Plumbing: https://omdandevelopment.com/plumbing/twentynine-palms/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/twentynine-palms/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/twentynine-palms/
@@ -107,7 +97,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/yucaipa/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/yucaipa/
   - Concrete: https://omdandevelopment.com/concrete/yucaipa/
-  - Handyman: https://omdandevelopment.com/handyman/yucaipa/
   - Plumbing: https://omdandevelopment.com/plumbing/yucaipa/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/yucaipa/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/yucaipa/
@@ -117,7 +106,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/moreno-valley/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/moreno-valley/
   - Concrete: https://omdandevelopment.com/concrete/moreno-valley/
-  - Handyman: https://omdandevelopment.com/handyman/moreno-valley/
   - Plumbing: https://omdandevelopment.com/plumbing/moreno-valley/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/moreno-valley/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/moreno-valley/
@@ -127,7 +115,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/menifee/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/menifee/
   - Concrete: https://omdandevelopment.com/concrete/menifee/
-  - Handyman: https://omdandevelopment.com/handyman/menifee/
   - Plumbing: https://omdandevelopment.com/plumbing/menifee/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/menifee/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/menifee/
@@ -137,7 +124,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/murrieta/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/murrieta/
   - Concrete: https://omdandevelopment.com/concrete/murrieta/
-  - Handyman: https://omdandevelopment.com/handyman/murrieta/
   - Plumbing: https://omdandevelopment.com/plumbing/murrieta/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/murrieta/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/murrieta/
@@ -147,7 +133,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/temecula/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/temecula/
   - Concrete: https://omdandevelopment.com/concrete/temecula/
-  - Handyman: https://omdandevelopment.com/handyman/temecula/
   - Plumbing: https://omdandevelopment.com/plumbing/temecula/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/temecula/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/temecula/
@@ -157,7 +142,6 @@ Omdan Development serves cities across the Coachella Valley and Inland Empire in
   - Pavers: https://omdandevelopment.com/pavers/san-bernardino/
   - Artificial Turf: https://omdandevelopment.com/artificial-turf/san-bernardino/
   - Concrete: https://omdandevelopment.com/concrete/san-bernardino/
-  - Handyman: https://omdandevelopment.com/handyman/san-bernardino/
   - Plumbing: https://omdandevelopment.com/plumbing/san-bernardino/
   - Bathroom Remodeling: https://omdandevelopment.com/bathroom-remodeling/san-bernardino/
   - Kitchen Remodeling: https://omdandevelopment.com/kitchen-remodeling/san-bernardino/

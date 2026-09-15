@@ -216,62 +216,10 @@
     "service": "gutters"
   },
   {
-    "title": "Home Maintenance Tasks Palm Springs Homeowners Overlook Every Year",
-    "slug": "home-maintenance-tasks-palm-springs-homeowners-overlook-every-year",
-    "category": "Handyman",
-    "priority": 1,
-    "city": "Palm Springs",
-    "service": "handyman"
-  },
-  {
-    "title": "What a Handyman Can Handle vs When You Need a Licensed Contractor",
-    "slug": "what-a-handyman-can-handle-vs-when-you-need-a-licensed-contractor",
-    "category": "Handyman",
-    "priority": 1,
-    "service": "handyman"
-  },
-  {
-    "title": "A Seasonal Home Maintenance Checklist for Coachella Valley Homeowners",
-    "slug": "seasonal-home-maintenance-checklist-for-coachella-valley-homeowners",
-    "category": "Handyman",
-    "priority": 1,
-    "city": "Palm Desert",
-    "service": "handyman"
-  },
-  {
-    "title": "How to Prioritize a Long Home Repair List Without Getting Overwhelmed",
-    "slug": "how-to-prioritize-a-long-home-repair-list-without-getting-overwhelmed",
-    "category": "Handyman",
-    "priority": 2,
-    "service": "handyman"
-  },
-  {
-    "title": "Common Door and Window Problems in Desert Homes and How They Get Fixed",
-    "slug": "common-door-and-window-problems-in-desert-homes",
-    "category": "Handyman",
-    "priority": 2,
-    "service": "handyman"
-  },
-  {
-    "title": "How Desert Climate Damages Caulking, Weatherstripping, and Exterior Seals",
-    "slug": "how-desert-climate-damages-caulking-weatherstripping-and-exterior-seals",
-    "category": "Handyman",
-    "priority": 2,
-    "service": "handyman"
-  },
-  {
     "title": "How to Know When a Small Repair Is Actually a Bigger Problem",
     "slug": "how-to-know-when-a-small-repair-is-actually-a-bigger-problem",
-    "category": "Handyman",
-    "priority": 3,
-    "service": "handyman"
-  },
-  {
-    "title": "What to Expect When You Hire a Handyman for the First Time",
-    "slug": "what-to-expect-when-you-hire-a-handyman-for-the-first-time",
-    "category": "Handyman",
-    "priority": 3,
-    "service": "handyman"
+    "category": "Home Repair",
+    "priority": 3
   },
   {
     "title": "Why Hard Water Is a Serious Plumbing Problem in the Coachella Valley",

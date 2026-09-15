@@ -119,7 +119,7 @@ function callClaude(prompt) {
 // ─── prompt builder ───────────────────────────────────────────────────────────
 
 function buildPrompt(topic) {
-  return `You are a content writer for Omdan Development Inc, a licensed contractor in Southern California (License #1148568). They serve Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, handyman repairs, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, drywall repair, floor repair, tile work, countertop replacement, pool remodeling.
+  return `You are a content writer for Omdan Development Inc, a licensed contractor in Southern California (License #1148568). They serve Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, pool remodeling.
 
 Write a full blog article for this topic:
 Title: "${topic.title}"
@@ -134,9 +134,9 @@ STRICT RULES — follow every one:
 - No pricing.
 - Write as a knowledgeable local contractor who knows Southern California.
 - Include internal links where contextually natural. Available service pages:
-  /pavers/, /artificial-turf/, /concrete/, /gutters/, /handyman/,
+  /pavers/, /artificial-turf/, /concrete/, /gutters/,
   /kitchen-remodeling/, /bathroom-remodeling/, /gravel/, /exterior-painting/,
-  /drywall-repair/, /floor-repair/, /tile-work/, /countertop-replacement/, /pool-remodeling/
+  /pool-remodeling/
 - Reference specific cities: Palm Springs, Coachella Valley, Palm Desert, Desert Hot Springs,
   Yucca Valley, Twentynine Palms, Moreno Valley, Menifee, Murrieta, Temecula, San Bernardino.
 - 5 to 7 sections minimum.
@@ -149,7 +149,7 @@ Return ONLY a valid JSON object. No markdown. No code fences. No explanation. Ex
   "meta_description": "140-160 chars, includes primary keyword naturally",
   "og_description": "130-150 chars for Open Graph",
   "lede": "1-2 sentence subtitle displayed under the article title in the header",
-  "category_label": "Short badge label e.g. Pavers, Handyman, Gutters",
+  "category_label": "Short badge label e.g. Pavers, Concrete, Gutters",
   "cta_icon": "feather icon name e.g. tool, sun, home, layers, cloud-rain, droplet, grid",
   "cta_heading": "Short compelling CTA headline inside the article",
   "cta_body": "1-2 sentence CTA body text inviting contact",
@@ -482,7 +482,7 @@ ${sectionsHtml}
             <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
-          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements + handyman repairs across Los Angeles and nearby areas.</p>
+          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements across Los Angeles and nearby areas.</p>
         </div>
         <div>
           <h4 class="font-bold mb-3">Services</h4>
@@ -491,17 +491,16 @@ ${sectionsHtml}
             <li><a class="hover:text-white" href="/artificial-turf/">Artificial Turf</a></li>
             <li><a class="hover:text-white" href="/concrete/">Concrete</a></li>
             <li><a class="hover:text-white" href="/gutters/">Gutters</a></li>
-            <li><a class="hover:text-white" href="/handyman/">Handyman</a></li>
           </ul>
         </div>
         <div>
           <h4 class="font-bold mb-3">Service Areas</h4>
           <ul class="space-y-2 text-white/75 text-sm">
-            <li><a class="hover:text-white" href="/handyman/palm-springs/">Palm Springs</a></li>
-            <li><a class="hover:text-white" href="/handyman/palm-desert/">Palm Desert</a></li>
-            <li><a class="hover:text-white" href="/handyman/twentynine-palms/">Twentynine Palms</a></li>
-            <li><a class="hover:text-white" href="/handyman/yucca-valley/">Yucca Valley</a></li>
-            <li><a class="hover:text-white" href="/handyman/moreno-valley/">Moreno Valley</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Palm Springs</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Palm Desert</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Twentynine Palms</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Yucca Valley</a></li>
+            <li><a class="hover:text-white" href="/#service-areas">Moreno Valley</a></li>
           </ul>
         </div>
         <div>

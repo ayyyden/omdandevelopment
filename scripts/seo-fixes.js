@@ -121,9 +121,9 @@ function main() {
   let html = read(indexPath);
 
   // Baseline geo signal: Palm Springs / Coachella Valley (service-area business)
-  const TITLE = "Omdan Development Inc | Pavers, Turf & Handyman | Palm Springs & Coachella Valley";
+  const TITLE = "Omdan Development Inc | Pavers, Turf & Concrete | Palm Springs & Coachella Valley";
   const DESC =
-    "Pavers, artificial turf, and handyman services across Palm Springs and the Coachella Valley. Fast quotes, clean work, reliable scheduling. Call 951-292-0703.";
+    "Pavers, artificial turf, and concrete services across Palm Springs and the Coachella Valley. Fast quotes, clean work, reliable scheduling. Call 951-292-0703.";
   const CANON = "https://omdandevelopment.com/";
 
   html = upsertTitle(html, TITLE);
@@ -149,7 +149,7 @@ function main() {
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pavers Installation" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Artificial Turf Installation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Handyman Services" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Work" } }
     ]
   };
 

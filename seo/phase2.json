@@ -2,7 +2,6 @@
   "baseUrl": "https://omdandevelopment.com",
   "batchName": "phase2-safe-expansion",
   "services": [
-    { "slug": "handyman", "name": "Handyman", "serviceType": "Handyman" },
     { "slug": "kitchen-remodel", "name": "Kitchen Remodel", "serviceType": "Kitchen Remodeling" },
     { "slug": "bathroom-remodeling", "name": "Bathroom Remodeling", "serviceType": "Bathroom Remodeling" },
     { "slug": "gutters", "name": "Gutters", "serviceType": "Gutter Installation" },
