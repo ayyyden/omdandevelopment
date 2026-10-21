@@ -101,34 +101,58 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Should I repair or replace my HVAC system?",
+        "name": "How often should I change my air filter in the desert?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If your system is under 10 years old and the repair cost is less than half the replacement cost, repair usually makes sense. If the unit is 15+ years old, requires frequent repairs, or is undersized for desert cooling loads, replacement is typically the better investment. We give you an honest assessment before quoting either option."
+          "text": "Monthly during summer — no exceptions. Desert dust is significantly finer and more abundant than in other climates, and it clogs filters faster than most filter manufacturers assume when they print their \"change every 3 months\" guidance. A clogged filter restricts airflow, reduces efficiency, causes the coil to ice over, and forces the system to work harder on every cycle. This single habit affects system life more than almost any other maintenance action."
         }
       },
       {
         "@type": "Question",
-        "name": "What size HVAC system do I need for a Palm Springs home?",
+        "name": "My A/C runs all day but the house won't get below 80°F. What's wrong?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "HVAC sizing in the desert requires a proper Manual J load calculation — not just square footage. Ceiling height, insulation, window area, and sun exposure all affect the required tonnage. An undersized unit runs constantly and fails early. We calculate the right size before recommending a system."
+          "text": "Several possible causes: low refrigerant (the system can't move heat effectively), dirty evaporator or condenser coils (reduced heat transfer), a failing compressor, undersized equipment for the actual load, leaky ducts delivering less airflow than the system produces, or inadequate insulation allowing heat to enter faster than the system removes it. This is a diagnostic job — we identify the actual cause before recommending a repair, upgrade, or replacement."
         }
       },
       {
         "@type": "Question",
-        "name": "What is a mini-split HVAC system?",
+        "name": "What is a mini-split and when does it make sense?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A mini-split is a ductless heating and cooling system with an outdoor compressor and one or more indoor air handlers. They are ideal for additions, garages, converted spaces, and rooms where running ductwork is not practical. They are also highly efficient and allow zone-level temperature control."
+          "text": "A mini-split (ductless system) pairs an outdoor compressor with one or more wall-mounted indoor air handlers — no ductwork required. They make the most sense for: additions or converted spaces without existing ducts, garages, guest quarters, or rooms that your central system cannot cool adequately. They are also highly efficient and allow zone-level control — you only cool the rooms that are occupied. Installing a mini-split in a problematic room is often faster and more targeted than re-engineering the main duct system."
         }
       },
       {
         "@type": "Question",
-        "name": "How often should HVAC systems be serviced in the desert?",
+        "name": "How do I know if my ducts are leaking?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In the Coachella Valley, annual tune-ups before the summer cooling season are strongly recommended. Desert dust clogs filters and coils faster than in other climates, reducing efficiency and shortening equipment life. Semi-annual service (fall and spring) is ideal for high-use systems."
+          "text": "Common signs: some rooms are consistently harder to cool than others despite similar size and exposure; you feel weak airflow from certain vents; your utility bills are higher than neighbors with similar-sized homes; or your attic is extremely hot even on moderate days (conditioned air leaking into the attic shows up as unusual heat there). A duct pressure test confirms leakage quantitatively and identifies where the losses are occurring so we address the right locations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I repair my old system or replace it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A useful rule: if the system is under 10 years old and the repair is a single, clearly identified component failure, repair usually makes sense. If the system is 12–15+ years old, is experiencing multiple failures, is a low-efficiency unit, or the repair cost approaches half the replacement cost — replacement is typically the better financial decision over a 5-year horizon. We walk you through this analysis honestly, including the efficiency improvement a modern system would provide, before you decide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my HVAC system need to be sized differently for the desert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — significantly. HVAC sizing uses Manual J load calculations that account for outdoor design temperatures, solar gain, insulation levels, window area, and building orientation. The Coachella Valley's extreme summer design temperatures require careful calculation because the outdoor-to-indoor temperature differential is much larger than most residential systems are commonly designed for. A system sized for a Los Angeles home would be undersized for the same square footage in Palm Springs. We always calculate before specifying equipment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What maintenance should I do before summer starts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Before peak summer: replace the air filter, clear any debris or vegetation from around the outdoor condenser (needs 2 feet of clearance minimum), visually check that the condenser coil fins are clean and straight, confirm the condensate drain line is clear (a clogged drain will shut the system off or cause water damage), and schedule a professional tune-up to check refrigerant charge, electrical connections, and coil condition. Doing this in April instead of waiting until your A/C struggles on the first 110°F day saves you from being on a waiting list for service in peak demand."
         }
       }
     ]
@@ -145,6 +169,7 @@
     ]
   }
   </script>
+  <link rel="preload" as="image" href="/assets/hvac.webp" fetchpriority="high" />
 </head>
 
 <body class="bg-white text-ink font-sans overflow-x-hidden">
@@ -182,10 +207,10 @@
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -194,15 +219,13 @@
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -213,7 +236,7 @@
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -231,7 +254,7 @@
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3 items-stretch justify-center">
         <a href="/#contact" class="block w-full sm:w-auto bg-brand text-white px-7 py-3 rounded-lg font-bold hover:opacity-95 transition text-center">
-          Get a Free Quote
+          Get a Free On-Site Estimate
         </a>
         <a href="tel:9512920703" class="block w-full sm:w-auto bg-white/10 text-white px-7 py-3 rounded-lg font-bold border border-white/20 hover:bg-white/15 transition text-center">
           Call (951) 292-0703
@@ -243,7 +266,7 @@
 
   <!-- QUICK INTRO -->
   <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-    <img src="/assets/hvac.webp" alt="HVAC installation in Palm Springs" class="rounded-2xl border border-line shadow-sm w-full h-72 md:h-[420px] object-cover">
+    <img src="/assets/hvac.webp" alt="HVAC installation in Palm Springs" class="rounded-2xl border border-line shadow-sm w-full h-72 md:h-[420px] object-cover" width="640" height="640">
     <div>
       <h2 class="text-2xl md:text-3xl font-extrabold mb-4">A/C that handles the desert — sized and installed properly</h2>
       <p class="text-gray-700 mb-4">
@@ -286,7 +309,7 @@
         <a href="/hvac/yucca-valley/" class="hover:text-brand hover:underline">Yucca Valley</a>
       </div>
       <div class="mt-6">
-        <a href="/#contact" class="inline-flex bg-brand text-white px-6 py-3 rounded-lg font-bold hover:opacity-95 transition">Get a Free Quote</a>
+        <a href="/#contact" class="inline-flex bg-brand text-white px-6 py-3 rounded-lg font-bold hover:opacity-95 transition">Get a Free On-Site Estimate</a>
       </div>
     </div>
   </section>
@@ -460,8 +483,8 @@
   <section id="contact" class="py-16 bg-soft border-t border-line">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-extrabold title-accent">Get a Free Quote</h2>
-        <p class="text-gray-600 mt-2">Tell us what you're planning and we'll reach out fast.</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold title-accent">Get a Free On-Site Estimate</h2>
+        <p class="text-gray-600 mt-2">Every home is different. We'll visit, measure, and give you personalized pricing — free, with no obligation. Licensed &amp; insured, CSLB #1148568. Call or text (951) 292-0703.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-10">
         <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="space-y-5 bg-white p-6 rounded-2xl border border-line">
@@ -499,7 +522,7 @@
           </label>
           <div class="h-captcha" data-captcha="true"></div>
           <button type="submit" class="w-full bg-brand text-white px-6 py-3 rounded-lg font-bold hover:opacity-95 transition">
-            Submit Request
+            Request My Free On-Site Estimate
           </button>
           <p class="text-xs text-gray-500">By submitting, you agree we may contact you by phone/text/email about your request.</p>
         </form>
@@ -531,7 +554,7 @@
       <div class="grid md:grid-cols-5 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" width="1024" height="1024" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
           <p class="mt-3 text-white/75 text-sm">Licensed contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
@@ -577,10 +600,10 @@
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
             <li class="flex items-center gap-2">
               <i data-feather="mail" class="w-4 h-4"></i>
-              <button onclick="copyEmail(this)" class="hover:text-white cursor-pointer bg-transparent border-0 p-0 text-white/75 text-sm" aria-label="Copy email address">omdandevelopment@gmail.com</button>
+              <button onclick="copyEmail(this)" class="hover:text-white cursor-pointer bg-transparent border-0 p-0 text-white/75 text-sm break-all text-left" aria-label="Copy email address">omdandevelopment@gmail.com</button>
             </li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
@@ -603,6 +626,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
+
 
   <script>
     function copyEmail(btn) {

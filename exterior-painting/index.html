@@ -83,34 +83,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How often should you repaint a home exterior in the desert?",
+        "name": "How often should I repaint in the desert?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In the Coachella Valley and Inland Empire, intense UV and temperature swings degrade exterior paint faster than in milder climates. Most homes need repainting every 5–8 years, compared to 8–12 years in cooler regions. Elastomeric coatings can extend intervals significantly."
+          "text": "Most desert homes need repainting every 5–8 years with standard acrylic paint. With elastomeric coating on stucco, you may get 10–12 years. South- and west-facing walls typically degrade faster and may need attention sooner than north-facing surfaces."
         }
       },
       {
         "@type": "Question",
-        "name": "What sheen level should I use for exterior walls?",
+        "name": "How long does a typical exterior paint job take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Flat or low-sheen finishes are standard for stucco and siding walls because they hide imperfections well. Satin or semi-gloss is better for trim, doors, and shutters where washability and durability matter more. High-gloss is rarely used on walls but works well on metal railings."
+          "text": "A typical single-family home takes 2–4 days: one day for prep and priming, one to two days for painting, and touch-ups at the end. Larger or more complex homes with extensive trim work or multiple stories take longer."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does exterior paint take to dry in the desert heat?",
+        "name": "Can you paint in the desert summer heat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Dry times accelerate in desert heat — most exterior acrylic paints are dry to the touch within 30–60 minutes in hot, low-humidity conditions. However, painting in extreme heat (above 95°F) can cause problems like lap marks and blistering. We typically work in the morning to avoid peak temperatures."
+          "text": "Yes, with scheduling adjustments. We work early mornings when temperatures are lower and avoid painting surfaces in direct afternoon sun above 90–95°F. Most quality exterior paints have application temperature ranges of 50°F–90°F on the surface being painted."
         }
       },
       {
         "@type": "Question",
-        "name": "What is elastomeric paint and do I need it?",
+        "name": "What is the difference between elastomeric and standard exterior paint?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Elastomeric paint is a thick, flexible coating that can bridge hairline cracks and expand and contract with temperature changes — critical in desert climates. It's significantly more durable than standard exterior paint on stucco and masonry. It costs more but typically lasts 2–3x longer."
+          "text": "Elastomeric is far thicker (applied at 15–20 mils dry vs. 2–4 mils for standard paint) and remains flexible when cured. It bridges hairline cracks and provides a waterproof barrier. It costs more but lasts much longer on stucco and is the better long-term value for desert homes."
         }
       }
     ]
@@ -168,10 +168,10 @@
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -180,15 +180,13 @@
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -199,7 +197,7 @@
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -209,7 +207,7 @@
 
   <header class="relative">
     <div class="absolute inset-0">
-      <img src="/assets/paint.webp" alt="Exterior painting service" class="w-full h-full object-cover" />
+      <img src="/assets/paint.webp" alt="Exterior painting service" class="w-full h-full object-cover" width="640" height="640" />
       <div class="absolute inset-0 bg-ink/60"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-5 py-20 md:py-28">
@@ -226,7 +224,7 @@
           Proper prep, quality primer, and paint selected for heat and UV resistance. We work stucco, wood, block, and trim across Coachella Valley and Inland Empire homes.
         </p>
         <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="bg-brand text-white px-5 py-3 rounded-lg font-semibold text-center hover:opacity-95 transition">Get a Free Quote</a>
+          <a href="#contact" class="bg-brand text-white px-5 py-3 rounded-lg font-semibold text-center hover:opacity-95 transition">Get a Free On-Site Estimate</a>
           <a href="tel:(951)292-0703" class="bg-white text-ink px-5 py-3 rounded-lg font-semibold text-center hover:bg-soft transition">Call (951) 292-0703</a>
         </div>
         <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -256,7 +254,7 @@
           <li class="flex items-start gap-2"><i data-feather="alert-triangle" class="w-5 h-5 text-brand flex-shrink-0"></i>Painting over unprepared surfaces fails within 2–3 years</li>
         </ul>
       </div>
-      <img src="/assets/paint.webp" alt="Exterior painting on stucco home" class="w-full rounded-2xl border border-line shadow-sm hover-scale object-cover" loading="lazy" />
+      <img src="/assets/paint.webp" alt="Exterior painting on stucco home" class="w-full rounded-2xl border border-line shadow-sm hover-scale object-cover" loading="lazy" width="640" height="640" />
     </div>
   </section>
 
@@ -383,7 +381,7 @@
           <p class="text-sm text-muted mt-1">CMU block walls, retaining walls, and foundations. Masonry sealer or block filler before paint.</p>
         </div>
         <div class="bg-soft rounded-2xl border border-line p-5 text-center">
-          <i data-feather="door-open" class="w-8 h-8 text-brand mx-auto mb-3"></i>
+          <i data-feather="home" class="w-8 h-8 text-brand mx-auto mb-3"></i>
           <h3 class="font-semibold">Doors &amp; Garage Doors</h3>
           <p class="text-sm text-muted mt-1">High-use surfaces that need durable semi-gloss or satin finishes for washability.</p>
         </div>
@@ -422,8 +420,8 @@
   <section id="contact" class="py-14">
     <div class="max-w-7xl mx-auto px-5">
       <div class="text-center max-w-2xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold">Get a Free Exterior Painting Quote</h2>
-        <p class="mt-2 text-muted">Tell us your surface type, approximate square footage, and location.</p>
+        <h2 class="text-2xl md:text-3xl font-bold">Get a Free On-Site Exterior Painting Estimate</h2>
+        <p class="mt-2 text-muted">Tell us your surface type, approximate square footage, and location. Every home is different. We'll visit, measure, and give you personalized pricing — free, with no obligation.</p>
       </div>
       <div class="mt-10 grid md:grid-cols-2 gap-8">
         <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
@@ -438,7 +436,7 @@
           <label class="block"><span class="block text-sm font-semibold mb-1">Project Address</span><input name="address" type="text" required autocomplete="street-address" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"></label>
           <label class="block"><span class="block text-sm font-semibold mb-1">Project Details</span><textarea name="message" rows="4" class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Surface type (stucco, wood, etc.)? Approx sq ft? Any existing issues (peeling, cracks)?"></textarea></label>
           <div class="h-captcha" data-captcha="true"></div>
-          <button type="submit" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:opacity-95 w-full">Submit Request</button>
+          <button type="submit" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:opacity-95 w-full">Request My Free On-Site Estimate</button>
         </form>
         <aside class="bg-soft border border-line rounded-2xl p-7">
           <h3 class="text-xl font-bold mb-4">Contact</h3>
@@ -458,7 +456,7 @@
       <div class="grid md:grid-cols-5 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" width="1024" height="1024" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
           <p class="mt-3 text-white/75 text-sm">Licensed contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
@@ -499,10 +497,10 @@
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
             <li class="flex items-center gap-2">
               <i data-feather="mail" class="w-4 h-4"></i>
-              <button onclick="copyEmail(this)" class="hover:text-white cursor-pointer bg-transparent border-0 p-0 text-white/75 text-sm" aria-label="Copy email address">omdandevelopment@gmail.com</button>
+              <button onclick="copyEmail(this)" class="hover:text-white cursor-pointer bg-transparent border-0 p-0 text-white/75 text-sm break-all text-left" aria-label="Copy email address">omdandevelopment@gmail.com</button>
             </li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
@@ -525,6 +523,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
+
 
   <script>
     const toggleBtn = document.getElementById('menu-toggle');

@@ -48,3 +48,9 @@ jobs:
           TITLE="${{ steps.publish.outputs.blog_title }}"
           git commit -m "feat(blog): auto-publish — ${TITLE}"
           git push origin main
+
+      - name: Notify search engines of the new post (IndexNow)
+        if: steps.publish.outputs.blog_slug != ''
+        run: |
+          sleep 90  # give GitHub Pages time to deploy
+          curl -s -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow             -H "Content-Type: application/json; charset=utf-8"             -d "{\"host\":\"omdandevelopment.com\",\"key\":\"2f4e3e585b1ce4f8de356be64417fe76\",\"keyLocation\":\"https://omdandevelopment.com/2f4e3e585b1ce4f8de356be64417fe76.txt\",\"urlList\":[\"https://omdandevelopment.com/blog/${{ steps.publish.outputs.blog_slug }}/\",\"https://omdandevelopment.com/blog/\"]}" || true

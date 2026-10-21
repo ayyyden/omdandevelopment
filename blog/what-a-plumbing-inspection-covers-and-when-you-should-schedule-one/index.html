@@ -14,7 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>What a Plumbing Inspection Covers and When You Should Schedule One | Omdan Development</title>
+  <title>What a Plumbing Inspection Covers and When You Should Schedule One</title>
   <meta name="description" content="Learn what a plumbing inspection covers and when to schedule one for your Southern California home. Omdan Development explains key checkpoints and warning signs.">
   <meta name="theme-color" content="#0f172a" />
 
@@ -32,30 +32,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://unpkg.com">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            ink: '#0f172a',
-            muted: '#334155',
-            line: '#e2e8f0',
-            brand: '#2563eb',
-            brand2: '#16a34a'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind compiled -->
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <!-- Feather icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/assets/feather.min.js"></script>
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/assets/favicon.ico">
@@ -224,10 +205,10 @@
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -236,15 +217,13 @@
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -255,7 +234,7 @@
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -319,6 +298,19 @@
 <p>Not every plumber performs inspections, and not every inspector is a licensed plumber. For the most reliable results, look for a licensed professional who has experience with the specific construction styles and plumbing materials common in your area. Homes in Twentynine Palms may have very different plumbing configurations than mid-century properties in Palm Springs, and local knowledge matters.</p><p>At Omdan Development, we work alongside homeowners throughout the Coachella Valley, Inland Empire, and surrounding communities. While we focus on remodeling and repair work, we regularly coordinate with plumbing specialists to ensure every project starts with a solid understanding of the existing system. If an inspection reveals issues that affect your walls, floors, or fixtures, our team is equipped to handle the restoration work so you aren't managing multiple contractors on your own.</p>
 
 
+      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How long does a typical plumbing inspection take?</h3>
+      <p>Most residential plumbing inspections take between one and two hours, depending on the size of the home and whether a sewer camera scope is included. Larger properties or homes with complex plumbing layouts may take longer.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Is a plumbing inspection different from a general home inspection?</h3>
+      <p>Yes. A general home inspection covers plumbing at a surface level along with electrical, structural, and other systems. A dedicated plumbing inspection goes much deeper, often including camera scoping of sewer lines, water pressure testing, and detailed evaluation of the water heater and all supply and drain connections.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How often should I have my plumbing inspected?</h3>
+      <p>For most Southern California homes, scheduling a plumbing inspection every few years is a sound practice. Homes older than 20 years, properties with hard water, and seasonal residences that sit vacant for months at a time benefit from more frequent evaluations.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Can a plumbing inspection detect slab leaks?</h3>
+      <p>A plumbing inspection can identify warning signs of a slab leak, such as unexplained water pressure drops, warm spots on the floor, or the sound of running water when all fixtures are off. If a slab leak is suspected, specialized leak detection equipment is used to pinpoint the exact location.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Should I get a plumbing inspection before remodeling my kitchen or bathroom?</h3>
+      <p>Absolutely. Remodeling projects often involve relocating fixtures, adding new supply and drain connections, and opening up walls. An inspection before the project begins helps identify aging pipes, code issues, or capacity limitations that could affect the design and timeline of your remodel.</p>
+
       <!-- CTA -->
       <div class="mt-10 bg-brand/5 border border-brand/20 rounded-2xl p-7 text-center not-prose">
         <i data-feather="droplet" class="w-8 h-8 text-brand mx-auto mb-3"></i>
@@ -350,10 +342,10 @@
       <div class="grid md:grid-cols-5 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" width="1024" height="1024" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
-          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements across Los Angeles and nearby areas.</p>
+          <p class="mt-3 text-white/75 text-sm">Licensed residential contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
         </div>
         <div>
           <h4 class="font-bold mb-3">Services</h4>
@@ -387,9 +379,9 @@
           <h4 class="font-bold mb-3">Contact</h4>
           <ul class="space-y-3 text-white/75 text-sm">
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
-            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white break-all" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
@@ -405,6 +397,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="/#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
+
 
   <script>
     const toggleBtn = document.getElementById('menu-toggle');

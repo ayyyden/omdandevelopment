@@ -149,9 +149,11 @@ CONTENT POLICY — every article is automatically checked; any violation is reje
 - Include internal links where contextually natural. Available service pages:
   /pavers/, /artificial-turf/, /concrete/, /gutters/,
   /kitchen-remodeling/, /bathroom-remodeling/, /gravel/, /exterior-painting/,
-  /pool-remodeling/
-- Reference specific cities: Palm Springs, Coachella Valley, Palm Desert, Desert Hot Springs,
-  Yucca Valley, Twentynine Palms, Moreno Valley, Menifee, Murrieta, Temecula, San Bernardino.
+  /pool-remodeling/, /plumbing/, /roofing/, /windows/, /insulation/, /hvac/,
+  /cool-life-paint/
+- Reference specific cities: Palm Springs, Coachella Valley, Palm Desert, Rancho Mirage, Cathedral City,
+  Indio, Desert Hot Springs, Yucca Valley, Twentynine Palms, Yucaipa, Moreno Valley, Menifee, Murrieta,
+  Temecula, San Bernardino.
 - 5 to 7 sections minimum.
 - Each section "body" must be 2–4 paragraphs of HTML using ONLY these tags: <p>, <ul>, <li>, <strong>, <a href="...">.
 - 4 to 5 FAQ entries.
@@ -187,7 +189,26 @@ Return ONLY a valid JSON object. No markdown. No code fences. No explanation. Ex
 
 // ─── build blog article HTML page ─────────────────────────────────────────────
 
+function relatedPosts(topic, slug) {
+  const library = readJSON('content/blog-topic-library.json');
+  const posted = new Set(readJSON('content/blog-posted-log.json').map(p => p.slug));
+  return library
+    .filter(t => t.category === topic.category && t.slug !== slug && posted.has(t.slug)
+      && fs.existsSync(path.join(ROOT, 'blog', t.slug, 'index.html')))
+    .slice(0, 2);
+}
+
 function buildPage(art, topic, slug, today) {
+  const related = relatedPosts(topic, slug);
+  const relatedHtml = related.length ? `
+    <!-- Related articles -->
+    <div class="mt-12 pt-8 border-t border-line">
+      <h2 class="text-lg font-bold text-ink mb-3">Related articles</h2>
+      <ul class="space-y-2">
+${related.map(r => `        <li><a href="/blog/${r.slug}/" class="text-brand hover:underline font-medium">${esc(r.title)}</a></li>`).join('\n')}
+      </ul>
+    </div>
+` : '';
   const url   = `https://omdandevelopment.com/blog/${slug}/`;
   const cat   = art.category_label || topic.category || 'General';
   const longD = longDate(today);
@@ -196,6 +217,13 @@ function buildPage(art, topic, slug, today) {
   const sectionsHtml = art.sections.map(s =>
     `      <h2>${esc(s.h2)}</h2>\n\n${s.body}\n`
   ).join('\n');
+
+  // FAQs are shown on the page as well as in the FAQPage schema (Google requires them to match)
+  const faqHtml = art.faqs.length ? `      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+${art.faqs.map(f => `      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">${esc(f.question)}</h3>
+      <p>${esc(f.answer)}</p>`).join('\n')}
+` : '';
 
   const faqSchemaItems = art.faqs.map(f => `      {
         "@type": "Question",
@@ -240,30 +268,12 @@ function buildPage(art, topic, slug, today) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://unpkg.com">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            ink: '#0f172a',
-            muted: '#334155',
-            line: '#e2e8f0',
-            brand: '#2563eb',
-            brand2: '#16a34a'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind compiled (tailwind.config.js scans this template) -->
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <!-- Feather icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/assets/feather.min.js"></script>
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/assets/favicon.ico">
@@ -396,7 +406,7 @@ ${faqSchemaItems}
         <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -405,15 +415,13 @@ ${faqSchemaItems}
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -424,7 +432,7 @@ ${faqSchemaItems}
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -450,7 +458,7 @@ ${faqSchemaItems}
       </p>
       <div class="mt-6 flex items-center gap-2 text-sm text-muted">
         <i data-feather="user" class="w-4 h-4"></i>
-        <span>By <strong class="text-ink">Omdan Development Inc</strong> — Licensed Contractor, License #1148568</span>
+        <span>By <strong class="text-ink">Omdan Development Inc.</strong> — Licensed Contractor, CSLB #1148568</span>
       </div>
     </div>
   </header>
@@ -460,6 +468,7 @@ ${faqSchemaItems}
     <article class="prose-article">
 
 ${sectionsHtml}
+${faqHtml}
 
       <!-- CTA -->
       <div class="mt-10 bg-brand/5 border border-brand/20 rounded-2xl p-7 text-center not-prose">
@@ -476,7 +485,7 @@ ${sectionsHtml}
       </div>
 
     </article>
-
+${relatedHtml}
     <!-- Back to blog -->
     <div class="mt-12 pt-8 border-t border-line">
       <a href="/blog/" class="inline-flex items-center gap-2 text-muted hover:text-ink text-sm font-medium transition">
@@ -495,7 +504,7 @@ ${sectionsHtml}
             <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
-          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements across Los Angeles and nearby areas.</p>
+          <p class="mt-3 text-white/75 text-sm">Licensed residential contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
         </div>
         <div>
           <h4 class="font-bold mb-3">Services</h4>
@@ -504,6 +513,12 @@ ${sectionsHtml}
             <li><a class="hover:text-white" href="/artificial-turf/">Artificial Turf</a></li>
             <li><a class="hover:text-white" href="/concrete/">Concrete</a></li>
             <li><a class="hover:text-white" href="/gutters/">Gutters</a></li>
+            <li><a class="hover:text-white" href="/pool-remodeling/">Pool Remodeling</a></li>
+            <li><a class="hover:text-white" href="/windows/">Windows</a></li>
+            <li><a class="hover:text-white" href="/roofing/">Roofing</a></li>
+            <li><a class="hover:text-white" href="/insulation/">Insulation</a></li>
+            <li><a class="hover:text-white" href="/kitchen-remodeling/">Kitchen Remodeling</a></li>
+            <li><a class="hover:text-white" href="/bathroom-remodeling/">Bathroom Remodeling</a></li>
           </ul>
         </div>
         <div>
@@ -529,24 +544,42 @@ ${sectionsHtml}
           <h4 class="font-bold mb-3">Contact</h4>
           <ul class="space-y-3 text-white/75 text-sm">
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
-            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white break-all" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.instagram.com/omdan_development/" target="_blank" rel="noopener" aria-label="Instagram">
               <i data-feather="instagram" class="w-4 h-4"></i><span class="text-sm">Instagram</span>
             </a>
+            <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.yelp.com/biz/omdan-development-palm-springs" target="_blank" rel="noopener" aria-label="Yelp">
+              <i data-feather="star" class="w-4 h-4"></i><span class="text-sm">Yelp</span>
+            </a>
           </div>
         </div>
       </div>
       <div class="border-t border-white/10 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/60 gap-2">
         <p>© 2026 Omdan Development Inc. All rights reserved.</p>
-        <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+        <div class="flex items-center gap-3">
+          <a class="hover:text-white" href="/privacy/">Privacy Policy</a>
+          <span class="text-white/30">·</span>
+          <a class="hover:text-white" href="/terms-and-conditions/">Terms &amp; Conditions</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="/#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
 
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
