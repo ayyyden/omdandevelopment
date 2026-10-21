@@ -27,6 +27,7 @@ const path  = require('path');
 const https = require('https');
 
 const ROOT = path.resolve(__dirname, '..');
+const { checkArticle, checkText, pageText } = require('./content-policy');
 
 // ─── file helpers ─────────────────────────────────────────────────────────────
 
@@ -119,7 +120,7 @@ function callClaude(prompt) {
 // ─── prompt builder ───────────────────────────────────────────────────────────
 
 function buildPrompt(topic) {
-  return `You are a content writer for Omdan Development Inc, a licensed contractor in Southern California (License #1148568). They serve Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, pool remodeling.
+  return `You are a content writer for Omdan Development Inc, a licensed residential contractor in Southern California (CSLB License #1148568, held by the company, Omdan Development Inc.). They serve homeowners in Palm Springs, Coachella Valley, Inland Empire, and surrounding areas. Services: pavers, artificial turf, concrete, gutters, kitchen remodeling, bathroom remodeling, gravel/xeriscape, exterior painting, pool remodeling.
 
 Write a full blog article for this topic:
 Title: "${topic.title}"
@@ -131,8 +132,20 @@ STRICT RULES — follow every one:
 - Natural, readable prose written for real homeowners. No thin filler content.
 - No fake customer testimonials or invented stories.
 - No made-up statistics or specific numbers you cannot verify.
-- No pricing.
 - Write as a knowledgeable local contractor who knows Southern California.
+
+CONTENT POLICY — every article is automatically checked; any violation is rejected:
+- RESIDENTIAL ONLY. Write for homeowners. Never offer, mention, or imply commercial work, commercial
+  clients, or commercial properties (no businesses, offices, warehouses, storefronts, retail, restaurants).
+  Do not use the word "commercial" at all.
+- NO PRICING. No prices, price ranges, dollar amounts, "$" signs, "starting at", cost-per-square-foot
+  figures, dollar savings, or cost comparisons with numbers.
+- Cost topics ARE allowed: explain what affects the cost (size, materials, site access, base preparation,
+  permits, design complexity) — in words only, never numbers — and explain that every home is different.
+- Every cost question in the FAQ ends by inviting the homeowner to schedule a free on-site estimate for
+  personalized pricing.
+- The CTA invites the reader to request a free on-site estimate for personalized pricing.
+- License wording: "Omdan Development Inc. (CSLB License #1148568)". Never say any person holds the license.
 - Include internal links where contextually natural. Available service pages:
   /pavers/, /artificial-turf/, /concrete/, /gutters/,
   /kitchen-remodeling/, /bathroom-remodeling/, /gravel/, /exterior-painting/,
@@ -152,9 +165,9 @@ Return ONLY a valid JSON object. No markdown. No code fences. No explanation. Ex
   "category_label": "Short badge label e.g. Pavers, Concrete, Gutters",
   "cta_icon": "feather icon name e.g. tool, sun, home, layers, cloud-rain, droplet, grid",
   "cta_heading": "Short compelling CTA headline inside the article",
-  "cta_body": "1-2 sentence CTA body text inviting contact",
+  "cta_body": "1-2 sentences inviting the homeowner to request a free on-site estimate for personalized pricing (no prices)",
   "cta_link": "/most-relevant-service-page/",
-  "cta_link_label": "Button label text",
+  "cta_link_label": "Get a Free On-Site Estimate",
   "keywords": ["5 to 8 keyword strings relevant to this article"],
   "article_section": "Same value as category_label",
   "sections": [
@@ -676,6 +689,11 @@ async function main() {
   // Select next topic: unposted, sorted by priority descending
   const available = library
     .filter(t => !postedSlugs.has(t.slug || slugify(t.title)))
+    .filter(t => {
+      const v = checkText(t.title, 'topic title');
+      if (v.length) console.warn(`⚠️  Skipping topic "${t.title}" — violates content policy (${v[0].why})`);
+      return !v.length;
+    })
     .sort((a, b) => (b.priority || 0) - (a.priority || 0));
 
   if (!available.length) {
@@ -693,29 +711,50 @@ async function main() {
   console.log('');
   console.log('🤖 Calling Claude API to generate article...');
 
-  const rawResponse = await callClaude(buildPrompt(topic));
+  // Generate → validate → content-policy gate. Retry with feedback; never write a violating article.
+  const MAX_ATTEMPTS = 3;
+  let article, pageHtml, feedback = '';
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const rawResponse = await callClaude(buildPrompt(topic) + feedback);
 
-  // Parse JSON — strip markdown code fences if Claude wraps the response
-  let article;
-  try {
-    const fenceMatch = rawResponse.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
-    article = JSON.parse(fenceMatch ? fenceMatch[1] : rawResponse.trim());
-  } catch (e) {
-    console.error('❌ Could not parse JSON from Claude response.');
-    console.error('   First 800 chars of response:', rawResponse.slice(0, 800));
-    process.exit(1);
-  }
+    // Parse JSON — strip markdown code fences if Claude wraps the response
+    try {
+      const fenceMatch = rawResponse.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+      article = JSON.parse(fenceMatch ? fenceMatch[1] : rawResponse.trim());
+    } catch (e) {
+      console.error('❌ Could not parse JSON from Claude response.');
+      console.error('   First 800 chars of response:', rawResponse.slice(0, 800));
+      process.exit(1);
+    }
 
-  // Validate required fields
-  const required = ['meta_description', 'lede', 'category_label', 'sections', 'faqs'];
-  const missing  = required.filter(k => !article[k]);
-  if (missing.length) {
-    console.error('❌ Article JSON is missing required fields:', missing.join(', '));
-    process.exit(1);
+    // Validate required fields
+    const required = ['meta_description', 'lede', 'category_label', 'sections', 'faqs'];
+    const missing  = required.filter(k => !article[k]);
+    if (missing.length) {
+      console.error('❌ Article JSON is missing required fields:', missing.join(', '));
+      process.exit(1);
+    }
+
+    // Lead-gen CTA is fixed wording, not left to the model
+    article.cta_link_label = 'Get a Free On-Site Estimate';
+
+    pageHtml = buildPage(article, topic, slug, today);
+    const violations = [...checkArticle(article), ...checkText(pageText(pageHtml), 'rendered page', { strict: true })];
+    if (!violations.length) {
+      console.log(`✅ Content policy check passed (attempt ${attempt})`);
+      break;
+    }
+    console.error(`⚠️  Content policy violations (attempt ${attempt}/${MAX_ATTEMPTS}):`);
+    violations.forEach(v => console.error(`   [${v.rule}] ${v.why} @ ${v.where}: "${v.snippet}"`));
+    if (attempt === MAX_ATTEMPTS) {
+      console.error('❌ Article still violates the content policy. Nothing was written or published.');
+      process.exit(1);
+    }
+    feedback = '\n\nYOUR PREVIOUS DRAFT WAS REJECTED for these content-policy violations — rewrite to fix ALL of them:\n' +
+      violations.map(v => `- ${v.why} (${v.where}): "${v.snippet}"`).join('\n');
   }
 
   // Write article page
-  const pageHtml = buildPage(article, topic, slug, today);
   write(`blog/${slug}/index.html`, pageHtml);
   console.log(`✅ blog/${slug}/index.html written`);
 
