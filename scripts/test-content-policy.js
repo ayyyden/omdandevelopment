@@ -141,5 +141,15 @@ test('every "Google review" attribution is a verified reviewer', () => {
   assert.deepStrictEqual(bad, []);
 });
 
+test('roof project is location-free (Agoura Hills only survives in the preserved URL slug)', () => {
+  const bad = html.flatMap(([f, t]) => (t.replace(/roof-reset-agoura-hills-april-17-2026/g, '').match(/agoura/gi) || []).map(() => f));
+  assert.deepStrictEqual(bad, []);
+});
+test('AI design images are never captioned as Omdan work', () => {
+  const bad = html.flatMap(([f, t]) => [...t.matchAll(/<img src="\/assets\/(11|14|16|17|rt[123])\.webp" alt="([^"]*)"/g)]
+    .filter(m => /omdan|completed|project|install/i.test(m[2])).map(m => `${f}: ${m[1]} "${m[2]}"`));
+  assert.deepStrictEqual(bad, []);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
