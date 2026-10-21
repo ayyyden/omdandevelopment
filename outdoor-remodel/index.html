@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWYZ2LSMHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWYZ2LSMHR');
+  gtag('config', 'AW-17862403534');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Ads landing page: kept out of search results and the sitemap -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Front &amp; Back Yard Remodeling | Omdan Development</title>
+  <meta name="description" content="Artificial turf, pavers, concrete patios and desert landscaping for homes across the Coachella Valley, Morongo Basin and Pass area. Licensed &amp; insured, CSLB #1148568. Free on-site estimate.">
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preload" as="image" href="/assets/15-hero.webp" fetchpriority="high" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://web3forms.com">
+
+  <!-- Tailwind compiled -->
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script src="/assets/feather.min.js" defer></script>
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+
+  <style>
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(15,23,42,.82) 0%, rgba(15,23,42,.62) 55%, rgba(15,23,42,.45) 100%);
+    }
+    /* Project-type and yard chips */
+    .chip input { position: absolute; opacity: 0; pointer-events: none; }
+    .chip span { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: .5rem .75rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: .875rem; font-weight: 500; color: #0f172a; background: #fff; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+    .chip input:checked + span { background: #2563eb; border-color: #2563eb; color: #fff; }
+    .chip input:focus-visible + span { outline: 2px solid #2563eb; outline-offset: 2px; }
+    .field-error { display: none; color: #dc2626; font-size: .8125rem; margin-top: .375rem; }
+    .field-error.show { display: block; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .2s ease; }
+    .card-img { width: 100%; height: 11rem; object-fit: cover; }
+    /* Utilities this page uses that aren't in the compiled /assets/styles.css yet */
+    .font-normal { font-weight: 400; }
+    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .text-amber-500 { color: #f59e0b; }
+    @media (min-width: 640px) { .sm\:col-span-2 { grid-column: span 2 / span 2; } .sm\:p-6 { padding: 1.5rem; } }
+    @media (min-width: 768px) { .md\:py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; } }
+    html { scroll-behavior: smooth; }
+    #estimate { scroll-margin-top: 5rem; }
+  </style>
+</head>
+<body class="font-sans text-ink bg-white antialiased">
+
+  <!-- Top bar: no site navigation on purpose, so visitors stay on the form -->
+  <div class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
+        <div class="min-w-0">
+          <div class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</div>
+          <div class="text-xs text-muted leading-tight">Licensed &amp; Insured · CSLB #1148568</div>
+        </div>
+      </div>
+      <a href="tel:9512920703" data-track="lp_header_call"
+         class="inline-flex items-center gap-2 bg-brand text-white px-4 py-2 rounded-lg font-semibold whitespace-nowrap hover:opacity-95 transition">
+        <i data-feather="phone" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">(951) 292-0703</span><span class="sm:hidden">Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero + form -->
+  <header id="hero" class="relative bg-center bg-no-repeat bg-cover"
+          style="background-image:url('/assets/15-hero.webp'); background-size:cover; background-position:center;">
+    <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-5 py-8 md:py-14 w-full relative grid md:grid-cols-2 gap-8 items-start">
+      <div class="text-white">
+        <h1 id="lp-title" class="text-3xl sm:text-5xl font-extrabold leading-tight">
+          Front &amp; Back Yard Remodeling in the Desert
+        </h1>
+        <p id="lp-sub" class="mt-3 text-lg text-white/90">
+          Artificial turf, pavers, concrete patios and low-water landscaping, built by one licensed team.
+        </p>
+        <p class="mt-2 text-white/90 font-medium">Free on-site estimate. David is on every project.</p>
+
+        <ul class="mt-6 hidden md:grid grid-cols-2 gap-3 text-sm font-medium text-white/95">
+          <li class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4 flex-shrink-0"></i>Licensed &amp; insured</li>
+          <li class="flex items-center gap-2"><i data-feather="star" class="w-4 h-4 flex-shrink-0"></i>5-star Google reviews</li>
+          <li class="flex items-center gap-2"><i data-feather="home" class="w-4 h-4 flex-shrink-0"></i>Homes only, new installs</li>
+          <li class="flex items-center gap-2"><i data-feather="credit-card" class="w-4 h-4 flex-shrink-0"></i>Financing available</li>
+        </ul>
+      </div>
+
+      <!-- Form card -->
+      <div id="estimate" class="bg-white text-ink rounded-xl shadow-lg p-5 sm:p-6">
+        <h2 class="text-xl font-bold">Get your free on-site estimate</h2>
+        <p class="text-sm text-muted mt-1">Takes about a minute. We'll call you to set a time.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="lpForm" class="mt-4 space-y-4" novalidate>
+          <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
+          <input type="hidden" name="subject" id="f-subject" value="Google Ads Lead: Outdoor Remodel">
+          <input type="hidden" name="from_name" value="Omdan Development Outdoor Landing Page">
+          <input type="hidden" name="redirect" value="https://omdandevelopment.com/thankyou/">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <input type="hidden" name="lead_source" value="Google Ads: /outdoor-remodel/">
+          <input type="hidden" name="service_page" id="f-service" value="general">
+          <input type="hidden" name="project_types" id="f-types" value="">
+          <input type="hidden" name="gclid" id="f-gclid" value="">
+          <input type="hidden" name="utm_campaign" id="f-utm_campaign" value="">
+          <input type="hidden" name="utm_term" id="f-utm_term" value="">
+
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="block">
+              <span class="block text-sm font-medium mb-1">Full name</span>
+              <input name="name" type="text" required autocomplete="name" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+            </label>
+            <label class="block">
+              <span class="block text-sm font-medium mb-1">Phone</span>
+              <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="block text-sm font-medium mb-1">Email</span>
+            <input name="email" type="email" required autocomplete="email" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+          </label>
+
+          <label class="block">
+            <span class="block text-sm font-medium mb-1">City</span>
+            <select name="city" required class="w-full px-4 py-2 border border-line rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-brand">
+              <option value="">Select your city</option>
+              <optgroup label="Coachella Valley">
+                <option>Palm Springs</option>
+                <option>Cathedral City</option>
+                <option>Rancho Mirage</option>
+                <option>Thousand Palms</option>
+                <option>Palm Desert</option>
+                <option>Indian Wells</option>
+                <option>La Quinta</option>
+                <option>Indio</option>
+                <option>Coachella</option>
+                <option>Desert Hot Springs</option>
+              </optgroup>
+              <optgroup label="Morongo Basin">
+                <option>Morongo Valley</option>
+                <option>Yucca Valley</option>
+                <option>Joshua Tree</option>
+                <option>Twentynine Palms</option>
+              </optgroup>
+              <optgroup label="Pass Area">
+                <option>Cabazon</option>
+                <option>Banning</option>
+                <option>Cherry Valley</option>
+                <option>Yucaipa</option>
+              </optgroup>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend class="block text-sm font-medium mb-2">What are you looking for? <span class="text-muted font-normal">(pick any)</span></legend>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <label class="chip relative"><input type="checkbox" value="Artificial Turf" data-service="turf"><span>Artificial Turf</span></label>
+              <label class="chip relative"><input type="checkbox" value="Pavers" data-service="pavers"><span>Pavers</span></label>
+              <label class="chip relative"><input type="checkbox" value="Concrete" data-service="concrete"><span>Concrete</span></label>
+              <label class="chip relative"><input type="checkbox" value="Gravel / DG" data-service="gravel"><span>Gravel / DG</span></label>
+              <label class="chip relative col-span-2 sm:col-span-2"><input type="checkbox" value="Full Yard Remodel" data-service="general"><span>Full Yard Remodel</span></label>
+            </div>
+            <p id="types-error" class="field-error">Pick at least one option.</p>
+          </fieldset>
+
+          <div class="grid sm:grid-cols-2 gap-3">
+            <fieldset>
+              <legend class="block text-sm font-medium mb-2">Which yard?</legend>
+              <div class="grid grid-cols-3 gap-2">
+                <label class="chip relative"><input type="radio" name="yard" value="Front" required><span>Front</span></label>
+                <label class="chip relative"><input type="radio" name="yard" value="Back"><span>Back</span></label>
+                <label class="chip relative"><input type="radio" name="yard" value="Both"><span>Both</span></label>
+              </div>
+            </fieldset>
+            <label class="block">
+              <span class="block text-sm font-medium mb-2">When do you want to start?</span>
+              <select name="timeline" class="w-full px-4 py-2 border border-line rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-brand">
+                <option value="">Optional</option>
+                <option>As soon as possible</option>
+                <option>Within 1–3 months</option>
+                <option>3+ months out</option>
+                <option>Just planning</option>
+              </select>
+            </label>
+          </div>
+
+          <p id="form-error" class="field-error">Please fill in your name, phone, email, city and which yard.</p>
+
+          <div class="h-captcha" data-captcha="true"></div>
+
+          <button type="submit" id="lp-submit" class="w-full bg-brand text-white px-6 py-3 rounded-lg font-semibold text-lg hover:opacity-95 transition">
+            Get My Free Estimate
+          </button>
+          <p class="text-xs text-muted">
+            No cost, no obligation. By submitting, you agree to be contacted about your request.
+            <a href="/privacy/" class="underline">Privacy policy</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust strip -->
+  <section class="bg-soft border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-medium">
+      <div class="flex items-center gap-2"><i data-feather="award" class="w-5 h-5 text-brand flex-shrink-0"></i>CSLB #1148568</div>
+      <div class="flex items-center gap-2"><i data-feather="shield" class="w-5 h-5 text-brand flex-shrink-0"></i>Insured &amp; bonded</div>
+      <div class="flex items-center gap-2"><i data-feather="star" class="w-5 h-5 text-brand flex-shrink-0"></i>5-star Google reviews</div>
+      <div class="flex items-center gap-2"><i data-feather="user-check" class="w-5 h-5 text-brand flex-shrink-0"></i>Owner on every project</div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold">Everything outside your home, one team</h2>
+        <p class="mt-2 text-muted">New installs for front and back yards. Mix and match in one project and one quote.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-xl border border-line overflow-hidden bg-white" data-card="turf">
+          <img src="/assets/rt2.webp" alt="Artificial turf lawn with stone stepping path, design inspiration" class="card-img" loading="lazy" decoding="async">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Artificial Turf</h3>
+            <p class="mt-1 text-muted text-sm">Lawns, pet turf, play areas and putting greens. No mowing and far less water.</p>
+          </div>
+        </div>
+        <div class="rounded-xl border border-line overflow-hidden bg-white" data-card="pavers">
+          <img src="/assets/rw-3.webp" alt="Paver patio around a backyard pool, design inspiration" class="card-img" loading="lazy" decoding="async">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Pavers</h3>
+            <p class="mt-1 text-muted text-sm">Patios, driveways, walkways and pool decks in concrete, brick or travertine pavers.</p>
+          </div>
+        </div>
+        <div class="rounded-xl border border-line overflow-hidden bg-white" data-card="concrete">
+          <img src="/assets/rc-3.webp" alt="Concrete walkway through a front lawn, design inspiration" class="card-img" loading="lazy" decoding="async">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Concrete Patios</h3>
+            <p class="mt-1 text-muted text-sm">Standard and stamped concrete patios, driveways, walkways and pool decks.</p>
+          </div>
+        </div>
+        <div class="rounded-xl border border-line overflow-hidden bg-white" data-card="gravel">
+          <img src="/assets/gravel.webp" alt="Gravel and xeriscape landscaping" class="card-img" loading="lazy" decoding="async">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Gravel, DG &amp; Xeriscape</h3>
+            <p class="mt-1 text-muted text-sm">Low-water desert landscaping with gravel and decomposed granite.</p>
+          </div>
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-muted text-center">Photos are design inspiration.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-14 bg-soft">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-3xl font-extrabold text-center mb-10">How it works</h2>
+      <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">1</div>
+          <h3 class="mt-3 font-bold">Send the form</h3>
+          <p class="mt-1 text-sm text-muted">Tell us what you have in mind. We call you back to set a time.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">2</div>
+          <h3 class="mt-3 font-bold">Free on-site visit</h3>
+          <p class="mt-1 text-sm text-muted">David comes out, measures and walks through options with you.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">3</div>
+          <h3 class="mt-3 font-bold">Clear written quote</h3>
+          <p class="mt-1 text-sm text-muted">Personalized pricing and a timeline, before any work starts.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">4</div>
+          <h3 class="mt-3 font-bold">We build it</h3>
+          <p class="mt-1 text-sm text-muted">Clean, careful work with David overseeing the project to the final walkthrough.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Reviews (genuine Google reviews from outdoor projects) -->
+  <section id="reviews" class="py-14">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold">What homeowners say</h2>
+        <p class="mt-2 text-muted">Google reviews from outdoor projects</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"We hired Omdan Development Inc for a full backyard remodel in Yucca Valley, and honestly, it exceeded all of our expectations. What was once an empty, unusable space is now a place where we can relax, host family, and truly enjoy our home."</blockquote>
+          <figcaption class="mt-4 font-semibold">Ben E. <span class="font-normal text-muted">· Backyard remodel, Yucca Valley</span></figcaption>
+        </figure>
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"The workmanship was clean, professional, and completed on time. The pavers were installed perfectly and the turf looks great, giving the yard a clean and modern look. David was honest, communicative, and easy to work with."</blockquote>
+          <figcaption class="mt-4 font-semibold">Rotem L. <span class="font-normal text-muted">· Pavers &amp; turf, San Jacinto</span></figcaption>
+        </figure>
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"We had artificial turf installed in Desert Hot Springs by Omdan Development Inc, and we're very happy with the results. David was friendly, professional, and made the whole process easy. The work came out clean and looks great."</blockquote>
+          <figcaption class="mt-4 font-semibold">John M. <span class="font-normal text-muted">· Artificial turf, Desert Hot Springs</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-soft">
+    <div class="max-w-3xl mx-auto px-5">
+      <h2 class="text-3xl font-extrabold text-center mb-8">Common questions</h2>
+      <div class="space-y-3">
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">How much will my project cost?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">It depends on the size of the area, the base preparation it needs and the materials you choose. That's why we visit first: you get personalized pricing in a clear written quote after a free on-site estimate.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">Does artificial turf hold up in desert heat?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">Quality turf is made for strong sun, and a good install with proper base prep and drainage is what makes it last. We'll go over turf options suited to your yard, pets and how you use the space.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">My HOA has rules. Can you still do turf?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">Many Coachella Valley HOAs allow artificial turf with guidelines on look and placement. Bring your HOA's rules to the estimate and we'll plan the project around them.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">Pavers or concrete: which should I choose?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">Pavers give you more looks and are easy to lift and reset in sections. Concrete, including stamped concrete, gives a seamless surface. We'll show you both at the estimate and help you pick what fits your home.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">Do you do repairs?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">For outdoor work we focus on new installations and full front or back yard remodels, not repairs.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">What areas do you serve?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">Palm Springs, Cathedral City, Rancho Mirage, Thousand Palms, Palm Desert, Indian Wells, La Quinta, Indio, Coachella, Desert Hot Springs, Morongo Valley, Yucca Valley, Joshua Tree, Twentynine Palms, Cabazon, Banning, Cherry Valley and Yucaipa.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold">Do you offer financing?<i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted">Yes, financing is available. Ask about it at your free estimate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-14 bg-ink text-white">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="text-3xl font-extrabold">Ready for a yard you'll actually use?</h2>
+      <p class="mt-3 text-white/80">Free on-site estimate, no obligation. Licensed &amp; insured, CSLB #1148568.</p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#estimate" data-track="lp_bottom_estimate" class="inline-flex items-center justify-center bg-brand text-white px-7 py-3 rounded-lg font-semibold text-lg hover:opacity-95 transition">Get My Free Estimate</a>
+        <a href="tel:9512920703" data-track="lp_bottom_call" class="inline-flex items-center justify-center bg-white/10 text-white px-7 py-3 rounded-lg font-semibold text-lg border border-white/25 hover:bg-white/15 transition">Call (951) 292-0703</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-white/60 border-t border-white/10 py-6 text-sm">
+    <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row justify-between gap-2">
+      <div>© <span id="year">2026</span> Omdan Development Inc · CSLB #1148568</div>
+      <div class="flex gap-4">
+        <a href="/privacy/" class="hover:text-white">Privacy</a>
+        <a href="/terms-and-conditions/" class="hover:text-white">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" data-track="lp_mobile_call" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="#estimate" data-track="lp_mobile_estimate" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get My Free Estimate
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      // Headline matches the ad that was clicked: /outdoor-remodel/?service=turf|pavers|concrete|gravel
+      var SERVICES = {
+        general:  { title: 'Front &amp; Back Yard Remodeling in the Desert',
+                    sub: 'Artificial turf, pavers, concrete patios and low-water landscaping, built by one licensed team.',
+                    hero: '/assets/15-hero.webp', subject: 'Outdoor Remodel' },
+        turf:     { title: 'Artificial Turf Installation',
+                    sub: 'Lawns, pet turf and putting greens for front and back yards. No mowing, far less water.',
+                    hero: '/assets/rt1.webp', subject: 'Artificial Turf' },
+        pavers:   { title: 'Paver Patios, Driveways &amp; Pool Decks',
+                    sub: 'Concrete, brick and travertine pavers installed by one licensed team.',
+                    hero: '/assets/rw-1.webp', subject: 'Pavers' },
+        concrete: { title: 'Concrete &amp; Stamped Concrete Patios',
+                    sub: 'Patios, driveways, walkways and pool decks with the finish and color you choose.',
+                    hero: '/assets/rc-2.webp', subject: 'Concrete' },
+        gravel:   { title: 'Desert Landscaping with Gravel &amp; DG',
+                    sub: 'Low-water xeriscape front and back yards, with turf or pavers if you want them.',
+                    hero: '/assets/gravel.webp', subject: 'Gravel / DG' }
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var key = (params.get('service') || '').toLowerCase();
+      if (!SERVICES[key]) key = 'general';
+      var s = SERVICES[key];
+
+      document.getElementById('lp-title').innerHTML = s.title;
+      document.getElementById('lp-sub').textContent = s.sub;
+      document.getElementById('f-service').value = key;
+      document.getElementById('f-subject').value = 'Google Ads Lead: ' + s.subject;
+      if (key !== 'general') {
+        document.getElementById('hero').style.backgroundImage = "url('" + s.hero + "')";
+        var pre = document.querySelector('.chip input[data-service="' + key + '"]');
+        if (pre) pre.checked = true;
+      }
+
+      // Keep the Google click ID and campaign info with the lead, even if the visitor reloads
+      function stored(name) {
+        var v = params.get(name);
+        try {
+          if (v) sessionStorage.setItem('lp_' + name, v);
+          else v = sessionStorage.getItem('lp_' + name);
+        } catch (e) {}
+        return v || '';
+      }
+      ['gclid', 'utm_campaign', 'utm_term'].forEach(function (n) {
+        document.getElementById('f-' + n).value = stored(n);
+      });
+
+      // Click tracking for calls and CTA buttons (GA4)
+      document.querySelectorAll('[data-track]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (window.gtag) gtag('event', el.getAttribute('data-track'), { service_page: key });
+        });
+      });
+
+      // Validation: combine project chips into one field and require the basics
+      var form = document.getElementById('lpForm');
+      var typesErr = document.getElementById('types-error');
+      var formErr = document.getElementById('form-error');
+      var chips = form.querySelectorAll('.chip input[type="checkbox"]');
+      chips.forEach(function (c) { c.addEventListener('change', function () { typesErr.classList.remove('show'); }); });
+
+      form.addEventListener('submit', function (e) {
+        var types = Array.prototype.filter.call(chips, function (c) { return c.checked; })
+                                      .map(function (c) { return c.value; });
+        document.getElementById('f-types').value = types.join(', ');
+
+        var ok = form.checkValidity();
+        typesErr.classList.toggle('show', types.length === 0);
+        formErr.classList.toggle('show', !ok);
+        if (!ok || types.length === 0) {
+          e.preventDefault();
+          var firstBad = form.querySelector(':invalid');
+          if (firstBad) firstBad.focus();
+          return;
+        }
+        if (window.gtag) gtag('event', 'lp_form_submit', { service_page: key });
+        document.getElementById('lp-submit').textContent = 'Sending…';
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+
+    document.addEventListener('DOMContentLoaded', function () { if (window.feather) feather.replace(); });
+  </script>
+
+  <!-- Web3Forms client (required when using hCaptcha) -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>
