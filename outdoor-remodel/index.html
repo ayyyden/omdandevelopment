@@ -59,6 +59,49 @@
     .text-amber-500 { color: #f59e0b; }
     @media (min-width: 640px) { .sm\:col-span-2 { grid-column: span 2 / span 2; } .sm\:p-6 { padding: 1.5rem; } }
     @media (min-width: 768px) { .md\:py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; } }
+    [hidden] { display: none !important; }
+    /* Booking card (booking.js) */
+    .bk-q { font-size: 1.25rem; font-weight: 700; line-height: 1.3; outline: none; }
+    .bk-input { width: 100%; min-height: 44px; padding: .5rem 1rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: 1rem; background: #fff; }
+    .bk-input:focus { outline: none; box-shadow: 0 0 0 2px #2563eb; border-color: #2563eb; }
+    .bk-input[aria-invalid="true"] { border-color: #dc2626; }
+    .bk-input[readonly] { background: #f8fafc; color: #334155; }
+    .bk-row { display: flex; gap: .5rem; }
+    .bk-row .bk-input { flex: 1; min-width: 0; }
+    .bk-btn-dark { min-height: 44px; padding: .5rem 1rem; border-radius: .5rem; background: #0f172a; color: #fff; font-weight: 600; font-size: .875rem; white-space: nowrap; }
+    .bk-btn-dark:disabled { opacity: .6; }
+    .bk-link { margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #2563eb; text-decoration: underline; background: none; }
+    .bk-link:disabled { color: #64748b; text-decoration: none; }
+    .bk-next { display: block; width: 100%; margin-top: 1.25rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: .5rem; background: #2563eb; color: #fff; font-weight: 600; font-size: 1.125rem; }
+    .bk-next:hover { opacity: .95; }
+    .bk-next:disabled { opacity: .6; }
+    .bk-back { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #e2e8f0; color: #0f172a; background: #fff; flex-shrink: 0; }
+    .bk-back:disabled { opacity: .35; }
+    .bk-bar { flex: 1; height: 6px; border-radius: 9999px; background: #e2e8f0; overflow: hidden; }
+    .bk-bar span { display: block; height: 100%; width: 20%; background: #2563eb; border-radius: inherit; transition: width .25s ease; }
+    .bk-verified { display: flex; align-items: center; gap: .375rem; margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #16a34a; }
+    .bk-verified .bk-link { margin: 0 0 0 auto; }
+    .bk-big span { min-height: 64px; font-size: 1.125rem; font-weight: 600; }
+    .bk-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .bk-combo { position: relative; }
+    .bk-combo__list { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); background: #fff; border: 1px solid #e2e8f0; border-radius: .5rem; box-shadow: 0 10px 25px rgba(15,23,42,.12); max-height: 16rem; overflow-y: auto; }
+    .bk-combo__list li { padding: .625rem .875rem; cursor: pointer; font-size: .9375rem; }
+    .bk-combo__list li small { display: block; color: #64748b; font-size: .8125rem; }
+    .bk-combo__list li[aria-selected="true"], .bk-combo__list li:hover { background: #eff6ff; }
+    .bk-combo__list .bk-combo__note { color: #64748b; cursor: default; font-size: .875rem; }
+    .bk-combo__list .bk-combo__note:hover { background: none; }
+    .bk-addr-grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: .5rem; }
+    .bk-dow, .bk-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .25rem; text-align: center; }
+    .bk-dow { margin-top: .75rem; font-size: .75rem; color: #64748b; font-weight: 500; }
+    .bk-grid { margin-top: .25rem; }
+    .bk-day { aspect-ratio: 1; max-height: 44px; border-radius: .5rem; font-size: .9375rem; font-weight: 600; color: #0f172a; background: #eff6ff; }
+    .bk-day:disabled { background: none; color: #cbd5e1; font-weight: 400; text-decoration: line-through; }
+    .bk-day[aria-pressed="true"] { background: #2563eb; color: #fff; }
+    .bk-cal__none { grid-column: 1 / -1; font-size: .875rem; color: #64748b; padding: 1rem 0; }
+    #bkSlots .chip span { min-height: 40px; padding: .375rem .25rem; }
+    .text-brand2 { color: #16a34a; }
+    .w-14 { width: 3.5rem; } .h-14 { height: 3.5rem; } .w-12 { width: 3rem; } .h-12 { height: 3rem; }
+    .col-span-2 { grid-column: span 2 / span 2; }
     html { scroll-behavior: smooth; }
     #estimate { scroll-margin-top: 5rem; }
   </style>
@@ -106,116 +149,173 @@
         </ul>
       </div>
 
-      <!-- Form card -->
+      <!-- Booking card: booking.js runs the steps -->
       <div id="estimate" class="bg-white text-ink rounded-xl shadow-lg p-5 sm:p-6">
-        <h2 class="text-xl font-bold">Get your free on-site estimate</h2>
-        <p class="text-sm text-muted mt-1">Takes about a minute. We'll call you to set a time.</p>
+        <div id="bkTop">
+          <div class="flex items-center gap-3">
+            <button type="button" id="bkBack" class="bk-back" aria-label="Back">
+              <i data-feather="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <div class="bk-bar" aria-hidden="true"><span id="bkBar"></span></div>
+            <p id="bkCount" class="text-xs text-muted whitespace-nowrap" aria-live="polite"></p>
+          </div>
+        </div>
 
-        <form action="https://api.web3forms.com/submit" method="POST" id="lpForm" class="mt-4 space-y-4" novalidate>
+        <!-- Web3Forms is the form's action only for the email fallback; normally booking.js books through the API -->
+        <form id="bkForm" action="https://api.web3forms.com/submit" method="POST" novalidate class="mt-4">
           <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
-          <input type="hidden" name="subject" id="f-subject" value="Google Ads Lead: Outdoor Remodel">
           <input type="hidden" name="from_name" value="Omdan Development Outdoor Landing Page">
           <input type="hidden" name="redirect" value="https://omdandevelopment.com/thankyou/">
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
           <input type="hidden" name="lead_source" value="Google Ads: /outdoor-remodel/">
-          <input type="hidden" name="service_page" id="f-service" value="general">
-          <input type="hidden" name="project_types" id="f-types" value="">
-          <input type="hidden" name="gclid" id="f-gclid" value="">
-          <input type="hidden" name="utm_campaign" id="f-utm_campaign" value="">
-          <input type="hidden" name="utm_term" id="f-utm_term" value="">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <div class="bk-hp" aria-hidden="true"><label>Company <input id="bkCompany" type="text" tabindex="-1" autocomplete="off"></label></div>
 
-          <div class="grid sm:grid-cols-2 gap-3">
-            <label class="block">
+          <!-- 1. Name and phone -->
+          <section class="bk-step" data-step="contact">
+            <h2 class="bk-q" tabindex="-1">Get your free on-site estimate</h2>
+            <p class="text-sm text-muted mt-1">A few quick questions, then pick a day and time.</p>
+            <label class="block mt-4">
               <span class="block text-sm font-medium mb-1">Full name</span>
-              <input name="name" type="text" required autocomplete="name" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
+              <input id="bkName" type="text" autocomplete="name" maxlength="80" class="bk-input">
             </label>
-            <label class="block">
-              <span class="block text-sm font-medium mb-1">Phone</span>
-              <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-            </label>
-          </div>
-
-          <label class="block">
-            <span class="block text-sm font-medium mb-1">Email</span>
-            <input name="email" type="email" required autocomplete="email" class="w-full px-4 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-          </label>
-
-          <label class="block">
-            <span class="block text-sm font-medium mb-1">City</span>
-            <select name="city" required class="w-full px-4 py-2 border border-line rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-brand">
-              <option value="">Select your city</option>
-              <optgroup label="Coachella Valley">
-                <option>Palm Springs</option>
-                <option>Cathedral City</option>
-                <option>Rancho Mirage</option>
-                <option>Thousand Palms</option>
-                <option>Palm Desert</option>
-                <option>Indian Wells</option>
-                <option>La Quinta</option>
-                <option>Indio</option>
-                <option>Coachella</option>
-                <option>Desert Hot Springs</option>
-              </optgroup>
-              <optgroup label="Morongo Basin">
-                <option>Morongo Valley</option>
-                <option>Yucca Valley</option>
-                <option>Joshua Tree</option>
-                <option>Twentynine Palms</option>
-              </optgroup>
-              <optgroup label="Pass Area">
-                <option>Cabazon</option>
-                <option>Banning</option>
-                <option>Cherry Valley</option>
-                <option>Yucaipa</option>
-              </optgroup>
-            </select>
-          </label>
-
-          <fieldset>
-            <legend class="block text-sm font-medium mb-2">What are you looking for? <span class="text-muted font-normal">(pick any)</span></legend>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              <label class="chip relative"><input type="checkbox" value="Artificial Turf" data-service="turf"><span>Artificial Turf</span></label>
-              <label class="chip relative"><input type="checkbox" value="Pavers" data-service="pavers"><span>Pavers</span></label>
-              <label class="chip relative"><input type="checkbox" value="Concrete" data-service="concrete"><span>Concrete</span></label>
-              <label class="chip relative"><input type="checkbox" value="Gravel / DG" data-service="gravel"><span>Gravel / DG</span></label>
-              <label class="chip relative col-span-2 sm:col-span-2"><input type="checkbox" value="Full Yard Remodel" data-service="general"><span>Full Yard Remodel</span></label>
-            </div>
-            <p id="types-error" class="field-error">Pick at least one option.</p>
-          </fieldset>
-
-          <div class="grid sm:grid-cols-2 gap-3">
-            <fieldset>
-              <legend class="block text-sm font-medium mb-2">Which yard?</legend>
-              <div class="grid grid-cols-3 gap-2">
-                <label class="chip relative"><input type="radio" name="yard" value="Front" required><span>Front</span></label>
-                <label class="chip relative"><input type="radio" name="yard" value="Back"><span>Back</span></label>
-                <label class="chip relative"><input type="radio" name="yard" value="Both"><span>Both</span></label>
+            <p id="bkName-err" class="field-error"></p>
+            <div class="mt-3">
+              <label for="bkPhone" class="block text-sm font-medium mb-1">Mobile phone number</label>
+              <div class="bk-row">
+                <input id="bkPhone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(760) 555-0123" class="bk-input">
+                <button type="button" id="bkSend" class="bk-btn-dark" hidden>Text me a code</button>
               </div>
-            </fieldset>
-            <label class="block">
-              <span class="block text-sm font-medium mb-2">When do you want to start?</span>
-              <select name="timeline" class="w-full px-4 py-2 border border-line rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-brand">
-                <option value="">Optional</option>
-                <option>As soon as possible</option>
-                <option>Within 1–3 months</option>
-                <option>3+ months out</option>
-                <option>Just planning</option>
-              </select>
+              <p id="bkPhoneHelp" class="text-xs text-muted mt-1" hidden>We'll text you a 6-digit code to confirm your number.</p>
+              <p id="bkPhone-err" class="field-error"></p>
+              <div id="bkCodeRow" class="mt-3" hidden>
+                <label for="bkCode" class="block text-sm font-medium mb-1">Enter the 6-digit code</label>
+                <div class="bk-row">
+                  <input id="bkCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code" class="bk-input">
+                  <button type="button" id="bkVerify" class="bk-btn-dark">Verify</button>
+                </div>
+                <button type="button" id="bkResend" class="bk-link" disabled></button>
+                <p id="bkCode-err" class="field-error"></p>
+              </div>
+              <p id="bkVerified" class="bk-verified" hidden>
+                <i data-feather="check-circle" class="w-4 h-4"></i> Phone number verified
+                <button type="button" id="bkChange" class="bk-link">Change</button>
+              </p>
+            </div>
+            <button type="button" id="bkNext1" class="bk-next">Next</button>
+          </section>
+
+          <!-- 2. Homeowner -->
+          <section class="bk-step" data-step="homeowner" hidden>
+            <h2 class="bk-q" tabindex="-1">Are you the homeowner?</h2>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="yes"><span>Yes</span></label>
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="no"><span>No</span></label>
+            </div>
+          </section>
+
+          <!-- 3. Address -->
+          <section class="bk-step" data-step="address" hidden>
+            <h2 class="bk-q" tabindex="-1">Address of the home</h2>
+            <p class="text-sm text-muted mt-1">Where we'll come for the estimate.</p>
+            <label for="bkStreet" class="block text-sm font-medium mb-1 mt-4">Street address</label>
+            <div class="bk-combo">
+              <input id="bkStreet" type="text" autocomplete="address-line1" placeholder="Start typing your address" class="bk-input"
+                role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="bkAddrList">
+              <ul id="bkAddrList" class="bk-combo__list" role="listbox" hidden></ul>
+            </div>
+            <p id="bkStreet-err" class="field-error"></p>
+            <div class="bk-addr-grid mt-3">
+              <label class="block"><span class="block text-sm font-medium mb-1">Apt/unit</span>
+                <input id="bkUnit" type="text" autocomplete="address-line2" maxlength="20" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1">City</span>
+                <input id="bkCity" type="text" autocomplete="address-level2" maxlength="60" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1">ZIP</span>
+                <input id="bkZip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" class="bk-input"></label>
+            </div>
+            <p id="bkCity-err" class="field-error"></p>
+            <p id="bkZip-err" class="field-error"></p>
+            <button type="button" id="bkNext3" class="bk-next">Next</button>
+          </section>
+
+          <!-- 4. Project and start -->
+          <section class="bk-step" data-step="project" hidden>
+            <h2 class="bk-q" tabindex="-1">What's the project?</h2>
+            <p class="text-sm text-muted mt-1">Pick all that apply.</p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+              <label class="chip relative"><input type="checkbox" name="services" value="turf"><span>Artificial turf</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="pavers"><span>Pavers</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="concrete"><span>Concrete</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="gravel"><span>Gravel / DG</span></label>
+              <label class="chip relative col-span-2"><input type="checkbox" name="services" value="full-remodel"><span>Full yard remodel</span></label>
+            </div>
+            <p id="bkServices-err" class="field-error"></p>
+            <p class="block text-sm font-medium mt-5 mb-2">When do you want to start?</p>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="chip relative"><input type="radio" name="start" value="asap"><span>As soon as possible</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="1-3"><span>Within 1–3 months</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="3plus"><span>3+ months out</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="planning"><span>Just planning</span></label>
+            </div>
+            <p id="bkStart-err" class="field-error"></p>
+            <button type="button" id="bkNext4" class="bk-next">Next</button>
+          </section>
+
+          <!-- 5. Day and time -->
+          <section class="bk-step" data-step="when" hidden>
+            <h2 class="bk-q" tabindex="-1">Pick a day and time</h2>
+            <p id="bkWhenHelp" class="text-sm text-muted mt-1">We visit Sunday through Thursday. Days that are full are grayed out.</p>
+            <div class="bk-cal mt-3">
+              <div class="flex items-center justify-between">
+                <button type="button" id="bkPrev" class="bk-back" aria-label="Previous month"><i data-feather="chevron-left" class="w-5 h-5"></i></button>
+                <p id="bkMonth" class="font-semibold" aria-live="polite"></p>
+                <button type="button" id="bkNextMonth" class="bk-back" aria-label="Next month"><i data-feather="chevron-right" class="w-5 h-5"></i></button>
+              </div>
+              <div class="bk-dow" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+              <div id="bkCalGrid" class="bk-grid" role="group" aria-label="Days"></div>
+              <p id="bkCalLoading" class="text-sm text-muted text-center py-6">Loading open days…</p>
+            </div>
+            <div id="bkSlotsWrap" class="mt-4" hidden>
+              <p id="bkSlotsLabel" class="text-sm font-medium mb-2"></p>
+              <div id="bkSlots" class="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="bkSlotsLabel"></div>
+            </div>
+            <p id="bkWhen-err" class="field-error"></p>
+
+            <label class="flex items-start gap-2 mt-5 text-xs text-muted">
+              <input type="checkbox" id="bkConsentBox" class="mt-0.5">
+              <span>I agree that Omdan Development Inc may call or text me at the number above about my estimate. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/" class="underline" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms-and-conditions/" class="underline" target="_blank" rel="noopener">Terms</a>.</span>
             </label>
-          </div>
+            <p id="bkConsent-err" class="field-error"></p>
 
-          <p id="form-error" class="field-error">Please fill in your name, phone, email, city and which yard.</p>
+            <div id="bkCaptchaWrap" class="mt-4" hidden><div class="h-captcha" data-captcha="true"></div></div>
 
-          <div class="h-captcha" data-captcha="true"></div>
-
-          <button type="submit" id="lp-submit" class="w-full bg-brand text-white px-6 py-3 rounded-lg font-semibold text-lg hover:opacity-95 transition">
-            Get My Free Estimate
-          </button>
-          <p class="text-xs text-muted">
-            No cost, no obligation. By submitting, you agree to be contacted about your request.
-            <a href="/privacy/" class="underline">Privacy policy</a>.
-          </p>
+            <button type="submit" id="bkSubmit" class="bk-next">Book my free estimate</button>
+            <p id="bkSubmitErr-err" class="field-error"></p>
+            <p class="text-xs text-muted mt-2 text-center">Free and no obligation. We'll call to confirm your appointment.</p>
+          </section>
         </form>
+
+        <!-- Can't take this one (not the homeowner, or outside the area) -->
+        <section id="bkStop" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="alert-circle" class="w-12 h-12 mx-auto text-muted"></i>
+          <h2 id="bkStopTitle" class="text-xl font-bold mt-3"></h2>
+          <p id="bkStopText" class="text-muted mt-2"></p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkStopBack" class="bk-btn-dark"></button>
+            <a href="tel:9512920703" data-track="lp_stop_call" class="bk-link text-center">Call (951) 292-0703</a>
+          </div>
+        </section>
+
+        <!-- Booked -->
+        <section id="bkDone" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="check-circle" class="w-14 h-14 mx-auto text-brand2"></i>
+          <h2 class="text-2xl font-extrabold mt-3">You're all set!</h2>
+          <p class="mt-2">We'll see you on <b id="bkWhenDone"></b>.</p>
+          <p class="text-muted mt-2 text-sm">Please make sure all homeowners can be there. We'll call before the visit to confirm. Need to change something? Just call us.</p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkIcs" class="bk-btn-dark">Add to my calendar</button>
+            <a href="tel:9512920703" class="bk-link text-center">Call (951) 292-0703</a>
+          </div>
+        </section>
       </div>
     </div>
   </header>
@@ -425,26 +525,7 @@
 
       document.getElementById('lp-title').innerHTML = s.title;
       document.getElementById('lp-sub').textContent = s.sub;
-      document.getElementById('f-service').value = key;
-      document.getElementById('f-subject').value = 'Google Ads Lead: ' + s.subject;
-      if (key !== 'general') {
-        document.getElementById('hero').style.backgroundImage = "url('" + s.hero + "')";
-        var pre = document.querySelector('.chip input[data-service="' + key + '"]');
-        if (pre) pre.checked = true;
-      }
-
-      // Keep the Google click ID and campaign info with the lead, even if the visitor reloads
-      function stored(name) {
-        var v = params.get(name);
-        try {
-          if (v) sessionStorage.setItem('lp_' + name, v);
-          else v = sessionStorage.getItem('lp_' + name);
-        } catch (e) {}
-        return v || '';
-      }
-      ['gclid', 'utm_campaign', 'utm_term'].forEach(function (n) {
-        document.getElementById('f-' + n).value = stored(n);
-      });
+      if (key !== 'general') document.getElementById('hero').style.backgroundImage = "url('" + s.hero + "')";
 
       // Click tracking for calls and CTA buttons (GA4)
       document.querySelectorAll('[data-track]').forEach(function (el) {
@@ -453,38 +534,12 @@
         });
       });
 
-      // Validation: combine project chips into one field and require the basics
-      var form = document.getElementById('lpForm');
-      var typesErr = document.getElementById('types-error');
-      var formErr = document.getElementById('form-error');
-      var chips = form.querySelectorAll('.chip input[type="checkbox"]');
-      chips.forEach(function (c) { c.addEventListener('change', function () { typesErr.classList.remove('show'); }); });
-
-      form.addEventListener('submit', function (e) {
-        var types = Array.prototype.filter.call(chips, function (c) { return c.checked; })
-                                      .map(function (c) { return c.value; });
-        document.getElementById('f-types').value = types.join(', ');
-
-        var ok = form.checkValidity();
-        typesErr.classList.toggle('show', types.length === 0);
-        formErr.classList.toggle('show', !ok);
-        if (!ok || types.length === 0) {
-          e.preventDefault();
-          var firstBad = form.querySelector(':invalid');
-          if (firstBad) firstBad.focus();
-          return;
-        }
-        if (window.gtag) gtag('event', 'lp_form_submit', { service_page: key });
-        document.getElementById('lp-submit').textContent = 'Sending…';
-      });
-
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
 
     document.addEventListener('DOMContentLoaded', function () { if (window.feather) feather.replace(); });
   </script>
 
-  <!-- Web3Forms client (required when using hCaptcha) -->
-  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script src="/outdoor-remodel/booking.js?v=2" defer></script>
 </body>
 </html>
