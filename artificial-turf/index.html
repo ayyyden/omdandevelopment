@@ -528,7 +528,7 @@
     <div id="savings-modal" class="hidden fixed inset-0 z-50 bg-black/50 p-4">
       <div class="bg-white rounded-2xl max-w-md mx-auto p-6 border border-line shadow-lg">
         <div class="flex items-center justify-between mb-4">
-          <h4 class="text-lg font-semibold">Quick Savings Estimate</h4>
+          <h4 class="text-lg font-semibold">Quick Water Savings Estimate</h4>
           <button id="close-savings" class="p-2 rounded-lg hover:bg-soft border border-line" aria-label="Close">
             <i data-feather="x"></i>
           </button>
@@ -538,10 +538,6 @@
         <input id="sqft" type="number" min="50" value="800"
                class="w-full mb-3 px-3 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" />
 
-        <label class="block text-sm mb-1 text-muted">Water cost ($ / 1,000 gal)</label>
-        <input id="water" type="number" min="1" step="0.01" value="7.00"
-               class="w-full mb-4 px-3 py-2 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand" />
-
         <p class="text-sm text-muted mb-4">
           Uses a simple estimate of ~55 gallons per sq ft per year for living grass irrigation (varies by usage and area).
         </p>
@@ -549,8 +545,6 @@
         <div class="bg-soft rounded-xl p-4 text-center border border-line">
           <div class="text-2xl font-bold" id="galOut">—</div>
           <div class="text-muted text-sm">Gallons saved per year</div>
-          <div class="mt-3 text-2xl font-bold" id="costOut">—</div>
-          <div class="text-muted text-sm">Estimated $ saved per year</div>
         </div>
 
         <button id="calc" class="mt-6 w-full bg-brand text-white font-semibold py-2.5 rounded-lg hover:opacity-95">
@@ -937,18 +931,13 @@
     const modal   = document.getElementById('savings-modal');
     const closeBtn= document.getElementById('close-savings');
     const sqftEl  = document.getElementById('sqft');
-    const waterEl = document.getElementById('water');
     const galOut  = document.getElementById('galOut');
-    const costOut = document.getElementById('costOut');
     const calcBtn = document.getElementById('calc');
 
     function calcSavings(){
       const sqft = Math.max(0, Number(sqftEl.value)||0);
-      const costPerK = Math.max(0, Number(waterEl.value)||0);
       const gallons = Math.round(sqft * 55);
-      const dollars = (gallons/1000) * costPerK;
       galOut.textContent  = gallons.toLocaleString();
-      costOut.textContent = '$' + Math.round(dollars).toLocaleString();
     }
 
     openBtn?.addEventListener('click', ()=>{ modal.classList.remove('hidden'); calcSavings(); });

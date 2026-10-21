@@ -34,13 +34,37 @@ Priority scale: `10` = highest (publish first), `1` = lowest. Use whole numbers.
 
 ---
 
+## Content policy (mandatory — enforced automatically)
+
+These rules apply to every article, title, meta description, FAQ, keyword and CTA.
+`scripts/publish-blog.js` checks each generated article with `scripts/content-policy.js` before
+writing anything. A violating draft is regenerated, up to 3 attempts in total; if it still fails, nothing is published.
+`scripts/test-content-policy.js` checks the whole site and runs before the blog bot can push.
+
+1. **Residential only.** Write for homeowners. Never offer, mention, or imply commercial work,
+   commercial clients, or commercial properties (offices, warehouses, storefronts, retail, restaurants,
+   tasting rooms). Don't use the word "commercial" in blog content. Don't target commercial keywords.
+2. **No pricing.** No prices, price ranges, dollar amounts, "$" signs, "starting at" amounts,
+   cost-per-square-foot figures, dollar savings, or numeric cost comparisons — anywhere.
+3. **Cost topics are allowed.** Cost-related titles and keywords (e.g. "Paver Installation Cost in
+   Palm Springs") are fine. Answer them with the factors that affect cost — size, materials, base
+   preparation, site access, permits, design complexity — in words only, and explain that every home
+   is different.
+4. **Lead generation.** Every article ends with a CTA to **request a free on-site estimate for
+   personalized pricing**. Every cost question in an FAQ ends the same way. The CTA button label is
+   always "Get a Free On-Site Estimate" (set automatically by the publish script).
+5. **License attribution.** CSLB License #1148568 belongs to **Omdan Development Inc.** Write
+   "Omdan Development Inc. (CSLB License #1148568)". Never say David or any person holds the license.
+
+---
+
 ## Writing standards
 
 **Voice and accuracy**
 - Write as a knowledgeable local contractor, not as a generic content mill.
 - No fake customer testimonials or invented stories.
 - No made-up statistics or specific numbers that cannot be verified.
-- No pricing. Not even ranges.
+- No pricing. Not even ranges (see Content policy above).
 - Do not write "as a homeowner you know..." or similar assumed-experience openers.
 
 **Length and structure**
@@ -79,7 +103,7 @@ Twentynine Palms, Moreno Valley, Menifee, Murrieta, Temecula, San Bernardino
 - Include `BlogPosting` JSON-LD schema with: headline, description, url, datePublished, dateModified, author, publisher, image, keywords, articleSection.
 - Include `FAQPage` JSON-LD schema with all FAQ items.
 - Article body uses `.prose-article` class for typography styling — do not add inline styles to body text.
-- CTA block at the end of every article: links to the most relevant service page, never to `/blog/` or `/#contact` alone.
+- CTA block at the end of every article: links to the most relevant service page, never to `/blog/` or `/#contact` alone. The CTA text invites the reader to request a free on-site estimate for personalized pricing.
 
 ---
 
