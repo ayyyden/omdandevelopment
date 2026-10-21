@@ -418,7 +418,7 @@
       mobileMenu.classList.toggle('hidden');
       toggleBtn.setAttribute('aria-expanded', String(!isOpen));
     });
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
 </body>
 </html>

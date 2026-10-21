@@ -418,7 +418,7 @@
     var orig = btn.textContent; btn.textContent = 'Copied!';
     setTimeout(function() { btn.textContent = orig; }, 2000);
   }
-  feather.replace();
+  if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
 </script>
 </body>
 </html>
