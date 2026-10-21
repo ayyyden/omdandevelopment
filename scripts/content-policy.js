@@ -29,6 +29,8 @@ const ALLOWED_COMMERCIAL = [
 const COMMERCIAL_TERMS = [
   /\bcommercial\b/i,
   /\b(warehouses?|storefronts?|tasting rooms?|tenant improvements?|office build-?outs?|retail (suites?|spaces?|stores?|leak))\b/i,
+  /\b(homes?|homeowners|residences|residential)( and|,| &| or) (local )?businesses\b/i,
+  /\bfor (local )?businesses\b/i,
 ];
 
 const PRICE_PATTERNS = [
