@@ -623,7 +623,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
 
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
 
     const toggleBtn = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');

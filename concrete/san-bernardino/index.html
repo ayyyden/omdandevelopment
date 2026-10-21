@@ -46,25 +46,31 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Concrete Contractor in San Bernardino, CA",
+  "serviceType": "Concrete Contractor",
+  "provider": {
     "@type": "LocalBusiness",
     "name": "Omdan Development Inc",
     "url": "https://omdandevelopment.com/",
     "telephone": "+1-951-292-0703",
-    "areaServed": {
-      "@type": "City",
-      "name": "San Bernardino"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "San Bernardino",
-        "addressRegion": "CA",
-        "addressCountry": "US"
-      },
-    "serviceType": "Concrete Contractor",
-    "image": "https://omdandevelopment.com/assets/concrete.webp"
-  }
+    "hasCredential": "CSLB License #1148568",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palm Springs",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "San Bernardino"
+  },
+  "url": "https://omdandevelopment.com/concrete/san-bernardino/",
+  "image": "https://omdandevelopment.com/assets/concrete.webp"
+}
   </script>
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -82,21 +88,7 @@
 
 <body class="bg-white font-sans text-ink overflow-x-hidden">
 
-  <div class="w-full bg-ink text-white text-sm">
-    <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="font-semibold">Omdan Development Inc</span>
-        <span class="text-white/70 hidden sm:inline">•</span>
-        <span class="text-white/85">Landscaping & Outdoor Improvements</span>
-      </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
-      </div>
-    </div>
-  </div>
-
-      <!-- Top bar -->
+  <!-- Top bar -->
   <div class="w-full bg-ink text-white">
     <!-- Mobile: phone number centered -->
     <div class="md:hidden flex items-center justify-center h-8">
@@ -125,12 +117,6 @@
           <i data-feather="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>omdandevelopment@gmail.com</span>
         </a>
-      </div>
-    </div>
-  </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
       </div>
     </div>
   </div>
@@ -433,7 +419,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
     
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
 </body>
 </html>

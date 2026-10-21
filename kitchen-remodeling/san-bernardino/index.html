@@ -51,25 +51,31 @@
 
   <!-- Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kitchen Remodeling in San Bernardino, CA",
+  "serviceType": "Kitchen Remodeling",
+  "provider": {
     "@type": "LocalBusiness",
     "name": "Omdan Development Inc",
     "url": "https://omdandevelopment.com/",
     "telephone": "+1-951-292-0703",
-    "areaServed": {
-      "@type": "City",
-      "name": "San Bernardino"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "San Bernardino",
-        "addressRegion": "CA",
-        "addressCountry": "US"
-      },
-    "serviceType": "Kitchen Remodeling",
-    "image": "https://omdandevelopment.com/assets/15-og.webp"
-  }
+    "hasCredential": "CSLB License #1148568",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palm Springs",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "San Bernardino"
+  },
+  "url": "https://omdandevelopment.com/kitchen-remodeling/san-bernardino/",
+  "image": "https://omdandevelopment.com/assets/15-og.webp"
+}
   </script>
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -116,12 +122,6 @@
           <i data-feather="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>omdandevelopment@gmail.com</span>
         </a>
-      </div>
-    </div>
-  </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
       </div>
     </div>
   </div>
@@ -442,7 +442,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
     
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
 </body>
 </html>

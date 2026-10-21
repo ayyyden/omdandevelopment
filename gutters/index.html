@@ -61,39 +61,66 @@
   <script src="https://web3forms.com/client/script.js" async defer></script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Gutter Installation & Repair",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Omdan Development Inc",
-      "telephone": "+1-951-292-0703",
-      "url": "https://omdandevelopment.com/",
-      "hasCredential": "CSLB License #1148568"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gutter Installation & Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Omdan Development Inc",
+    "telephone": "+1-951-292-0703",
+    "url": "https://omdandevelopment.com/",
+    "hasCredential": "CSLB License #1148568"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Palm Springs"
     },
-    "areaServed": [
-      {"@type": "City", "name": "Palm Springs"},
-      {"@type": "City", "name": "Palm Desert"},
-      {"@type": "City", "name": "Desert Hot Springs"},
-      {"@type": "City", "name": "Yucca Valley"},
-      {"@type": "City", "name": "Twentynine Palms"},
-      {"@type": "City", "name": "Yucaipa"},
-      {"@type": "City", "name": "Moreno Valley"},
-      {"@type": "City", "name": "Menifee"},
-      {"@type": "City", "name": "Murrieta"},
-      {"@type": "City", "name": "Temecula"},
-      {"@type": "City", "name": "San Bernardino"}
-    ],
-    "description": "Gutter installation, repair, and replacement for homes across Palm Springs and the Coachella Valley. Seamless gutters, downspout routing, and drainage support by licensed Contractor #1148568.",
-    "url": "https://omdandevelopment.com/gutters/",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "7",
-      "bestRating": "5"
+    {
+      "@type": "City",
+      "name": "Palm Desert"
+    },
+    {
+      "@type": "City",
+      "name": "Desert Hot Springs"
+    },
+    {
+      "@type": "City",
+      "name": "Yucca Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Twentynine Palms"
+    },
+    {
+      "@type": "City",
+      "name": "Yucaipa"
+    },
+    {
+      "@type": "City",
+      "name": "Moreno Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Menifee"
+    },
+    {
+      "@type": "City",
+      "name": "Murrieta"
+    },
+    {
+      "@type": "City",
+      "name": "Temecula"
+    },
+    {
+      "@type": "City",
+      "name": "San Bernardino"
     }
-  }
+  ],
+  "description": "Gutter installation, repair, and replacement for homes across Palm Springs and the Coachella Valley. Seamless gutters, downspout routing, and drainage support by licensed Contractor #1148568.",
+  "url": "https://omdandevelopment.com/gutters/"
+}
   </script>
 
   <script type="application/ld+json">
@@ -721,7 +748,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
 
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
 
     const toggleBtn = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');

@@ -45,25 +45,31 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gutter Installation in Temecula, CA",
+  "serviceType": "Gutter Installation",
+  "provider": {
     "@type": "LocalBusiness",
     "name": "Omdan Development Inc",
     "url": "https://omdandevelopment.com/",
     "telephone": "+1-951-292-0703",
-    "areaServed": {
-      "@type": "City",
-      "name": "Temecula"
-    },
+    "hasCredential": "CSLB License #1148568",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Temecula",
+      "addressLocality": "Palm Springs",
       "addressRegion": "CA",
       "addressCountry": "US"
-    },
-    "serviceType": "Gutter Installation",
-    "image": "https://omdandevelopment.com/assets/15-og.webp"
-  }
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Temecula"
+  },
+  "url": "https://omdandevelopment.com/gutters/temecula/",
+  "image": "https://omdandevelopment.com/assets/15-og.webp"
+}
   </script>
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -81,21 +87,7 @@
 
 <body class="bg-white font-sans text-ink overflow-x-hidden">
 
-  <div class="w-full bg-ink text-white text-sm">
-    <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="font-semibold">Omdan Development Inc</span>
-        <span class="text-white/70 hidden sm:inline">•</span>
-        <span class="text-white/85">Licensed, Bonded &amp; Insured</span>
-      </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
-      </div>
-    </div>
-  </div>
-
-      <!-- Top bar -->
+  <!-- Top bar -->
   <div class="w-full bg-ink text-white">
     <!-- Mobile: phone number centered -->
     <div class="md:hidden flex items-center justify-center h-8">
@@ -124,12 +116,6 @@
           <i data-feather="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>omdandevelopment@gmail.com</span>
         </a>
-      </div>
-    </div>
-  </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
       </div>
     </div>
   </div>
@@ -400,7 +386,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
     
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
 </body>
 </html>

@@ -274,7 +274,17 @@
       btn.textContent = 'Copied!';
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
-    feather.replace();</script>
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
+
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
 
   <!-- Optional Auto Redirect (after 8 seconds) -->
   <script>

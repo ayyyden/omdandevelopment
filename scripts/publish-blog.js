@@ -218,7 +218,7 @@ function buildPage(art, topic, slug, today) {
   <meta property="og:description" content="${escA(art.og_description)}">
   <meta property="og:url" content="${url}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://omdandevelopment.com/assets/15.webp">
+  <meta property="og:image" content="https://omdandevelopment.com/assets/15-og.webp">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="canonical" href="${url}">
@@ -319,7 +319,7 @@ function buildPage(art, topic, slug, today) {
         "url": "https://omdandevelopment.com/assets/logo.webp"
       }
     },
-    "image": "https://omdandevelopment.com/assets/15.webp",
+    "image": "https://omdandevelopment.com/assets/15-og.webp",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "${url}"

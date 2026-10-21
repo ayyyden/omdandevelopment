@@ -241,12 +241,6 @@
       </div>
     </div>
   </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Nav -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
@@ -593,7 +587,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
 
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
 </body>
 </html>

@@ -78,41 +78,74 @@
   <link rel="alternate icon" href="/assets/favicon.ico">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Artificial Turf Installation",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Omdan Development Inc",
-      "telephone": "+1-951-292-0703",
-      "url": "https://omdandevelopment.com/",
-      "hasCredential": "CSLB License #1148568"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Artificial Turf Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Omdan Development Inc",
+    "telephone": "+1-951-292-0703",
+    "url": "https://omdandevelopment.com/",
+    "hasCredential": "CSLB License #1148568"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Palm Springs"
     },
-    "areaServed": [
-      {"@type": "City", "name": "Palm Springs"},
-      {"@type": "City", "name": "Palm Desert"},
-      {"@type": "City", "name": "Desert Hot Springs"},
-      {"@type": "City", "name": "Yucca Valley"},
-      {"@type": "City", "name": "Twentynine Palms"},
-      {"@type": "City", "name": "Yucaipa"},
-      {"@type": "City", "name": "Moreno Valley"},
-      {"@type": "City", "name": "Menifee"},
-      {"@type": "City", "name": "Murrieta"},
-      {"@type": "City", "name": "Temecula"},
-      {"@type": "City", "name": "San Bernardino"},
-      {"@type": "City", "name": "Indio"},
-      {"@type": "City", "name": "Cathedral City"}
-    ],
-    "description": "Artificial turf installation for pet turf, low-maintenance lawns, putting greens, and poolside areas in Palm Springs and Southern California. Built with clean edges and proper drainage.",
-    "url": "https://omdandevelopment.com/artificial-turf/",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "7",
-      "bestRating": "5"
+    {
+      "@type": "City",
+      "name": "Palm Desert"
+    },
+    {
+      "@type": "City",
+      "name": "Desert Hot Springs"
+    },
+    {
+      "@type": "City",
+      "name": "Yucca Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Twentynine Palms"
+    },
+    {
+      "@type": "City",
+      "name": "Yucaipa"
+    },
+    {
+      "@type": "City",
+      "name": "Moreno Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Menifee"
+    },
+    {
+      "@type": "City",
+      "name": "Murrieta"
+    },
+    {
+      "@type": "City",
+      "name": "Temecula"
+    },
+    {
+      "@type": "City",
+      "name": "San Bernardino"
+    },
+    {
+      "@type": "City",
+      "name": "Indio"
+    },
+    {
+      "@type": "City",
+      "name": "Cathedral City"
     }
-  }
+  ],
+  "description": "Artificial turf installation for pet turf, low-maintenance lawns, putting greens, and poolside areas in Palm Springs and Southern California. Built with clean edges and proper drainage.",
+  "url": "https://omdandevelopment.com/artificial-turf/"
+}
   </script>
 
   <script type="application/ld+json">
@@ -199,12 +232,6 @@
           <i data-feather="mail" class="w-3.5 h-3.5 flex-shrink-0"></i>
           <span>omdandevelopment@gmail.com</span>
         </a>
-      </div>
-    </div>
-  </div>
-      <div class="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-center">
-        <a class="hover:underline" href="tel:9512920703">(951) 292-0703</a>
-        <a class="hover:underline" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a>
       </div>
     </div>
   </div>
@@ -851,7 +878,7 @@
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
     
-    feather.replace();
+    if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
 
     // Better carousel dots: picks the card closest to the center (works with gaps + fixed card widths)
     function bindCarousel(name){
