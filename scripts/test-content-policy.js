@@ -28,6 +28,8 @@ const MUST_FLAG = [
   ['Commercial-grade fixtures rated for constant use.', 'residential-only'],
   ['We also handle commercial buildings.', 'residential-only'],
   ['Our crews serve commercial clients too.', 'residential-only'],
+  ['We install artificial turf for homes and businesses across the valley.', 'residential-only'],
+  ['Turf solutions for businesses in Indio.', 'residential-only'],
   ['A $150 tune-up prevents bigger repairs.', 'no-pricing'],
   ['Pavers run $15–$18 per square foot.', 'no-pricing'],
   ['Most patios cost between $4,000 and $9,000.', 'no-pricing'],
@@ -122,6 +124,31 @@ test(`all ${pages.length} pages comply (visible text, titles, meta, schema)`, ()
 test('llms.txt complies', () => {
   const bad = checkText(fs.readFileSync(path.join(ROOT, 'llms.txt'), 'utf8'), 'llms.txt');
   assert.deepStrictEqual(bad.map(v => `${v.why}: "${v.snippet}"`), []);
+});
+
+// ── 5. Genuine proof only (no unrelated companies, no fabricated reviews) ───
+const VERIFIED_REVIEWERS = ['Ben E', 'John M', 'Simcha T', 'Giela T', 'Revital W', 'Sivan K', 'Rotem L'];
+const FABRICATED = ['Desert Green Builders', 'L. Miller', 'P. Lee', 'A. Johnson', 'R. Bennett', 'T. Harper', 'S. Coleman',
+  'Jenna R.', 'Marcus L.', 'Alicia M.', 'David S.', 'Morgan V.', 'Caleb R.'];
+const html = pages.map(p => [path.relative(ROOT, p), fs.readFileSync(p, 'utf8')]);
+test('no unrelated company or fabricated reviewer appears on any page', () => {
+  const bad = html.flatMap(([f, t]) => FABRICATED.filter(n => t.includes(n)).map(n => `${f}: ${n}`));
+  assert.deepStrictEqual(bad, []);
+});
+test('every "Google review" attribution is a verified reviewer', () => {
+  const bad = html.flatMap(([f, t]) => [...t.matchAll(/—\s*([^<,]+),\s*Google review/g)]
+    .map(m => m[1].trim()).filter(n => !VERIFIED_REVIEWERS.includes(n)).map(n => `${f}: ${n}`));
+  assert.deepStrictEqual(bad, []);
+});
+
+test('roof project is location-free (Agoura Hills only survives in the preserved URL slug)', () => {
+  const bad = html.flatMap(([f, t]) => (t.replace(/roof-reset-agoura-hills-april-17-2026/g, '').match(/agoura/gi) || []).map(() => f));
+  assert.deepStrictEqual(bad, []);
+});
+test('AI design images are never captioned as Omdan work', () => {
+  const bad = html.flatMap(([f, t]) => [...t.matchAll(/<img src="\/assets\/(11|14|16|17|rt[123])\.webp" alt="([^"]*)"/g)]
+    .filter(m => /omdan|completed|project|install/i.test(m[2])).map(m => `${f}: ${m[1]} "${m[2]}"`));
+  assert.deepStrictEqual(bad, []);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
