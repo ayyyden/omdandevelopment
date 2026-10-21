@@ -90,6 +90,12 @@ writing anything. A violating draft is regenerated, up to 3 attempts in total; i
 - `/gravel/` — gravel and xeriscape
 - `/exterior-painting/` — exterior painting
 - `/pool-remodeling/` — pool remodeling
+- `/plumbing/` — residential plumbing
+- `/roofing/` — residential roofing
+- `/windows/` — window replacement and installation
+- `/insulation/` — attic and spray foam insulation
+- `/hvac/` — residential HVAC
+- `/cool-life-paint/` — Cool Life Paint reflective coating
 
 **Service areas to reference** (only these — do not invent others):
 Palm Springs, Coachella Valley, Palm Desert, Desert Hot Springs, Yucca Valley,

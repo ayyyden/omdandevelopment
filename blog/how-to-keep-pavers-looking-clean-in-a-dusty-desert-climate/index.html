@@ -34,7 +34,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://unpkg.com">
 
   <!-- Tailwind compiled -->
   <link rel="stylesheet" href="/assets/styles.css">
@@ -230,10 +229,10 @@
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -242,15 +241,13 @@
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -261,7 +258,7 @@
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -325,6 +322,19 @@
 <p>Many aspects of paver care are well within a homeowner's ability, but there are times when bringing in a professional makes sense. Large-scale cleaning and resealing, base repairs for sunken or shifted areas, and full joint re-sanding on big installations are all tasks where experience and the right equipment make a significant difference in the outcome.</p><p>If your pavers haven't been maintained in several years, a professional restoration — cleaning, re-sanding, leveling any problem areas, and sealing — can bring a tired paver surface back to near-original condition. It's far more cost-effective than tearing out and replacing, and it extends the useful life of your investment considerably.</p><p>At Omdan Development, we work with homeowners across Palm Springs, Palm Desert, Menifee, Murrieta, Temecula, and throughout the Inland Empire on both new <a href="/pavers/">paver installations</a> and maintenance of existing surfaces. Whether you need help planning a new project or restoring what's already there, we bring local knowledge and hands-on expertise to every job.</p>
 
 
+      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How often should I clean my pavers in the desert?</h3>
+      <p>In dusty desert areas like the Coachella Valley, a quick sweep or blow-off once a week is ideal. A more thorough wash with a hose or pressure washer every one to three months will keep surfaces looking fresh, depending on how much wind-driven dust your property receives.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Is it worth sealing pavers in Palm Springs and the desert?</h3>
+      <p>Absolutely. Sealing is especially beneficial in desert climates because it protects against UV fading, makes dust and sand easier to remove, and helps prevent staining. A good sealer also slows the breakdown of polymeric joint sand, reducing overall maintenance.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">What causes the white residue on my pavers?</h3>
+      <p>That white, chalky film is called efflorescence. It's caused by natural mineral salts inside the paver material migrating to the surface as moisture evaporates. It's common in new installations and typically fades with regular cleaning. Persistent cases can be treated with an efflorescence-specific cleaner.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Can I pressure wash pavers without damaging them?</h3>
+      <p>Yes, but you need to use the right technique. Keep the pressure at a moderate setting, use a fan tip rather than a pinpoint nozzle, and maintain a consistent distance from the surface. Avoid blasting directly into the joints, which can displace polymeric sand. When in doubt, start with lower pressure and increase gradually.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How do I keep weeds from growing between my pavers?</h3>
+      <p>Keeping your polymeric sand joints full and in good condition is the best weed prevention. When joints erode or develop gaps, seeds and moisture get in and weeds take hold. Regular joint inspections, timely re-sanding, and applying a paver sealer all help keep weeds from becoming a recurring problem.</p>
+
       <!-- CTA -->
       <div class="mt-10 bg-brand/5 border border-brand/20 rounded-2xl p-7 text-center not-prose">
         <i data-feather="grid" class="w-8 h-8 text-brand mx-auto mb-3"></i>
@@ -341,6 +351,15 @@
 
     </article>
 
+    <!-- Related articles -->
+    <div class="mt-12 pt-8 border-t border-line">
+      <h2 class="text-lg font-bold text-ink mb-3">Related articles</h2>
+      <ul class="space-y-2">
+        <li><a href="/blog/difference-between-concrete-pavers-brick-pavers-and-travertine/" class="text-brand hover:underline font-medium">The Difference Between Concrete Pavers, Brick Pavers, and Travertine</a></li>
+        <li><a href="/blog/how-long-do-pavers-last-in-the-coachella-valley-heat/" class="text-brand hover:underline font-medium">How Long Do Pavers Last in the Coachella Valley Heat</a></li>
+      </ul>
+    </div>
+
     <!-- Back to blog -->
     <div class="mt-12 pt-8 border-t border-line">
       <a href="/blog/" class="inline-flex items-center gap-2 text-muted hover:text-ink text-sm font-medium transition">
@@ -356,7 +375,7 @@
       <div class="grid md:grid-cols-5 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" width="1024" height="1024" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
           <p class="mt-3 text-white/75 text-sm">Licensed contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
@@ -393,9 +412,9 @@
           <h4 class="font-bold mb-3">Contact</h4>
           <ul class="space-y-3 text-white/75 text-sm">
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
-            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white break-all" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
@@ -415,6 +434,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="/#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
+
 
   <script>
     const toggleBtn = document.getElementById('menu-toggle');

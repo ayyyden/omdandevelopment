@@ -14,7 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Concrete Pool Decks: What to Consider Before Starting the Project | Omdan Development</title>
+  <title>Concrete Pool Decks: What to Consider Before Starting the Project</title>
   <meta name="description" content="Concrete pool decks for Southern California homes — what to consider before starting your project. Advice from a licensed contractor serving Palm Springs and the Inland Empire.">
   <meta name="theme-color" content="#0f172a" />
 
@@ -32,30 +32,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://unpkg.com">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            ink: '#0f172a',
-            muted: '#334155',
-            line: '#e2e8f0',
-            brand: '#2563eb',
-            brand2: '#16a34a'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind compiled -->
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <!-- Feather icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/assets/feather.min.js"></script>
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/assets/favicon.ico">
@@ -224,10 +205,10 @@
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 min-w-0" aria-label="Omdan Development home">
-        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" />
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
         <span class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</span>
       </a>
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a href="/#about" class="text-muted hover:text-ink font-medium transition">About</a>
         <a href="/#services" class="text-muted hover:text-ink font-medium transition">Services</a>
         <a href="/#service-areas" class="text-muted hover:text-ink font-medium transition">Service Areas</a>
@@ -236,15 +217,13 @@
         <a href="/projects/" class="text-muted hover:text-ink font-medium transition">Projects</a>
         <a href="/blog/" class="text-brand font-semibold hover:text-ink transition">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink font-medium transition">Contact</a>
-        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition">
-          Get a Free Consultation
-        </a>
+        <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:opacity-95 transition whitespace-nowrap"><span class="xl:hidden">Free Estimate</span><span class="hidden xl:inline">Get a Free On-Site Estimate</span></a>
       </div>
-      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
         <i data-feather="menu" class="w-6 h-6"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
+    <div id="mobile-menu" class="xl:hidden hidden border-t bg-white" role="dialog" aria-label="Mobile menu">
       <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-4">
         <a href="/#about" class="text-muted hover:text-ink">About</a>
         <a href="/#services" class="text-muted hover:text-ink">Services</a>
@@ -255,7 +234,7 @@
         <a href="/blog/" class="text-brand font-semibold hover:text-ink">Blog</a>
         <a href="/#contact" class="text-muted hover:text-ink">Contact</a>
         <a href="/#contact" class="bg-brand text-white px-5 py-2 rounded-lg text-center font-semibold hover:opacity-95">
-          Get a Free Consultation
+          Get a Free On-Site Estimate
         </a>
       </div>
     </div>
@@ -319,6 +298,19 @@
 <p>Pool deck construction in Southern California typically requires a building permit, especially if the project involves changes to drainage, grading, or proximity to property lines. Permit requirements vary by city and county — what applies in <strong>Palm Springs</strong> may differ from rules in <strong>San Bernardino</strong> or <strong>Menifee</strong>. A licensed contractor familiar with local codes will handle the permit process and ensure the project passes inspection.</p><p>Working with a licensed contractor also protects you legally and financially. Omdan Development Inc (License #1148568) is a licensed contractor serving the Coachella Valley, Inland Empire, and surrounding areas. We handle <a href="/concrete/">concrete</a> projects from start to finish — including the permit process, site preparation, pour, and finishing — so you know the job is done to code and built to last.</p><p>Before hiring anyone, verify their license through the California Contractors State License Board. Ask for proof of insurance. And make sure the scope of work is clearly defined in writing before any concrete is mixed.</p>
 
 
+      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How long does it take to install a concrete pool deck?</h3>
+      <p>Most residential pool decks take between one and two weeks from site preparation to final finish, depending on the size of the deck, complexity of the design, and curing time. Factors like stamping, coloring, or integrating other materials can add time. Your contractor should provide a realistic timeline before work begins.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Can I resurface my existing pool deck instead of replacing it?</h3>
+      <p>In many cases, yes. If the existing concrete is structurally sound — no major cracks, settling, or heaving — a resurfacing overlay or textured coating can give it a fresh look and improved surface performance. A contractor can evaluate the condition of your current deck and recommend whether resurfacing or full replacement is the better investment.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">What is the best concrete finish for hot climates like Palm Springs?</h3>
+      <p>Light-colored textured coatings, often called cool-deck finishes, are among the most popular options in the Coachella Valley because they reflect solar heat and stay cooler underfoot. Exposed aggregate with lighter stone and lightly colored stamped concrete are also good choices. Avoid dark pigments and smooth, sealed surfaces that absorb and trap heat.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">Do I need a permit for a pool deck in Southern California?</h3>
+      <p>Most cities in the Coachella Valley and Inland Empire require a permit for new concrete pool decks, especially when grading or drainage changes are involved. Requirements vary by jurisdiction. A licensed contractor will know the local permit requirements and handle the application process for you.</p>
+      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">How do I prevent cracking in my concrete pool deck?</h3>
+      <p>Cracking can be minimized but not entirely eliminated in any concrete slab. Proper sub-base compaction, adequate slab thickness, steel or fiber reinforcement, correctly placed control joints, and a quality concrete mix all reduce the risk. Avoiding rapid drying during the curing process is also important, especially in the dry desert climate.</p>
+
       <!-- CTA -->
       <div class="mt-10 bg-brand/5 border border-brand/20 rounded-2xl p-7 text-center not-prose">
         <i data-feather="layers" class="w-8 h-8 text-brand mx-auto mb-3"></i>
@@ -335,6 +327,15 @@
 
     </article>
 
+    <!-- Related articles -->
+    <div class="mt-12 pt-8 border-t border-line">
+      <h2 class="text-lg font-bold text-ink mb-3">Related articles</h2>
+      <ul class="space-y-2">
+        <li><a href="/blog/concrete-finishes-and-colors-why-the-choice-matters/" class="text-brand hover:underline font-medium">Concrete Finishes and Colors: Why the Choice Matters More Than Most Homeowners Think</a></li>
+        <li><a href="/blog/how-desert-heat-affects-concrete-and-what-you-can-do-about-it/" class="text-brand hover:underline font-medium">How Desert Heat Affects Concrete and What You Can Do About It</a></li>
+      </ul>
+    </div>
+
     <!-- Back to blog -->
     <div class="mt-12 pt-8 border-t border-line">
       <a href="/blog/" class="inline-flex items-center gap-2 text-muted hover:text-ink text-sm font-medium transition">
@@ -350,10 +351,10 @@
       <div class="grid md:grid-cols-5 gap-8">
         <div>
           <div class="flex items-center gap-3">
-            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" />
+            <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto" loading="lazy" decoding="async" width="1024" height="1024" />
             <span class="text-lg font-bold">Omdan Development</span>
           </div>
-          <p class="mt-3 text-white/75 text-sm">Landscaping &amp; outdoor improvements across Los Angeles and nearby areas.</p>
+          <p class="mt-3 text-white/75 text-sm">Licensed residential contractor serving Palm Springs, the Coachella Valley &amp; Inland Empire, CA.</p>
         </div>
         <div>
           <h4 class="font-bold mb-3">Services</h4>
@@ -387,9 +388,9 @@
           <h4 class="font-bold mb-3">Contact</h4>
           <ul class="space-y-3 text-white/75 text-sm">
             <li class="flex items-center gap-2"><i data-feather="phone" class="w-4 h-4"></i><a class="hover:text-white" href="tel:9512920703">(951) 292-0703</a></li>
-            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
+            <li class="flex items-center gap-2"><i data-feather="mail" class="w-4 h-4"></i><a class="hover:text-white break-all" href="mailto:omdandevelopment@gmail.com">omdandevelopment@gmail.com</a></li>
           </ul>
-          <div class="mt-4 flex items-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center gap-3">
             <a class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 hover:bg-white/10 transition" href="https://www.facebook.com/profile.php?id=61588335854030" target="_blank" rel="noopener" aria-label="Facebook">
               <i data-feather="facebook" class="w-4 h-4"></i><span class="text-sm">Facebook</span>
             </a>
@@ -405,6 +406,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" onclick="window.gtag&&gtag('event','mobile_bar_call')" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i>Call
+    </a>
+    <a href="/#contact" onclick="window.gtag&&gtag('event','mobile_bar_estimate')" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white">
+      Get a Free On-Site Estimate
+    </a>
+  </div>
+
 
   <script>
     const toggleBtn = document.getElementById('menu-toggle');

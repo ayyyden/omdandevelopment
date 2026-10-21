@@ -375,5 +375,110 @@
     "category": "Kitchen Remodeling",
     "priority": 3,
     "service": "kitchen-remodeling"
+  },
+  {
+    "title": "Artificial Turf vs. Decomposed Granite in the Coachella Valley",
+    "slug": "artificial-turf-vs-decomposed-granite-coachella-valley",
+    "category": "Artificial Turf",
+    "priority": 1,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Paver Installation Cost in Palm Springs: What Affects Your Price",
+    "slug": "paver-installation-cost-palm-springs",
+    "category": "Pavers",
+    "priority": 1,
+    "service": "pavers"
+  },
+  {
+    "title": "What Affects the Cost of Pool Resurfacing in Palm Springs",
+    "slug": "what-affects-the-cost-of-pool-resurfacing-in-palm-springs",
+    "category": "Pool Remodeling",
+    "priority": 3,
+    "service": "pool-remodeling"
+  },
+  {
+    "title": "White Plaster vs. Pebble vs. Quartz: Choosing a Pool Finish for Desert Heat",
+    "slug": "white-plaster-vs-pebble-vs-quartz-choosing-a-pool-finish-for-desert-heat",
+    "category": "Pool Remodeling",
+    "priority": 3,
+    "service": "pool-remodeling"
+  },
+  {
+    "title": "Cool Deck vs. Stamped Concrete for Pool Decks in the Coachella Valley",
+    "slug": "cool-deck-vs-stamped-concrete-for-pool-decks-in-the-coachella-valley",
+    "category": "Pool Remodeling",
+    "priority": 3,
+    "service": "pool-remodeling"
+  },
+  {
+    "title": "Retrofit vs. Full-Frame Window Replacement for Palm Springs Homes",
+    "slug": "retrofit-vs-full-frame-window-replacement-for-palm-springs-homes",
+    "category": "Windows",
+    "priority": 3,
+    "service": "windows"
+  },
+  {
+    "title": "Choosing Window Frame Materials for Desert Heat: Vinyl, Fiberglass, Aluminum, or Wood",
+    "slug": "choosing-window-frame-materials-for-desert-heat-vinyl-fiberglass-aluminum-or-wood",
+    "category": "Windows",
+    "priority": 2,
+    "service": "windows"
+  },
+  {
+    "title": "Spray Foam vs. Blown-In Attic Insulation for Palm Springs Homes",
+    "slug": "spray-foam-vs-blown-in-attic-insulation-for-palm-springs-homes",
+    "category": "Insulation",
+    "priority": 3,
+    "service": "insulation"
+  },
+  {
+    "title": "Signs Your Attic Insulation Is Losing the Battle With Desert Heat",
+    "slug": "signs-your-attic-insulation-is-losing-the-battle-with-desert-heat",
+    "category": "Insulation",
+    "priority": 2,
+    "service": "insulation"
+  },
+  {
+    "title": "What Goes Under Artificial Turf: Decomposed Granite and Base Preparation Explained",
+    "slug": "what-goes-under-artificial-turf-decomposed-granite-and-base-preparation-explained",
+    "category": "Artificial Turf",
+    "priority": 3,
+    "service": "artificial-turf"
+  },
+  {
+    "title": "Decomposed Granite vs. Gravel for Low-Water Desert Yards",
+    "slug": "decomposed-granite-vs-gravel-for-low-water-desert-yards",
+    "category": "Gravel",
+    "priority": 2,
+    "service": "gravel"
+  },
+  {
+    "title": "Flat Roof Coatings for Desert Homes: What Homeowners Should Know",
+    "slug": "flat-roof-coatings-for-desert-homes-what-homeowners-should-know",
+    "category": "Roofing",
+    "priority": 2,
+    "service": "roofing"
+  },
+  {
+    "title": "How Desert Sun Ages a Roof and What to Inspect Each Year",
+    "slug": "how-desert-sun-ages-a-roof-and-what-to-inspect-each-year",
+    "category": "Roofing",
+    "priority": 2,
+    "service": "roofing"
+  },
+  {
+    "title": "Sizing an Air Conditioner for a Coachella Valley Home",
+    "slug": "sizing-an-air-conditioner-for-a-coachella-valley-home",
+    "category": "HVAC",
+    "priority": 2,
+    "service": "hvac"
+  },
+  {
+    "title": "What Affects the Cost of a Kitchen Remodel in Palm Springs",
+    "slug": "what-affects-the-cost-of-a-kitchen-remodel-in-palm-springs",
+    "category": "Kitchen Remodeling",
+    "priority": 3,
+    "service": "kitchen-remodeling"
   }
 ]
