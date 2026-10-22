@@ -249,8 +249,10 @@
     var d = digits(phone.value);
     if (!validPhone(d)) ok = err("bkPhone", "Enter a 10-digit US phone number.") && ok;
     else if (state.verifyOn && !state.verified) ok = err("bkPhone", "Please confirm your number: tap <b>Text me a code</b>.") && ok;
-    if (state.mode === "loading") return;
-    if (ok) show(1);
+    if (!ok) return;
+    // The backend check takes a few seconds on first load: wait for it instead of ignoring the tap
+    if (state.mode === "loading") { state.pendingNext = true; busy($("bkNext1"), true, "One moment…"); return; }
+    show(1);
   }
   $("bkNext1").addEventListener("click", next1);
 
@@ -638,6 +640,12 @@
   });
 
   /* ---------- Start: which mode? ---------- */
+  function ready() {
+    if (!state.pendingNext) return;
+    state.pendingNext = false;
+    busy($("bkNext1"), false);
+    next1();
+  }
   function useFallback() {
     state.mode = "fallback";
     state.verifyOn = false;
@@ -650,6 +658,7 @@
     s.async = true;
     document.body.appendChild(s);
     $("bkCaptchaWrap").hidden = false;
+    ready();
   }
 
   if (FORCE_FALLBACK) useFallback();
@@ -661,6 +670,7 @@
       state.mode = "live";
       state.verifyOn = res.phoneVerification !== false;
       markVerified(false);
+      ready();
     }).catch(useFallback);
   }
   show(0);
