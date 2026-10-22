@@ -35,6 +35,7 @@
 
   <!-- Tailwind compiled -->
   <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/booking.css">
 
   <!-- Icons -->
   <script src="/assets/feather.min.js" defer></script>
@@ -60,7 +61,6 @@
     .animate-fade-in { animation: fadeIn .25s ease-out; }
   </style>
 
-  <script src="https://web3forms.com/client/script.js" async defer></script>
 
   <script type="application/ld+json">
   {
@@ -498,45 +498,183 @@
         <p class="text-gray-600 mt-2">Every home is different. We'll visit, measure, and give you personalized pricing — free, with no obligation. Licensed &amp; insured, CSLB #1148568. Call or text (951) 292-0703.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-10">
-        <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="space-y-5 bg-white p-6 rounded-2xl border border-line">
+        <div id="estimate" class="bg-white p-5 sm:p-6 rounded-2xl border border-line shadow-sm text-left" data-service="cool-life-paint">
+        <div id="bkTop">
+          <div class="flex items-center gap-3">
+            <button type="button" id="bkBack" class="bk-back" aria-label="Back">
+              <i data-feather="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <div class="bk-bar" aria-hidden="true"><span id="bkBar"></span></div>
+            <p id="bkCount" class="text-xs text-muted whitespace-nowrap" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <form id="bkForm" action="https://api.web3forms.com/submit" method="POST" novalidate class="mt-4">
           <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
-          <input type="hidden" name="subject" value="New Quote Request - Cool Life Paint Page">
           <input type="hidden" name="from_name" value="Omdan Development Website">
           <input type="hidden" name="redirect" value="https://omdandevelopment.com/thankyou/">
+          <input type="hidden" name="lead_source" value="Website: /cool-life-paint/">
           <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <div class="bk-hp" aria-hidden="true"><label>Company <input id="bkCompany" type="text" tabindex="-1" autocomplete="off"></label></div>
 
-          <label class="block">
-            <span class="block text-sm font-semibold mb-1">Full Name</span>
-            <input name="name" type="text" required autocomplete="name"
-              class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold mb-1">Phone Number</span>
-            <input name="phone" type="tel" required autocomplete="tel"
-              class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold mb-1">Email Address</span>
-            <input name="email" type="email" required autocomplete="email"
-              class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold mb-1">Project Address</span>
-            <input name="address" type="text" required autocomplete="street-address"
-              class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold mb-1">Project Details</span>
-            <textarea name="message" rows="4"
-              class="w-full px-4 py-2.5 border border-line rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
-              placeholder="Example: exterior walls, garage floor, or patio — approximate square footage, surface type (stucco, concrete, etc.), and your preferred timeline."></textarea>
-          </label>
-          <div class="h-captcha" data-captcha="true"></div>
-          <button type="submit" class="w-full bg-brand text-white px-6 py-3 rounded-lg font-bold hover:opacity-95 transition">
-            Request My Free On-Site Estimate
-          </button>
-          <p class="text-xs text-gray-500">By submitting, you agree we may contact you by phone/text/email about your request.</p>
+          <!-- 1. Name and phone -->
+          <section class="bk-step" data-step="contact">
+            <h2 class="bk-q" tabindex="-1">Book your free on-site estimate</h2>
+            <p class="text-sm text-muted mt-1">A few quick questions, then pick a day and time.</p>
+            <label class="block mt-4">
+              <span class="block text-sm font-medium mb-1">Full name</span>
+              <input id="bkName" type="text" autocomplete="name" maxlength="80" class="bk-input">
+            </label>
+            <p id="bkName-err" class="field-error"></p>
+            <div class="mt-3">
+              <label for="bkPhone" class="block text-sm font-medium mb-1">Mobile phone number</label>
+              <div class="bk-row">
+                <input id="bkPhone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(760) 555-0123" class="bk-input">
+                <button type="button" id="bkSend" class="bk-btn-dark" hidden>Text me a code</button>
+              </div>
+              <p id="bkPhoneHelp" class="text-xs text-muted mt-1" hidden>We'll text you a 6-digit code to confirm your number.</p>
+              <p id="bkPhone-err" class="field-error"></p>
+              <div id="bkCodeRow" class="mt-3" hidden>
+                <label for="bkCode" class="block text-sm font-medium mb-1">Enter the 6-digit code</label>
+                <div class="bk-row">
+                  <input id="bkCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code" class="bk-input">
+                  <button type="button" id="bkVerify" class="bk-btn-dark">Verify</button>
+                </div>
+                <button type="button" id="bkResend" class="bk-link" disabled></button>
+                <p id="bkCode-err" class="field-error"></p>
+              </div>
+              <p id="bkVerified" class="bk-verified" hidden>
+                <i data-feather="check-circle" class="w-4 h-4"></i> Phone number verified
+                <button type="button" id="bkChange" class="bk-link">Change</button>
+              </p>
+            </div>
+            <button type="button" id="bkNext1" class="bk-next">Next</button>
+          </section>
+
+          <!-- 2. Homeowner -->
+          <section class="bk-step" data-step="homeowner" hidden>
+            <h2 class="bk-q" tabindex="-1">Are you the homeowner?</h2>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="yes"><span>Yes</span></label>
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="no"><span>No</span></label>
+            </div>
+          </section>
+
+          <!-- 3. Address -->
+          <section class="bk-step" data-step="address" hidden>
+            <h2 class="bk-q" tabindex="-1">Address of the home</h2>
+            <p class="text-sm text-muted mt-1">Where we'll come for the estimate.</p>
+            <label for="bkStreet" class="block text-sm font-medium mb-1 mt-4">Street address</label>
+            <div class="bk-combo">
+              <input id="bkStreet" type="text" autocomplete="address-line1" placeholder="Start typing your address" class="bk-input"
+                role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="bkAddrList">
+              <ul id="bkAddrList" class="bk-combo__list" role="listbox" hidden></ul>
+            </div>
+            <p id="bkStreet-err" class="field-error"></p>
+            <div class="bk-addr-grid mt-3">
+              <label class="block"><span class="block text-sm font-medium mb-1">Apt/unit</span>
+                <input id="bkUnit" type="text" autocomplete="address-line2" maxlength="20" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1">City</span>
+                <input id="bkCity" type="text" autocomplete="address-level2" maxlength="60" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1">ZIP</span>
+                <input id="bkZip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" class="bk-input"></label>
+            </div>
+            <p id="bkCity-err" class="field-error"></p>
+            <p id="bkZip-err" class="field-error"></p>
+            <button type="button" id="bkNext3" class="bk-next">Next</button>
+          </section>
+
+          <!-- 4. Project and start -->
+          <section class="bk-step" data-step="project" hidden>
+            <h2 class="bk-q" tabindex="-1">What's the project?</h2>
+            <p class="text-sm text-muted mt-1">Pick all that apply.</p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+              <label class="chip relative"><input type="checkbox" name="services" value="pavers"><span>Pavers</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="turf"><span>Artificial turf</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="concrete"><span>Concrete</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="gravel"><span>Gravel / DG</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="pool"><span>Pool remodel</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="kitchen"><span>Kitchen remodel</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="bathroom"><span>Bathroom remodel</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="windows"><span>Windows</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="roofing"><span>Roofing</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="insulation"><span>Insulation</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="hvac"><span>HVAC</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="gutters"><span>Gutters</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="plumbing"><span>Plumbing</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="painting"><span>Exterior painting</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="cool-life-paint"><span>Cool Life Paint</span></label>
+              <label class="chip relative col-span-2"><input type="checkbox" name="services" value="full-remodel"><span>Full yard remodel</span></label>
+            </div>
+            <p id="bkServices-err" class="field-error"></p>
+            <p class="block text-sm font-medium mt-5 mb-2">When do you want to start?</p>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="chip relative"><input type="radio" name="start" value="asap"><span>As soon as possible</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="1-3"><span>Within 1–3 months</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="3plus"><span>3+ months out</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="planning"><span>Just planning</span></label>
+            </div>
+            <p id="bkStart-err" class="field-error"></p>
+            <button type="button" id="bkNext4" class="bk-next">Next</button>
+          </section>
+
+          <!-- 5. Day and time -->
+          <section class="bk-step" data-step="when" hidden>
+            <h2 class="bk-q" tabindex="-1">Pick a day and time</h2>
+            <p id="bkWhenHelp" class="text-sm text-muted mt-1">We visit Sunday through Thursday. Days that are full are grayed out.</p>
+            <div class="bk-cal mt-3">
+              <div class="flex items-center justify-between">
+                <button type="button" id="bkPrev" class="bk-back" aria-label="Previous month"><i data-feather="chevron-left" class="w-5 h-5"></i></button>
+                <p id="bkMonth" class="font-semibold" aria-live="polite"></p>
+                <button type="button" id="bkNextMonth" class="bk-back" aria-label="Next month"><i data-feather="chevron-right" class="w-5 h-5"></i></button>
+              </div>
+              <div class="bk-dow" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+              <div id="bkCalGrid" class="bk-grid" role="group" aria-label="Days"></div>
+              <p id="bkCalLoading" class="text-sm text-muted text-center py-6">Loading open days…</p>
+            </div>
+            <div id="bkSlotsWrap" class="mt-4" hidden>
+              <p id="bkSlotsLabel" class="text-sm font-medium mb-2"></p>
+              <div id="bkSlots" class="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="bkSlotsLabel"></div>
+            </div>
+            <p id="bkWhen-err" class="field-error"></p>
+
+            <label class="flex items-start gap-2 mt-5 text-xs text-muted">
+              <input type="checkbox" id="bkConsentBox" class="mt-0.5">
+              <span>I agree that Omdan Development Inc may call or text me at the number above about my estimate. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/" class="underline" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms-and-conditions/" class="underline" target="_blank" rel="noopener">Terms</a>.</span>
+            </label>
+            <p id="bkConsent-err" class="field-error"></p>
+
+            <div id="bkCaptchaWrap" class="mt-4" hidden><div class="h-captcha" data-captcha="true"></div></div>
+
+            <button type="submit" id="bkSubmit" class="bk-next">Book my free estimate</button>
+            <p id="bkSubmitErr-err" class="field-error"></p>
+            <p class="text-xs text-muted mt-2 text-center">Free and no obligation. We'll call to confirm your appointment.</p>
+          </section>
         </form>
+
+        <!-- Can't take this one (not the homeowner, or outside the area) -->
+        <section id="bkStop" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="alert-circle" class="w-12 h-12 mx-auto text-muted"></i>
+          <h2 id="bkStopTitle" class="text-xl font-bold mt-3"></h2>
+          <p id="bkStopText" class="text-muted mt-2"></p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkStopBack" class="bk-btn-dark"></button>
+            <a href="tel:9512920703" class="bk-link text-center">Call (951) 292-0703</a>
+          </div>
+        </section>
+
+        <!-- Booked -->
+        <section id="bkDone" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="check-circle" class="w-14 h-14 mx-auto text-brand2"></i>
+          <h2 class="text-2xl font-extrabold mt-3">You're all set!</h2>
+          <p class="mt-2">We'll see you on <b id="bkWhenDone"></b>.</p>
+          <p class="text-muted mt-2 text-sm">Please make sure all homeowners can be there. We'll call before the visit to confirm. Need to change something? Just call us.</p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkIcs" class="bk-btn-dark">Add to my calendar</button>
+            <a href="tel:9512920703" class="bk-link text-center">Call (951) 292-0703</a>
+          </div>
+        </section>
+        </div>
 
         <aside class="bg-white p-6 rounded-2xl border border-line">
           <h3 class="text-xl font-extrabold mb-5">Contact</h3>
@@ -692,5 +830,6 @@
     });
   </script>
 
+  <script src="/assets/booking.js" defer></script>
 </body>
 </html>
