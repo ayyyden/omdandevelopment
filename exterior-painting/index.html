@@ -38,7 +38,7 @@
 
   <!-- Tailwind compiled -->
   <link rel="stylesheet" href="/assets/styles.css">
-  <link rel="stylesheet" href="/assets/booking.css">
+  <link rel="stylesheet" href="/assets/booking.css?v=2">
   <script src="/assets/feather.min.js" defer></script>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/assets/favicon.ico">
@@ -395,22 +395,22 @@
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl md:text-3xl font-bold mb-8">Common Questions</h2>
         <div class="space-y-5">
-          <div class="bg-white border border-line rounded-2xl p-6">
-            <h3 class="font-semibold text-lg">How often should I repaint in the desert?</h3>
-            <p class="mt-2 text-muted">Most desert homes need repainting every 5–8 years with standard acrylic paint. With elastomeric coating on stucco, you may get 10–12 years. South- and west-facing walls typically degrade faster and may need attention sooner than north-facing surfaces.</p>
-          </div>
-          <div class="bg-white border border-line rounded-2xl p-6">
-            <h3 class="font-semibold text-lg">How long does a typical exterior paint job take?</h3>
-            <p class="mt-2 text-muted">A typical single-family home takes 2–4 days: one day for prep and priming, one to two days for painting, and touch-ups at the end. Larger or more complex homes with extensive trim work or multiple stories take longer.</p>
-          </div>
-          <div class="bg-white border border-line rounded-2xl p-6">
-            <h3 class="font-semibold text-lg">Can you paint in the desert summer heat?</h3>
-            <p class="mt-2 text-muted">Yes, with scheduling adjustments. We work early mornings when temperatures are lower and avoid painting surfaces in direct afternoon sun above 90–95°F. Most quality exterior paints have application temperature ranges of 50°F–90°F on the surface being painted.</p>
-          </div>
-          <div class="bg-white border border-line rounded-2xl p-6">
-            <h3 class="font-semibold text-lg">What is the difference between elastomeric and standard exterior paint?</h3>
-            <p class="mt-2 text-muted">Elastomeric is far thicker (applied at 15–20 mils dry vs. 2–4 mils for standard paint) and remains flexible when cured. It bridges hairline cracks and provides a waterproof barrier. It costs more but lasts much longer on stucco and is the better long-term value for desert homes.</p>
-          </div>
+          <details class="faq bg-white border border-line rounded-2xl p-6">
+            <summary><h3 class="font-semibold text-lg flex items-start justify-between gap-3">How often should I repaint in the desert?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
+            <p class="mt-3 text-muted">Most desert homes need repainting every 5–8 years with standard acrylic paint. With elastomeric coating on stucco, you may get 10–12 years. South- and west-facing walls typically degrade faster and may need attention sooner than north-facing surfaces.</p>
+          </details>
+          <details class="faq bg-white border border-line rounded-2xl p-6">
+            <summary><h3 class="font-semibold text-lg flex items-start justify-between gap-3">How long does a typical exterior paint job take?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
+            <p class="mt-3 text-muted">A typical single-family home takes 2–4 days: one day for prep and priming, one to two days for painting, and touch-ups at the end. Larger or more complex homes with extensive trim work or multiple stories take longer.</p>
+          </details>
+          <details class="faq bg-white border border-line rounded-2xl p-6">
+            <summary><h3 class="font-semibold text-lg flex items-start justify-between gap-3">Can you paint in the desert summer heat?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
+            <p class="mt-3 text-muted">Yes, with scheduling adjustments. We work early mornings when temperatures are lower and avoid painting surfaces in direct afternoon sun above 90–95°F. Most quality exterior paints have application temperature ranges of 50°F–90°F on the surface being painted.</p>
+          </details>
+          <details class="faq bg-white border border-line rounded-2xl p-6">
+            <summary><h3 class="font-semibold text-lg flex items-start justify-between gap-3">What is the difference between elastomeric and standard exterior paint?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
+            <p class="mt-3 text-muted">Elastomeric is far thicker (applied at 15–20 mils dry vs. 2–4 mils for standard paint) and remains flexible when cured. It bridges hairline cracks and provides a waterproof barrier. It costs more but lasts much longer on stucco and is the better long-term value for desert homes.</p>
+          </details>
         </div>
       </div>
     </div>
@@ -738,6 +738,6 @@
     
     if (window.feather) { feather.replace(); } else { document.addEventListener('DOMContentLoaded', function () { feather.replace(); }); }
   </script>
-  <script src="/assets/booking.js?v=2" defer></script>
+  <script src="/assets/booking.js?v=3" defer></script>
 </body>
 </html>

@@ -159,8 +159,21 @@
   });
 
   function busy(btn, on, label) {
-    if (on) { btn.dataset.label = btn.textContent; btn.textContent = label; btn.disabled = true; }
-    else { btn.textContent = btn.dataset.label || btn.textContent; btn.disabled = false; }
+    clearTimeout(btn._slow);
+    if (on) {
+      if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+      btn.disabled = true;
+      btn.setAttribute("aria-busy", "true");
+      btn.innerHTML = '<span class="bk-spin" aria-hidden="true"></span>';
+      btn.appendChild(document.createTextNode(label));
+      // a slow server answer shouldn't look frozen: reassure after a few seconds
+      btn._slow = setTimeout(function () { if (btn.disabled) btn.lastChild.nodeValue = "Almost done…"; }, 4000);
+    } else {
+      btn.textContent = btn.dataset.label || btn.textContent;
+      delete btn.dataset.label;
+      btn.disabled = false;
+      btn.removeAttribute("aria-busy");
+    }
   }
 
   function resendTimer() {
@@ -584,8 +597,7 @@
       i.value = fields[k];
     });
     if (window.gtag) gtag("event", "site_form_submit", { mode: "fallback", service: PAGE_SERVICE || "general" });
-    $("bkSubmit").disabled = true;
-    $("bkSubmit").textContent = "Sending…";
+    busy($("bkSubmit"), true, "Sending…");
     f.submit();
   }
 
