@@ -221,8 +221,10 @@ ${related.map(r => `        <li><a href="/blog/${r.slug}/" class="text-brand hov
   // FAQs are shown on the page as well as in the FAQPage schema (Google requires them to match)
   const faqHtml = art.faqs.length ? `      <!-- FAQ -->
       <h2>Frequently Asked Questions</h2>
-${art.faqs.map(f => `      <h3 class="text-lg font-semibold text-ink mt-6 mb-2">${esc(f.question)}</h3>
-      <p>${esc(f.answer)}</p>`).join('\n')}
+${art.faqs.map(f => `      <details class="faq not-prose border-b border-line py-4">
+        <summary><h3 class="text-lg font-semibold text-ink flex items-start justify-between gap-3">${esc(f.question)}<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
+        <p class="mt-3 mb-0 text-muted leading-relaxed">${esc(f.answer)}</p>
+      </details>`).join('\n')}
 ` : '';
 
   const faqSchemaItems = art.faqs.map(f => `      {

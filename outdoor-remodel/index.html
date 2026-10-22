@@ -104,6 +104,12 @@
     .col-span-2 { grid-column: span 2 / span 2; }
     html { scroll-behavior: smooth; }
     #estimate { scroll-margin-top: 5rem; }
+    /* Busy buttons: spinner while waiting on the booking server */
+    .bk-spin { display: inline-block; width: 1em; height: 1em; margin-right: .5em; vertical-align: -.125em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 9999px; animation: bk-spin .7s linear infinite; }
+    @keyframes bk-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .bk-spin { animation-duration: 1.6s; } }
+    button[aria-busy="true"] { cursor: progress; }
+    .bk-next[aria-busy="true"], .bk-btn-dark[aria-busy="true"] { opacity: 1; }
   </style>
 </head>
 <body class="font-sans text-ink bg-white antialiased">
@@ -540,6 +546,6 @@
     document.addEventListener('DOMContentLoaded', function () { if (window.feather) feather.replace(); });
   </script>
 
-  <script src="/outdoor-remodel/booking.js?v=2" defer></script>
+  <script src="/outdoor-remodel/booking.js?v=3" defer></script>
 </body>
 </html>

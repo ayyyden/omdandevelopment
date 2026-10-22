@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Collapsible FAQ items (<details class="faq">): one question per row, tap to open */
+@layer components {
+  details.faq > summary { list-style: none; cursor: pointer; }
+  details.faq > summary::-webkit-details-marker { display: none; }
+  details.faq > summary h3 { margin: 0; }
+  details.faq .faq-chev { flex-shrink: 0; margin-top: .125rem; transition: transform .2s ease; }
+  details.faq[open] .faq-chev { transform: rotate(180deg); }
+  /* compact closed rows so the list is quick to scroll past */
+  details.faq.p-5, details.faq.p-6 { padding: .875rem 1.125rem; }
+  details.faq.p-5[open], details.faq.p-6[open] { padding-bottom: 1.125rem; }
+  details.faq > summary h3 { font-size: 1rem; line-height: 1.4; }
+  @media (min-width: 768px) { details.faq > summary h3 { font-size: 1.0625rem; } }
+}

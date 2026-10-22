@@ -46,3 +46,10 @@
 .bk-day[aria-pressed="true"] { background: #2563eb; color: #fff; }
 .bk-cal__none { grid-column: 1 / -1; font-size: .875rem; color: #64748b; padding: 1rem 0; }
 #bkSlots .chip span { min-height: 40px; padding: .375rem .25rem; }
+
+/* Busy buttons: spinner while waiting on the booking server */
+.bk-spin { display: inline-block; width: 1em; height: 1em; margin-right: .5em; vertical-align: -.125em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 9999px; animation: bk-spin .7s linear infinite; }
+@keyframes bk-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .bk-spin { animation-duration: 1.6s; } }
+button[aria-busy="true"] { cursor: progress; }
+.bk-next[aria-busy="true"], .bk-btn-dark[aria-busy="true"] { opacity: 1; }
