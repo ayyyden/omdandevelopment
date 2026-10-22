@@ -1,0 +1,48 @@
+/* Free on-site estimate booking card (#estimate, run by /assets/booking.js). Same look as /outdoor-remodel/. */
+#estimate [hidden] { display: none !important; }
+#estimate { scroll-margin-top: 6rem; }
+#estimate .chip { position: relative; }
+#estimate .chip input { position: absolute; opacity: 0; pointer-events: none; }
+#estimate .chip span { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: .5rem .75rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: .875rem; font-weight: 500; color: #0f172a; background: #fff; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+#estimate .chip input:checked + span { background: #2563eb; border-color: #2563eb; color: #fff; }
+#estimate .chip input:focus-visible + span { outline: 2px solid #2563eb; outline-offset: 2px; }
+#estimate .field-error { display: none; color: #dc2626; font-size: .8125rem; margin-top: .375rem; }
+#estimate .field-error.show { display: block; }
+.bk-q { font-size: 1.25rem; font-weight: 700; line-height: 1.3; outline: none; }
+.bk-input { width: 100%; min-height: 44px; padding: .5rem 1rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: 1rem; background: #fff; }
+.bk-input:focus { outline: none; box-shadow: 0 0 0 2px #2563eb; border-color: #2563eb; }
+.bk-input[aria-invalid="true"] { border-color: #dc2626; }
+.bk-input[readonly] { background: #f8fafc; color: #334155; }
+.bk-row { display: flex; gap: .5rem; }
+.bk-row .bk-input { flex: 1; min-width: 0; }
+.bk-btn-dark { min-height: 44px; padding: .5rem 1rem; border-radius: .5rem; background: #0f172a; color: #fff; font-weight: 600; font-size: .875rem; white-space: nowrap; }
+.bk-btn-dark:disabled { opacity: .6; }
+.bk-link { margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #2563eb; text-decoration: underline; background: none; }
+.bk-link:disabled { color: #64748b; text-decoration: none; }
+.bk-next { display: block; width: 100%; margin-top: 1.25rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: .5rem; background: #2563eb; color: #fff; font-weight: 600; font-size: 1.125rem; }
+.bk-next:hover { opacity: .95; }
+.bk-next:disabled { opacity: .6; }
+.bk-back { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #e2e8f0; color: #0f172a; background: #fff; flex-shrink: 0; }
+.bk-back:disabled { opacity: .35; }
+.bk-bar { flex: 1; height: 6px; border-radius: 9999px; background: #e2e8f0; overflow: hidden; }
+.bk-bar span { display: block; height: 100%; width: 20%; background: #2563eb; border-radius: inherit; transition: width .25s ease; }
+.bk-verified { display: flex; align-items: center; gap: .375rem; margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #16a34a; }
+.bk-verified .bk-link { margin: 0 0 0 auto; }
+.bk-big span { min-height: 64px; font-size: 1.125rem; font-weight: 600; }
+.bk-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.bk-combo { position: relative; }
+.bk-combo__list { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); background: #fff; border: 1px solid #e2e8f0; border-radius: .5rem; box-shadow: 0 10px 25px rgba(15,23,42,.12); max-height: 16rem; overflow-y: auto; }
+.bk-combo__list li { padding: .625rem .875rem; cursor: pointer; font-size: .9375rem; }
+.bk-combo__list li small { display: block; color: #64748b; font-size: .8125rem; }
+.bk-combo__list li[aria-selected="true"], .bk-combo__list li:hover { background: #eff6ff; }
+.bk-combo__list .bk-combo__note { color: #64748b; cursor: default; font-size: .875rem; }
+.bk-combo__list .bk-combo__note:hover { background: none; }
+.bk-addr-grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: .5rem; }
+.bk-dow, .bk-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .25rem; text-align: center; }
+.bk-dow { margin-top: .75rem; font-size: .75rem; color: #64748b; font-weight: 500; }
+.bk-grid { margin-top: .25rem; }
+.bk-day { aspect-ratio: 1; max-height: 44px; border-radius: .5rem; font-size: .9375rem; font-weight: 600; color: #0f172a; background: #eff6ff; }
+.bk-day:disabled { background: none; color: #cbd5e1; font-weight: 400; text-decoration: line-through; }
+.bk-day[aria-pressed="true"] { background: #2563eb; color: #fff; }
+.bk-cal__none { grid-column: 1 / -1; font-size: .875rem; color: #64748b; padding: 1rem 0; }
+#bkSlots .chip span { min-height: 40px; padding: .375rem .25rem; }
