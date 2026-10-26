@@ -11,6 +11,23 @@
   gtag('config', 'G-EWYZ2LSMHR');
   gtag('config', 'AW-17862403534');
 </script>
+<!-- Meta Pixel (Omdan Development Website dataset); booking.js sends Lead on a completed booking. Off on localhost. -->
+<script>
+  if (!/^(localhost|127\.|192\.168\.)/.test(location.hostname)) {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1064150789992386');
+  fbq('track', 'PageView');
+  }
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1064150789992386&ev=PageView&noscript=1"></noscript>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Google Ads landing page: kept out of search results and the sitemap -->
@@ -546,10 +563,11 @@
       document.getElementById('lp-sub').textContent = s.sub;
       if (key !== 'general') document.getElementById('hero').style.backgroundImage = "url('" + s.hero + "')";
 
-      // Click tracking for calls and CTA buttons (GA4)
+      // Click tracking for calls and CTA buttons (GA4); a tap on a phone link is a Contact for Meta
       document.querySelectorAll('[data-track]').forEach(function (el) {
         el.addEventListener('click', function () {
           if (window.gtag) gtag('event', el.getAttribute('data-track'), { service_page: key });
+          if (window.fbq && /^tel:/.test(el.getAttribute('href') || '')) fbq('track', 'Contact');
         });
       });
 

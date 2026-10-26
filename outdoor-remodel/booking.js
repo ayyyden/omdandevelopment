@@ -508,7 +508,7 @@
   }
   function attribution() {
     var a = {};
-    ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (k) {
+    ["gclid", "fbclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (k) {
       var v = params.get(k);
       try { if (v) sessionStorage.setItem("lp_" + k, v); else v = sessionStorage.getItem("lp_" + k); } catch (e) {}
       if (v) a[k] = v.slice(0, 300);
@@ -576,7 +576,7 @@
       project: p.services.map(function (s) { return LABELS[s] || s; }).join(", "),
       wants_to_start: START[p.start] || p.start,
       preferred_time: nice + " (preference, not on the calendar yet: call to confirm)",
-      gclid: p.attribution.gclid || "", utm_campaign: p.attribution.utm_campaign || "", utm_term: p.attribution.utm_term || "",
+      gclid: p.attribution.gclid || "", fbclid: p.attribution.fbclid || "", utm_campaign: p.attribution.utm_campaign || "", utm_term: p.attribution.utm_term || "",
       service_page: params.get("service") || "general"
     };
     Object.keys(fields).forEach(function (k) {
@@ -585,11 +585,25 @@
       i.value = fields[k];
     });
     if (window.gtag) gtag("event", "lp_form_submit", { mode: "fallback" });
+    metaLead("request");
     busy($("bkSubmit"), true, "Sending…");
     f.submit();
   }
 
   var LABELS = { turf: "Artificial turf", pavers: "Pavers", concrete: "Concrete", gravel: "Gravel / DG", "full-remodel": "Full yard remodel" };
+
+  // Meta Pixel "Lead": once per page load, only for a request that was actually sent (never in the demo).
+  // The eventID lets Meta drop a repeat of the same submission.
+  var metaLeadSent = false;
+  function metaLead(kind) {
+    if (metaLeadSent || DEMO || typeof window.fbq !== "function") return;
+    metaLeadSent = true;
+    try {
+      window.fbq("track", "Lead", { content_name: kind === "booking" ? "Estimate booked" : "Estimate requested",
+        content_category: params.get("service") || "general" },
+        { eventID: "omd-lead-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8) });
+    } catch (e) { /* tracking must never break the booking */ }
+  }
 
   var conversionSent = false;
   function booked(p) {
@@ -598,6 +612,7 @@
       gtag("event", "conversion", { send_to: CONVERSION });
       gtag("event", "lp_booked", { service_page: params.get("service") || "general" });
     }
+    metaLead("booking");
     state.booked = p;
     form.hidden = true;
     $("bkTop").hidden = true;
