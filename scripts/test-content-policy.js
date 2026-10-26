@@ -117,9 +117,21 @@ function htmlFiles(dir) {
   });
 }
 const pages = htmlFiles(ROOT);
+// The one place dollar figures are allowed: the promotional offer terms on the Terms page (user decision, Oct 2026).
+// Offer landing pages state the offer without amounts and link here.
+const OFFER_TERMS = /<!--[^>]*OFFER-TERMS:START[\s\S]*?OFFER-TERMS:END -->/g;
+const OFFER_TERMS_PAGE = path.join('terms-and-conditions', 'index.html');
+const policyText = p => {
+  const src = fs.readFileSync(p, 'utf8');
+  return pageText(path.relative(ROOT, p) === OFFER_TERMS_PAGE ? src.replace(OFFER_TERMS, ' ') : src);
+};
 test(`all ${pages.length} pages comply (visible text, titles, meta, schema)`, () => {
-  const bad = pages.flatMap(p => checkText(pageText(fs.readFileSync(p, 'utf8')), path.relative(ROOT, p)));
+  const bad = pages.flatMap(p => checkText(policyText(p), path.relative(ROOT, p)));
   assert.deepStrictEqual(bad.map(v => `${v.where} [${v.rule}] ${v.why}: "${v.snippet}"`), []);
+});
+test('offer-terms exemption is used only on the Terms page', () => {
+  const bad = pages.filter(p => path.relative(ROOT, p) !== OFFER_TERMS_PAGE && /OFFER-TERMS:START/.test(fs.readFileSync(p, 'utf8')));
+  assert.deepStrictEqual(bad.map(p => path.relative(ROOT, p)), []);
 });
 test('llms.txt complies', () => {
   const bad = checkText(fs.readFileSync(path.join(ROOT, 'llms.txt'), 'utf8'), 'llms.txt');
