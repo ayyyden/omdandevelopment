@@ -10,6 +10,8 @@
   the same steps still work: the phone isn't verified, the day and time are a preference
   (Sunday-Thursday, 8 AM-7 PM), and the request goes out by email through Web3Forms.
 
+  Messages are in English or Spanish (L(en, es); the switch is i18n.js). Lead emails stay in English.
+
   On localhost it runs a demo backend (code 123456) so testing never books or texts anyone.
   Add ?mode=fallback to test the fallback.
 */
@@ -23,19 +25,37 @@
   var DEMO = isLocal && params.get("mode") !== "fallback";
   var FORCE_FALLBACK = isLocal && params.get("mode") === "fallback";
 
-  // Service area: ZIP -> city (the Google Ads campaign's cities; 92278, the Marine base, left out)
+  // Service area: ZIP -> city (the Google and Meta campaigns' cities; 92278, the Marine base, left out).
+  // Keep in step with OMDAN.zips in the booking backend (Code.gs).
   var ZIPS = {
     "92262": "Palm Springs", "92264": "Palm Springs", "92234": "Cathedral City", "92270": "Rancho Mirage",
     "92276": "Thousand Palms", "92210": "Indian Wells", "92211": "Palm Desert", "92260": "Palm Desert",
     "92253": "La Quinta", "92201": "Indio", "92203": "Indio", "92236": "Coachella",
     "92240": "Desert Hot Springs", "92241": "Desert Hot Springs", "92256": "Morongo Valley", "92284": "Yucca Valley",
     "92252": "Joshua Tree", "92277": "Twentynine Palms", "92230": "Cabazon", "92220": "Banning",
-    "92223": "Cherry Valley", "92399": "Yucaipa"
+    "92223": "Beaumont / Cherry Valley", "92399": "Yucaipa",
+    "92543": "Hemet", "92545": "Hemet", "92582": "San Jacinto", "92583": "San Jacinto",
+    "92584": "Menifee", "92585": "Menifee", "92586": "Menifee", "92587": "Menifee",
+    "92551": "Moreno Valley", "92553": "Moreno Valley", "92555": "Moreno Valley", "92557": "Moreno Valley",
+    "92501": "Riverside", "92503": "Riverside", "92504": "Riverside", "92505": "Riverside", "92506": "Riverside",
+    "92507": "Riverside", "92508": "Riverside", "92521": "Riverside",
+    "91752": "Jurupa Valley", "92509": "Jurupa Valley",
+    "92879": "Corona", "92881": "Corona", "92882": "Corona", "92883": "Corona",
+    "92346": "San Bernardino", "92369": "San Bernardino", "92385": "San Bernardino", "92401": "San Bernardino",
+    "92404": "San Bernardino", "92405": "San Bernardino", "92407": "San Bernardino", "92408": "San Bernardino",
+    "92410": "San Bernardino", "92411": "San Bernardino", "92415": "San Bernardino",
+    "92316": "Rialto", "92376": "Rialto", "92377": "Rialto",
+    "92335": "Fontana", "92336": "Fontana", "92337": "Fontana",
+    "91761": "Ontario", "91762": "Ontario", "91764": "Ontario",
+    "92562": "Murrieta", "92563": "Murrieta", "92590": "Temecula", "92591": "Temecula", "92592": "Temecula"
   };
   var START = { asap: "As soon as possible", "1-3": "Within 1-3 months", "3plus": "3+ months out", planning: "Just planning" };
   var FALLBACK_TIMES = ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
 
   function $(id) { return document.getElementById(id); }
+  function L(en, es) { return window.OMD ? OMD.t(en, es) : en; }
+  function loc() { return window.OMD ? OMD.locale() : "en-US"; }
+  function lang() { return window.OMD ? OMD.lang : "en"; }
   var form = $("bkForm");
   if (!form) return;
   var loadedAt = Date.now();
@@ -93,7 +113,7 @@
     }
     return !msg;
   }
-  var CALL = 'call us at <a href="tel:9512920703" class="underline">' + PHONE + "</a>";
+  function CALL() { return L("call us at ", "llámenos al ") + '<a href="tel:9512920703" class="underline">' + PHONE + "</a>"; }
 
   /* ---------- Steps ---------- */
   var steps = Array.prototype.slice.call(form.querySelectorAll(".bk-step"));
@@ -105,7 +125,7 @@
     $("bkTop").hidden = false;
     $("bkBack").disabled = n === 0;
     $("bkBack").style.visibility = n === 0 ? "hidden" : "visible";
-    $("bkCount").textContent = "Step " + (n + 1) + " of " + steps.length;
+    $("bkCount").textContent = L("Step ", "Paso ") + (n + 1) + L(" of ", " de ") + steps.length;
     $("bkBar").style.width = Math.round((n + 1) / steps.length * 100) + "%";
     if (n > 0) {
       var top = $("estimate").getBoundingClientRect().top;
@@ -156,7 +176,7 @@
       btn.innerHTML = '<span class="bk-spin" aria-hidden="true"></span>';
       btn.appendChild(document.createTextNode(label));
       // a slow server answer shouldn't look frozen: reassure after a few seconds
-      btn._slow = setTimeout(function () { if (btn.disabled) btn.lastChild.nodeValue = "Almost done…"; }, 4000);
+      btn._slow = setTimeout(function () { if (btn.disabled) btn.lastChild.nodeValue = L("Almost done…", "Ya casi…"); }, 4000);
     } else {
       btn.textContent = btn.dataset.label || btn.textContent;
       delete btn.dataset.label;
@@ -169,8 +189,8 @@
     clearInterval(state.resendTimer);
     var left = 30, b = $("bkResend");
     function tick() {
-      if (left > 0) { b.disabled = true; b.textContent = "Send a new code in " + left + "s"; left--; }
-      else { b.disabled = false; b.textContent = "Send a new code"; clearInterval(state.resendTimer); }
+      if (left > 0) { b.disabled = true; b.textContent = L("Send a new code in ", "Pedir otro código en ") + left + "s"; left--; }
+      else { b.disabled = false; b.textContent = L("Send a new code", "Pedir otro código"); clearInterval(state.resendTimer); }
     }
     tick();
     state.resendTimer = setInterval(tick, 1000);
@@ -178,31 +198,32 @@
 
   function sendCode() {
     var d = digits(phone.value);
-    if (!validPhone(d)) { err("bkPhone", "Enter a 10-digit US phone number."); phone.focus(); return; }
+    if (!validPhone(d)) { err("bkPhone", L("Enter a 10-digit US phone number.", "Escriba un número de EE. UU. de 10 dígitos.")); phone.focus(); return; }
     err("bkPhone", ""); err("bkCode", "");
     var btn = $("bkSend");
-    busy(btn, true, "Sending…");
-    api("POST", { action: "sendCode", phone: e164(), lang: "en", brand: "omdan" }).then(function (res) {
+    busy(btn, true, L("Sending…", "Enviando…"));
+    api("POST", { action: "sendCode", phone: e164(), lang: lang(), brand: "omdan" }).then(function (res) {
       busy(btn, false);
       if (res.ok) {
         $("bkCodeRow").hidden = false;
-        $("bkPhoneHelp").textContent = "We texted a 6-digit code to " + fmtPhone(d) + ".";
+        $("bkPhoneHelp").textContent = L("We texted a 6-digit code to ", "Le mandamos un código de 6 dígitos al ") + fmtPhone(d) + ".";
         resendTimer();
         code.value = "";
         code.focus();
       } else {
-        err("bkPhone", res.error === "rate_limited" ? "Too many tries. Wait a few minutes or " + CALL + "."
-          : res.error === "invalid_phone" ? "Enter a 10-digit US mobile number."
-          : "We couldn't send a code right now. Try again in a minute or " + CALL + ".");
+        err("bkPhone", res.error === "rate_limited" ? L("Too many tries. Wait a few minutes or ", "Demasiados intentos. Espere unos minutos o ") + CALL() + "."
+          : res.error === "invalid_phone" ? L("Enter a 10-digit US mobile number.", "Escriba un número de celular de EE. UU. de 10 dígitos.")
+          : res.error === "not_mobile" ? L("That number can't receive texts. Please use a cell phone number.", "Ese número no recibe mensajes. Use un número de celular.")
+          : L("We couldn't send a code right now. Try again in a minute or ", "No pudimos mandar el código ahorita. Intente en un minuto o ") + CALL() + ".");
       }
-    }).catch(function () { busy(btn, false); err("bkPhone", "We couldn't send a code right now. Try again in a minute or " + CALL + "."); });
+    }).catch(function () { busy(btn, false); err("bkPhone", L("We couldn't send a code right now. Try again in a minute or ", "No pudimos mandar el código ahorita. Intente en un minuto o ") + CALL() + "."); });
   }
 
   function verifyCode() {
     var c = code.value.replace(/\D/g, "");
-    if (c.length !== 6) { err("bkCode", "Enter the 6-digit code."); code.focus(); return; }
+    if (c.length !== 6) { err("bkCode", L("Enter the 6-digit code.", "Escriba el código de 6 dígitos.")); code.focus(); return; }
     var btn = $("bkVerify");
-    busy(btn, true, "Checking…");
+    busy(btn, true, L("Checking…", "Revisando…"));
     api("POST", { action: "verifyCode", phone: e164(), code: c }).then(function (res) {
       busy(btn, false);
       if (res.ok && res.token) {
@@ -212,10 +233,11 @@
         markVerified(true);
         if (window.gtag) gtag("event", "lp_phone_verified");
       } else {
-        err("bkCode", res.error === "rate_limited" ? "Too many tries. Wait a few minutes or " + CALL + "." : "That code didn't work. Check it, or send a new one.");
+        err("bkCode", res.error === "rate_limited" ? L("Too many tries. Wait a few minutes or ", "Demasiados intentos. Espere unos minutos o ") + CALL() + "."
+          : L("That code didn't work. Check it, or send a new one.", "Ese código no funcionó. Revíselo o pida otro."));
         code.select();
       }
-    }).catch(function () { busy(btn, false); err("bkCode", "Something went wrong. Try again, or " + CALL + "."); });
+    }).catch(function () { busy(btn, false); err("bkCode", L("Something went wrong. Try again, or ", "Algo salió mal. Intente de nuevo o ") + CALL() + "."); });
   }
 
   function markVerified(on) {
@@ -241,16 +263,16 @@
   $("bkChange").addEventListener("click", function () {
     state.verified = false; state.token = "";
     markVerified(false);
-    $("bkPhoneHelp").textContent = "We'll text you a 6-digit code to confirm your number.";
+    $("bkPhoneHelp").textContent = L("We'll text you a 6-digit code to confirm your number.", "Le enviaremos un código de 6 dígitos por mensaje para confirmar su número.");
     phone.focus(); phone.select();
   });
 
   function next1() {
     var name = $("bkName").value.trim();
-    var ok = err("bkName", /\S+\s+\S+/.test(name) ? "" : "Please enter your first and last name.");
+    var ok = err("bkName", /\S+\s+\S+/.test(name) ? "" : L("Please enter your first and last name.", "Escriba su nombre y apellido."));
     var d = digits(phone.value);
-    if (!validPhone(d)) ok = err("bkPhone", "Enter a 10-digit US phone number.") && ok;
-    else if (state.verifyOn && !state.verified) ok = err("bkPhone", "Please confirm your number: tap <b>Text me a code</b>.") && ok;
+    if (!validPhone(d)) ok = err("bkPhone", L("Enter a 10-digit US phone number.", "Escriba un número de EE. UU. de 10 dígitos.")) && ok;
+    else if (state.verifyOn && !state.verified) ok = err("bkPhone", L("Please confirm your number: tap <b>Text me a code</b>.", "Confirme su número: toque <b>Mándenme un código</b>.")) && ok;
     if (state.mode === "loading") return;
     if (ok) show(1);
   }
@@ -260,9 +282,10 @@
   form.querySelectorAll('input[name="homeowner"]').forEach(function (r) {
     r.addEventListener("change", function () {
       if (r.value === "no") {
-        stop("Sorry, we can only help the homeowner.",
-          "We do estimates for the owner of the home. If the owner wants a free estimate, they're welcome to book one or call us at " + PHONE + ".",
-          "Change my answer", 1);
+        stop(L("Sorry, we can only help the homeowner.", "Lo sentimos, solo atendemos al dueño de la casa."),
+          L("We do estimates for the owner of the home. If the owner wants a free estimate, they're welcome to book one or call us at ",
+            "Hacemos estimados para el dueño de la casa. Si el dueño quiere un estimado gratis, con gusto puede agendarlo o llamarnos al ") + PHONE + ".",
+          L("Change my answer", "Cambiar mi respuesta"), 1);
       } else {
         setTimeout(function () { show(2); }, 150);
       }
@@ -279,7 +302,7 @@
     if (!results.length) {
       var none = document.createElement("li");
       none.className = "bk-combo__note";
-      none.textContent = "No matches yet. Keep typing, or fill in the address yourself.";
+      none.textContent = L("No matches yet. Keep typing, or fill in the address yourself.", "Todavía no hay resultados. Siga escribiendo o escriba la dirección usted mismo.");
       list.appendChild(none);
     }
     results.forEach(function (r, i) {
@@ -327,7 +350,8 @@
   function searchAddress(q) {
     if (addrAbort) addrAbort.abort();
     addrAbort = "AbortController" in window ? new AbortController() : null;
-    var url = "https://photon.komoot.io/api/?limit=6&lang=en&lat=33.85&lon=-116.5&bbox=-117.4,33.4,-115.6,34.4&q=" + encodeURIComponent(q);
+    // the desert out to the Inland Empire (Ontario/Corona in the west), biased to the middle of it
+    var url = "https://photon.komoot.io/api/?limit=6&lang=en&lat=33.9&lon=-116.9&bbox=-117.8,33.4,-115.6,34.45&q=" + encodeURIComponent(q);
     fetch(url, addrAbort ? { signal: addrAbort.signal } : {}).then(function (r) { return r.json(); }).then(function (data) {
       var seen = {}, typed = q.match(/^\s*(\d+[A-Za-z]?(?:-\d+)?)\s+\S/), typedNum = typed ? typed[1] : "";
       results = (data.features || []).map(function (f) {
@@ -362,16 +386,17 @@
   $("bkZip").addEventListener("input", function () { this.value = this.value.replace(/\D/g, "").slice(0, 5); });
 
   $("bkNext3").addEventListener("click", function () {
-    var ok = err("bkStreet", street.value.trim().length >= 5 && /\d/.test(street.value) ? "" : "Enter the street address of the home.");
-    ok = err("bkCity", $("bkCity").value.trim().length >= 2 ? "" : "Enter the city.") && ok;
+    var ok = err("bkStreet", street.value.trim().length >= 5 && /\d/.test(street.value) ? "" : L("Enter the street address of the home.", "Escriba la dirección de la casa."));
+    ok = err("bkCity", $("bkCity").value.trim().length >= 2 ? "" : L("Enter the city.", "Escriba la ciudad.")) && ok;
     var zip = $("bkZip").value.trim();
-    ok = err("bkZip", /^\d{5}$/.test(zip) ? "" : "Enter a 5-digit ZIP code.") && ok;
+    ok = err("bkZip", /^\d{5}$/.test(zip) ? "" : L("Enter a 5-digit ZIP code.", "Escriba un código postal de 5 dígitos.")) && ok;
     if (!ok) return;
     if (!ZIPS[zip]) {
       if (window.gtag) gtag("event", "lp_out_of_area", { zip: zip });
-      stop("Sorry, that's outside our service area.",
-        "We don't work in ZIP code " + zip + " yet. If you think that's a mistake, call us at " + PHONE + ".",
-        "Change my address", 2);
+      stop(L("Sorry, that's outside our service area.", "Lo sentimos, eso está fuera de nuestra área."),
+        L("We don't work in ZIP code ", "Todavía no trabajamos en el código postal ") + zip +
+        L(" yet. If you think that's a mistake, call us at ", ". Si cree que es un error, llámenos al ") + PHONE + ".",
+        L("Change my address", "Cambiar mi dirección"), 2);
       return;
     }
     if (zip !== state.availZip) loadAvailability(zip);
@@ -381,8 +406,8 @@
   /* ---------- Step 4: project and start ---------- */
   $("bkNext4").addEventListener("click", function () {
     var any = form.querySelectorAll('input[name="services"]:checked').length > 0;
-    var ok = err("bkServices", any ? "" : "Pick at least one.");
-    ok = err("bkStart", form.querySelector('input[name="start"]:checked') ? "" : "Pick when you'd like to start.") && ok;
+    var ok = err("bkServices", any ? "" : L("Pick at least one.", "Escoja al menos uno."));
+    ok = err("bkStart", form.querySelector('input[name="start"]:checked') ? "" : L("Pick when you'd like to start.", "Escoja cuándo quiere empezar.")) && ok;
     if (ok) show(4);
   });
   var pre = params.get("service");
@@ -392,8 +417,8 @@
   /* ---------- Step 5: day and time ---------- */
   function ymd(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
   function parseYmd(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
-  function fmtDate(s) { return parseYmd(s).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }); }
-  function fmtTime(hm) { var p = hm.split(":"); return new Date(2000, 0, 1, +p[0], +p[1]).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }); }
+  function fmtDate(s, locale) { return parseYmd(s).toLocaleDateString(locale || loc(), { weekday: "long", month: "long", day: "numeric" }); }
+  function fmtTime(hm, locale) { var p = hm.split(":"); return new Date(2000, 0, 1, +p[0], +p[1]).toLocaleTimeString(locale || loc(), { hour: "numeric", minute: "2-digit" }); }
 
   // Preference calendar for fallback mode: Sunday-Thursday, from tomorrow, 30 days out
   function fallbackDays() {
@@ -428,7 +453,7 @@
     var seq = ++state.availSeq;
     state.availZip = zip;
     $("bkCalLoading").hidden = false;
-    $("bkCalLoading").textContent = "Loading open days…";
+    $("bkCalLoading").textContent = L("Loading open days…", "Cargando días disponibles…");
     $("bkCalGrid").innerHTML = "";
     $("bkSlotsWrap").hidden = true;
     api("GET", { action: "availability", zip: zip, brand: "omdan" }).then(function (res) {
@@ -439,14 +464,15 @@
       setDays(days);
     }).catch(function () {
       if (seq !== state.availSeq) return;
-      $("bkCalLoading").innerHTML = "We couldn't load the open days. Refresh the page or " + CALL + ".";
+      $("bkCalLoading").innerHTML = L("We couldn't load the open days. Refresh the page or ", "No pudimos cargar los días disponibles. Recargue la página o ") + CALL() + ".";
     });
   }
 
   function renderCalendar() {
     if (!state.months.length) return;
     var mm = state.months[state.monthIndex], first = new Date(mm.y, mm.m, 1);
-    $("bkMonth").textContent = first.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    var month = first.toLocaleDateString(loc(), { month: "long", year: "numeric" });
+    $("bkMonth").textContent = month.charAt(0).toUpperCase() + month.slice(1);
     $("bkPrev").disabled = state.monthIndex === 0;
     $("bkNextMonth").disabled = state.monthIndex >= state.months.length - 1;
     var grid = $("bkCalGrid");
@@ -468,7 +494,7 @@
     if (!anyOpen) {
       var note = document.createElement("p");
       note.className = "bk-cal__none";
-      note.textContent = "No open days left this month. Try the next month.";
+      note.textContent = L("No open days left this month. Try the next month.", "Ya no hay días disponibles este mes. Revise el mes siguiente.");
       grid.appendChild(note);
     }
   }
@@ -488,7 +514,7 @@
   function renderSlots() {
     var wrap = $("bkSlotsWrap"), box = $("bkSlots");
     if (!state.date || !state.days[state.date]) { wrap.hidden = true; box.innerHTML = ""; return; }
-    $("bkSlotsLabel").textContent = (state.mode === "live" ? "Open times on " : "Times on ") + fmtDate(state.date);
+    $("bkSlotsLabel").textContent = (state.mode === "live" ? L("Open times on ", "Horarios disponibles el ") : L("Times on ", "Horarios el ")) + fmtDate(state.date);
     box.innerHTML = "";
     state.days[state.date].forEach(function (hm) {
       var label = document.createElement("label"), input = document.createElement("input"), span = document.createElement("span");
@@ -519,8 +545,8 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var ok = err("bkWhen", state.date && state.time ? "" : "Pick a day and a time.");
-    ok = err("bkConsent", $("bkConsentBox").checked ? "" : "Please check the box so we can contact you about your estimate.") && ok;
+    var ok = err("bkWhen", state.date && state.time ? "" : L("Pick a day and a time.", "Escoja día y hora."));
+    ok = err("bkConsent", $("bkConsentBox").checked ? "" : L("Please check the box so we can contact you about your estimate.", "Marque la casilla para que podamos contactarle sobre su estimado.")) && ok;
     if (!ok) return;
     var services = checked("services"), start = checked("start")[0] || "";
     var payload = {
@@ -530,34 +556,36 @@
       street: street.value.trim(), unit: $("bkUnit").value.trim(), city: $("bkCity").value.trim(), state: "CA", zip: $("bkZip").value.trim(),
       services: services, start: start,
       date: state.date, time: state.time,
-      lang: "en", consent: true,
+      lang: lang(), consent: true,
       company: $("bkCompany").value, elapsedMs: Date.now() - loadedAt,
       page: location.href.split("#")[0], attribution: attribution()
     };
     if (state.mode === "fallback") return sendFallback(payload);
 
     var btn = $("bkSubmit");
-    busy(btn, true, "Booking…");
+    busy(btn, true, L("Booking…", "Agendando…"));
     api("POST", payload).then(function (res) {
       busy(btn, false);
       if (res.ok) return booked(payload);
       if (res.error === "slot_taken") {
         state.time = "";
         loadAvailability(payload.zip);
-        err("bkWhen", "Sorry, that time was just booked. Please pick another one.");
+        err("bkWhen", L("Sorry, that time was just booked. Please pick another one.", "Lo sentimos, alguien acaba de tomar esa hora. Escoja otra."));
       } else if (res.error === "not_verified") {
         state.verified = false; state.token = "";
         markVerified(false);
         show(0);
-        err("bkPhone", "Please confirm your number again: tap <b>Text me a code</b>.");
+        err("bkPhone", L("Please confirm your number again: tap <b>Text me a code</b>.", "Confirme su número otra vez: toque <b>Mándenme un código</b>."));
       } else if (res.error === "out_of_area") {
-        stop("Sorry, that's outside our service area.", "Call us at " + PHONE + " and we'll see what we can do.", "Change my address", 2);
+        stop(L("Sorry, that's outside our service area.", "Lo sentimos, eso está fuera de nuestra área."),
+          L("Call us at ", "Llámenos al ") + PHONE + L(" and we'll see what we can do.", " y vemos qué podemos hacer."),
+          L("Change my address", "Cambiar mi dirección"), 2);
       } else {
-        err("bkSubmitErr", "Something went wrong and your estimate wasn't booked. Please try again, or " + CALL + ".");
+        err("bkSubmitErr", L("Something went wrong and your estimate wasn't booked. Please try again, or ", "Algo salió mal y su estimado no se agendó. Intente de nuevo o ") + CALL() + ".");
       }
     }).catch(function () {
       busy(btn, false);
-      err("bkSubmitErr", "Something went wrong and your estimate wasn't booked. Please try again, or " + CALL + ".");
+      err("bkSubmitErr", L("Something went wrong and your estimate wasn't booked. Please try again, or ", "Algo salió mal y su estimado no se agendó. Intente de nuevo o ") + CALL() + ".");
     });
   });
 
@@ -566,8 +594,8 @@
   function sendFallback(p) {
     var f = form;
     var human = f.querySelector('[name="h-captcha-response"]');
-    if (human && !human.value) { err("bkSubmitErr", "Please tick the \"I am human\" box above."); return; }
-    var nice = fmtDate(p.date) + " at " + fmtTime(p.time);
+    if (human && !human.value) { err("bkSubmitErr", L("Please tick the \"I am human\" box above.", "Marque la casilla \"I am human\" de arriba.")); return; }
+    var nice = fmtDate(p.date, "en-US") + " at " + fmtTime(p.time, "en-US");   // the email to the office stays in English
     var fields = {
       subject: "Google Ads Lead: estimate request, " + p.fullName + " (" + nice + ")",
       name: p.fullName, phone: fmtPhone(digits(p.phone)) + " (not verified)",
@@ -577,7 +605,8 @@
       wants_to_start: START[p.start] || p.start,
       preferred_time: nice + " (preference, not on the calendar yet: call to confirm)",
       gclid: p.attribution.gclid || "", fbclid: p.attribution.fbclid || "", utm_campaign: p.attribution.utm_campaign || "", utm_term: p.attribution.utm_term || "",
-      service_page: params.get("service") || "general"
+      service_page: params.get("service") || "general",
+      language: p.lang === "es" ? "Spanish" : "English"
     };
     Object.keys(fields).forEach(function (k) {
       var i = f.querySelector('input[name="' + k + '"]');
@@ -586,7 +615,7 @@
     });
     if (window.gtag) gtag("event", "lp_form_submit", { mode: "fallback" });
     metaLead("request");
-    busy($("bkSubmit"), true, "Sending…");
+    busy($("bkSubmit"), true, L("Sending…", "Enviando…"));
     f.submit();
   }
 
@@ -616,10 +645,14 @@
     state.booked = p;
     form.hidden = true;
     $("bkTop").hidden = true;
-    $("bkWhenDone").textContent = fmtDate(p.date) + " at " + fmtTime(p.time);
+    renderDone();
     $("bkDone").hidden = false;
     $("bkDone").focus();
     $("estimate").scrollIntoView({ block: "start" });
+  }
+
+  function renderDone() {
+    if (state.booked) $("bkWhenDone").textContent = fmtDate(state.booked.date) + L(" at ", " a las ") + fmtTime(state.booked.time);
   }
 
   /* ---------- Add to calendar (.ics) ---------- */
@@ -641,8 +674,8 @@
     var addr = [p.street, p.unit, p.city, "CA " + p.zip].filter(Boolean).join(", ");
     var ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Omdan Development//Estimate//EN", "METHOD:PUBLISH", "BEGIN:VEVENT",
       "UID:" + Date.now() + "@omdandevelopment.com", "DTSTAMP:" + stamp(new Date()), "DTSTART:" + stamp(start), "DTEND:" + stamp(end),
-      "SUMMARY:" + esc("Free estimate with Omdan Development"),
-      "DESCRIPTION:" + esc("Free on-site estimate. Questions or changes: " + PHONE + "."),
+      "SUMMARY:" + esc(L("Free estimate with Omdan Development", "Estimado gratis con Omdan Development")),
+      "DESCRIPTION:" + esc(L("Free on-site estimate. Questions or changes: ", "Estimado gratis en su casa. Preguntas o cambios: ") + PHONE + "."),
       "LOCATION:" + esc(addr), "END:VEVENT", "END:VCALENDAR"].join("\r\n");
     var url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
     var a = document.createElement("a");
@@ -656,8 +689,7 @@
     state.mode = "fallback";
     state.verifyOn = false;
     markVerified(false);
-    $("bkWhenHelp").textContent = "Pick the day and time that works best. We visit Sunday through Thursday, 8 AM to 7 PM, and we'll call to confirm.";
-    $("bkSubmit").textContent = "Request my free estimate";
+    renderModeText();
     // Web3Forms' spam check (hCaptcha) is only needed in this mode
     var s = document.createElement("script");
     s.src = "https://web3forms.com/client/script.js";
@@ -666,6 +698,33 @@
     $("bkCaptchaWrap").hidden = false;
   }
 
+  // Texts that depend on the mode (live booking vs. emailed request)
+  function renderModeText() {
+    var help = $("bkWhenHelp"), submit = $("bkSubmit");
+    if (state.mode === "fallback") {
+      help.textContent = L("Pick the day and time that works best. We visit Sunday through Thursday, 8 AM to 7 PM, and we'll call to confirm.",
+        "Escoja el día y la hora que mejor le queden. Visitamos de domingo a jueves, de 8 AM a 7 PM, y le llamamos para confirmar.");
+      if (!submit.disabled) submit.textContent = L("Request my free estimate", "Pedir mi estimado gratis");
+    } else {
+      help.textContent = L("We visit Sunday through Thursday. Days that are full are grayed out.", "Visitamos de domingo a jueves. Los días llenos aparecen en gris.");
+      if (!submit.disabled) submit.textContent = L("Book my free estimate", "Agendar mi estimado gratis");
+    }
+  }
+
+  // Language switch (i18n.js): redraw everything this script wrote
+  document.addEventListener("omd:lang", function () {
+    $("bkCount").textContent = L("Step ", "Paso ") + (state.step + 1) + L(" of ", " de ") + steps.length;
+    renderModeText();
+    renderCalendar();
+    renderSlots();
+    renderDone();
+    if ($("bkCodeRow").hidden) $("bkPhoneHelp").textContent =   // not the "we texted a code to …" note
+      L("We'll text you a 6-digit code to confirm your number.", "Le enviaremos un código de 6 dígitos por mensaje para confirmar su número.");
+    // messages already on screen were written in the old language: clear them
+    form.querySelectorAll(".field-error.show").forEach(function (e) { e.classList.remove("show"); e.innerHTML = ""; });
+  });
+
+  renderModeText();
   if (FORCE_FALLBACK) useFallback();
   else {
     // The backend must know brand "omdan" (it answers brands: true); otherwise texts and leads wouldn't be labelled Omdan.
