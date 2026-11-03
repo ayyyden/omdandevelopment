@@ -100,6 +100,26 @@ faq_html = "\n".join(f'''        <details class="rounded-xl border border-line b
           <p class="mt-3 text-muted" data-es="{aes}">{aen}</p>
         </details>''' for qes, qen, aes, aen in FAQ)
 
+# Winter offer: the 15% discount in /terms-and-conditions/#winter-offer (any new residential
+# project signed Oct 26, 2026 - Feb 28, 2027). The page removes it from Mar 1, 2027.
+WINTER_BANNER = '''  <!-- Winter offer (hidden automatically after it ends; the full terms are on /terms-and-conditions/#winter-offer) -->
+  <a id="winterOffer" href="/terms-and-conditions/#winter-offer" target="_blank" rel="noopener" data-track="lp_offer_terms"
+     class="block bg-ink text-white hover:opacity-95 transition">
+    <div class="max-w-7xl mx-auto px-5 py-2.5 flex items-center justify-center gap-2 text-sm text-center">
+      <i data-feather="gift" class="w-4 h-4 flex-shrink-0 text-amber-500"></i>
+      <span data-es="&lt;b&gt;Especial de invierno:&lt;/b&gt; 15% de descuento en su proyecto de eliminación de moho. Contratos firmados hasta el 28 de febrero. &lt;span class=&quot;underline whitespace-nowrap&quot;&gt;Términos de la oferta&lt;/span&gt;"><b>Winter Special:</b> 15% off your mold removal project. Contracts signed by Feb 28. <span class="underline whitespace-nowrap">Offer terms</span></span>
+    </div>
+  </a>
+
+'''
+WINTER_BULLET = '''          <li id="winterBullet" class="flex items-center gap-2 col-span-2 text-amber-500 font-semibold"><i data-feather="gift" class="w-4 h-4 flex-shrink-0"></i><span data-es="15% de descuento en contratos firmados hasta el 28 de febrero">15% off when you sign by Feb 28</span></li>
+'''
+faq_html = '''        <details id="winterFaq" class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿Cuál es el especial de invierno?">What's the winter special?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Los contratos firmados hasta el 28 de febrero tienen 15% de descuento en el precio total del proyecto. Lo vemos en su estimado gratis y lo ponemos en su contrato. &lt;a href=&quot;/terms-and-conditions/#winter-offer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;underline&quot;&gt;Vea los términos de la oferta&lt;/a&gt;.">Contracts signed through February 28 get 15% off the total project price. We'll go over it at your free estimate and write it into your contract. <a href="/terms-and-conditions/#winter-offer" target="_blank" rel="noopener" class="underline">See the offer terms</a>.</p>
+        </details>
+''' + faq_html
+
 page = head + '''</head>
 <body class="font-sans text-ink bg-white antialiased">
 
@@ -126,7 +146,7 @@ page = head + '''</head>
     </div>
   </div>
 
-  <!-- Hero + form -->
+''' + WINTER_BANNER + '''  <!-- Hero + form -->
   <header id="hero" class="relative bg-center bg-no-repeat bg-cover"
           style="background-image:url('/assets/mold/mold-removal-hero-bg.webp'); background-size:cover; background-position:center;">
     <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
@@ -145,7 +165,7 @@ page = head + '''</head>
         <p class="mt-1 text-white/80 text-sm" data-es="Servimos el Valle de Coachella, el Alto Desierto y el Inland Empire.">Serving the Coachella Valley, the High Desert and the Inland Empire.</p>
 
         <ul class="mt-6 grid grid-cols-2 gap-3 text-sm font-medium text-white/95">
-          <li class="flex items-center gap-2"><i data-feather="search" class="w-4 h-4 flex-shrink-0"></i><span data-es="Inspección y pruebas">Inspection &amp; testing</span></li>
+''' + WINTER_BULLET + '''          <li class="flex items-center gap-2"><i data-feather="search" class="w-4 h-4 flex-shrink-0"></i><span data-es="Inspección y pruebas">Inspection &amp; testing</span></li>
           <li class="flex items-center gap-2"><i data-feather="droplet" class="w-4 h-4 flex-shrink-0"></i><span data-es="Arreglamos la fuga">We fix the leak</span></li>
           <li class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4 flex-shrink-0"></i><span data-es="Área sellada mientras trabajamos">Sealed-off work area</span></li>
           <li class="flex items-center gap-2"><i data-feather="tool" class="w-4 h-4 flex-shrink-0"></i><span data-es="Reparamos paredes y techos">We rebuild walls &amp; ceilings</span></li>
@@ -321,6 +341,11 @@ page = head + '''</head>
         });
       });
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // The winter offer covers contracts signed through Feb 28, 2027: take it off the page from Mar 1
+      if (new Date() >= new Date('2027-03-01T00:00:00-08:00')) {
+        ['winterOffer', 'winterBullet', 'winterFaq'].forEach(function (id) { var el = document.getElementById(id); if (el) el.remove(); });
+      }
     })();
 
     document.addEventListener('DOMContentLoaded', function () { if (window.feather) feather.replace(); });
