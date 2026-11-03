@@ -189,6 +189,40 @@ page = head + '''</head>
     </div>
   </section>
 
+  <!-- Our work -->
+  <section class="py-14 bg-white border-t border-line">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold" data-es="Trabajos reales de moho">Real mold jobs</h2>
+        <p class="mt-2 text-muted" data-es="Fotos de nuestros propios trabajos.">Photos from our own work.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <figure>
+          <img src="/assets/mold/sink-cabinet-before-after.webp" alt="Kitchen sink cabinet with mold before, clean and sealed after" class="rounded-xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Debajo del fregadero de la cocina: antes y después.">Under a kitchen sink: before and after.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/shower-tile-before-after.webp" alt="Shower tile corner with mold in the grout before, clean after" class="rounded-xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Azulejo, lechada y silicón de la regadera: antes y después.">Shower tile, grout and caulk: before and after.</figcaption>
+        </figure>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 mt-6">
+        <figure>
+          <img src="/assets/mold/wall-framing-before-after.webp" alt="Bathroom wall opened up: moldy framing before, cleaned framing after" class="rounded-xl border border-line w-full h-64 object-cover" width="1254" height="1254" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Pared del baño abierta: antes y después.">Bathroom wall opened up: before and after.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/ceiling-and-wall-under-containment.webp" alt="Mold across a ceiling and wall, with the room sealed in plastic" class="rounded-xl border border-line w-full h-64 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Techo y pared, área sellada antes de quitar el moho.">Ceiling and wall, sealed off before removal.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/wall-corner-under-containment.webp" alt="Mold on a wall corner with the floor and furniture covered in plastic" class="rounded-xl border border-line w-full h-64 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Cubrimos y sellamos el área antes de empezar.">Work area covered and taped before we start.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- How it works -->
   <section class="py-14 bg-soft">
     <div class="max-w-7xl mx-auto px-5">

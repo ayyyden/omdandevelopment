@@ -313,8 +313,20 @@ SHARED_FAQS = [
 ]
 
 
+CITY_PHOTOS = [
+    ("sink-cabinet-before-after.webp", 1774, 887, "Kitchen sink cabinet with mold before, clean and sealed after", "Under a kitchen sink: before and after."),
+    ("shower-tile-before-after.webp", 1774, 887, "Shower tile corner with mold in the grout and caulk before, clean after", "Shower tile, grout and caulk: before and after."),
+    ("wall-framing-before-after.webp", 1254, 1254, "Bathroom wall opened up: moldy framing before, cleaned framing after", "A bathroom wall opened up: before and after removal."),
+]
+
+
 def city_page(shell_top, shell_footer, slug, name, nearby):
     c = CITY[slug]
+    ph = CITY_PHOTOS[[s for s, _, _ in CITIES].index(slug) % len(CITY_PHOTOS)]
+    photo = f'''        <figure>
+          <img src="/assets/mold/{ph[0]}" alt="{ph[3]}" class="rounded-2xl border border-line w-full h-auto" width="{ph[1]}" height="{ph[2]}" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2">From our mold removal work: {ph[4][0].lower() + ph[4][1:]} <a href="/mold-removal/#our-work" class="text-brand font-semibold hover:underline">See more</a></figcaption>
+        </figure>'''
     faqs = c["faqs"] + SHARED_FAQS
     others = [("roofing", "Roofing", "home"), ("plumbing", "Plumbing", "droplet"), ("insulation", "Insulation", "wind"),
               ("bathroom-remodeling", "Bathroom Remodeling", "box"), ("windows", "Windows", "square"), ("gutters", "Gutters", "cloud-rain")]
@@ -377,7 +389,7 @@ def city_page(shell_top, shell_footer, slug, name, nearby):
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{url}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{BASE}/assets/15-og.webp">
+  <meta property="og:image" content="{BASE}/assets/mold/sink-cabinet-before-after.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -444,6 +456,8 @@ def city_page(shell_top, shell_footer, slug, name, nearby):
 {spots}
           </ul>
         </section>
+
+{photo}
 
         <!-- Process -->
         <section>
@@ -624,7 +638,7 @@ def main_page():
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{BASE}/mold-removal/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{BASE}/assets/15-og.webp">
+  <meta property="og:image" content="{BASE}/assets/mold/sink-cabinet-before-after.webp">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
@@ -691,7 +705,10 @@ def main_page():
 
   <!-- QUICK INTRO -->
   <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-    <img src="/assets/mold-removal.svg" alt="Illustration of a home protected from water damage and mold" class="rounded-2xl border border-line shadow-sm w-full h-72 md:h-[420px] object-cover" width="1200" height="800">
+    <figure>
+      <img src="/assets/mold/wall-framing-before-after.webp" alt="Bathroom wall opened up: moldy framing and insulation before, cleaned framing after" class="rounded-2xl border border-line shadow-sm w-full h-auto" width="1254" height="1254" fetchpriority="high">
+      <figcaption class="text-xs text-muted mt-2 text-center">From one of our jobs: a bathroom wall opened up, before and after removal.</figcaption>
+    </figure>
     <div>
       <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Mold is a water problem first</h2>
       <p class="text-gray-700 mb-4">
@@ -706,6 +723,40 @@ def main_page():
         <li class="flex gap-2"><span class="text-brand font-black">•</span> Leak, condensation and drainage repair</li>
         <li class="flex gap-2"><span class="text-brand font-black">•</span> Drywall, insulation, paint, cabinets and flooring put back</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- REAL JOBS -->
+  <section class="py-16 bg-white" id="our-work">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold title-accent">Real Mold Jobs</h2>
+        <p class="text-gray-600 mt-2">Photos from our own mold removal work.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <figure>
+          <img src="/assets/mold/sink-cabinet-before-after.webp" alt="Kitchen sink cabinet with mold on the floor and walls before, clean and sealed after" class="rounded-2xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center">Under a kitchen sink: before and after.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/shower-tile-before-after.webp" alt="Tub and shower tile corner with mold in the grout and caulk before, clean after" class="rounded-2xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center">Shower tile, grout and caulk: before and after.</figcaption>
+        </figure>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 mt-6">
+        <figure>
+          <img src="/assets/mold/ceiling-and-wall-under-containment.webp" alt="Mold across a ceiling and wall, with the wall opened and the room sealed in plastic" class="rounded-2xl border border-line w-full h-72 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center">Ceiling and wall, sealed off before removal.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/bedroom-wall-corner.webp" alt="Mold spreading up from the baseboard in a bedroom corner" class="rounded-2xl border border-line w-full h-72 object-cover" width="1448" height="1086" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center">Bedroom corner: mold rising from the floor.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/wall-corner-under-containment.webp" alt="Mold on a wall corner with the floor and furniture covered in plastic" class="rounded-2xl border border-line w-full h-72 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center">Work area covered and taped before we start.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
