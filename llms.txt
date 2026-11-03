@@ -27,6 +27,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
 - Roofing (residential roof work): https://omdandevelopment.com/roofing/
 - Insulation (attic, spray foam, and blown-in insulation and air sealing): https://omdandevelopment.com/insulation/
 - HVAC (residential heating and air conditioning): https://omdandevelopment.com/hvac/
+- Mold removal (inspection and testing, containment and removal, fixing the water source, and rebuilding): https://omdandevelopment.com/mold-removal/
 - Cool Life Paint (heat-reflective exterior paint and coating): https://omdandevelopment.com/cool-life-paint/
 - Exterior Painting (residential exterior painting): https://omdandevelopment.com/exterior-painting/
 - Gutters (seamless gutter installation and repair): https://omdandevelopment.com/gutters/
@@ -45,6 +46,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/palm-springs/
   - Insulation: https://omdandevelopment.com/insulation/palm-springs/
   - HVAC: https://omdandevelopment.com/hvac/palm-springs/
+  - Mold removal: https://omdandevelopment.com/mold-removal/palm-springs/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/palm-springs/
   - Gutters: https://omdandevelopment.com/gutters/palm-springs/
   - Plumbing: https://omdandevelopment.com/plumbing/palm-springs/
@@ -58,6 +60,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/palm-desert/
   - Insulation: https://omdandevelopment.com/insulation/palm-desert/
   - HVAC: https://omdandevelopment.com/hvac/palm-desert/
+  - Mold removal: https://omdandevelopment.com/mold-removal/palm-desert/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/palm-desert/
   - Gutters: https://omdandevelopment.com/gutters/palm-desert/
   - Plumbing: https://omdandevelopment.com/plumbing/palm-desert/
@@ -71,6 +74,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/cathedral-city/
   - Insulation: https://omdandevelopment.com/insulation/cathedral-city/
   - HVAC: https://omdandevelopment.com/hvac/cathedral-city/
+  - Mold removal: https://omdandevelopment.com/mold-removal/cathedral-city/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/cathedral-city/
   - Gutters: https://omdandevelopment.com/gutters/cathedral-city/
 - Indio:
@@ -83,6 +87,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/indio/
   - Insulation: https://omdandevelopment.com/insulation/indio/
   - HVAC: https://omdandevelopment.com/hvac/indio/
+  - Mold removal: https://omdandevelopment.com/mold-removal/indio/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/indio/
   - Gutters: https://omdandevelopment.com/gutters/indio/
 - Desert Hot Springs:
@@ -95,6 +100,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/desert-hot-springs/
   - Insulation: https://omdandevelopment.com/insulation/desert-hot-springs/
   - HVAC: https://omdandevelopment.com/hvac/desert-hot-springs/
+  - Mold removal: https://omdandevelopment.com/mold-removal/desert-hot-springs/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/desert-hot-springs/
   - Gutters: https://omdandevelopment.com/gutters/desert-hot-springs/
   - Plumbing: https://omdandevelopment.com/plumbing/desert-hot-springs/
@@ -110,6 +116,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/yucca-valley/
   - Insulation: https://omdandevelopment.com/insulation/yucca-valley/
   - HVAC: https://omdandevelopment.com/hvac/yucca-valley/
+  - Mold removal: https://omdandevelopment.com/mold-removal/yucca-valley/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/yucca-valley/
   - Gutters: https://omdandevelopment.com/gutters/yucca-valley/
   - Plumbing: https://omdandevelopment.com/plumbing/yucca-valley/
@@ -123,6 +130,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/twentynine-palms/
   - Insulation: https://omdandevelopment.com/insulation/twentynine-palms/
   - HVAC: https://omdandevelopment.com/hvac/twentynine-palms/
+  - Mold removal: https://omdandevelopment.com/mold-removal/twentynine-palms/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/twentynine-palms/
   - Gutters: https://omdandevelopment.com/gutters/twentynine-palms/
   - Plumbing: https://omdandevelopment.com/plumbing/twentynine-palms/
@@ -138,6 +146,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/yucaipa/
   - Insulation: https://omdandevelopment.com/insulation/yucaipa/
   - HVAC: https://omdandevelopment.com/hvac/yucaipa/
+  - Mold removal: https://omdandevelopment.com/mold-removal/yucaipa/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/yucaipa/
   - Gutters: https://omdandevelopment.com/gutters/yucaipa/
   - Plumbing: https://omdandevelopment.com/plumbing/yucaipa/
@@ -151,6 +160,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/moreno-valley/
   - Insulation: https://omdandevelopment.com/insulation/moreno-valley/
   - HVAC: https://omdandevelopment.com/hvac/moreno-valley/
+  - Mold removal: https://omdandevelopment.com/mold-removal/moreno-valley/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/moreno-valley/
   - Gutters: https://omdandevelopment.com/gutters/moreno-valley/
   - Plumbing: https://omdandevelopment.com/plumbing/moreno-valley/
@@ -164,6 +174,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/menifee/
   - Insulation: https://omdandevelopment.com/insulation/menifee/
   - HVAC: https://omdandevelopment.com/hvac/menifee/
+  - Mold removal: https://omdandevelopment.com/mold-removal/menifee/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/menifee/
   - Gutters: https://omdandevelopment.com/gutters/menifee/
   - Plumbing: https://omdandevelopment.com/plumbing/menifee/
@@ -177,6 +188,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/murrieta/
   - Insulation: https://omdandevelopment.com/insulation/murrieta/
   - HVAC: https://omdandevelopment.com/hvac/murrieta/
+  - Mold removal: https://omdandevelopment.com/mold-removal/murrieta/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/murrieta/
   - Gutters: https://omdandevelopment.com/gutters/murrieta/
   - Plumbing: https://omdandevelopment.com/plumbing/murrieta/
@@ -190,6 +202,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/temecula/
   - Insulation: https://omdandevelopment.com/insulation/temecula/
   - HVAC: https://omdandevelopment.com/hvac/temecula/
+  - Mold removal: https://omdandevelopment.com/mold-removal/temecula/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/temecula/
   - Gutters: https://omdandevelopment.com/gutters/temecula/
   - Plumbing: https://omdandevelopment.com/plumbing/temecula/
@@ -203,6 +216,7 @@ Omdan Development Inc is a licensed and insured residential contractor based in 
   - Roofing: https://omdandevelopment.com/roofing/san-bernardino/
   - Insulation: https://omdandevelopment.com/insulation/san-bernardino/
   - HVAC: https://omdandevelopment.com/hvac/san-bernardino/
+  - Mold removal: https://omdandevelopment.com/mold-removal/san-bernardino/
   - Cool Life Paint: https://omdandevelopment.com/cool-life-paint/san-bernardino/
   - Gutters: https://omdandevelopment.com/gutters/san-bernardino/
   - Plumbing: https://omdandevelopment.com/plumbing/san-bernardino/

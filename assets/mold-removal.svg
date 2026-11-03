@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t">
+  <title id="t">Illustration: a home protected from water damage and mold</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2">
+    <circle cx="1040" cy="140" r="220"/>
+    <circle cx="160" cy="700" r="260"/>
+  </g>
+  <!-- house -->
+  <g stroke="#ffffff" stroke-width="22" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M300 420 L600 190 L900 420"/>
+    <path d="M370 370 V640 H830 V370"/>
+    <path d="M540 640 V520 H660 V640"/>
+  </g>
+  <!-- water drop -->
+  <path d="M600 285 C600 285 515 385 515 440 a85 85 0 0 0 170 0 C685 385 600 285 600 285 Z" fill="url(#drop)"/>
+  <!-- check badge -->
+  <circle cx="830" cy="600" r="88" fill="#16a34a"/>
+  <path d="M787 600 l30 30 l58 -62" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

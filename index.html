@@ -77,7 +77,7 @@
   "url": "https://omdandevelopment.com/",
   "telephone": "+1-951-292-0703",
   "email": "info@omdandevelopment.com",
-  "description": "Licensed residential contractor (CSLB #1148568) serving homeowners in Palm Springs, the Coachella Valley, and the Inland Empire: pavers, artificial turf, concrete, pool remodeling, kitchen and bathroom remodeling, windows, roofing, insulation, HVAC, gutters, plumbing, exterior painting, and Cool Life Paint.",
+  "description": "Licensed residential contractor (CSLB #1148568) serving homeowners in Palm Springs, the Coachella Valley, and the Inland Empire: pavers, artificial turf, concrete, pool remodeling, kitchen and bathroom remodeling, windows, roofing, insulation, HVAC, mold removal, gutters, plumbing, exterior painting, and Cool Life Paint.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Palm Springs",
@@ -239,6 +239,14 @@
         "@type": "Service",
         "name": "HVAC",
         "url": "https://omdandevelopment.com/hvac/"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mold Removal",
+        "url": "https://omdandevelopment.com/mold-removal/"
       }
     },
     {
@@ -437,7 +445,7 @@
       "name": "What services does Omdan Development offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We work on homes only: paver installation, artificial turf, concrete, pool remodeling and resurfacing, kitchen and bathroom remodeling, window replacement, roofing, insulation, HVAC, gutters, plumbing, exterior painting, Cool Life Paint, and gravel and xeriscape landscaping."
+        "text": "We work on homes only: paver installation, artificial turf, concrete, pool remodeling and resurfacing, kitchen and bathroom remodeling, window replacement, roofing, insulation, HVAC, mold removal, gutters, plumbing, exterior painting, Cool Life Paint, and gravel and xeriscape landscaping."
       }
     },
     {
@@ -857,6 +865,19 @@
           <img src="/assets/hvac.webp" alt="HVAC installation" class="mt-4 rounded-lg border border-line w-full h-40 object-cover" loading="lazy" decoding="async" width="640" height="640" />
           <a href="/hvac/" class="mt-4 inline-flex items-center gap-2 text-brand font-semibold hover:underline">Details <span aria-hidden="true">→</span></a>
         </article>
+
+        <!-- Mold Removal -->
+        <article class="bg-white rounded-xl border border-line p-5 shadow-sm hover:shadow transition reveal">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand/10">
+              <i data-feather="shield" class="text-brand w-5 h-5"></i>
+            </span>
+            <h3 class="text-lg font-bold">Mold Removal</h3>
+          </div>
+          <p class="text-muted">Inspection and testing, removal, fixing the leak, and rebuilding.</p>
+          <img src="/assets/mold-removal.svg" alt="Illustration of a home protected from water damage and mold" class="mt-4 rounded-lg border border-line w-full h-40 object-cover" loading="lazy" decoding="async" width="1200" height="800" />
+          <a href="/mold-removal/" class="mt-4 inline-flex items-center gap-2 text-brand font-semibold hover:underline">Details <span aria-hidden="true">→</span></a>
+        </article>
       </div>
 
       <div class="mt-10 text-center reveal">
@@ -1237,7 +1258,7 @@
         </details>
         <details class="faq rounded-xl border border-line bg-white p-6">
           <summary><h3 class="font-bold text-lg flex items-start justify-between gap-3">What services does Omdan Development offer?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
-          <p class="mt-3 text-muted">We work on homes only: paver installation, artificial turf, concrete, pool remodeling and resurfacing, kitchen and bathroom remodeling, window replacement, roofing, insulation, HVAC, gutters, plumbing, exterior painting, Cool Life Paint, and gravel and xeriscape landscaping.</p>
+          <p class="mt-3 text-muted">We work on homes only: paver installation, artificial turf, concrete, pool remodeling and resurfacing, kitchen and bathroom remodeling, window replacement, roofing, insulation, HVAC, mold removal, gutters, plumbing, exterior painting, Cool Life Paint, and gravel and xeriscape landscaping.</p>
         </details>
         <details class="faq rounded-xl border border-line bg-white p-6">
           <summary><h3 class="font-bold text-lg flex items-start justify-between gap-3">How much will my project cost?<i data-feather="chevron-down" class="faq-chev w-5 h-5 text-muted"></i></h3></summary>
@@ -1372,6 +1393,7 @@
               <label class="chip relative"><input type="checkbox" name="services" value="plumbing"><span>Plumbing</span></label>
               <label class="chip relative"><input type="checkbox" name="services" value="painting"><span>Exterior painting</span></label>
               <label class="chip relative"><input type="checkbox" name="services" value="cool-life-paint"><span>Cool Life Paint</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold"><span>Mold removal</span></label>
               <label class="chip relative col-span-2"><input type="checkbox" name="services" value="full-remodel"><span>Full yard remodel</span></label>
             </div>
             <p id="bkServices-err" class="field-error"></p>
@@ -1533,6 +1555,7 @@
             <li><a class="hover:text-white" href="/cool-life-paint/">Cool Life Paint</a></li>
             <li><a class="hover:text-white" href="/insulation/">Insulation</a></li>
             <li><a class="hover:text-white" href="/hvac/">HVAC</a></li>
+            <li><a class="hover:text-white" href="/mold-removal/">Mold Removal</a></li>
           </ul>
         </div>
         <div>
@@ -1746,9 +1769,10 @@
         { id: 'roofing',             label: 'Roofing',             icon: 'home' },
         { id: 'cool-life-paint',     label: 'Cool Life Paint',     icon: 'sun' },
         { id: 'insulation',          label: 'Insulation',          icon: 'shield' },
-        { id: 'hvac',                label: 'HVAC',                icon: 'wind' }
+        { id: 'hvac',                label: 'HVAC',                icon: 'wind' },
+        { id: 'mold-removal',        label: 'Mold Removal',        icon: 'shield' }
       ];
-      var FULL = ['bathroom-remodeling','kitchen-remodeling','artificial-turf','pavers','concrete','gutters','windows','roofing','cool-life-paint','insulation','hvac'];
+      var FULL = ['bathroom-remodeling','kitchen-remodeling','artificial-turf','pavers','concrete','gutters','windows','roofing','cool-life-paint','insulation','hvac','mold-removal'];
       var CITIES = {
         'palm-springs':      { name: 'Palm Springs',      svcs: FULL },
         'palm-desert':       { name: 'Palm Desert',       svcs: FULL },
@@ -1826,6 +1850,6 @@
     document.addEventListener('DOMContentLoaded', function() { feather.replace(); });
   </script>
 
-  <script src="/assets/booking.js?v=3" defer></script>
+  <script src="/assets/booking.js?v=4" defer></script>
 </body>
 </html>
