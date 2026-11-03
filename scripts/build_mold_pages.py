@@ -389,7 +389,9 @@ def city_page(shell_top, shell_footer, slug, name, nearby):
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{url}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{BASE}/assets/mold/sink-cabinet-before-after.webp">
+  <meta property="og:image" content="{BASE}/assets/mold/mold-removal-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -638,7 +640,9 @@ def main_page():
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{BASE}/mold-removal/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{BASE}/assets/mold/sink-cabinet-before-after.webp">
+  <meta property="og:image" content="{BASE}/assets/mold/mold-removal-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
@@ -657,7 +661,11 @@ def main_page():
   <link rel="alternate icon" href="/assets/favicon.ico">
 
   <style>
-    .hero {{ background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }}
+    .hero {{
+      background:
+        linear-gradient(180deg, rgba(15,23,42,.80), rgba(15,23,42,.60)),
+        url('/assets/mold/mold-removal-hero-bg.webp') center/cover no-repeat;
+    }}
     .title-accent{{ position:relative; display:inline-block; padding-bottom:.55rem; }}
     .title-accent::after{{
       content:""; position:absolute; left:0; bottom:0;
@@ -677,6 +685,7 @@ def main_page():
   <script type="application/ld+json">
 {crumbs}
   </script>
+  <link rel="preload" as="image" href="/assets/mold/mold-removal-hero-bg.webp" fetchpriority="high" />
 </head>
 
 <body class="bg-white text-ink font-sans overflow-x-hidden">
@@ -706,7 +715,7 @@ def main_page():
   <!-- QUICK INTRO -->
   <section class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center">
     <figure>
-      <img src="/assets/mold/wall-framing-before-after.webp" alt="Bathroom wall opened up: moldy framing and insulation before, cleaned framing after" class="rounded-2xl border border-line shadow-sm w-full h-auto" width="1254" height="1254" fetchpriority="high">
+      <img src="/assets/mold/wall-framing-before-after.webp" alt="Bathroom wall opened up: moldy framing and insulation before, cleaned framing after" class="rounded-2xl border border-line shadow-sm w-full h-auto" width="1254" height="1254" loading="lazy" decoding="async">
       <figcaption class="text-xs text-muted mt-2 text-center">From one of our jobs: a bathroom wall opened up, before and after removal.</figcaption>
     </figure>
     <div>

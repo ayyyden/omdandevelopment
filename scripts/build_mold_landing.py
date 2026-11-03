@@ -27,7 +27,13 @@ head = re.sub(r"<title>.*?</title>", "<title>Mold Removal &amp; Repair | Omdan D
 head = re.sub(r'<meta name="description" content="[^"]*">',
               '<meta name="description" content="Mold inspection, testing, removal and repair for homes across the Coachella Valley, High Desert and Inland Empire. We find the leak, remove the mold and rebuild. Free on-site estimate. CSLB #1148568.">',
               head)
-head = head.replace('  <link rel="preload" as="image" href="/assets/15-hero.webp" fetchpriority="high" />\n', "")
+head = head.replace('  <link rel="preload" as="image" href="/assets/15-hero.webp" fetchpriority="high" />\n',
+                    '  <link rel="preload" as="image" href="/assets/mold/mold-removal-hero-bg.webp" fetchpriority="high" />\n'
+                    '  <meta property="og:title" content="Mold Removal &amp; Repair | Omdan Development">\n'
+                    '  <meta property="og:description" content="We find the leak, remove the mold and put your home back together. Free on-site estimate. CSLB #1148568.">\n'
+                    '  <meta property="og:image" content="https://omdandevelopment.com/assets/mold/mold-removal-og.jpg">\n'
+                    '  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n'
+                    '  <meta property="og:type" content="website">\n')
 head = head.replace("    .hero-overlay {", "    .hero-mold { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }\n    .hero-overlay {")
 assert "Mold Removal &amp; Repair" in head and "fbq('init', '1064150789992386')" in head
 
@@ -121,7 +127,9 @@ page = head + '''</head>
   </div>
 
   <!-- Hero + form -->
-  <header id="hero" class="relative hero-mold">
+  <header id="hero" class="relative bg-center bg-no-repeat bg-cover"
+          style="background-image:url('/assets/mold/mold-removal-hero-bg.webp'); background-size:cover; background-position:center;">
+    <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-5 py-8 md:py-14 w-full relative grid md:grid-cols-2 gap-8 items-start">
       <div class="text-white">
         <button type="button" data-lang-toggle class="mb-5 inline-flex items-center gap-2 bg-white text-ink px-5 py-3 rounded-full font-bold text-base shadow-lg hover:opacity-95 transition">
