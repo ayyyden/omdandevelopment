@@ -604,7 +604,7 @@
   var LABELS = { turf: "Artificial turf", pavers: "Pavers", concrete: "Concrete", gravel: "Gravel / DG", "full-remodel": "Full yard remodel",
     pool: "Pool remodel", kitchen: "Kitchen remodel", bathroom: "Bathroom remodel", windows: "Windows", roofing: "Roofing",
     insulation: "Insulation", hvac: "HVAC", gutters: "Gutters", plumbing: "Plumbing", painting: "Exterior painting",
-    "cool-life-paint": "Cool Life Paint" };
+    "cool-life-paint": "Cool Life Paint", mold: "Mold removal" };
 
   var conversionSent = false;
   function booked(p) {

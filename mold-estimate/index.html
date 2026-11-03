@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWYZ2LSMHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWYZ2LSMHR');
+  gtag('config', 'AW-17862403534');
+</script>
+<!-- Meta Pixel (Omdan Development Website dataset); booking.js sends Lead on a completed booking. Off on localhost. -->
+<script>
+  if (!/^(localhost|127\.|192\.168\.)/.test(location.hostname)) {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1064150789992386');
+  fbq('track', 'PageView');
+  }
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1064150789992386&ev=PageView&noscript=1"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Meta ads landing page: kept out of search results and the sitemap -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Mold Removal &amp; Repair | Omdan Development</title>
+  <meta name="description" content="Mold inspection, testing, removal and repair for homes across the Coachella Valley, High Desert and Inland Empire. We find the leak, remove the mold and rebuild. Free on-site estimate. CSLB #1148568.">
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preload" as="image" href="/assets/mold/mold-removal-hero-bg.webp" fetchpriority="high" />
+  <meta property="og:title" content="Mold Removal &amp; Repair | Omdan Development">
+  <meta property="og:description" content="We find the leak, remove the mold and put your home back together. Free on-site estimate. CSLB #1148568.">
+  <meta property="og:image" content="https://omdandevelopment.com/assets/mold/mold-removal-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://web3forms.com">
+
+  <!-- Tailwind compiled -->
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script src="/assets/feather.min.js" defer></script>
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/favicon.ico">
+
+  <style>
+    .hero-mold { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(15,23,42,.82) 0%, rgba(15,23,42,.62) 55%, rgba(15,23,42,.45) 100%);
+    }
+    /* Project-type and yard chips */
+    .chip input { position: absolute; opacity: 0; pointer-events: none; }
+    .chip span { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: .5rem .75rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: .875rem; font-weight: 500; color: #0f172a; background: #fff; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+    .chip input:checked + span { background: #2563eb; border-color: #2563eb; color: #fff; }
+    .chip input:focus-visible + span { outline: 2px solid #2563eb; outline-offset: 2px; }
+    .field-error { display: none; color: #dc2626; font-size: .8125rem; margin-top: .375rem; }
+    .field-error.show { display: block; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .2s ease; }
+    .card-img { width: 100%; height: 11rem; object-fit: cover; }
+    /* Utilities this page uses that aren't in the compiled /assets/styles.css yet */
+    .font-normal { font-weight: 400; }
+    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .text-amber-500 { color: #f59e0b; }
+    @media (min-width: 640px) { .sm\:col-span-2 { grid-column: span 2 / span 2; } .sm\:p-6 { padding: 1.5rem; } }
+    @media (min-width: 768px) { .md\:py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; } }
+    [hidden] { display: none !important; }
+    /* Booking card (booking.js) */
+    .bk-q { font-size: 1.25rem; font-weight: 700; line-height: 1.3; outline: none; }
+    .bk-input { width: 100%; min-height: 44px; padding: .5rem 1rem; border: 1px solid #e2e8f0; border-radius: .5rem; font-size: 1rem; background: #fff; }
+    .bk-input:focus { outline: none; box-shadow: 0 0 0 2px #2563eb; border-color: #2563eb; }
+    .bk-input[aria-invalid="true"] { border-color: #dc2626; }
+    .bk-input[readonly] { background: #f8fafc; color: #334155; }
+    .bk-row { display: flex; gap: .5rem; }
+    .bk-row .bk-input { flex: 1; min-width: 0; }
+    .bk-btn-dark { min-height: 44px; padding: .5rem 1rem; border-radius: .5rem; background: #0f172a; color: #fff; font-weight: 600; font-size: .875rem; white-space: nowrap; }
+    .bk-btn-dark:disabled { opacity: .6; }
+    .bk-link { margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #2563eb; text-decoration: underline; background: none; }
+    .bk-link:disabled { color: #64748b; text-decoration: none; }
+    .bk-next { display: block; width: 100%; margin-top: 1.25rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: .5rem; background: #2563eb; color: #fff; font-weight: 600; font-size: 1.125rem; }
+    .bk-next:hover { opacity: .95; }
+    .bk-next:disabled { opacity: .6; }
+    .bk-back { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #e2e8f0; color: #0f172a; background: #fff; flex-shrink: 0; }
+    .bk-back:disabled { opacity: .35; }
+    .bk-bar { flex: 1; height: 6px; border-radius: 9999px; background: #e2e8f0; overflow: hidden; }
+    .bk-bar span { display: block; height: 100%; width: 20%; background: #2563eb; border-radius: inherit; transition: width .25s ease; }
+    .bk-verified { display: flex; align-items: center; gap: .375rem; margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #16a34a; }
+    .bk-verified .bk-link { margin: 0 0 0 auto; }
+    .bk-big span { min-height: 64px; font-size: 1.125rem; font-weight: 600; }
+    .bk-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .bk-combo { position: relative; }
+    .bk-combo__list { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); background: #fff; border: 1px solid #e2e8f0; border-radius: .5rem; box-shadow: 0 10px 25px rgba(15,23,42,.12); max-height: 16rem; overflow-y: auto; }
+    .bk-combo__list li { padding: .625rem .875rem; cursor: pointer; font-size: .9375rem; }
+    .bk-combo__list li small { display: block; color: #64748b; font-size: .8125rem; }
+    .bk-combo__list li[aria-selected="true"], .bk-combo__list li:hover { background: #eff6ff; }
+    .bk-combo__list .bk-combo__note { color: #64748b; cursor: default; font-size: .875rem; }
+    .bk-combo__list .bk-combo__note:hover { background: none; }
+    .bk-addr-grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: .5rem; }
+    .bk-dow, .bk-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .25rem; text-align: center; }
+    .bk-dow { margin-top: .75rem; font-size: .75rem; color: #64748b; font-weight: 500; }
+    .bk-grid { margin-top: .25rem; }
+    .bk-day { aspect-ratio: 1; max-height: 44px; border-radius: .5rem; font-size: .9375rem; font-weight: 600; color: #0f172a; background: #eff6ff; }
+    .bk-day:disabled { background: none; color: #cbd5e1; font-weight: 400; text-decoration: line-through; }
+    .bk-day[aria-pressed="true"] { background: #2563eb; color: #fff; }
+    .bk-cal__none { grid-column: 1 / -1; font-size: .875rem; color: #64748b; padding: 1rem 0; }
+    #bkSlots .chip span { min-height: 40px; padding: .375rem .25rem; }
+    .text-brand2 { color: #16a34a; }
+    .w-14 { width: 3.5rem; } .h-14 { height: 3.5rem; } .w-12 { width: 3rem; } .h-12 { height: 3rem; }
+    .col-span-2 { grid-column: span 2 / span 2; }
+    html { scroll-behavior: smooth; }
+    #estimate { scroll-margin-top: 5rem; }
+    /* Busy buttons: spinner while waiting on the booking server */
+    .bk-spin { display: inline-block; width: 1em; height: 1em; margin-right: .5em; vertical-align: -.125em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 9999px; animation: bk-spin .7s linear infinite; }
+    @keyframes bk-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .bk-spin { animation-duration: 1.6s; } }
+    button[aria-busy="true"] { cursor: progress; }
+    .bk-next[aria-busy="true"], .bk-btn-dark[aria-busy="true"] { opacity: 1; }
+  </style>
+</head>
+<body class="font-sans text-ink bg-white antialiased">
+
+  <!-- Top bar: no site navigation on purpose, so visitors stay on the form -->
+  <div class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <img src="/assets/logo.webp" alt="Omdan Development Inc logo" class="h-9 w-auto flex-shrink-0" loading="eager" width="1024" height="1024" />
+        <div class="min-w-0">
+          <div class="font-bold text-base sm:text-lg leading-tight truncate">Omdan Development</div>
+          <div class="text-xs text-muted leading-tight" data-es="Con licencia y seguro · CSLB #1148568">Licensed &amp; Insured · CSLB #1148568</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+      <button type="button" data-lang-toggle class="inline-flex items-center gap-1.5 border border-line bg-white text-ink px-3 py-2 rounded-lg font-semibold text-sm hover:bg-soft transition">
+        <i data-feather="globe" class="w-4 h-4"></i><span data-lang-short>ES</span>
+      </button>
+      <a href="tel:9512920703" data-track="lp_header_call"
+         class="inline-flex items-center gap-2 bg-brand text-white px-4 py-2 rounded-lg font-semibold whitespace-nowrap hover:opacity-95 transition">
+        <i data-feather="phone" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">(951) 292-0703</span><span class="sm:hidden" data-es="Llamar">Call</span>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero + form -->
+  <header id="hero" class="relative bg-center bg-no-repeat bg-cover"
+          style="background-image:url('/assets/mold/mold-removal-hero-bg.webp'); background-size:cover; background-position:center;">
+    <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto px-5 py-8 md:py-14 w-full relative grid md:grid-cols-2 gap-8 items-start">
+      <div class="text-white">
+        <button type="button" data-lang-toggle class="mb-5 inline-flex items-center gap-2 bg-white text-ink px-5 py-3 rounded-full font-bold text-base shadow-lg hover:opacity-95 transition">
+          <i data-feather="globe" class="w-5 h-5 text-brand"></i><span data-lang-label>Ver en español</span>
+        </button>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight" data-es="Eliminación de moho, hecha bien">
+          Mold Removal, Done Right
+        </h1>
+        <p class="mt-3 text-lg text-white/90" data-es="Encontramos la fuga, quitamos el moho y dejamos su casa reparada. Un solo equipo con licencia, de principio a fin.">
+          We find the leak, remove the mold and put your home back together. One licensed team, start to finish.
+        </p>
+        <p class="mt-2 text-white/90 font-medium" data-es="Estimado gratis en su casa. David está en cada proyecto.">Free on-site estimate. David is on every project.</p>
+        <p class="mt-1 text-white/80 text-sm" data-es="Servimos el Valle de Coachella, el Alto Desierto y el Inland Empire.">Serving the Coachella Valley, the High Desert and the Inland Empire.</p>
+
+        <ul class="mt-6 grid grid-cols-2 gap-3 text-sm font-medium text-white/95">
+          <li class="flex items-center gap-2"><i data-feather="search" class="w-4 h-4 flex-shrink-0"></i><span data-es="Inspección y pruebas">Inspection &amp; testing</span></li>
+          <li class="flex items-center gap-2"><i data-feather="droplet" class="w-4 h-4 flex-shrink-0"></i><span data-es="Arreglamos la fuga">We fix the leak</span></li>
+          <li class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4 flex-shrink-0"></i><span data-es="Área sellada mientras trabajamos">Sealed-off work area</span></li>
+          <li class="flex items-center gap-2"><i data-feather="tool" class="w-4 h-4 flex-shrink-0"></i><span data-es="Reparamos paredes y techos">We rebuild walls &amp; ceilings</span></li>
+        </ul>
+      </div>
+
+      <!-- Booking card: booking.js runs the steps -->
+      <div id="estimate" class="bg-white text-ink rounded-xl shadow-lg p-5 sm:p-6">
+        <div id="bkTop">
+          <div class="flex items-center gap-3">
+            <button type="button" id="bkBack" class="bk-back" aria-label="Back" data-es-aria="Atrás">
+              <i data-feather="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <div class="bk-bar" aria-hidden="true"><span id="bkBar"></span></div>
+            <p id="bkCount" class="text-xs text-muted whitespace-nowrap" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <!-- Web3Forms is the form's action only for the email fallback; normally booking.js books through the API -->
+        <form id="bkForm" action="https://api.web3forms.com/submit" method="POST" novalidate class="mt-4">
+          <input type="hidden" name="access_key" value="1df7edac-fd81-4287-b014-b768951aac91">
+          <input type="hidden" name="from_name" value="Omdan Development Mold Landing Page">
+          <input type="hidden" name="redirect" value="https://omdandevelopment.com/thankyou/">
+          <input type="hidden" name="lead_source" value="Meta Ads: /mold-estimate/">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <div class="bk-hp" aria-hidden="true"><label>Company <input id="bkCompany" type="text" tabindex="-1" autocomplete="off"></label></div>
+
+          <!-- 1. Name and phone -->
+          <section class="bk-step" data-step="contact">
+            <h2 class="bk-q" tabindex="-1" data-es="Pida su estimado gratis en su casa">Get your free on-site estimate</h2>
+            <p class="text-sm text-muted mt-1" data-es="Unas preguntas rápidas y luego escoja día y hora.">A few quick questions, then pick a day and time.</p>
+            <label class="block mt-4">
+              <span class="block text-sm font-medium mb-1" data-es="Nombre completo">Full name</span>
+              <input id="bkName" type="text" autocomplete="name" maxlength="80" class="bk-input">
+            </label>
+            <p id="bkName-err" class="field-error"></p>
+            <div class="mt-3">
+              <label for="bkPhone" class="block text-sm font-medium mb-1" data-es="Número de celular">Mobile phone number</label>
+              <div class="bk-row">
+                <input id="bkPhone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(760) 555-0123" class="bk-input">
+                <button type="button" id="bkSend" class="bk-btn-dark" hidden data-es="Mándenme un código">Text me a code</button>
+              </div>
+              <p id="bkPhoneHelp" class="text-xs text-muted mt-1" hidden data-es="Le enviaremos un código de 6 dígitos por mensaje para confirmar su número.">We'll text you a 6-digit code to confirm your number.</p>
+              <p id="bkPhone-err" class="field-error"></p>
+              <div id="bkCodeRow" class="mt-3" hidden>
+                <label for="bkCode" class="block text-sm font-medium mb-1" data-es="Escriba el código de 6 dígitos">Enter the 6-digit code</label>
+                <div class="bk-row">
+                  <input id="bkCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code" data-es-placeholder="Código de 6 dígitos" class="bk-input">
+                  <button type="button" id="bkVerify" class="bk-btn-dark" data-es="Verificar">Verify</button>
+                </div>
+                <button type="button" id="bkResend" class="bk-link" disabled></button>
+                <p id="bkCode-err" class="field-error"></p>
+              </div>
+              <p id="bkVerified" class="bk-verified" hidden>
+                <i data-feather="check-circle" class="w-4 h-4"></i> <span data-es="Número verificado">Phone number verified</span>
+                <button type="button" id="bkChange" class="bk-link" data-es="Cambiar">Change</button>
+              </p>
+            </div>
+            <button type="button" id="bkNext1" class="bk-next" data-es="Siguiente">Next</button>
+          </section>
+
+          <!-- 2. Homeowner -->
+          <section class="bk-step" data-step="homeowner" hidden>
+            <h2 class="bk-q" tabindex="-1" data-es="¿Es usted el dueño de la casa?">Are you the homeowner?</h2>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="yes"><span data-es="Sí">Yes</span></label>
+              <label class="chip relative bk-big"><input type="radio" name="homeowner" value="no"><span data-es="No">No</span></label>
+            </div>
+          </section>
+
+          <!-- 3. Address -->
+          <section class="bk-step" data-step="address" hidden>
+            <h2 class="bk-q" tabindex="-1" data-es="Dirección de la casa">Address of the home</h2>
+            <p class="text-sm text-muted mt-1" data-es="A donde iremos para el estimado.">Where we'll come for the estimate.</p>
+            <label for="bkStreet" class="block text-sm font-medium mb-1 mt-4" data-es="Calle y número">Street address</label>
+            <div class="bk-combo">
+              <input id="bkStreet" type="text" autocomplete="address-line1" placeholder="Start typing your address" data-es-placeholder="Empiece a escribir su dirección" class="bk-input"
+                role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="bkAddrList">
+              <ul id="bkAddrList" class="bk-combo__list" role="listbox" hidden></ul>
+            </div>
+            <p id="bkStreet-err" class="field-error"></p>
+            <div class="bk-addr-grid mt-3">
+              <label class="block"><span class="block text-sm font-medium mb-1" data-es="Apto.">Apt/unit</span>
+                <input id="bkUnit" type="text" autocomplete="address-line2" maxlength="20" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1" data-es="Ciudad">City</span>
+                <input id="bkCity" type="text" autocomplete="address-level2" maxlength="60" class="bk-input"></label>
+              <label class="block"><span class="block text-sm font-medium mb-1" data-es="Código postal">ZIP</span>
+                <input id="bkZip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" class="bk-input"></label>
+            </div>
+            <p id="bkCity-err" class="field-error"></p>
+            <p id="bkZip-err" class="field-error"></p>
+            <button type="button" id="bkNext3" class="bk-next" data-es="Siguiente">Next</button>
+          </section>
+
+          <!-- 4. Where the mold is, and how soon -->
+          <section class="bk-step" data-step="project" hidden>
+            <h2 class="bk-q" tabindex="-1" data-es="¿Dónde está el problema?">Where is the problem?</h2>
+            <p class="text-sm text-muted mt-1" data-es="Escoja todos los que apliquen.">Pick all that apply.</p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-bathroom"><span data-es="Baño">Bathroom</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-kitchen"><span data-es="Cocina / debajo del fregadero">Kitchen / under a sink</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-ceiling"><span data-es="Techo / ático / gotera">Ceiling / attic / roof leak</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-walls"><span data-es="Paredes / clóset">Walls / closet</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-ac"><span data-es="Clóset del A/C / ventilas">AC closet / vents</span></label>
+              <label class="chip relative"><input type="checkbox" name="services" value="mold-leak"><span data-es="Después de una fuga o inundación">After a leak or flood</span></label>
+              <label class="chip relative col-span-2"><input type="checkbox" name="services" value="mold-test"><span data-es="No sé si es moho / quiero una prueba">Not sure it's mold / I want it tested</span></label>
+            </div>
+            <p id="bkServices-err" class="field-error"></p>
+            <p class="block text-sm font-medium mt-5 mb-2" data-es="¿Qué tan pronto lo necesita?">How soon do you need it handled?</p>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="chip relative"><input type="radio" name="start" value="asap"><span data-es="Lo antes posible">As soon as possible</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="1-3"><span data-es="En 1–3 meses">Within 1–3 months</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="3plus"><span data-es="En más de 3 meses">3+ months out</span></label>
+              <label class="chip relative"><input type="radio" name="start" value="planning"><span data-es="Solo quiero saber">Just want to know</span></label>
+            </div>
+            <p id="bkStart-err" class="field-error"></p>
+            <button type="button" id="bkNext4" class="bk-next" data-es="Siguiente">Next</button>
+          </section>
+
+          <!-- 5. Day and time -->
+          <section class="bk-step" data-step="when" hidden>
+            <h2 class="bk-q" tabindex="-1" data-es="Escoja día y hora">Pick a day and time</h2>
+            <p id="bkWhenHelp" class="text-sm text-muted mt-1">We visit Sunday through Thursday. Days that are full are grayed out.</p>
+            <div class="bk-cal mt-3">
+              <div class="flex items-center justify-between">
+                <button type="button" id="bkPrev" class="bk-back" aria-label="Previous month" data-es-aria="Mes anterior"><i data-feather="chevron-left" class="w-5 h-5"></i></button>
+                <p id="bkMonth" class="font-semibold" aria-live="polite"></p>
+                <button type="button" id="bkNextMonth" class="bk-back" aria-label="Next month" data-es-aria="Mes siguiente"><i data-feather="chevron-right" class="w-5 h-5"></i></button>
+              </div>
+              <div class="bk-dow" aria-hidden="true" data-es="&lt;span&gt;Dom&lt;/span&gt;&lt;span&gt;Lun&lt;/span&gt;&lt;span&gt;Mar&lt;/span&gt;&lt;span&gt;Mié&lt;/span&gt;&lt;span&gt;Jue&lt;/span&gt;&lt;span&gt;Vie&lt;/span&gt;&lt;span&gt;Sáb&lt;/span&gt;"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+              <div id="bkCalGrid" class="bk-grid" role="group" aria-label="Days"></div>
+              <p id="bkCalLoading" class="text-sm text-muted text-center py-6">Loading open days…</p>
+            </div>
+            <div id="bkSlotsWrap" class="mt-4" hidden>
+              <p id="bkSlotsLabel" class="text-sm font-medium mb-2"></p>
+              <div id="bkSlots" class="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="bkSlotsLabel"></div>
+            </div>
+            <p id="bkWhen-err" class="field-error"></p>
+
+            <label class="flex items-start gap-2 mt-5 text-xs text-muted">
+              <input type="checkbox" id="bkConsentBox" class="mt-0.5">
+              <span data-es="Acepto que Omdan Development Inc me llame o me mande mensajes al número de arriba sobre mi estimado. El consentimiento no es condición de compra. Pueden aplicar cargos por mensajes y datos. Responda STOP para cancelar. Vea nuestra &lt;a href=&quot;/privacy/&quot; class=&quot;underline&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Política de privacidad&lt;/a&gt; y &lt;a href=&quot;/terms-and-conditions/&quot; class=&quot;underline&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Términos&lt;/a&gt;.">I agree that Omdan Development Inc may call or text me at the number above about my estimate. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/" class="underline" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms-and-conditions/" class="underline" target="_blank" rel="noopener">Terms</a>.</span>
+            </label>
+            <p id="bkConsent-err" class="field-error"></p>
+
+            <div id="bkCaptchaWrap" class="mt-4" hidden><div class="h-captcha" data-captcha="true"></div></div>
+
+            <button type="submit" id="bkSubmit" class="bk-next">Book my free estimate</button>
+            <p id="bkSubmitErr-err" class="field-error"></p>
+            <p class="text-xs text-muted mt-2 text-center" data-es="Gratis y sin compromiso. Le llamaremos para confirmar su cita.">Free and no obligation. We'll call to confirm your appointment.</p>
+          </section>
+        </form>
+
+        <!-- Can't take this one (not the homeowner, or outside the area) -->
+        <section id="bkStop" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="alert-circle" class="w-12 h-12 mx-auto text-muted"></i>
+          <h2 id="bkStopTitle" class="text-xl font-bold mt-3"></h2>
+          <p id="bkStopText" class="text-muted mt-2"></p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkStopBack" class="bk-btn-dark"></button>
+            <a href="tel:9512920703" data-track="lp_stop_call" class="bk-link text-center" data-es="Llame al (951) 292-0703">Call (951) 292-0703</a>
+          </div>
+        </section>
+
+        <!-- Booked -->
+        <section id="bkDone" class="text-center py-6" hidden tabindex="-1">
+          <i data-feather="check-circle" class="w-14 h-14 mx-auto text-brand2"></i>
+          <h2 class="text-2xl font-extrabold mt-3" data-es="¡Listo, ya quedó!">You're all set!</h2>
+          <p class="mt-2"><span data-es="Nos vemos el">We'll see you on</span> <b id="bkWhenDone"></b>.</p>
+          <p class="text-muted mt-2 text-sm" data-es="Por favor asegúrese de que todos los dueños de la casa puedan estar. Le llamaremos antes de la visita para confirmar. ¿Necesita cambiar algo? Llámenos.">Please make sure all homeowners can be there. We'll call before the visit to confirm. Need to change something? Just call us.</p>
+          <div class="flex flex-col gap-2 mt-5">
+            <button type="button" id="bkIcs" class="bk-btn-dark" data-es="Agregar a mi calendario">Add to my calendar</button>
+            <a href="tel:9512920703" class="bk-link text-center" data-es="Llame al (951) 292-0703">Call (951) 292-0703</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust strip -->
+  <section class="bg-soft border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 py-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-medium">
+      <div class="flex items-center gap-2"><i data-feather="award" class="w-5 h-5 text-brand flex-shrink-0"></i>CSLB #1148568</div>
+      <div class="flex items-center gap-2"><i data-feather="shield" class="w-5 h-5 text-brand flex-shrink-0"></i><span data-es="Asegurados y con fianza">Insured &amp; bonded</span></div>
+      <div class="flex items-center gap-2"><i data-feather="star" class="w-5 h-5 text-brand flex-shrink-0"></i><span data-es="Reseñas de 5 estrellas en Google">5-star Google reviews</span></div>
+      <div class="flex items-center gap-2"><i data-feather="user-check" class="w-5 h-5 text-brand flex-shrink-0"></i><span data-es="El dueño en cada proyecto">Owner on every project</span></div>
+    </div>
+  </section>
+
+  <!-- Signs -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold" data-es="¿Le suena familiar?">Sound familiar?</h2>
+        <p class="mt-2 text-muted" data-es="Estas son las señales más comunes de moho en casa. Muchas veces crece donde no se ve.">These are the most common signs of mold at home. It often grows where you can't see it.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-xl border border-line bg-white p-6">
+          <i data-feather="wind" class="w-6 h-6 text-brand"></i>
+          <h3 class="mt-3 font-bold" data-es="Olor a humedad">A musty smell</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Un olor a encerrado que no se quita, sobre todo en un clóset, un baño o debajo del fregadero.">A stale, earthy smell that won't go away, often in a closet, bathroom or under a sink.</p>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-6">
+          <i data-feather="circle" class="w-6 h-6 text-brand"></i>
+          <h3 class="mt-3 font-bold" data-es="Manchas en paredes o techo">Spots or stains</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Puntos negros o verdes, manchas de agua en el techo o en la lechada del baño.">Black or green spotting, water stains on the ceiling, or dark grout in the shower.</p>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-6">
+          <i data-feather="layers" class="w-6 h-6 text-brand"></i>
+          <h3 class="mt-3 font-bold" data-es="Pintura o zócalos dañados">Peeling paint, swollen baseboards</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Pintura que se levanta, tablaroca blanda o zócalos hinchados cerca de un baño o del piso.">Paint that bubbles or peels, soft drywall, or baseboards that swell near a bathroom or the floor.</p>
+        </div>
+        <div class="rounded-xl border border-line bg-white p-6">
+          <i data-feather="droplet" class="w-6 h-6 text-brand"></i>
+          <h3 class="mt-3 font-bold" data-es="Una fuga reciente">A recent leak</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Una fuga, un A/C que goteó o una inundación que no se secó en uno o dos días.">A leak, an AC that dripped, or a flood that wasn't fully dried within a day or two.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our work -->
+  <section class="py-14 bg-white border-t border-line">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold" data-es="Trabajos reales de moho">Real mold jobs</h2>
+        <p class="mt-2 text-muted" data-es="Fotos de nuestros propios trabajos.">Photos from our own work.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <figure>
+          <img src="/assets/mold/sink-cabinet-before-after.webp" alt="Kitchen sink cabinet with mold before, clean and sealed after" class="rounded-xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Debajo del fregadero de la cocina: antes y después.">Under a kitchen sink: before and after.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/shower-tile-before-after.webp" alt="Shower tile corner with mold in the grout before, clean after" class="rounded-xl border border-line w-full h-auto" width="1774" height="887" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Azulejo, lechada y silicón de la regadera: antes y después.">Shower tile, grout and caulk: before and after.</figcaption>
+        </figure>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 mt-6">
+        <figure>
+          <img src="/assets/mold/wall-framing-before-after.webp" alt="Bathroom wall opened up: moldy framing before, cleaned framing after" class="rounded-xl border border-line w-full h-64 object-cover" width="1254" height="1254" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Pared del baño abierta: antes y después.">Bathroom wall opened up: before and after.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/ceiling-and-wall-under-containment.webp" alt="Mold across a ceiling and wall, with the room sealed in plastic" class="rounded-xl border border-line w-full h-64 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Techo y pared, área sellada antes de quitar el moho.">Ceiling and wall, sealed off before removal.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/mold/wall-corner-under-containment.webp" alt="Mold on a wall corner with the floor and furniture covered in plastic" class="rounded-xl border border-line w-full h-64 object-cover" width="1086" height="1448" loading="lazy" decoding="async">
+          <figcaption class="text-sm text-muted mt-2 text-center" data-es="Cubrimos y sellamos el área antes de empezar.">Work area covered and taped before we start.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-14 bg-soft">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-3xl font-extrabold text-center mb-3" data-es="Cómo funciona">How it works</h2>
+      <p class="text-center text-muted mb-10" data-es="Muchas compañías quitan el moho y le dejan las paredes abiertas. Nosotros terminamos el trabajo.">Many mold companies remove the damage and leave you with open walls. We finish the job.</p>
+      <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">1</div>
+          <h3 class="mt-3 font-bold" data-es="Revisamos y probamos">Inspect &amp; test</h3>
+          <p class="mt-1 text-sm text-muted" data-es="David va a su casa, mide la humedad, encuentra de dónde viene el agua y hace pruebas cuando hacen falta.">David comes out, takes moisture readings, finds where the water comes from and tests when it's needed.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">2</div>
+          <h3 class="mt-3 font-bold" data-es="Cotización clara por escrito">Clear written quote</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Precio personalizado y fechas, antes de empezar cualquier trabajo.">Personalized pricing and a timeline, before any work starts.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">3</div>
+          <h3 class="mt-3 font-bold" data-es="Sellamos, quitamos y arreglamos">Contain, remove &amp; fix</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Sellamos el área, quitamos lo dañado, limpiamos con equipo HEPA y arreglamos la fuga.">We seal off the area, remove what's damaged, clean with HEPA equipment and fix the leak.</p>
+        </li>
+        <li class="rounded-xl border border-line bg-white p-6">
+          <div class="w-9 h-9 rounded-full bg-brand text-white font-bold flex items-center justify-center">4</div>
+          <h3 class="mt-3 font-bold" data-es="Reconstruimos">We rebuild</h3>
+          <p class="mt-1 text-sm text-muted" data-es="Tablaroca, aislamiento, pintura, gabinetes o pisos, hasta que el cuarto quede terminado.">Drywall, insulation, paint, cabinets or flooring, until the room is finished.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Reviews (genuine Google reviews; these customers hired us for other projects) -->
+  <section id="reviews" class="py-14">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold" data-es="Lo que dicen los dueños de casa">What homeowners say</h2>
+        <p class="mt-2 text-muted" data-es="Reseñas de Google de nuestros clientes (en inglés, como las escribieron)">Google reviews from our customers</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"We hired Omdan Development Inc for a full backyard remodel in Yucca Valley, and honestly, it exceeded all of our expectations. What was once an empty, unusable space is now a place where we can relax, host family, and truly enjoy our home."</blockquote>
+          <figcaption class="mt-4 font-semibold">Ben E. <span class="font-normal text-muted">· Backyard remodel, Yucca Valley</span></figcaption>
+        </figure>
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"The workmanship was clean, professional, and completed on time. The pavers were installed perfectly and the turf looks great, giving the yard a clean and modern look. David was honest, communicative, and easy to work with."</blockquote>
+          <figcaption class="mt-4 font-semibold">Rotem L. <span class="font-normal text-muted">· Pavers &amp; turf, San Jacinto</span></figcaption>
+        </figure>
+        <figure class="rounded-xl border border-line bg-white p-6">
+          <div class="text-amber-500" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="mt-3 text-muted text-sm">"We had artificial turf installed in Desert Hot Springs by Omdan Development Inc, and we're very happy with the results. David was friendly, professional, and made the whole process easy. The work came out clean and looks great."</blockquote>
+          <figcaption class="mt-4 font-semibold">John M. <span class="font-normal text-muted">· Artificial turf, Desert Hot Springs</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-soft">
+    <div class="max-w-3xl mx-auto px-5">
+      <h2 class="text-3xl font-extrabold text-center mb-8" data-es="Preguntas frecuentes">Common questions</h2>
+      <div class="space-y-3">
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿Cuánto cuesta quitar el moho?">How much does mold removal cost?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Depende de qué tan grande sea el área, qué materiales están afectados, qué tan difícil es llegar, si hace falta una prueba y cuánto hay que reconstruir. Por eso vamos primero: le damos un precio personalizado en una cotización clara por escrito después de un estimado gratis en su casa.">It depends on how large the area is, which materials are affected, how hard it is to reach, whether testing is needed and how much has to be rebuilt. That's why we visit first: you get personalized pricing in a clear written quote after a free on-site estimate.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿Hacen pruebas de moho?">Do you test for mold?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Sí. Revisamos, medimos la humedad y hacemos pruebas cuando ayudan a contestar una pregunta, como si hay moho detrás de una pared. Si ya tiene un reporte de un inspector independiente, trabajamos con ese reporte.">Yes. We inspect, take moisture readings and test when it helps answer a question, like whether there's mold behind a wall. If you already have a report from an independent inspector, we work from it.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿Va a regresar el moho?">Will the mold come back?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="No, si se arregla la fuente de humedad y el área se seca bien antes de cerrarla. Por eso cada trabajo empieza por encontrar la fuga o el problema de agua y lo arreglamos como parte del trabajo.">Not if the moisture source is fixed and the area is properly dried before it's closed up. That's why every job starts with finding the leak or water problem, and we fix it as part of the work.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿Puedo quedarme en mi casa durante el trabajo?">Can I stay home while you work?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Normalmente sí. Sellamos el área de trabajo con plástico y usamos filtración de aire HEPA para que el resto de la casa quede separado. En trabajos grandes, o si alguien en la casa tiene problemas de salud, platicamos si algunos cuartos deben quedar cerrados.">Usually yes. We seal off the work area with plastic sheeting and use HEPA air filtration, so the rest of the home stays separate. On larger jobs, or if someone in the home has health concerns, we'll talk through whether certain rooms should be off-limits.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿También reparan las paredes y el techo?">Do you also repair the walls and ceiling?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Sí. Somos contratista general Clase B, así que un solo equipo quita el moho, arregla la causa y reconstruye: tablaroca, aislamiento, pintura, zócalos, gabinetes o pisos.">Yes. We're a Class B general building contractor, so one team removes the mold, fixes the cause and rebuilds: drywall, insulation, paint, baseboards, cabinets or flooring.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿El seguro de casa cubre el moho?">Does homeowners insurance cover mold?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Depende de su póliza y de qué causó el moho. Los daños por algo repentino, como un tubo roto, a veces se tratan diferente que los daños por una fuga de mucho tiempo. Pregunte a su compañía de seguros. Le podemos dar fotos y un alcance del trabajo por escrito.">It depends on your policy and what caused the mold. Damage from a sudden event, like a burst pipe, is often treated differently from a long-term leak. Check with your insurance company. We can give you photos and a written scope of the work.</p>
+        </details>
+        <details class="rounded-xl border border-line bg-white p-5">
+          <summary class="flex justify-between items-center gap-4 font-bold"><span data-es="¿En qué áreas trabajan?">What areas do you serve?</span><i data-feather="plus" class="faq-icon w-5 h-5 flex-shrink-0"></i></summary>
+          <p class="mt-3 text-muted" data-es="Valle de Coachella, Alto Desierto, el Paso e Inland Empire: de Palm Springs, Palm Desert e Indio a Yucca Valley, Twentynine Palms, Yucaipa, San Bernardino, Moreno Valley, Menifee, Murrieta y Temecula, y áreas cercanas.">The Coachella Valley, High Desert, Pass area and Inland Empire: from Palm Springs, Palm Desert and Indio to Yucca Valley, Twentynine Palms, Yucaipa, San Bernardino, Moreno Valley, Menifee, Murrieta and Temecula, and nearby areas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-14 bg-ink text-white">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="text-3xl font-extrabold" data-es="No deje que una fuga pequeña se haga grande">Don't let a small leak turn into a big job</h2>
+      <p class="mt-3 text-white/80" data-es="Estimado gratis en su casa, sin compromiso. Con licencia y seguro, CSLB #1148568.">Free on-site estimate, no obligation. Licensed &amp; insured, CSLB #1148568.</p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#estimate" data-track="lp_bottom_estimate" class="inline-flex items-center justify-center bg-brand text-white px-7 py-3 rounded-lg font-semibold text-lg hover:opacity-95 transition" data-es="Quiero mi estimado gratis">Get My Free Estimate</a>
+        <a href="tel:9512920703" data-track="lp_bottom_call" class="inline-flex items-center justify-center bg-white/10 text-white px-7 py-3 rounded-lg font-semibold text-lg border border-white/25 hover:bg-white/15 transition" data-es="Llame al (951) 292-0703">Call (951) 292-0703</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-white/60 border-t border-white/10 py-6 text-sm">
+    <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row justify-between gap-2">
+      <div>© <span id="year">2026</span> Omdan Development Inc · CSLB #1148568</div>
+      <div class="flex gap-4">
+        <a href="/privacy/" class="hover:text-white" data-es="Privacidad">Privacy</a>
+        <a href="/terms-and-conditions/" class="hover:text-white" data-es="Términos">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile estimate bar -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 bottom-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-line px-4 pt-3 flex gap-3" style="padding-bottom:calc(.75rem + env(safe-area-inset-bottom))">
+    <a href="tel:9512920703" data-track="lp_mobile_call" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-3 py-3 text-sm font-semibold text-ink">
+      <i data-feather="phone" class="w-4 h-4"></i><span data-es="Llamar">Call</span>
+    </a>
+    <a href="#estimate" data-track="lp_mobile_estimate" class="flex-[2] inline-flex items-center justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold text-white" data-es="Quiero mi estimado gratis">
+      Get My Free Estimate
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      // Click tracking for calls and CTA buttons (GA4); a tap on a phone link is a Contact for Meta
+      document.querySelectorAll('[data-track]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (window.gtag) gtag('event', el.getAttribute('data-track'), { service_page: 'mold' });
+          if (window.fbq && /^tel:/.test(el.getAttribute('href') || '')) fbq('track', 'Contact');
+        });
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+
+    document.addEventListener('DOMContentLoaded', function () { if (window.feather) feather.replace(); });
+  </script>
+
+  <script src="/mold-estimate/i18n.js?v=1" defer></script>
+  <script src="/mold-estimate/booking.js?v=1" defer></script>
+</body>
+</html>
