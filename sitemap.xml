@@ -609,4 +609,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://omdandevelopment.com/blog/cool-deck-vs-stamped-concrete-for-pool-decks-in-the-coachella-valley/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
